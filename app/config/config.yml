@@ -1,0 +1,65 @@
+imports:
+    - { resource:                    parameters.yml }
+    - { resource:                    security.yml }
+    - { resource:                    services.yml }
+
+framework:
+    translator: { fallbacks:         [en] }
+    secret:                          '%secret%'
+    router:
+        resource:                    '%kernel.project_dir%/app/config/routing.yml'
+        strict_requirements:         ~
+    form:                            ~
+    csrf_protection:                 ~
+    validation: { enable_annotations: true }
+    default_locale:                  '%locale%'
+    trusted_hosts:                   ~
+    session:
+        handler_id:                  snc_redis.session.handler
+        save_path:                   '%kernel.project_dir%/var/sessions/%kernel.environment%'
+    fragments:                       ~
+    http_method_override:            true
+    assets:                          ~
+    php_errors:
+        log:                         '%kernel.debug%'
+
+# Twig Configuration
+twig:
+    debug:                           '%kernel.debug%'
+    strict_variables:                '%kernel.debug%'
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:                      pdo_mysql
+        host:                        '%database_host%'
+        port:                        '%database_port%'
+        dbname:                      '%database_name%'
+        user:                        '%database_user%'
+        password:                    '%database_password%'
+        charset:                     utf8mb4
+        default_table_options:
+            charset:                 utf8mb4
+            collate:                 utf8mb4_unicode_ci
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy:             doctrine.orm.naming_strategy.underscore
+        auto_mapping:                true
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport:                       '%mailer_transport%'
+    host:                            '%mailer_host%'
+    username:                        '%mailer_username%'
+    password:                        '%mailer_password%'
+    spool:
+        type:                        service
+        id:                          snc_redis.swiftmailer.spool
+    source_ip:                       '%mailer_source_ip%'
+    port:                            '%mailer_port%'
+    auth_mode:                       '%mailer_auth_mode%'
+    sender_address:                  '%mailer_sender_address%'
+    antiflood:
+        threshold:                   '%mailer_antiflood_threshold%'
+        sleep:                       '%mailer_antiflood_sleep%'
+    logging:                         '%mailer_logging%'

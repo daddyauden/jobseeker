@@ -1,0 +1,103 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main_edit">
+    <label id="message_alert"></label>
+    <table class="table table-hover product_table">
+        <caption class="text-left caption">
+            <div class="btn-group">
+                <div class="btn btn-default">{{ "table.product.duration"|trans }}</div>
+                <div class="btn btn-info">{{ "table.product.duration.comment"|trans }}</div>
+            </div>
+            <div class="btn-group">
+                <div class="btn btn-default">{{ "table.product.price"|trans }}</div>
+                <div class="btn btn-info">{{ "table.product.price.comment"|trans }}</div>
+            </div>
+        </caption>
+        <thead>
+            <tr>
+                <th class="product_queue">{{ "table.product.queue"|trans }}</th>
+                <th class="product_durtation">{{ "table.product.duration"|trans }}({{ "common.date.day"|trans }})</th>
+                <th class="product_price">{{ "table.product.price"|trans }}({{ currency }})</th>
+                <th class="product_status">{{ "table.product.status"|trans }}</th>
+                <th class="product_operation">{{ "be.operate"|trans }}</th>
+            </tr>
+            <tr>
+                <th class="product_queue">{{ "table.product.queue"|trans }}</th>
+                <th class="product_durtation">{{ "table.product.duration"|trans }}({{ "common.date.day"|trans }})</th>
+                <th class="product_price">{{ "table.product.price"|trans }}({{ currency }})</th>
+                <th class="product_status">{{ "table.product.status"|trans }}</th>
+                <th class="product_operation">{{ "be.operate"|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                {{ form_widget(product.id) }}
+                <td class="product_queue">{{ form_widget(product.queue) }}</td>
+                <td class="product_durtation">{{ form_widget(product.duration) }}</td>
+                <td class="product_price">{{ form_widget(product.price) }}</td>
+                <td class="product_status">{{ form_widget(product.status) }}</td>
+                <td class="product_operation">
+                    <button name="edit" class="btn btn-info btn-sm">{{ "be.edit"|trans }}</button>
+                    <button name="delete" class="btn btn-warning btn-sm">{{ "be.delete"|trans }}</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<ul class="pager">
+    {% for url in urls %}
+    <li>{{ url|raw }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+$("button[name=edit]").click(function() {
+    var data = {};
+    var inputs = $(this).parent().parent().find("[name^=form]");
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        var id = $(inputs[i]).attr("id");
+        data[id.substring(id.lastIndexOf("_") + 1)] = $(inputs[i]).val();
+    }
+    $.ajax({
+        type: "POST",
+        url: "{{ path("product_save") }}",
+        data: $.toJSON(data)
+    }).done(function(message) {
+        if (message == "same") {
+            $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.nochange"|trans }}").delay(800).slideUp(800);
+        } else if (message == "success") {
+            window.location.reload();
+        } else if (message == "error") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.update.fail"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "b.update.invalid"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+
+$("button[name=delete]").click(function() {
+    var pp = $(this).parent().parent();
+    var id = pp.find("[name='form[id]']").val();
+    $.ajax({
+        type: "POST",
+        url: "{{ path("product_delete") }}",
+        data: id
+    }).done(function(message) {
+        if (message == "success") {
+            $("#message_alert").attr({"class": "label label-success"}).slideDown(500).html("{{ "be.delete.success"|trans }}").delay(800).slideUp(800);
+            pp.fadeOut(800);
+        } else if (message == "error") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.delete.fail"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.delete.invalid"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+</script>
+{% endblock %}

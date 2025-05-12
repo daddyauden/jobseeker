@@ -1,0 +1,36 @@
+{% extends "sso/base.html.twig" %}
+
+{% block title %}{% endblock %}
+
+{% block container %}
+    <div class="signin">
+        <div class="logo">
+            <img src="{{ asset("assets/sso/images/logo.png") }}" title="jobseeker logo">
+        </div>
+        {% if app.session.flashbag.has("info") %}
+            <div class="alert alert-info">
+                {% for info in app.session.flashbag.get('info') %}
+                    {{ info }}
+                {% endfor %}
+            </div>
+        {% elseif app.session.flashbag.has("danger") %}
+            <div class="alert alert-danger">
+                {% for danger in app.session.flashbag.get('danger') %}
+                    {{ danger }}
+                {% endfor %}
+            </div>
+        {% else %}
+            {{ form_start(form) }}
+            {{ form_widget(form.client_id) }}
+            {{ form_widget(form.redirect_uri) }}
+            {{ form_widget(form.response_type) }}
+            {{ form_widget(form.state) }}
+            {{ form_widget(form.scope) }}
+            {{ form_widget(form.email) }}
+            {{ form_widget(form.password) }}
+            {{ form_widget(form.signin) }}
+            {{ form_widget(form.cancel) }}
+            {{ form_end(form) }}
+        {% endif %}
+    </div>
+{% endblock %}

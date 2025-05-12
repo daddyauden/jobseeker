@@ -1,0 +1,1689 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    font-size: 12px;
+}
+
+#main, #main_inner {
+    width: 100%;
+    height: 100%;
+}
+
+#main_inner {
+    position: relative;
+}
+
+#main_header, #main_header_inner {
+    width: 100%;
+}
+
+#main_header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-width: 0px 0px 1px;
+    z-index: 2;
+}
+
+#main_content, #main_content_inner {
+    width: 100%;
+    height: 100%;
+}
+
+#content_left, #content_right {
+    height: 100%;
+}
+
+#content_left {
+    overflow: auto;
+    border-right: 1px solid #DDDDDD;
+    -webkit-box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.075);
+    box-shadow:1px 0px 5px rgba(0, 0, 0, 0.075);
+    z-index: 1;
+}
+
+#main_footer, #main_footer_inner {
+    width: 100%;
+}
+
+#main_footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-width: 1px 0px 0px;
+    z-index: 2;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#main_header_inner #nav-level-1 a:hover {
+    cursor: pointer;
+}
+
+#choose_lang {
+    float: left;
+    padding: 15px;
+    line-height: 20px;
+}
+
+.horizontal {
+    min-width: 360px;
+}
+
+.horizontal > li > h5 {
+    padding: 10px 5px 5px;
+    margin: 0px;
+    font-weight: normal;
+}
+
+.horizontal > li > ul {
+    overflow: hidden;
+    padding: 0px;
+    border-bottom: 1px solid #39b3d7;
+}
+
+.horizontal > li:last-child > ul {
+    border-bottom: none;
+}
+
+.horizontal > li > ul > li {
+    float: left;
+    list-style: none;
+}
+
+.horizontal > li > ul > li > a {
+    display: block;
+    padding: 5px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333333;
+    white-space: nowrap;
+}
+
+.horizontal > li > ul > li > a:hover {
+    text-decoration: none;
+    background-color: #DDDDDD;
+}
+
+.vertical > li > h5 {
+    padding-left: 5px;
+    font-weight: normal;
+}
+
+.vertical > li > ul {
+    overflow: hidden;
+    padding: 0px;
+    border-bottom: 1px solid #39b3d7;
+}
+
+.vertical > li:last-child > ul {
+    border-bottom: none;
+}
+
+.vertical > li > ul > li {
+    list-style: none;
+}
+
+.vertical > li > ul > li > a {
+    display: block;
+    padding: 5px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333333;
+    white-space: nowrap;
+}
+
+.vertical > li > ul > li > a:hover {
+    text-decoration: none;
+    background-color: #DDDDDD;
+}
+
+.form_main {
+    padding: 20px;
+}
+
+.form_main .form_header {
+    margin-bottom: 15px;
+}
+
+.form_main .form-control {
+    position: relative;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form_main .form-control:focus {
+    z-index: 2;
+}
+
+.form_main table tr th, .form_main table tr td {
+    word-break: break-all;
+    vertical-align: middle;
+}
+
+.form_main input[type="checkbox"] {
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.form_main input[type="text"] {
+    margin-bottom: 15px;
+}
+
+.form_main input[type="password"] {
+    margin-bottom: 15px;
+}
+
+.form_main label {
+    display: block;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+.form_main select.form-control {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    outline: none;
+    background-color: #FFF;
+    cursor: pointer;
+    height: 34px;
+    line-height: 34px;
+}
+
+.form_main .caption {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #39b3d7;
+}
+
+.form_main .caption .btn-group {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.form_main_edit {
+    padding: 20px 20px 50px;
+}
+
+.form_main_edit .form_header {
+    margin-bottom: 15px;
+}
+
+.form_main_edit .form-control {
+    padding: 5px;
+}
+
+.form_main_edit .form-control:focus {
+    z-index: 2;
+}
+
+.form_main_edit table {
+    margin: 0px;
+}
+
+.form_main_edit table tr th, .form_main_edit table tr td {
+    word-break: break-all;
+    vertical-align: middle;
+}
+
+.form_main_edit input[type="checkbox"] {
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.form_main_edit input[type="text"] {
+    margin-bottom: 0px;
+}
+
+.form_main_edit input[type="password"] {
+    margin-bottom: 15px;
+}
+
+.form_main_edit .caption {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #39b3d7;
+}
+
+.form_main_edit .caption .btn-group {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#message_alert {
+    display: none;
+    position: fixed;
+    width: 50%;
+    top: 3px;
+    left: 25%;
+    text-align: center;
+    z-index: 10;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form_main_edit table .btn {
+    margin: 0px 3px 3px 0px;
+}
+
+.form_main_edit .admin_table .admin_role {
+    width: 15%;
+    padding-left: 0px;
+}
+
+.form_main_edit .admin_table .admin_email {
+    width: 15%;
+}
+
+.form_main_edit .admin_table .admin_logintime {
+    width: 40%;
+}
+
+.form_main_edit .admin_table .admin_operation {
+    width: 30%;
+    padding: 0px;
+}
+
+.form_main_edit .admin_table .admin_operation .btn {
+    margin: 3px 3px 3px 0px;
+}
+
+.form_main_edit .area_table .area_name {
+    width: 10%;
+    padding-left: 0px;
+}
+
+.form_main_edit .area_table .area_code {
+    width: 7%;
+}
+
+.form_main_edit .area_table .area_level {
+    width: 8%;
+}
+
+.form_main_edit .area_table .area_queue {
+    width: 5%;
+}
+
+.form_main_edit .area_table .area_pid {
+    width: 10%;
+}
+
+.form_main_edit .area_table .area_alpha {
+    width: 6%;
+}
+
+.form_main_edit .area_table .area_domain {
+    width: 15%;
+}
+
+.form_main_edit .area_table .area_lat, .form_main_edit .area_table .area_lng {
+    width: 8%;
+}
+
+.form_main_edit .area_table .area_status {
+    width: 9%;
+}
+
+.form_main_edit .area_table .area_operation {
+    width: 17%;
+    padding: 0px;
+}
+
+.form_main_edit .currency_table tr {
+    float: left;
+    width: 50%;
+    display: table;
+}
+
+.form_main_edit .currency_table tr:nth-child(even) {
+    float: right;
+}
+
+.form_main_edit .currency_table .currency_name {
+    width: 20%;
+}
+
+.form_main_edit .currency_table .currency_code {
+    width: 20%;
+}
+
+.form_main_edit .currency_table .currency_symbol {
+    width: 15%;
+}
+
+.form_main_edit .currency_table .currency_status {
+    width: 20%;
+}
+
+.form_main_edit .currency_table .currency_operation {
+    width: 25%;
+    padding: 0px;
+}
+
+.form_main_edit .diploma_table tr {
+    float: left;
+    width: 50%;
+    display: table;
+}
+
+.form_main_edit .diploma_table tr:nth-child(even) {
+    float: right;
+}
+
+.form_main_edit .diploma_table .diploma_name {
+    width: 25%;
+    padding-left: 0px;
+}
+
+.form_main_edit .diploma_table .diploma_csn {
+    width: 20%;
+}
+
+.form_main_edit .diploma_table .diploma_queue {
+    width: 15%;
+}
+
+.form_main_edit .diploma_table .diploma_status {
+    width: 20%;
+}
+
+.form_main_edit .diploma_table .diploma_operation {
+    width: 20%;
+    padding: 0px;
+}
+
+.form_main_edit .discount_table tr {
+    float: left;
+    width: 50%;
+    display: table;
+}
+
+.form_main_edit .discount_table tr:nth-child(even) {
+    float: right;
+}
+
+.form_main_edit .discount_table .discount_name {
+    width: 18%;
+    padding-left: 0px;
+}
+
+.form_main_edit .discount_table .discount_queue {
+    width: 10%;
+}
+
+.form_main_edit .discount_table .discount_dsn {
+    width: 16%;
+}
+
+.form_main_edit .discount_table .discount_rate {
+    width: 14%;
+}
+
+.form_main_edit .discount_table .discount_status {
+    width: 16%;
+}
+
+.form_main_edit .discount_table .discount_operation {
+    width: 26%;
+    padding: 0px;
+}
+
+.employee_table .search_panel, .employee_table .search_result_panel {
+    vertical-align: top;
+    padding: 0px;
+}
+
+.employee_table .search_panel .form-control {
+    margin-bottom: 10px;
+}
+
+.employee_table .search_panel > div, .employee_table .search_result_panel > div {
+    padding-right: 10px;
+}
+
+.employee_table .search_result_panel .tag {
+    font-size: 100%;
+    display: inline-block;
+    padding: 3px 9px;
+    margin: 3px;
+    background-color: #3A87AD;
+    border-radius: 3px;
+}
+
+.form_main_edit .user_table tr th, .form_main_edit .user_table tr td {
+    padding: 8px;
+    border-top: 1px solid #dddddd; 
+}
+
+.form_main_edit .industry_table .industry_name {
+    width: 25%;
+}
+
+.form_main_edit .industry_table .industry_pid {
+    width: 25%;
+}
+
+.form_main_edit .industry_table .industry_isn {
+    width: 15%;
+}
+
+.form_main_edit .industry_table .industry_queue {
+    width: 10%;
+}
+
+.form_main_edit .industry_table .industry_status {
+    width: 10%;
+}
+
+.form_main_edit .industry_table .industry_operation {
+    width: 15%;
+    padding: 0px;
+}
+
+.form_main_edit .locale_table tr {
+    float: left;
+    width: 50%;
+    display: table;
+}
+
+.form_main_edit .locale_table tr:nth-child(even) {
+    float: right;
+}
+
+.form_main_edit .locale_table .locale_name {
+    width: 20%;
+    padding-left: 0px;
+}
+
+.form_main_edit .locale_table .locale_code {
+    width: 20%;
+}
+
+.form_main_edit .locale_table .locale_queue {
+    width: 15%;
+}
+
+.form_main_edit .locale_table .locale_status {
+    width: 20%;
+}
+
+.form_main_edit .locale_table .locale_operation {
+    width: 25%;
+    padding: 0px;
+}
+
+.form_main_edit .plugin_table td {
+    vertical-align: middle;
+    text-align: center;
+    border-top: 1px solid #dddddd;
+}
+
+.form_main_edit .plugin_header_table {
+    background-color: #EDEDED;
+    color: #333333;
+}
+
+.form_main_edit .plugin_header_table th {
+    text-align: center;
+    border: none;
+    padding: 10px 0;
+}
+
+.form_main_edit .plugin_table .caption {
+    color: #FFFFFF;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    padding: 5px;
+    margin-bottom: 0px;
+    border-bottom: none;
+}
+
+.form_main_edit .plugin_table .plugin_logo {
+    width: 5%;
+}
+
+.form_main_edit .plugin_table .plugin_logo img {
+    width: 32px;
+}
+
+.form_main_edit .plugin_table .plugin_name {
+    width: 10%;
+}
+
+.form_main_edit .plugin_table .plugin_description {
+    width: 25%;
+}
+
+.form_main_edit .plugin_table td.plugin_description {
+    text-align: left;
+}
+
+.form_main_edit .plugin_table .plugin_status {
+    width: 10%;
+}
+
+.form_main_edit .plugin_table .plugin_config {
+    width: 40%;
+}
+
+.form_main_edit .plugin_table .plugin_config div label {
+    width: 25%;
+    text-align: right;
+    line-height: 30px;
+    padding-right: 15px;
+}
+
+.form_main_edit .plugin_table .plugin_config div input {
+    display: inline-block;
+    width: 75%;
+    line-height: 30px;
+    margin: 5px 0px;
+}
+
+.form_main_edit .plugin_table .plugin_opration {
+    width: 10%;
+}
+
+.form_main_edit .privilege_table .privilege_name {
+    width: 25%;
+}
+
+.form_main_edit .privilege_table .privilege_bundle{
+    width: 25%;
+}
+
+.form_main_edit .privilege_table .privilege_controller {
+    width: 15%;
+}
+
+.form_main_edit .privilege_table .privilege_action {
+    width: 10%;
+}
+
+.form_main_edit .privilege_table .privilege_status {
+    width: 10%;
+}
+
+.form_main_edit .privilege_table .privilege_operation {
+    width: 15%;
+    padding: 0px;
+}
+
+.form_main_edit .product_table tr {
+    float: left;
+    width: 50%;
+    display: table;
+}
+
+.form_main_edit .product_table tr:nth-child(even) {
+    float: right;
+}
+
+.form_main_edit .product_table .product_queue {
+    width: 15%;
+    padding-left: 0px;
+}
+
+.form_main_edit .product_table .product_durtation {
+    width: 25%;
+}
+
+.form_main_edit .product_table .product_price {
+    width: 20%;
+}
+
+.form_main_edit .product_table .product_status {
+    width: 20%;
+}
+
+.form_main_edit .product_table .product_operation {
+    width: 20%;
+    padding: 0px;
+}
+
+.form_main_edit .role_table tr {
+    float: left;
+    width: 50%;
+    display: table;
+}
+
+.form_main_edit .role_table tr:nth-child(even) {
+    float: right;
+}
+
+.form_main_edit .role_table .role_name {
+    width: 30%;
+    padding-left: 0px;
+}
+
+.form_main_edit .role_table .role_operation {
+    width: 40%;
+    padding: 0px;
+}
+
+.form_main_edit .system_table .system_skey {
+    width: 25%;
+}
+
+.form_main_edit .system_table .system_stype {
+    width: 15%;
+}
+
+.form_main_edit .system_table .system_svalue {
+    width: 45%;
+}
+
+.form_main_edit .system_table .system_operation {
+    width: 15%;
+    padding: 0px;
+}
+
+.form_main_edit .type_table tr {
+    float: left;
+    width: 50%;
+    display: table;
+}
+
+.form_main_edit .type_table tr:nth-child(even) {
+    float: right;
+}
+
+.form_main_edit .type_table .type_name {
+    width: 20%;
+}
+
+.form_main_edit .type_table .type_tsn {
+    width: 20%;
+}
+
+.form_main_edit .type_table .type_queue {
+    width: 15%;
+}
+
+.form_main_edit .type_table .type_status {
+    width: 20%;
+}
+
+.form_main_edit .type_table .type_operation {
+    width: 25%;
+    padding: 0px;
+}
+
+.form_main_edit .category_table tr {
+    float: left;
+    width: 50%;
+    display: table;
+}
+
+.form_main_edit .category_table tr:nth-child(even) {
+    float: right;
+}
+
+.form_main_edit .category_table .category_name {
+    width: 15%;
+    padding-left: 0px;
+}
+
+.form_main_edit .category_table .category_queue {
+    width: 10%;
+}
+
+.form_main_edit .category_table .category_csn {
+    width: 15%;
+}
+
+.form_main_edit .category_table .category_pid {
+    width: 25%;
+}
+
+.form_main_edit .category_table .category_status {
+    width: 15%;
+}
+
+.form_main_edit .category_table .category_operation {
+    width: 20%;
+    padding: 0px;
+}
+
+.area_flag {
+    width: 16px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 5px;
+    background-image: url("/assets/images/flag.png");
+    background-repeat: no-repeat;
+}
+
+.area_flag_AD {
+    background-position: -1921px 0;
+}
+
+.area_flag_AE {
+    background-position: -1904px 0;
+}
+
+.area_flag_AF {
+    background-position: -3689px 0;
+}
+
+.area_flag_AG {
+    background-position: -34px 0;
+}
+
+.area_flag_AI {
+    background-position: -51px 0;
+}
+
+.area_flag_AL {
+    background-position: -68px 0;
+}
+
+.area_flag_AM {
+    background-position: -85px 0;
+}
+
+.area_flag_AN {
+    background-position: -102px 0;
+}
+
+.area_flag_AO {
+    background-position: -119px 0;
+}
+
+.area_flag_AQ {
+    background-position: -136px 0;
+}
+
+.area_flag_AR {
+    background-position: -153px 0;
+}
+
+.area_flag_AS {
+    background-position: -170px 0;
+}
+
+.area_flag_AT {
+    background-position: -187px 0;
+}
+
+.area_flag_AU {
+    background-position: -204px 0;
+}
+
+.area_flag_AW {
+    background-position: -221px 0;
+}
+
+.area_flag_AX {
+    background-position: -238px 0;
+}
+
+.area_flag_AZ {
+    background-position: -255px 0;
+}
+
+.area_flag_BA {
+    background-position: -272px 0;
+}
+
+.area_flag_BB {
+    background-position: -289px 0;
+}
+
+.area_flag_BD {
+    background-position: -306px 0;
+}
+
+.area_flag_BE {
+    background-position: -323px 0;
+}
+
+.area_flag_BG {
+    background-position: -340px 0;
+}
+
+.area_flag_BH {
+    background-position: -357px 0;
+}
+
+.area_flag_BI {
+    background-position: -374px 0;
+}
+
+.area_flag_BJ {
+    background-position: -391px 0;
+}
+
+.area_flag_BL {
+    background-position: -408px 0;
+}
+
+.area_flag_BM {
+    background-position: -425px 0;
+}
+
+.area_flag_BN {
+    background-position: -442px 0;
+}
+
+.area_flag_BO {
+    background-position: -459px 0;
+}
+
+.area_flag_BR {
+    background-position: -476px 0;
+}
+
+.area_flag_BS {
+    background-position: -493px 0;
+}
+
+.area_flag_BT {
+    background-position: -510px 0;
+}
+
+.area_flag_BW {
+    background-position: -527px 0;
+}
+
+.area_flag_BY {
+    background-position: -544px 0;
+}
+
+.area_flag_BZ {
+    background-position: -561px 0;
+}
+
+.area_flag_CA {
+    background-position: -578px 0;
+}
+
+.area_flag_CD {
+    background-position: -595px 0;
+}
+
+.area_flag_CF {
+    background-position: -612px 0;
+}
+
+.area_flag_CG {
+    background-position: -629px 0;
+}
+
+.area_flag_CH {
+    background-position: -646px 0;
+}
+
+.area_flag_CI {
+    background-position: -663px 0;
+}
+
+.area_flag_CL {
+    background-position: -680px 0;
+}
+
+.area_flag_CM {
+    background-position: -697px 0;
+}
+
+.area_flag_CN {
+    background-position: -714px 0;
+}
+
+.area_flag_CO {
+    background-position: -731px 0;
+}
+
+.area_flag_CR {
+    background-position: -748px 0;
+}
+
+.area_flag_CV {
+    background-position: -765px 0;
+}
+
+.area_flag_CY {
+    background-position: -782px 0;
+}
+
+.area_flag_CZ {
+    background-position: -799px 0;
+}
+
+.area_flag_DJ {
+    background-position: -816px 0;
+}
+
+.area_flag_DK {
+    background-position: -833px 0;
+}
+
+.area_flag_DM {
+    background-position: -850px 0;
+}
+
+.area_flag_DO {
+    background-position: -867px 0;
+}
+
+.area_flag_DZ {
+    background-position: -884px 0;
+}
+
+.area_flag_EC {
+    background-position: -901px 0;
+}
+
+.area_flag_EE {
+    background-position: -918px 0;
+}
+
+.area_flag_EG {
+    background-position: -935px 0;
+}
+
+.area_flag_EH {
+    background-position: -952px 0;
+}
+
+.area_flag_ER {
+    background-position: -969px 0;
+}
+
+.area_flag_ES {
+    background-position: -986px 0;
+}
+
+.area_flag_ET {
+    background-position: -1003px 0;
+}
+
+.area_flag_EU {
+    background-position: -1020px 0;
+}
+
+.area_flag_FI {
+    background-position: -1037px 0;
+}
+
+.area_flag_FJ {
+    background-position: -1054px 0;
+}
+
+.area_flag_FK {
+    background-position: -1071px 0;
+}
+
+.area_flag_FM {
+    background-position: -1088px 0;
+}
+
+.area_flag_FO {
+    background-position: -1105px 0;
+}
+
+.area_flag_FR,
+.area_flag_FX,
+.area_flag_GF,
+.area_flag_GP,
+.area_flag_MQ,
+.area_flag_NC,
+.area_flag_PF,
+.area_flag_PM,
+.area_flag_RE,
+.area_flag_TF,
+.area_flag_WF {
+    background-position: -1122px 0;
+}
+
+.area_flag_GA {
+    background-position: -1139px 0;
+}
+
+.area_flag_GB {
+    background-position: -1156px 0;
+}
+
+.area_flag_GD {
+    background-position: -1173px 0;
+}
+
+.area_flag_GE {
+    background-position: -1190px 0;
+}
+
+.area_flag_GG {
+    background-position: -1207px 0;
+}
+
+.area_flag_GH {
+    background-position: -1224px 0;
+}
+
+.area_flag_GL {
+    background-position: -1241px 0;
+}
+
+.area_flag_GM {
+    background-position: -1258px 0;
+}
+
+.area_flag_GN {
+    background-position: -1275px 0;
+}
+
+.area_flag_GQ {
+    background-position: -1292px 0;
+}
+
+.area_flag_GR {
+    background-position: -1309px 0;
+}
+
+.area_flag_GS {
+    background-position: -1326px 0;
+}
+
+.area_flag_GT {
+    background-position: -1343px 0;
+}
+
+.area_flag_GU {
+    background-position: -1360px 0;
+}
+
+.area_flag_GW {
+    background-position: -1377px 0;
+}
+
+.area_flag_GY {
+    background-position: -1394px 0;
+}
+
+.area_flag_HK {
+    background-position: -1411px 0;
+}
+
+.area_flag_HN {
+    background-position: -1428px 0;
+}
+
+.area_flag_HR {
+    background-position: -1445px 0;
+}
+
+.area_flag_HT {
+    background-position: -1462px 0;
+}
+
+.area_flag_HU {
+    background-position: -1479px 0;
+}
+
+.area_flag_ID {
+    background-position: -1496px 0;
+}
+
+.area_flag_IE {
+    background-position: -1513px 0;
+}
+
+.area_flag_IL {
+    background-position: -1530px 0;
+}
+
+.area_flag_IM {
+    background-position: -1547px 0;
+}
+
+.area_flag_IN {
+    background-position: -1564px 0;
+}
+
+.area_flag_IQ {
+    background-position: -1581px 0;
+}
+
+.area_flag_IS {
+    background-position: -1598px 0;
+}
+
+.area_flag_IT {
+    background-position: -1615px 0;
+}
+
+.area_flag_JE {
+    background-position: -1632px 0;
+}
+
+.area_flag_JM {
+    background-position: -1649px 0;
+}
+
+.area_flag_JO {
+    background-position: -1666px 0;
+}
+
+.area_flag_JP {
+    background-position: -1683px 0;
+}
+
+.area_flag_KE {
+    background-position: -1700px 0;
+}
+
+.area_flag_KG {
+    background-position: -1717px 0;
+}
+
+.area_flag_KH {
+    background-position: -1734px 0;
+}
+
+.area_flag_KI {
+    background-position: -1751px 0;
+}
+
+.area_flag_KM {
+    background-position: -1768px 0;
+}
+
+.area_flag_KN {
+    background-position: -1785px 0;
+}
+
+.area_flag_KP {
+    background-position: -1802px 0;
+}
+
+.area_flag_KR {
+    background-position: -1819px 0;
+}
+
+.area_flag_KV {
+    background-position: -1836px 0;
+}
+
+.area_flag_KW {
+    background-position: -1853px 0;
+}
+
+.area_flag_KY {
+    background-position: -1870px 0;
+}
+
+.area_flag_LA {
+    background-position: -1887px 0;
+}
+
+.area_flag_LC {
+    background-position: 0 0;
+}
+
+.area_flag_LK {
+    background-position: -17px 0;
+}
+
+.area_flag_LR {
+    background-position: -1938px 0;
+}
+
+.area_flag_LS {
+    background-position: -1955px 0;
+}
+
+.area_flag_LT {
+    background-position: -1972px 0;
+}
+
+.area_flag_LU {
+    background-position: -1989px 0;
+}
+
+.area_flag_LV {
+    background-position: -2006px 0;
+}
+
+.area_flag_LY {
+    background-position: -2023px 0;
+}
+
+.area_flag_MA {
+    background-position: -2040px 0;
+}
+
+.area_flag_ME {
+    background-position: -2057px 0;
+}
+
+.area_flag_MG {
+    background-position: -2074px 0;
+}
+
+.area_flag_MH {
+    background-position: -2091px 0;
+}
+
+.area_flag_ML {
+    background-position: -2108px 0;
+}
+
+.area_flag_MM {
+    background-position: -2125px 0;
+}
+
+.area_flag_MP {
+    background-position: -2142px 0;
+}
+
+.area_flag_MR {
+    background-position: -2159px 0;
+}
+
+.area_flag_MS {
+    background-position: -2176px 0;
+}
+
+.area_flag_MT {
+    background-position: -2193px 0;
+}
+
+.area_flag_MU {
+    background-position: -2210px 0;
+}
+
+.area_flag_MV {
+    background-position: -2227px 0;
+}
+
+.area_flag_MW {
+    background-position: -2244px 0;
+}
+
+.area_flag_MZ {
+    background-position: -2261px 0;
+}
+
+.area_flag_NA {
+    background-position: -2278px 0;
+}
+
+.area_flag_NE {
+    background-position: -2295px 0;
+}
+
+.area_flag_NF {
+    background-position: -2312px 0;
+}
+
+.area_flag_NG {
+    background-position: -2329px 0;
+}
+
+.area_flag_NI {
+    background-position: -2346px 0;
+}
+
+.area_flag_NL {
+    background-position: -2363px 0;
+}
+
+.area_flag_NO {
+    background-position: -2380px 0;
+}
+
+.area_flag_NP {
+    background-position: -2397px 0;
+}
+
+.area_flag_NR {
+    background-position: -2414px 0;
+}
+
+.area_flag_NZ {
+    background-position: -2431px 0;
+}
+
+.area_flag_OM {
+    background-position: -2448px 0;
+}
+
+.area_flag_PA {
+    background-position: -2465px 0;
+}
+
+.area_flag_PE {
+    background-position: -2482px 0;
+}
+
+.area_flag_PG {
+    background-position: -2499px 0;
+}
+
+.area_flag_PH {
+    background-position: -2516px 0;
+}
+
+.area_flag_PK {
+    background-position: -2533px 0;
+}
+
+.area_flag_PL {
+    background-position: -2550px 0;
+}
+
+.area_flag_PN {
+    background-position: -2567px 0;
+}
+
+.area_flag_PS {
+    background-position: -2584px 0;
+}
+
+.area_flag_PT {
+    background-position: -2601px 0;
+}
+
+.area_flag_PW {
+    background-position: -2618px 0;
+}
+
+.area_flag_PY {
+    background-position: -2635px 0;
+}
+
+.area_flag_QA {
+    background-position: -2652px 0;
+}
+
+.area_flag_RS {
+    background-position: -2669px 0;
+}
+
+.area_flag_RU {
+    background-position: -2686px 0;
+}
+
+.area_flag_RW {
+    background-position: -2703px 0;
+}
+
+.area_flag_SA {
+    background-position: -2720px 0;
+}
+
+.area_flag_SB {
+    background-position: -2737px 0;
+}
+
+.area_flag_SC {
+    background-position: -2754px 0;
+}
+
+.area_flag_SD {
+    background-position: -2771px 0;
+}
+
+.area_flag_SE {
+    background-position: -2788px 0;
+}
+
+.area_flag_SG {
+    background-position: -2805px 0;
+}
+
+.area_flag_SH {
+    background-position: -2822px 0;
+}
+
+.area_flag_SI {
+    background-position: -2839px 0;
+}
+
+.area_flag_SK {
+    background-position: -2856px 0;
+}
+
+.area_flag_SM {
+    background-position: -2873px 0;
+}
+
+.area_flag_SN {
+    background-position: -2890px 0;
+}
+
+.area_flag_SO {
+    background-position: -2907px 0;
+}
+
+.area_flag_SR {
+    background-position: -2924px 0;
+}
+
+.area_flag_SS {
+    background-position: -2941px 0;
+}
+
+.area_flag_ST {
+    background-position: -2958px 0;
+}
+
+.area_flag_SV {
+    background-position: -2975px 0;
+}
+
+.area_flag_SY {
+    background-position: -2992px 0;
+}
+
+.area_flag_SZ {
+    background-position: -3009px 0;
+}
+
+.area_flag_TC {
+    background-position: -3026px 0;
+}
+
+.area_flag_TD {
+    background-position: -3043px 0;
+}
+
+.area_flag_TG {
+    background-position: -3060px 0;
+}
+
+.area_flag_TH {
+    background-position: -3077px 0;
+}
+
+.area_flag_TJ {
+    background-position: -3094px 0;
+}
+
+.area_flag_TM {
+    background-position: -3111px 0;
+}
+
+.area_flag_TN {
+    background-position: -3128px 0;
+}
+
+.area_flag_TP {
+    background-position: -3145px 0;
+}
+
+.area_flag_TR {
+    background-position: -3162px 0;
+}
+
+.area_flag_TT {
+    background-position: -3179px 0;
+}
+
+.area_flag_TV {
+    background-position: -3196px 0;
+}
+
+.area_flag_TW {
+    background-position: -3213px 0;
+}
+
+.area_flag_TZ {
+    background-position: -3230px 0;
+}
+
+.area_flag_UA {
+    background-position: -3247px 0;
+}
+
+.area_flag_UG {
+    background-position: -3264px 0;
+}
+
+.area_flag_US {
+    background-position: -3281px 0;
+}
+
+.area_flag_UY {
+    background-position: -3298px 0;
+}
+
+.area_flag_UZ {
+    background-position: -3315px 0;
+}
+
+.area_flag_VC {
+    background-position: -3332px 0;
+}
+
+.area_flag_VE {
+    background-position: -3349px 0;
+}
+
+.area_flag_VG {
+    background-position: -3366px 0;
+}
+
+.area_flag_VI {
+    background-position: -3383px 0;
+}
+
+.area_flag_VN {
+    background-position: -3400px 0;
+}
+
+.area_flag_VU {
+    background-position: -3417px 0;
+}
+
+.area_flag_WS {
+    background-position: -3434px 0;
+}
+
+.area_flag_YE {
+    background-position: -3451px 0;
+}
+
+.area_flag_ZA {
+    background-position: -3468px 0;
+}
+
+.area_flag_ZM {
+    background-position: -3485px 0;
+}
+
+.area_flag_BF {
+    background-position: -3502px 0;
+}
+
+.area_flag_CU {
+    background-position: -3519px 0;
+}
+
+.area_flag_DE {
+    background-position: -3536px 0;
+}
+
+.area_flag_IR {
+    background-position: -3553px 0;
+}
+
+.area_flag_KZ {
+    background-position: -3570px 0;
+}
+
+.area_flag_LB {
+    background-position: -3587px 0;
+}
+
+.area_flag_LI {
+    background-position: -3604px 0;
+}
+
+.area_flag_MC {
+    background-position: -3621px 0;
+}
+
+.area_flag_MD {
+    background-position: -3638px 0;
+}
+
+.area_flag_MK {
+    background-position: -3655px 0;
+}
+
+.area_flag_MN {
+    background-position: -3672px 0;
+}
+
+.area_flag_MO {
+    background-position: -3706px 0;
+}
+
+.area_flag_MX {
+    background-position: -3723px 0;
+}
+
+.area_flag_MY {
+    background-position: -3740px 0;
+}
+
+.area_flag_PR {
+    background-position: -3757px 0;
+}
+
+.area_flag_RO {
+    background-position: -3774px 0;
+}
+
+.area_flag_SL {
+    background-position: -3791px 0;
+}
+
+.area_flag_TO {
+    background-position: -3808px 0;
+}
+
+.area_flag_VA {
+    background-position: -3825px 0;
+}
+
+.area_flag_ZW {
+    background-position: -3842px 0;
+}

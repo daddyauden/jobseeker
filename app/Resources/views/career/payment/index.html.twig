@@ -1,0 +1,141 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Payment Index{% endblock %}
+
+{% block header_css %}
+{% endblock %}
+
+{% block header_js %}
+{% endblock %}
+
+{% block footer_js %}
+{% endblock %}
+
+{% block main_header %}
+<div id="main_header">
+    <div id="main_header_inner">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div>
+                <img alt="jobseeker logo" src="{{ asset("/logo.png") }}" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block main_content_inner %}
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <center>
+        <h4>
+            Welcome to the PayPal PHP SDK Samples Main Page</h4>
+        <table id="calls">
+            <tr>
+                <th>
+                    Website Payments Pro and ExpressCheckout Samples
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <a id="DoDirectPaymentSaleLink" href="DoDirectPayment.php?paymentType=Sale">DoDirectPayment</a> - Sale
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="DoDirectPaymentAuthorizationLink" href="DoDirectPayment.php?paymentType=Authorization">DoDirectPayment</a> - Authorization
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="ExpressCheckoutSaleLink" href="SetExpressCheckout.php?paymentType=Sale">ExpressCheckout</a> - Sale
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="ExpressCheckoutAuthorizationLink" href="SetExpressCheckout.php?paymentType=Authorization">ExpressCheckout</a> - Authorization
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="ExpressCheckoutOrderLink" href="SetExpressCheckout.php?paymentType=Order">ExpressCheckout</a> - Order
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="ThreeSecureLink" href="3DSecure/ThreeDSecure.php?paymentType=Sale">DoDirectPayment - 3D Secure</a> - Sale
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Administrative Samples</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <a id="DoAuthorizationLink" href="DoAuthorization.php">Authorization</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="DoCaptureLink" href="DoCapture.php">DoCapture</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="DoVoidLink" href="DoVoid.php">DoVoid</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="GetTransactionDetailsLink" href="GetTransactionDetails.html">GetTransactionDetails</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="TransactionSearchLink" href="TransactionSearch.php">TransactionSearch</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="RefundTransactionLink" href="RefundTransaction.php">RefundTransaction</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="DoReauthorizationLink" href="DoReauthorization.html">Reauthorization</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="MassPayLink" href="MassPay.html">MassPay</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="GetBalanceLink" href="GetBalance.php">GetBalance</a>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Recurring Payments Samples</th>
+            </tr>
+            <tr>
+                <td>
+                    <a id="RecurringPaymentsLink" href="RecurringPayments/RecurringPayments.php">Recurring Payments</a>
+                </td>
+            </tr>
+        </table>
+    </center>
+</div>
+{% endblock %}
+
+{% block main_footer %}
+<div id="main_footer">
+    <div id="main_footer_inner">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div>
+                <img alt="jobseeker logo" src="{{ asset("/logo.png") }}" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

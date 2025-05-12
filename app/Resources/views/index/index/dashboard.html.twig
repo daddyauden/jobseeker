@@ -1,0 +1,109 @@
+{% extends "base.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block header_inner %}
+<div id="toolbar">
+    <a class="btn btn-info btn-sm post-job" href="{{ path("job_post") }}">{{ "fe.job_post"|trans }}</a>
+    {% if areas is defined %}
+    <div id="country">
+        <a id="change_country">{{ "country"|system|upper|trans }}</a>
+        <ul id="other_country">
+            {% for area in areas %}
+            {% if area.child is defined %}
+            <li>
+                <h5>{{ area.code|upper|trans }}</h5>
+                <ul>
+                    {% for child in area.child %}
+                    <li><a href="{{ child.domain }}" target="_blank"><i class="glyphicon area_flag area_flag_{{ child.code|upper }}"></i>{{ child.code|upper|trans }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if locales is defined %}
+    <div id="locale">
+        <a id="change_locale">{{ locales.data[0]|trans }}</a>
+        <ul id="other_locale">
+            {% if false == locales.single %}
+            {% for data in locales.data %}
+            <li class="more">
+                <ul>
+                    {% for locale in data %}
+                    <li><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+            {% else %}
+            {% for locale in locales.data %}
+            <li class="single"><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+            {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+    {% endif %}
+    {% if eme_or_emr is defined %}
+    <div class="avator avator_1x"> 
+        <a class="home" href="{{ path("dashboard") }}"><img src="{{ eme_or_emr.avator|avator }}" /></a>
+    </div>
+    {% else %}
+    <div class="avator avator_1x"> 
+        <a class="home" href="{{ path("dashboard") }}"><img src="{{ ""|avator }}" /></a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block container_inner %}
+<div id="container_inner_left" class="slide_left slide_left_2">
+    <div id="dashboard_left">
+        {% if eme is defined %}
+        <div class="avator avator_1x">
+            <img src="{{ eme.avator|avator }}" />
+            <a class="home" href="{{ path("dashboard") ~ "?q=account_eme" }}"><span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
+        {% endif %}
+        <ul class="nav">
+            <li><a href="{{ path("index") }}"><i class="fa fa-home" aria-hidden="true"></i>{{ "fe.home"|trans }}</a></li>
+            {% if isEmployer == true %}
+            <li><a href="{{ path("account_emr") }}" target="dashboard_right"><i class="fa fa-user" aria-hidden="true"></i>{{ "fe.dashboard.emrinfo"|trans }}</a></li>
+            <li><a href="{{ path("job_list") }}" target="dashboard_right"><i class="fa fa-paper-plane" aria-hidden="true"></i>{{ "fe.dashboard.emr_postjob"|trans }}</a></li>
+            <li><a href="{{ path("emr_delivery") }}" target="dashboard_right"><i class="fa fa-envelope" aria-hidden="true"></i>{{ "fe.dashboard.postinfo"|trans }}</a></li>
+            {% else %}
+            <li><a href="{{ path("account_eme") }}" target="dashboard_right"><i class="fa fa-user" aria-hidden="true"></i>{{ "fe.dashboard.info"|trans }}</a></li>
+            <li><a href="{{ path("account_edu") }}" target="dashboard_right"><i class="fa fa-book" aria-hidden="true"></i>{{ "fe.dashboard.eduinfo"|trans }}</a></li>
+            <li><a href="{{ path("account_exp") }}" target="dashboard_right"><i class="fa fa-rocket" aria-hidden="true"></i>{{ "fe.dashboard.expinfo"|trans }}</a></li>
+            <li><a href="{{ path("eme_delivery") }}" target="dashboard_right"><i class="fa fa-envelope" aria-hidden="true"></i>{{ "fe.dashboard.eme_postjob"|trans }}</a></li>
+            {% endif %}
+            <li><a href="{{ path("user_logout") }}"><i class="fa fa-power-off" aria-hidden="true"></i>{{ "fe.logout"|trans }}</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="container_inner_right" class="slide_right slide_left_2_right">
+    <button id="trigger_left" class="btn btn-sm">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    {% if route is defined %}
+    <iframe name="dashboard_right" id="dashboard_right" src="{{ route }}"></iframe>
+    {% else %}
+    <iframe name="dashboard_right" id="dashboard_right" src="{{ path("brand") }}"></iframe>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+$("#container_inner_right #trigger_left").click(function() {
+    $(this).parent().toggleClass("slide_left_right");
+    $(".slide_left").toggleClass("slide_left_2_push");
+});
+</script>
+{% endblock %}

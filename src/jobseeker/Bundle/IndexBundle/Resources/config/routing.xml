@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    <route id="index" path="/">
+        <default key="_controller">IndexBundle:Index:index</default>
+    </route>
+    <route id="search" path="/search">
+        <default key="_controller">IndexBundle:Index:search</default>
+    </route>
+    <route id="brand" path="/brand">
+        <default key="_controller">IndexBundle:Index:brand</default>
+    </route>
+    <route id="dashboard" path="/dashboard">
+        <default key="_controller">IndexBundle:Index:dashboard</default>
+    </route>
+</routes>

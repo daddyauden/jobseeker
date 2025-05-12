@@ -1,0 +1,12 @@
+{% extends "career/delivery/emr.html.twig" %}
+
+{% block emr_delivery_left %}
+<ul class="nav cat">
+    <li>
+        <a href="{{ path("emr_delivery") }}">{{ "job.delivery.emr.new"|trans }}</a>
+    </li>
+    <li class="actived">
+        <a href="{{ path("emr_delivery",{"opera":"history"}) }}"><i class="fa fa-caret-right" aria-hidden="false"></i>{{ "job.delivery.emr.history"|trans }}</a>
+    </li>
+</ul>
+{% endblock %}

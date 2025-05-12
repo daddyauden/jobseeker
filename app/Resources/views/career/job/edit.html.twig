@@ -1,0 +1,177 @@
+{% extends "dashboard.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block container %}
+<div class="alpha_100 job_edit">
+{% if app.session.flashbag.has("danger") %}
+<div class="alert alert-danger">
+    {% for danger in app.session.flashbag.get('danger') %}
+    {{ danger|raw }}
+    {% endfor %}
+    <span class="close glyphicon glyphicon-remove"></span>
+</div>
+{% endif %}
+{% if app.session.flashbag.has("info") %}
+<div class="alert alert-info">
+    {% for info in app.session.flashbag.get('info') %}
+    {{ info|raw }}
+    {% endfor %}
+    <span class="close glyphicon glyphicon-remove"></span>
+</div>
+{% endif %}
+
+{{ form_start(form) }}
+{% if jid is defined %}
+<input type="hidden" id="form_jid" name="form[jid]" value="{{ jid }}">
+{% endif %}
+
+{% if product is defined and product|length > 0 %}
+<div class="row">
+    {#<div class="col-3 text-right">{{ "table.job.product"|trans }} ( <span class="required">*</span> )</div>#}
+    <div class="col-9" id="job_product">
+        {{ form_widget(form.product) }}
+    </div>
+</div>
+{% endif %}
+
+{% if type is defined and type|length > 0 %}
+<div class="row">
+    <div class="col-3 text-right">{{ "table.job.type"|trans }} ( <span class="required">*</span> )</div>
+    <div class="col-9" id="job_type">
+        {{ form_widget(form.type) }}
+    </div>
+</div>
+{% endif %}
+
+{% if industry is defined and industry|length > 0 %}
+<div class="row" id="job_industry">
+    <div class="col-3 text-right">{{ "table.job.industry"|trans }} ( <span class="required">*</span> )</div>
+    <div class="col-9">
+        {{ form_widget(form.industry) }}
+        <div id="job_industry_level_1"></div>
+        <div id="job_industry_level_2"></div>
+    </div>
+</div>
+{% endif %}
+
+{% if area is defined and area|length > 0 %}
+<div class="row" id="job_area">
+    <div class="col-3 text-right">{{ "table.job.area"|trans }} ( <span class="required">*</span> )</div>
+    <div class="col-9">
+        {{ form_widget(form.area) }}
+        <div id="job_area_level_1"></div>
+        <div id="job_area_level_2"></div>
+    </div>
+</div>
+{% endif %}
+
+<div class="row">
+    <div class="col-3 text-right">{{ "common.salary.unit"|trans }} {{ "table.job.salary"|trans }} ( <span class="required">*</span> )</div>
+    <div class="col-9">
+        {{ form_widget(form.salary) }}
+    </div>
+</div>  
+<div class="row">
+    <div class="col-3 text-right">{{ "table.job.title"|trans }} ( <span class="required">*</span> )</div>
+    <div class="col-9">
+        {{ form_widget(form.title) }}
+    </div>
+</div>   
+<div class="row">
+    <div class="col-3 text-right">{{ "table.job.description"|trans }} ( <span class="required">*</span> )</div>
+    <div class="col-9">
+        {{ form_widget(form.description) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 text-right">{{ "table.job.avator"|trans }}</div>
+    <div class="col-6">
+        {{ form_widget(form.avator) }}
+        <p><span class="glyphicon glyphicon-exclamation-sign"></span>{{ "common.upload_comment"|trans }}</p>
+        {% if form.vars.value.avator %}
+            <img src="{{ form.vars.value.avator|avator("2x") }}" />
+        {% endif %}
+    </div>
+</div>
+{% if form.begintime is defined %}
+<div class="row">
+    <div class="col-3 text-right">{{ "table.job.begintime"|trans }} ( <span class="required">*</span> )</div>
+    <div class="col-9">
+        {{ form_widget(form.begintime) }}<i class="icon-form-controll icon-office-calendar"></i>
+    </div>
+</div>
+{% endif %}
+<div class="row">
+    <div class="col-3 text-right">{{ "table.job.contacter"|trans }}</div>
+    <div class="col-9">
+        {{ form_widget(form.contacter) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 text-right">{{ "table.job.contacteremail"|trans }}</div>
+    <div class="col-9">
+        {{ form_widget(form.contacteremail) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 text-right">{{ "table.job.contactertel"|trans }}</div>
+    <div class="col-9">
+        {{ form_widget(form.contactertel) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 text-right">{{ "table.employer.about"|trans }}</div>
+    <div class="col-9">
+        {{ form_widget(form.about) }}
+    </div>
+</div>
+<div class="row" id="job_submit">
+    <div class="col-offset-3">{{ form_widget(form.save) }}</div>
+</div>
+{{ form_end(form) }}
+</div>
+{% endblock %}
+
+{% block footer_js %}
+<script src="{{ asset("/assets/js/ckeditor/ckeditor.js") }}"></script>
+<script type="text/javascript">
+CKEDITOR.replace("form_description");   
+CKEDITOR.replace("form_about");
+{% if product is defined and product|length > 0 %}
+var product = {{ product|json_encode|raw }};
+{% if productDefault is defined %}
+initJobProduct(product, false, {{ productDefault|json_encode|raw }});
+{% else %}
+initJobProduct(product, false);
+{% endif %}
+{% endif %}
+
+{% if type is defined and type|length > 0 %}
+var type = {{ type|json_encode|raw }};
+{% if typeDefault is defined %}
+initJobTypeForEdit(type, "{{ "common.choose"|trans }}", false, {{ typeDefault|json_encode|raw }});
+{% else %}
+initJobTypeForEdit(type, "{{ "common.choose"|trans }}");
+{% endif %}
+{% endif %}
+
+{% if industry is defined and industry|length > 0 %}
+var industry = {{ industry|json_encode|raw }};
+{% if industryDefault is defined %}
+initJobIndustry(industry, "{{ "common.choose"|trans }}", false, {{ industryDefault|json_encode|raw }});
+{% else %}
+initJobIndustry(industry, "{{ "common.choose"|trans }}");
+{% endif %}
+{% endif %}
+
+{% if area is defined and area|length > 0 %}
+var area = {{ area|json_encode|raw }};
+{% if areaDefault is defined %}
+initJobArea(area, "{{ "common.choose"|trans }}", false, {{ areaDefault|json_encode|raw }});
+{% else %}
+initJobArea(area, "{{ "common.choose"|trans }}");
+{% endif %}
+{% endif %}
+</script>
+{% endblock %}

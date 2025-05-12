@@ -1,0 +1,51 @@
+{% extends "dashboard.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block container %}
+<div id="job_list_left" class="col-lg-5 col-lg-offset-1 col-md-4 col-md-offset-1 alpha_100">
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+    {% if app.session.flashbag.has("info") %}
+    <div class="alert alert-info">
+        {% for info in app.session.flashbag.get('info') %}
+        {{ info|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+
+    {% if jobs is defined and jobs|length > 0 %}
+    <ul class="nav">
+        {% for job in jobs %}
+        <li>
+            <a href="{{ path("job_edit",{"condition": job.condition }) }}" target="job_content">
+                {{ job.title }}
+                <br /><small>{{ job.begintime|date("datetime_format"|system) }} -- {{ job.endtime|date("datetime_format"|system) }}</small>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% if pages is defined and pages|length > 0 %}
+    <ul class="pager">
+        {% for page in pages %}
+        <li>{{ page|raw }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% else %}
+    <div class="row">{{ "common.none"|trans }}</div>
+    {% endif %}
+</div>
+
+<div id="job_list_right" class="col-lg-7 col-md-7">
+    <div id="close-btn" class="close-btn-right"><i class="fa fa-close" aria-hidden="true"></i></div>
+    <iframe name="job_content" id="job_content" src="{{ path("brand") }}"></iframe>
+</div>
+{% endblock %}

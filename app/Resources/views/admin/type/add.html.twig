@@ -1,0 +1,14 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main">
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {{ form(form) }}
+</div>
+{% endblock %}

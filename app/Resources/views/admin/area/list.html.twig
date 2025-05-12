@@ -1,0 +1,116 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main_edit">
+    <label id="message_alert"></label>
+    {% if areas|length > 0 %}
+    <table class="table table-hover area_table">
+        <caption class="text-left caption">
+            <div class="btn-group">
+                <div class="btn btn-default">{{ "table.area.level"|trans }}</div>
+                <div class="btn btn-info">{{ "table.area.level.comment"|trans }}</div>
+            </div>
+            <div class="btn-group">
+                <div class="btn btn-default">{{ "table.area.code"|trans }}</div>
+                <div class="btn btn-info">{{ "table.area.code.comment"|trans }}</div>
+            </div>
+            <div class="btn-group">
+                <div class="btn btn-default">{{ "table.area.domain"|trans }}</div>
+                <div class="btn btn-info">{{ "table.area.domain.comment"|trans }}</div>
+            </div>
+        </caption>
+        <thead>
+            <tr>
+                <th class="area_name">{{ "table.area.name"|trans }}</th>
+                <th class="area_code">{{ "table.area.code"|trans }}</th>
+                <th class="area_level">{{ "table.area.level"|trans }}</th>
+                <th class="area_queue">{{ "table.area.queue"|trans }}</th>
+                <th class="area_pid">{{ "table.area.pid"|trans }}</th>
+                <th class="area_alpha">{{ "table.area.alpha"|trans }}</th>
+                <th class="area_domain">{{ "table.area.domain"|trans }}</th>
+                <th class="area_lat">{{ "table.area.lat"|trans }}</th>
+                <th class="area_lng">{{ "table.area.lng"|trans }}</th>
+                <th class="area_status">{{ "table.area.status"|trans }}</th>
+                <th class="area_operation">{{ "be.operate"|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for area in areas %}
+            <tr>
+                {{ form_widget(area.id) }}
+                <td class="area_name">{{ form_label(area.code) }}</td>
+                <td class="area_code">{{ form_widget(area.code) }}</td>
+                <td class="area_level">{{ form_widget(area.level) }}</td>
+                <td class="area_queue">{{ form_widget(area.queue) }}</td>
+                <td class="area_pid">{{ form_widget(area.pid) }}</td>
+                <td class="area_alpha">{{ form_widget(area.alpha) }}</td>
+                <td class="area_domain">{{ form_widget(area.domain) }}</td>
+                <td class="area_lat">{{ form_widget(area.lat) }}</td>
+                <td class="area_lng">{{ form_widget(area.lng) }}</td>
+                <td class="area_status">{{ form_widget(area.status) }}</td>
+                <td class="area_operation">
+                    <button name="edit" class="btn btn-info btn-sm">{{ "be.edit"|trans }}</button>
+                    <button name="delete" class="btn btn-warning btn-sm">{{ "be.delete"|trans }}</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-warning">{{ "common.none"|trans }}</div>
+    {% endif %}
+</div>
+
+<ul class="pager">
+    {% for url in urls %}
+    <li>{{ url|raw }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+$("button[name=edit]").click(function() {
+    var data = {};
+    var inputs = $(this).parent().parent().find("[name^=form]");
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        var id = $(inputs[i]).attr("id");
+        data[id.substring(id.lastIndexOf("_") + 1)] = $(inputs[i]).val();
+    }
+    $.ajax({
+        type: "POST",
+        url: "{{ path("area_save") }}",
+        data: $.toJSON(data)
+    }).done(function(message) {
+        if (message == "same") {
+            $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.nochange"|trans }}").delay(800).slideUp(800);
+        } else if (message == "success") {
+            window.location.reload();
+        } else if (message == "error") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.update.fail"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.update.invalid"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+
+$("button[name=delete]").click(function() {
+    var pp = $(this).parent().parent();
+    var id = pp.find("[name='form[id]']").val();
+    $.ajax({
+        type: "POST",
+        url: "{{ path("area_delete") }}",
+        data: id
+    }).done(function(message) {
+        if (message == "success") {
+            $("#message_alert").attr({"class": "label label-success"}).slideDown(500).html("{{ "be.delete.success"|trans }}").delay(800).slideUp(800);
+            pp.fadeOut(800);
+        } else if (message == "error") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.delete.fail"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.delete.invalid"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+</script>
+{% endblock %}

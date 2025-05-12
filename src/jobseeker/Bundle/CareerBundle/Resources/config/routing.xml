@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    <route id="career_index" path="/career">
+        <default key="_controller">CareerBundle:Payment:index</default>
+    </route>
+    <route id="order_payment" path="/order/payment/{type}">
+        <default key="_controller">CareerBundle:Payment:payment</default>
+        <default key="type">sale</default>
+        <requirement key="type">sale|auth</requirement>
+    </route>
+    <route id="order_dopayment" path="/order/dopayment">
+        <default key="_controller">CareerBundle:Payment:dopayment</default>
+    </route>
+    <route id="order_checkout" path="/order/checkout">
+        <default key="_controller">CareerBundle:Payment:checkout</default>
+    </route>
+    <route id="order_docheckout" path="/order/docheckout">
+        <default key="_controller">CareerBundle:Payment:docheckout</default>
+    </route>
+
+    <route id="job_post" path="/job/post">
+        <default key="_controller">CareerBundle:Job:post</default>
+    </route>
+    <route id="job_edit" path="/job/edit-{condition}">
+        <default key="_controller">CareerBundle:Job:edit</default>
+        <default key="condition">""</default>
+    </route>
+    <route id="job_show" path="/job-{condition}">
+        <default key="_controller">CareerBundle:Job:show</default>
+        <default key="condition">""</default>
+    </route>
+    <route id="job_list" path="/job/list-{page}">
+        <default key="_controller">CareerBundle:Job:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="job_search" path="/job/search-{condition}">
+        <default key="_controller">CareerBundle:Job:search</default>
+        <default key="condition">""</default>
+    </route>
+    <route id="job_view" path="/job/view-{condition}">
+        <default key="_controller">CareerBundle:Job:view</default>
+        <default key="condition">""</default>
+    </route>
+
+    <route id="eme_delivery" path="/eme/delivery-{opera}-{page}">
+        <default key="_controller">CareerBundle:Delivery:eme</default>
+        <default key="opera">new</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="emr_delivery" path="/emr/delivery-{opera}-{page}">
+        <default key="_controller">CareerBundle:Delivery:emr</default>
+        <default key="opera">new</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="job_delivery" path="/job/delivery">
+        <default key="_controller">CareerBundle:Delivery:delivery</default>
+    </route>
+    <route id="job_reserve" path="/job/reserve">
+        <default key="_controller">CareerBundle:Delivery:reserve</default>
+    </route>
+    <route id="job_schedule" path="/job/schedule">
+        <default key="_controller">CareerBundle:Delivery:schedule</default>
+    </route>
+    <route id="job_sendmail" path="/job/sendmail">
+        <default key="_controller">CareerBundle:Delivery:sendmail</default>
+    </route>
+</routes>

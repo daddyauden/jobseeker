@@ -1,0 +1,99 @@
+imports:
+    - { resource:        config_dev.yml }
+
+framework:
+    test:                ~
+    session:
+        storage_id:      session.storage.mock_file
+    profiler:
+        collect:         false
+
+web_profiler:
+    toolbar:             false
+    intercept_redirects: false
+
+swiftmailer:
+    disable_delivery:    true
+
+doctrine_mongodb:
+    connections:
+        default:
+            server: "mongodb://localhost:27017"
+            options: {}
+    default_database: test_database
+    document_managers:
+        default:
+            auto_mapping: true
+
+snc_redis:
+    clients:
+        default:
+            type:             predis
+            alias:            default
+            logging:          '%kernel.debug%'
+            dsn:
+                - redis://localhost
+            options:
+                replication:  true
+        cache:
+            type:             predis
+            alias:            cache
+            logging:          '%kernel.debug%'
+            dsn:
+                - redis://localhost:6379
+            options:
+                replication:  true
+        profiler_storage:
+            type:             predis
+            alias:            profiler_storage
+            logging:          '%kernel.debug%'
+            dsn:
+                - redis://localhost:6379
+            options:
+                replication:  true
+        session:
+            type:             predis
+            alias:            session
+            logging:          '%kernel.debug%'
+            dsn:
+                - redis://localhost:6379
+            options:
+                replication:  true
+        monolog:
+            type:             predis
+            alias:            monolog
+            logging:          false
+            dsn:
+                - redis://localhost:6379
+            options:
+                replication:  true
+    session:
+        client:               session
+        prefix:               '%country%%domain%_sess_'
+        ttl:                  1200
+    swiftmailer:
+        client:               default
+        key:                  swiftmailer
+    profiler_storage:
+        client:               profiler_storage
+        ttl:                  3600
+    doctrine:
+        metadata_cache:
+            client:           cache
+            entity_manager:   default
+            document_manager: default
+        result_cache:
+            client:           cache
+            entity_manager:   [default, read]
+            document_manager: [default, slave1, slave2]
+            namespace:        'dcrc:'
+        query_cache:
+            client:           cache
+            entity_manager:   default
+        second_level_cache:
+            client:           cache
+            entity_manager:   default
+    monolog:
+        client:               monolog
+        key:                  monolog
+

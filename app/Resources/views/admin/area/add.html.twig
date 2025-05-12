@@ -1,0 +1,28 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main">
+    <div class="text-left caption">
+        <div class="btn-group">
+            <div class="btn btn-default">{{ "table.area.level"|trans }}</div>
+            <div class="btn btn-info">{{ "table.area.level.comment"|trans }}</div>
+        </div>
+        <div class="btn-group">
+            <div class="btn btn-default">{{ "table.area.code"|trans }}</div>
+            <div class="btn btn-info">{{ "table.area.code.comment"|trans }}</div>
+        </div>
+        <div class="btn-group">
+            <div class="btn btn-default">{{ "table.area.domain"|trans }}</div>
+            <div class="btn btn-info">{{ "table.area.domain.comment"|trans }}</div>
+        </div>
+    </div>
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {{ form(form) }}
+</div>
+{% endblock %}

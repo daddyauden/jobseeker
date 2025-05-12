@@ -1,0 +1,46 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main_edit">
+    {% if employers|length > 0 %}
+    <table class="table table-hover table-striped user_table">
+        <thead>
+            <tr>
+                <th>{{ "table.user.source"|trans }}</th>
+                <th>{{ "table.user.logintime"|trans }}</th>
+                <th>{{ "table.user.loginip"|trans }}</th>
+                <th>{{ "table.employer.abbr"|trans }}</th>
+                <th>{{ "table.employer.location"|trans }}</th>
+                <th>{{ "table.employer.type"|trans }}</th>
+                <th>{{ "table.employer.scale"|trans }}</th>
+                <th>{{ "table.employer.tel"|trans }}</th>
+                <th>{{ "table.employer.contacter"|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employer in employers %}
+            <tr>
+                <td>{{ employer.uid.source }}</td>
+                <td>{{ employer.uid.logintime|date('Y-m-d H:i:s') }}</td>
+                <td>{{ employer.uid.loginip }}</td>
+                <td>{{ employer.abbr }}</td>
+                <td>{{ employer.location.code|upper|trans }}</td>
+                <td>{{ employer.type.csn|upper|trans }}</td>
+                <td>{{ employer.scale.csn|upper|trans }}</td>
+                <td>{{ employer.tel }}</td>
+                <td>{{ employer.contacter }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-warning">User Not Exist</div>
+    {% endif %}
+</div>
+
+<ul class="pager">
+    {% for url in urls %}
+    <li>{{ url|raw }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

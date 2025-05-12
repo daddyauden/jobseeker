@@ -1,0 +1,16 @@
+{% extends "admin/base.html.twig" %}
+
+{% block title %}添加企业规模{% endblock %}
+
+{% block main_content_inner %}
+<div class="form_main">
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {{ form(form) }}
+</div>
+{% endblock %}

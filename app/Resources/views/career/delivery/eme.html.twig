@@ -1,0 +1,56 @@
+{% extends "dashboard.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block container %}
+<div id="delivery_left" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 alpha_100">
+    {% block eme_delivery_left %}{% endblock %}
+
+    {% if deliveries is defined and deliveries|length > 0 %}
+    <ul class="nav">
+        {% for delivery in deliveries %}
+        <li>
+            <a href="{{ path("job_view",{"condition": delivery.condition }) }}" target="delivery_content">
+                <img src="{{ delivery.avator|avator }}" />
+                <span class="emr">
+                    <h1>{{ delivery.title }}</h1>
+                    <h2><abbr>{{ delivery.name }}</abbr></h2>
+                </span>
+                <span class="type">
+                    <h4>{{ delivery.salary }} {{ ("currency"|system ~ ".symbol")|trans }}</h4>
+                    <h3>{{ delivery.tsn|trans }}</h3>
+                </span>
+                <div class="clearfix"></div>
+                <div class="meta">
+                    <span>{{ delivery.ctime|date("date_format"|system)}}</span>
+                    {% if delivery.reserve is not empty %}
+                    <span>{{ "job.delivery.reserved"|trans }}</span>
+                    {% endif %}
+                    {% if delivery.schedule is not empty %}
+                    <span>{{ "job.delivery.schedule"|trans }}</span>
+                    {% endif %}
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% if pages is defined and pages|length > 0 %}
+    <ul class="pager col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        {% for page in pages %}
+        <li>{{ page|raw }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% else %}
+    <ul class="nav">
+        <li><div class="row">{{ "common.none"|trans }}</div></li>
+    </ul>
+    {% endif %}
+</div>
+
+<div id="delivery_right">
+    <div id="close-btn" class="close-btn-right"><i class="fa fa-close" aria-hidden="true"></i></div>
+    <iframe name="delivery_content" id="delivery_content" src="{{ path("brand") }}"></iframe>
+</div>
+{% endblock %}

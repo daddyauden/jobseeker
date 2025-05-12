@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="EmployerRepository" name="jobseeker\Bundle\UserBundle\Entity\Employer" table="employer">
+        <id name="id" type="bigint" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="uid" type="bigint" column="uid"/>
+        <field name="name" type="string" column="name" length="100"/>
+        <field name="abbr" type="string" column="abbr" length="50"/>
+        <field name="avator" type="string" column="avator" length="255" nullable="true"/>
+        <many-to-one field="location" target-entity="jobseeker\Bundle\AdminBundle\Entity\Area">
+            <join-column name="location" nullable="false" referenced-column-name="id"/>
+        </many-to-one>
+        <field name="address" type="string" column="address" length="255"/>
+        <many-to-one field="type" target-entity="jobseeker\Bundle\UserBundle\Entity\Category">
+            <join-column name="type" nullable="false" referenced-column-name="id"/>
+        </many-to-one>
+        <many-to-one field="scale" target-entity="jobseeker\Bundle\UserBundle\Entity\Category">
+            <join-column name="scale" nullable="false" referenced-column-name="id"/>
+        </many-to-one>
+        <field name="contacter" type="string" column="contacter" length="50"/>
+        <field name="contacteremail" type="string" column="contacteremail" length="50"/>
+        <field name="contactertel" type="string" column="contactertel" length="20"/>
+        <field name="fax" type="string" column="fax" length="20" nullable="true"/>
+        <field name="site" type="string" column="site" length="100" nullable="true"/>
+        <field name="about" type="text" column="about"/>
+        <unique-constraints>
+            <unique-constraint columns="uid" name="employer_uid"/>
+        </unique-constraints>
+        <indexes>
+            <index columns="abbr" name="employer_abbr"/>
+            <index columns="location" name="employer_location"/>
+            <index columns="type" name="employer_type"/>
+            <index columns="scale" name="employer_scale"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

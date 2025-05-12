@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="DiscountRepository" name="jobseeker\Bundle\CareerBundle\Entity\Discount" table="discount">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="rate" type="float" column="rate"/>
+        <field name="dsn" type="string" column="dsn" length="50"/>
+        <field name="queue" type="integer" column="queue" nullable="true"/>
+        <field name="status" type="smallint" column="status"/>
+        <unique-constraints>
+            <unique-constraint columns="dsn" name="discount_dsn"/>
+            <unique-constraint columns="rate" name="discount_rate"/>
+        </unique-constraints>
+        <indexes>
+            <index columns="queue" name="discount_queue"/>
+            <index columns="status" name="discount_status"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

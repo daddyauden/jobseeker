@@ -1,0 +1,270 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Payment Index{% endblock %}
+
+{% block header_css %}
+{% endblock %}
+
+{% block header_js %}
+<script type="text/javascript">
+    function generateCC() {
+        var cc_number = new Array(16);
+        var cc_len = 16;
+        var start = 0;
+        var rand_number = Math.random();
+
+        switch (document.DoDirectPaymentForm.creditCardType.value)
+        {
+            case "Visa":
+                cc_number[start++] = 4;
+                break;
+            case "Discover":
+                cc_number[start++] = 6;
+                cc_number[start++] = 0;
+                cc_number[start++] = 1;
+                cc_number[start++] = 1;
+                break;
+            case "MasterCard":
+                cc_number[start++] = 5;
+                cc_number[start++] = Math.floor(Math.random() * 5) + 1;
+                break;
+            case "Amex":
+                cc_number[start++] = 3;
+                cc_number[start++] = Math.round(Math.random()) ? 7 : 4;
+                cc_len = 15;
+                break;
+        }
+
+        for (var i = start; i < (cc_len - 1); i++) {
+            cc_number[i] = Math.floor(Math.random() * 10);
+        }
+
+        var sum = 0;
+        for (var j = 0; j < (cc_len - 1); j++) {
+            var digit = cc_number[j];
+            if ((j & 1) == (cc_len & 1))
+                digit *= 2;
+            if (digit > 9)
+                digit -= 9;
+            sum += digit;
+        }
+
+        var check_digit = new Array(0, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+        cc_number[cc_len - 1] = check_digit[sum % 10];
+
+        document.DoDirectPaymentForm.creditCardNumber.value = "";
+        for (var k = 0; k < cc_len; k++) {
+            document.DoDirectPaymentForm.creditCardNumber.value += cc_number[k];
+        }
+        return false;
+    }
+</script>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+    generateCC();
+</script>
+{% endblock %}
+
+{% block main_header %}
+<div id="main_header">
+    <div id="main_header_inner">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div>
+                <img alt="jobseeker logo" src="{{ asset("/logo.png") }}" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block main_content_inner %}
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    <center>
+        <form method="POST" action="/order/dopayment" name="DoDirectPaymentForm">
+            <input type=hidden name=paymentType value="{{ type }}" />
+            <table width=600>
+                <tr>
+                    <td align=right>First Name:</td>
+                    <td align=left><input type=text size=30 maxlength=32 name=firstName value=John></td>
+                </tr>
+                <tr>
+                    <td align=right>Last Name:</td>
+                    <td align=left><input type=text size=30 maxlength=32 name=lastName value=Doe></td>
+                </tr>
+                <tr>
+                    <td align=right>Card Type:</td>
+                    <td align=left>
+                        <select name=creditCardType onChange="javascript:generateCC();">
+                            <option value=Visa selected>Visa</option>
+                            <option value=MasterCard>MasterCard</option>
+                            <option value=Discover>Discover</option>
+                            <option value=Amex>American Express</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align=right>Card Number:</td>
+                    <td align=left><input type=text size=19 maxlength=19 name=creditCardNumber></td>
+                </tr>
+                <tr>
+                    <td align=right>Expiration Date:</td>
+                    <td align=left><p>
+                            <select name=expDateMonth>
+                                <option value=1>01</option>
+                                <option value=2>02</option>
+                                <option value=3>03</option>
+                                <option value=4>04</option>
+                                <option value=5>05</option>
+                                <option value=6>06</option>
+                                <option value=7>07</option>
+                                <option value=8>08</option>
+                                <option value=9>09</option>
+                                <option value=10>10</option>
+                                <option value=11>11</option>
+                                <option value=12>12</option>
+                            </select>
+                            <select name=expDateYear>
+                                <option value=2005>2005</option>
+                                <option value=2006>2006</option>
+                                <option value=2007>2007</option>
+                                <option value=2008>2008</option>
+                                <option value=2009>2009</option>
+                                <option value=2010 >2010</option>
+                                <option value=2011 >2011</option>
+                                <option value=2012 selected>2012</option>
+                                <option value=2013>2013</option>
+                                <option value=2014>2014</option>
+                                <option value=2015>2015</option>
+                            </select>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td align=right>Card Verification Number:</td>
+                    <td align=left><input type=text size=3 maxlength=4 name=cvv2Number value=962></td>
+                </tr>
+                <tr>
+                    <td align=right><br><b>Billing Address:</b></td>
+                </tr>
+                <tr>
+                    <td align=right>Address 1:</td>
+                    <td align=left><input type=text size=25 maxlength=100 name=address1 value="1 Main St"></td>
+                </tr>
+                <tr>
+                    <td align=right>Address 2:</td>
+                    <td align=left><input type=text  size=25 maxlength=100 name=address2>(optional)</td>
+                </tr>
+                <tr>
+                    <td align=right>City:</td>
+                    <td align=left><input type=text size=25 maxlength=40 name=city value="San Jose"></td>
+                </tr>
+                <tr>
+                    <td align=right>State:</td>
+                    <td align=left>
+                        <select id=state name=state>
+                            <option value=></option>
+                            <option value=AK>{{ "AK"|trans }}</option>
+                            <option value=AL>{{ "AL"|trans }}</option>
+                            <option value=AR>{{ "AR"|trans }}</option>
+                            <option value=AZ>{{ "AZ"|trans }}</option>
+                            <option value=CA selected>{{ "CA"|trans }}</option>
+                            <option value=CO>{{ "CO"|trans }}</option>
+                            <option value=CT>{{ "CT"|trans }}</option>
+                            <option value=DC>{{ "DC"|trans }}</option>
+                            <option value=DE>{{ "DE"|trans }}</option>
+                            <option value=FL>{{ "FL"|trans }}</option>
+                            <option value=GA>{{ "GA"|trans }}</option>
+                            <option value=HI>{{ "HI"|trans }}</option>
+                            <option value=IA>{{ "IA"|trans }}</option>
+                            <option value=ID>{{ "ID"|trans }}</option>
+                            <option value=IL>{{ "IL"|trans }}</option>
+                            <option value=IN>{{ "IN"|trans }}</option>
+                            <option value=KS>{{ "KS"|trans }}</option>
+                            <option value=KY>{{ "KY"|trans }}</option>
+                            <option value=LA>{{ "LA"|trans }}</option>
+                            <option value=MA>{{ "MA"|trans }}</option>
+                            <option value=MD>{{ "MD"|trans }}</option>
+                            <option value=ME>{{ "ME"|trans }}</option>
+                            <option value=MI>{{ "MI"|trans }}</option>
+                            <option value=MN>{{ "MN"|trans }}</option>
+                            <option value=MO>{{ "MO"|trans }}</option>
+                            <option value=MS>{{ "MS"|trans }}</option>
+                            <option value=MT>{{ "MT"|trans }}</option>
+                            <option value=NC>{{ "NC"|trans }}</option>
+                            <option value=ND>{{ "ND"|trans }}</option>
+                            <option value=NE>{{ "NE"|trans }}</option>
+                            <option value=NH>{{ "NH"|trans }}</option>
+                            <option value=NJ>{{ "NJ"|trans }}</option>
+                            <option value=NM>{{ "NM"|trans }}</option>
+                            <option value=NV>{{ "NV"|trans }}</option>
+                            <option value=NY>{{ "NY"|trans }}</option>
+                            <option value=OH>{{ "OH"|trans }}</option>
+                            <option value=OK>{{ "OK"|trans }}</option>
+                            <option value=OR>{{ "OR"|trans }}</option>
+                            <option value=PA>{{ "PA"|trans }}</option>
+                            <option value=RI>{{ "RI"|trans }}</option>
+                            <option value=SC>{{ "SC"|trans }}</option>
+                            <option value=SD>{{ "SD"|trans }}</option>
+                            <option value=TN>{{ "TN"|trans }}</option>
+                            <option value=TX>{{ "TX"|trans }}</option>
+                            <option value=UT>{{ "UT"|trans }}</option>
+                            <option value=VA>{{ "VA"|trans }}</option>
+                            <option value=VT>{{ "VT"|trans }}</option>
+                            <option value=WA>{{ "WA"|trans }}</option>
+                            <option value=WI>{{ "WI"|trans }}</option>
+                            <option value=WV>{{ "WV"|trans }}</option>
+                            <option value=WY>{{ "WY"|trans }}</option>
+                            <option value=AA>{{ "AA"|trans }}</option>
+                            <option value=AE>{{ "AE"|trans }}</option>
+                            <option value=AP>{{ "AP"|trans }}</option>
+                            <option value=AS>{{ "AS"|trans }}</option>
+                            <option value=FM>{{ "FM"|trans }}</option>
+                            <option value=GU>{{ "GU"|trans }}</option>
+                            <option value=MH>{{ "MH"|trans }}</option>
+                            <option value=MP>{{ "MP"|trans }}</option>
+                            <option value=PR>{{ "PR"|trans }}</option>
+                            <option value=PW>{{ "PW"|trans }}</option>
+                            <option value=VI>{{ "VI"|trans }}</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align=right>ZIP Code:</td>
+                    <td align=left><input type=text size=10 maxlength=10 name=zip value=95131>(5 or 9 digits)</td>
+                </tr>
+                <tr>
+                    <td align=right>Country:</td>
+                    <td align=left>United States</td>
+                </tr>
+                <tr>
+                    <td align=right><br>Amount:</td>
+                    <td align=left><br><input type=text size=4 maxlength=7 name=amount value=1.00> USD</td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td align=left><b>(DoDirectPayment only supports USD at this time)</b></td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td><input type=Submit value=Submit></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+
+</div>
+{% endblock %}
+
+{% block main_footer %}
+<div id="main_footer">
+    <div id="main_footer_inner">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div>
+                <img alt="jobseeker logo" src="{{ asset("/logo.png") }}" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

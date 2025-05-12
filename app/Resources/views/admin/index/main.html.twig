@@ -1,0 +1,172 @@
+{% extends "admin/base.html.twig" %}
+
+{% block header_js %}
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    document.body.style.height = $(document).height() + "px";
+    $(window).resize(function(){
+        document.body.style.height = ($(document).height()) + "px";
+    });
+});
+</script>
+{% endblock %}
+
+{% block main_header %}
+<div id="main_header">
+    <div id="main_header_inner">
+        <nav class="navbar navbar-default navbar-fixed-top col-xs-12 col-sm-12 col-md-12 col-lg-12" role="navigation">
+            <div class="navbar-header col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">
+                    <a href="{{ path("admin_index") }}"><img alt="jobseeker logo" src="{{ asset("/assets/admin/images/logo.png") }}" /></a>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav" id="nav-level-1">
+                    <li><a id="nav-level-1-admin">系统</a></li>
+                    <li><a id="nav-level-1-career">招聘</a></li>
+                    <li><a id="nav-level-1-plugin">插件</a></li>
+                    <li><a id="nav-level-1-tool">工具</a></li>
+                    <li><a id="nav-level-1-user">用户</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">用户中心 <b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a>{{ admin.getEmail() }}</a></li>
+                            <li class="divider"></li>
+                            <li><a target="_blank" href="{{ path("index") }}">首页</a></li>
+                            <li><a href="{{ path("admin_logout") }}">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+{% endblock %}
+
+{% block main_content_inner %}
+<div id="content_left" class="col-lg-1 col-md-2 col-sm-3 col-xs-4 navbar-fixed-top">
+    <ul class="list-group" id="nav-level-2-admin">
+        <li><a class="list-group-item" href="/admin/admin-list" target="container">管理员列表</a></li>
+        <li><a class="list-group-item" href="/admin/admin-add" target="container">添加管理员</a></li>
+        <li><a class="list-group-item" href="/admin/area-list" target="container">地区列表</a></li>
+        <li><a class="list-group-item" href="/admin/area-add" target="container">添加地区</a></li>
+        <li><a class="list-group-item" href="/admin/currency-list" target="container">货币列表</a></li>
+        <li><a class="list-group-item" href="/admin/currency-add" target="container">添加货币</a></li>
+        <li><a class="list-group-item" href="/admin/locale-list" target="container">语言列表</a></li>
+        <li><a class="list-group-item" href="/admin/locale-add" target="container">添加语言</a></li>
+        <li><a class="list-group-item" href="/admin/privilege-list" target="container">权限列表</a></li>
+        <li><a class="list-group-item" href="/admin/privilege-add" target="container">添加权限</a></li>
+        <li><a class="list-group-item" href="/admin/system-list" target="container">参数列表</a></li>
+        <li><a class="list-group-item" href="/admin/system-add" target="container">添加参数</a></li>
+    </ul>
+    <ul class="list-group" id="nav-level-2-career">
+        <li><a class="list-group-item" href="/admin/discount-list" target="container">折扣列表</a></li>
+        <li><a class="list-group-item" href="/admin/discount-add" target="container">添加折扣</a></li>
+        <li><a class="list-group-item" href="/admin/industry-list" target="container">行业列表</a></li>
+        <li><a class="list-group-item" href="/admin/industry-add" target="container">添加行业</a></li>
+        <li><a class="list-group-item" href="/admin/paymenttype-list" target="container">支付方式列表</a></li>
+        <li><a class="list-group-item" href="/admin/paymenttype-add" target="container">添加支付方式</a></li>
+        <li><a class="list-group-item" href="/admin/product-list" target="container">产品列表</a></li>
+        <li><a class="list-group-item" href="/admin/product-add" target="container">添加产品</a></li>
+        <li><a class="list-group-item" href="/admin/type-list" target="container">岗位类别列表</a></li>
+        <li><a class="list-group-item" href="/admin/type-add" target="container">添加岗位类别</a></li>
+    </ul>
+    <ul class="list-group" id="nav-level-2-plugin">
+        <li><a class="list-group-item" href="/admin/plugin-installed" target="container">已安装插件</a></li>
+        <li><a class="list-group-item" href="/admin/plugin-uninstalled" target="container">未安装插件</a></li>
+    </ul>
+    <ul class="list-group" id="nav-level-2-tool">
+        <li><a class="list-group-item" href="/admin/add-user" target="container">新建企业用户</a></li>
+    </ul>
+    <ul class="list-group" id="nav-level-2-user">
+        <li><a class="list-group-item" href="/admin/diploma-list" target="container">学历列表</a></li>
+        <li><a class="list-group-item" href="/admin/diploma-add" target="container">添加学历</a></li>
+        <li><a class="list-group-item" href="/admin/employee-search" target="container">查找普通用户</a></li>
+        <li><a class="list-group-item" href="/admin/employee-add" target="container">添加普通用户</a></li>
+        <li><a class="list-group-item" href="/admin/employee-list" target="container">普通用户列表</a></li>
+        <li><a class="list-group-item" href="/admin/employer-search" target="container">查找企业用户</a></li>
+        <li><a class="list-group-item" href="/admin/employer-add" target="container">添加企业用户</a></li>
+        <li><a class="list-group-item" href="/admin/employer-list" target="container">企业用户列表</a></li>
+        <li><a class="list-group-item" href="/admin/employertype-list" target="container">企业类别</a></li>
+        <li><a class="list-group-item" href="/admin/employertype-add" target="container">添加企业类别</a></li>
+        <li><a class="list-group-item" href="/admin/role-list" target="container">角色列表</a></li>
+        <li><a class="list-group-item" href="/admin/role-add" target="container">添加角色</a></li>
+        <li><a class="list-group-item" href="/admin/employerscale-list" target="container">企业规模列表</a></li>
+        <li><a class="list-group-item" href="/admin/employerscale-add" target="container">添加企业规模</a></li>
+    </ul>
+</div>
+<div id="content_right" class="col-lg-11 col-lg-offset-1 col-md-10 col-md-offset-2 col-sm-9 col-sm-offset-3 col-xs-8 col-xs-offset-4">
+    <iframe name="container" id="container" src="/admin/locale-list"></iframe>
+</div>
+{% endblock %}
+
+{% block main_footer %}
+<div id="main_footer">
+    <div id="main_footer_inner">
+        <nav class="navbar navbar-default navbar-fixed-bottom col-xs-12 col-sm-12 col-md-12 col-lg-12" role="navigation">
+            <div class="btn-toolbar">
+                {% if locales is defined %}
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-adjust"></span> {{ "common.language"|trans }}
+                    </button>
+                    <ul class="dropdown-menu horizontal" role="menu" id="change-locale">
+                        {% if false == locales.single %}
+                        {% for data in locales.data %}
+                        <li>
+                            <ul>
+                                {% for locale in data %}
+                                <li><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        {% endfor %}
+                        {% else %}
+                        {% for locale in locales.data %}
+                        <li><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+                        {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div>
+                {% endif %}
+                {% if areas is defined %}
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-globe"></span> {{ "common.country"|trans }}
+                    </button>
+                    <ul class="dropdown-menu horizontal" role="menu">
+                        {% for area in areas %}
+                        {% if area.child is defined %}
+                        <li>
+                            <h5>{{ area.code|upper|trans }}</h5>
+                            <ul>
+                                {% for child in area.child %}
+                                <li><a href="{{ child.domain }}" target="_blank"><i class="glyphicon area_flag area_flag_{{ child.code|upper }}"></i>{{ child.code|upper|trans }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+$("#content_left").css("padding","50px 0px");
+$("#content_right").css("padding","50px 0px");
+</script>
+{% endblock %}

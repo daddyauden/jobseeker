@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    <route id="auth" path="/auth">
+        <default key="_controller">SsoBundle:OAuth:auth</default>
+    </route>
+    <route id="token" path="/token" methods="post">
+        <default key="_controller">SsoBundle:OAuth:token</default>
+    </route>
+    
+    <route id="api_user_get" path="/api/user/get">
+        <default key="_controller">SsoBundle:User:get</default>
+    </route>
+    <route id="api_user_register" path="/api/user/register">
+        <default key="_controller">SsoBundle:User:register</default>
+    </route>
+    <route id="api_user_active" path="/api/user/active">
+        <default key="_controller">SsoBundle:User:active</default>
+    </route>    
+</routes>

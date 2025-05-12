@@ -1,0 +1,185 @@
+{% extends "dashboard.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block header_css %}
+<style type="text/css">
+html {
+    height: auto;
+}
+</style>
+{% endblock%}
+
+{% block container %}
+{% if reserve is defined %}
+<div id="reserve_dialog">
+    <div id="close-btn" class="close-btn-right"><i class="fa fa-close" aria-hidden="true"></i></div>
+    <div id="reserve_dialog_inner" class="col-10 col-offset-1">
+        <div class="col-4 row">
+            <input type="text" readonly placeholder="{{ "job.reserve.enter"|trans }}" class="form-control input-sm input-date delivery_dating" />
+            <input type="text" readonly placeholder="{{ "job.reserve.enter"|trans }}" class="form-control input-sm input-date delivery_dating" />
+            <input type="text" readonly placeholder="{{ "job.reserve.enter"|trans }}" class="form-control input-sm input-date delivery_dating" />
+            <input type="text" readonly placeholder="{{ "job.reserve.enter"|trans }}" class="form-control input-sm input-date delivery_dating" />
+            <input type="text" readonly placeholder="{{ "job.reserve.enter"|trans }}" class="form-control input-sm input-date delivery_dating" />
+        </div>
+        <div class="col-8 row">
+            <div>{{ "job.reserve.reserved"|trans }} ( <span class="required">*</span> )</div>
+            <input type="text" id="dating" name="dating" class="form-control input-sm" />
+            <div>{{ "job.reserve.note"|trans }}</div>
+            <textarea id="dmessage" name="dmessage" class="form-control input-sm"></textarea>
+            <div class="col-12">
+                <div class="col-6">
+                    <a class="btn btn-primary btn-md col-12" id="reserve" onclick='reserve("{{ reserve }}","{{ path('job_reserve') }}",{"reserving":"{{ "job.reserve.reserving"|trans }}","less":"{{ "job.reserve.less"|trans }}","more":"{{ "job.reserve.more"|trans }}","success":"{{ "job.reserve.success"|trans }}","fail":"{{ "job.reserve.fail"|trans }}","repeat":"{{ "job.reserve.repeat"|trans }}","nologin":"{{ "job.reserve.nologin"|trans }}","invalid":"{{ "job.reserve.invalid"|trans }}"})'>{{ "job.reserve"|trans }}</a>
+                </div>
+                <div class="col-6" id="reserve_status"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% elseif reserved is defined %}
+<div id="reserve_dialog">
+    <div id="close-btn" class="close-btn-right"><i class="fa fa-close" aria-hidden="true"></i></div>
+    <div id="reserve_dialog_inner" class="col-10 col-offset-1">
+        {% if reserved.schedule is defined %}
+        <p>{{ "table.delivery.schedule"|trans }}</p>
+        <p><span class="label label-danger">{{ reserved.schedule|date("datetime_format"|system) }}</span></p>
+        {% endif %}
+        {% if reserved.reserve is defined %}
+        <p>{{ "table.delivery.reserve"|trans }}</p>
+        <p>
+            {% for reserveDate in reserved.reserve %}
+            <span class="label label-default">{{ reserveDate|date("datetime_format"|system) }}</span>
+            {% endfor %}
+        </p>
+        {% endif %}
+        {% if reserved.message is defined %}
+        <p>{{ "table.delivery.message"|trans }}</p>
+        <p>{{ reserved.message|raw }}</p>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+
+<div id="eme_left" class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+    {% if eme is defined %}
+    {% if reserve is defined %}
+    <button id="toggle-dialog" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-bullhorn"></span> {{ "job.reserve"|trans }}</button>
+    {% elseif reserved is defined %}
+    <button id="toggle-dialog" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-info-sign"></span> {{ "job.reserve.info"|trans }}</button>
+    {% endif %}
+    <div class="avator avator_2x">
+        <img src="{{ eme.avator|avator("2x") }}" />
+    </div>
+    <h3 class="eme_name text-center">{{ eme.name }}</h3>
+    <p class="letter_1"><strong><span class="glyphicon glyphicon-earphone"></span></strong> {{ eme.mobile }}</p>
+    <p class="letter_1"><strong><span class="glyphicon glyphicon-envelope"></span></strong> {{ eme.email }}</p>
+    <h6 class="title eme_ps">PERSONAL</h6>
+    <div class="meta">
+        <div class="col-5">{{ "table.employee.gender"|trans }}</div>
+        <div class="col-2">:</div>
+        <div class="col-5">{{ ("table.employee.gender." ~ eme.gender)|trans }}</div>
+    </div>
+    <div class="meta">
+        <div class="col-5">{{ "table.employee.birthday"|trans }}</div>
+        <div class="col-2">:</div>
+        <div class="col-5">{{ eme.birthday|date("date_format"|system) }}</div>
+    </div>
+    <div class="meta">
+        <div class="col-5">{{ "table.employee.marital"|trans }}</div>
+        <div class="col-2">:</div>
+        <div class="col-5">{{ ("table.employee.marital." ~ eme.marital)|trans }}</div>
+    </div>
+    <div class="meta">
+        <div class="col-5">{{ "table.employee.nationality"|trans }}</div>
+        <div class="col-2">:</div>
+        <div class="col-5">{{ eme.nationality }}</div>
+    </div>
+    <div class="meta">
+        <div class="col-5">{{ "table.employee.hometown"|trans }}</div>
+        <div class="col-2">:</div>
+        <div class="col-5">{{ eme.hometown }}</div>
+    </div>
+    <div class="meta">
+        <div class="col-5">{{ "table.employee.location"|trans }}</div>
+        <div class="col-2">:</div>
+        <div class="col-5">{{ eme.location }}</div>
+    </div>
+    <h6 class="title">INTERESTS</h6>
+    <div>
+        <div class="col-6 meta-icon letter_1"><span class="glyphicon glyphicon-music"></span> Music</div>
+        <div class="col-6 meta-icon letter_1"><span class="glyphicon glyphicon-film"></span> Photograhy</div>
+        <div class="col-6 meta-icon letter_1"><span class="glyphicon glyphicon-cutlery"></span> Cooking</div>
+        <div class="col-6 meta-icon letter_1"><span class="glyphicon glyphicon-plane"></span> Traving</div>
+    </div>
+    {% endif %}
+</div>
+
+<div id="eme_right" class="col-lg-7 col-lg-offset-5 col-md-7 col-md-offset-5 col-sm-7 col-sm-offset-5 col-xs-7 col-xs-offset-5">
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get("danger") %}
+        {{ danger|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+    {% if app.session.flashbag.has("info") %}
+    <div class="alert alert-info">
+        {% for info in app.session.flashbag.get("info") %}
+        {{ info|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+    <h5 class="edu_title"><span class="glyphicon glyphicon-stats"></span>{{ "table.education"|trans }}</h5>
+    {% if edus is defined and edus|length > 0 %}
+    {% for edu in edus %}
+    <div class="edu">
+        <div class="col-5">
+            <h6>{{ edu.graduation|date("date_format"|system) }}</h6>
+        </div>
+        <div class="col-7">
+            <h6 class="edu_uni">{{ edu.university }}</h6>
+            <p>{{ edu.major }}  {{ edu.diploma.csn|trans }}</p>
+            <p>{{ edu.course }}</p>
+        </div>
+        <div class="col-12 edu_desc">{{ edu.description|raw }}</div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="row">{{ "common.none"|trans }}</div>
+    {% endif %}
+
+    <h5 class="exp_title"><span class="glyphicon glyphicon-align-left"></span>{{ "table.experience"|trans }}</h5>
+    {% if exps is defined and exps|length > 0 %}
+    {% for exp in exps %}
+    <div class="exp">
+        <div class="col-5">
+            <h6>{{ exp.orientation|date("date_format"|system) }} - {{ exp.dimission|date("date_format"|system) }}</h6>
+        </div>
+        <div class="col-7">
+            <h6 class="exp_com">{{ exp.company }}</h6>
+            <p>{{ exp.title }} <span class=""></span> {{ exp.location }}</p>
+        </div>
+        <div class="col-12 exp_desc">{{ exp.description|raw }}</div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="row">{{ "common.none"|trans }}</div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block footer_js %}
+
+<script src="{{ asset("assets/js/ckeditor/ckeditor.js") }}"></script>
+<script src="{{ asset("assets/js/ckeditor/adapters/jquery.js") }}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+if($("#eme_left").height() > $("#eme_right").height()) {
+    $("#eme_right").height($("#eme_left").height());
+}
+$('#dmessage').ckeditor();
+});
+</script>
+{% endblock %}

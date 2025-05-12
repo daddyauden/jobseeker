@@ -1,0 +1,120 @@
+{% extends "user/user/sign.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block country %}
+{% if areas is defined %}
+<div id="country">
+    <a id="change_country">{{ "country"|system|upper|trans }}</a>
+    <ul id="other_country">
+        {% for area in areas %}
+        {% if area.child is defined %}
+        <li>
+            <h5>{{ area.code|upper|trans }}</h5>
+            <ul>
+                {% for child in area.child %}
+                <li><a href="{{ child.domain }}" target="_blank"><i class="glyphicon area_flag area_flag_{{ child.code|upper }}"></i>{{ child.code|upper|trans }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>    
+</div>
+{% endif %}
+{% endblock %}
+
+{% block locale %}
+{% if locales is defined %}
+<div id="locale">
+    <a id="change_locale">{{ locales.data[0]|trans }}</a>
+    <ul id="other_locale">
+        {% if false == locales.single %}
+        {% for data in locales.data %}
+        <li class="more">
+            <ul>
+                {% for locale in data %}
+                <li><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+        {% else %}
+        {% for locale in locales.data %}
+        <li class="single"><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+        {% endfor %}
+        {% endif %}
+    </ul>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block jobseeker_sign_choose %}
+<div id="jobseeker_sign_choose">
+    <a class="btn btn-warning btn-sm" id="signup" href="{{ path("user_signup") }}">{{ "fe.signup"|trans }}</a>
+</div>
+{% endblock %}
+
+{% block jobseeker_brand %}
+<div id="brand">
+    <div id="brand_logo"><a href="{{ path("index") }}"><img src="{{ asset("/logo.png") }}" alt="{{ "fe.home"|trans }}" /></a></div>
+    {% if brand_intro is defined %}
+    <div id="brand_intro">
+        <p></p>
+        <p></p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block jobseeker_sign %}
+<div id="signin_jobseeker">
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+    {% if app.session.flashbag.has("info") %}
+    <div class="alert alert-info">
+        {% for info in app.session.flashbag.get('info') %}
+        {{ info|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+
+    {% if formSignin is defined %}
+    <div id="jobseeker_signin">
+        {{ form_start(formSignin) }}
+        {{ form_widget(formSignin.email) }}
+        {{ form_widget(formSignin.password) }}
+        {{ form_widget(formSignin.signin) }}
+        {{ form_end(formSignin) }}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block plugin_signin %}
+{% if plugins is defined and plugins|length > 0 %}
+<div id="plugin_signin">
+    <ul class="list-inline">
+        {% for plugin in plugins %}
+        <li class="signin_{{ plugin[0] }}">
+            <span class="signin_logo"></span>
+            <a href="{{ plugin[1] }}">{{ ("plugin.signin." ~ plugin[0])|trans }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block footer_js %}
+{% if brand_intro is defined %}
+<script type="text/javascript">brand_queue({{ brand_intro|raw }});</script>
+{% endif %}
+{% endblock %}

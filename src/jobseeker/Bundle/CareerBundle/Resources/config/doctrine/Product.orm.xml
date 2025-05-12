@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="ProductRepository"  name="jobseeker\Bundle\CareerBundle\Entity\Product" table="product">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="duration" type="integer" column="duration"/>
+        <field name="price" type="float" column="price"/>
+        <field name="queue" type="smallint" column="queue" nullable="true"/>
+        <field name="status" type="smallint" column="status"/>
+        <indexes>
+            <index columns="duration" name="product_duration"/>
+            <index columns="price" name="product_price"/>
+            <index columns="queue" name="product_queue"/>
+            <index columns="status" name="product_status"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

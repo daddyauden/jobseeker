@@ -1,0 +1,160 @@
+{% extends "base.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block header_inner %}
+<div id="toolbar">
+    <a class="btn btn-info btn-sm post-job" href="{{ path("job_post") }}">{{ "fe.job_post"|trans }}</a>
+    {% if areas is defined %}
+    <div id="country">
+        <a id="change_country">{{ "country"|system|upper|trans }}</a>
+        <ul id="other_country">
+            {% for area in areas %}
+            {% if area.child is defined %}
+            <li>
+                <h5>{{ area.code|upper|trans }}</h5>
+                <ul>
+                    {% for child in area.child %}
+                    <li><a href="{{ child.domain }}" target="_blank"><i class="glyphicon area_flag area_flag_{{ child.code|upper }}"></i>{{ child.code|upper|trans }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>    
+    </div>
+    {% endif %}
+
+    {% if locales is defined %}
+    <div id="locale">
+        <a id="change_locale" title="{{ (locales.data[0] ~ ".title")|trans }}">{{ locales.data[0]|trans }}</a>
+        <ul id="other_locale">
+            {% if false == locales.single %}
+            {% for data in locales.data %}
+            <li class="more">
+                <ul>
+                    {% for locale in data %}
+                    <li><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+            {% else %}
+            {% for locale in locales.data %}
+            <li class="single"><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+            {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if eme_or_emr is defined %}
+    <div class="avator avator_1x"> 
+        <a class="home" href="{{ path("dashboard") }}"><img src="{{ eme_or_emr.avator|avator }}" /></a>
+    </div>
+    {% else %}   
+    <div class="avator avator_1x">
+        {% if isLogin == true %}
+        <a class="home" href="{{ path("dashboard") }}"><img src="{{ ""|avator }}" /></a>
+        {% else %}
+        <a class="home" href="{{ path("user_signin") }}"><img src="{{ ""|avator }}" /></a>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block container_inner %}
+<div id="message_alert" class="alert alert-info"></div>
+{% if app.session.flashbag.has("danger") %}
+<div class="alert alert-danger">
+    {% for danger in app.session.flashbag.get('danger') %}
+    {{ danger|raw }}
+    {% endfor %}
+    <span class="close glyphicon glyphicon-remove"></span>
+</div>
+{% endif %}
+{% if app.session.flashbag.has("info") %}
+<div class="alert alert-info">
+    {% for info in app.session.flashbag.get('info') %}
+    {{ info|raw }}
+    {% endfor %}
+    <span class="close glyphicon glyphicon-remove"></span>
+</div>
+{% endif %}
+{% if app.session.flashbag.has("success") %}
+<div class="alert alert-success">
+    {% for success in app.session.flashbag.get('success') %}
+    {{ success|raw }}
+    {% endfor %}
+    <span class="close glyphicon glyphicon-remove"></span>
+</div>
+{% endif %}
+<div id="brand">
+    <div id="brand_logo"><a href="{{ path("index") }}"><img src="{{ asset("/logo.png") }}" alt="{{ "fe.home"|trans }}" /></a></div>
+    {% if brand_intro is defined %}
+    <div id="brand_intro">
+        <p></p>
+        <p></p>
+    </div>
+    {% endif %}
+</div>
+
+<div id="searchbox">
+    <div id="searchpanel">
+        <div id="searchbar">
+            {{ form_start(form) }}
+            {% if industry is defined and industry|length > 0 %}
+            <div class="select select-industry" id="job_industry_level_1">{{ form_widget(form.industry) }}<div id="job_industry_level_2"></div></div>
+            {% endif %}
+            {% if area is defined and area|length > 0 %}
+            <div class="select select-area" id="job_area_level_1">{{ form_widget(form.area) }}<div id="job_area_level_2"></div></div>
+            {% endif %}
+            <label class="select select-type">{{ form_widget(form.type) }}</label>
+            <label class="select select-salary">{{ form_widget(form.salary) }}</label>
+            <label class="select select-begintime">{{ form_widget(form.begintime) }}</label>
+            {{ form_widget(form.search) }}
+            <div class="clearfix"></div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+{% if brand_intro is defined %}
+brand_queue({{ brand_intro|raw }});
+{% endif %}
+
+{% if typeDefault is defined %}
+initJobType("{{typeDefault|raw}}");
+{% endif %}
+
+{% if industry is defined and industry|length > 0 %}
+var industry = {{ industry|json_encode|raw }};
+{% if industryDefault is defined %}
+initJobIndustry(industry, "{{ "job.search.industry"|trans }}", true, {{ industryDefault|json_encode|raw }});
+{% else %}
+initJobIndustry(industry, "{{ "job.search.industry"|trans }}");
+{% endif %}
+{% endif %}
+
+{% if area is defined and area|length > 0 %}
+var area = {{ area|json_encode|raw }};
+{% if areaDefault is defined %}
+initJobArea(area, "{{ "job.search.area"|trans }}", true, {{ areaDefault|json_encode|raw }});
+{% else %}
+initJobArea(area, "{{ "job.search.area"|trans }}");
+{% endif %}
+{% endif %}
+
+{% if salaryDefault is defined %}
+initJobSalary("{{salaryDefault|raw}}");
+{% endif %}
+
+{% if begintimeDefault is defined %}
+initJobBegintime("{{begintimeDefault|raw}}");
+{% endif %}
+</script>
+{% endblock %}

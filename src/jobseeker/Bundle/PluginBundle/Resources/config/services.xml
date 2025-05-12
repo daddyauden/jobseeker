@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="UserPluginManager" class="jobseeker\Bundle\PluginBundle\DependencyInjection\UserPluginManager">
+            <argument type="service" id="service_container"/>
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <argument>jobseeker\Bundle\PluginBundle\Entity\Plugin</argument>
+            <call method="registerPlugin"/>
+        </service>
+        <service id="GooglePlugin" class="jobseeker\Bundle\PluginBundle\Library\GooglePlugin">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+        <service id="WeiboPlugin" class="jobseeker\Bundle\PluginBundle\Library\WeiboPlugin">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+        <service id="QqPlugin" class="jobseeker\Bundle\PluginBundle\Library\QqPlugin">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+        <service id="PaypalPlugin" class="jobseeker\Bundle\PluginBundle\Library\PaypalPlugin">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+        <service id="StripePlugin" class="jobseeker\Bundle\PluginBundle\Library\StripePlugin">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+        <service id="MicrosoftPlugin" class="jobseeker\Bundle\PluginBundle\Library\MicrosoftPlugin">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+        <service id="JobSeekerPlugin" class="jobseeker\Bundle\PluginBundle\Library\JobSeekerPlugin">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+        <service id="WeixinOpenPlugin" class="jobseeker\Bundle\PluginBundle\Library\WeixinOpenPlugin">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+        <service id="FacebookPlugin" class="jobseeker\Bundle\PluginBundle\Library\FacebookPlugin">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>
+            </call>
+        </service>
+    </services>
+</container>

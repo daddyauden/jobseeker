@@ -1,0 +1,84 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main_edit">
+    <label id="message_alert"></label>
+    <table class="table table-hover role_table">
+        <caption class="text-left caption">
+            <div class="btn-group">
+                <div class="btn btn-default">{{ "table.role.locale"|trans }}</div>
+                <div class="btn btn-info">{{ "table.role.local.comment"|trans }}</div>
+            </div>
+            <div class="btn-group">
+                <div class="btn btn-default">{{ "table.role.name"|trans }}</div>
+                <div class="btn btn-info">{{ "table.role.name.comment"|trans }}</div>
+            </div>
+        </caption>
+        <thead>
+            <tr>
+                <th class="role_name">{{ "table.role.locale"|trans }}</th>
+                <th class="role_name">{{ "table.role.name"|trans }}</th>
+                <th class="role_operation">{{ "be.operate"|trans }}</th>
+            </tr>
+            <tr>
+                <th class="role_name">{{ "table.role.locale"|trans }}</th>
+                <th class="role_name">{{ "table.role.name"|trans }}</th>
+                <th class="role_operation">{{ "be.operate"|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for role in roles %}
+            <tr>
+                {{ form_widget(role.id) }}
+                <td class="role_name">{{ form_label(role.name) }}</td>
+                <td class="role_name">{{ form_widget(role.name) }}</td>
+                <td class="role_operation">
+                    <button name="edit" class="btn btn-info btn-sm">{{ "be.edit"|trans }}</button>
+                    <button name="privilege_manage" class="btn btn-warning btn-sm">{{ "be.edit"|trans }}{{ "table.privilege"|trans }}</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<ul class="pager">
+    {% for url in urls %}
+    <li>{{ url|raw }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+$("button[name=edit]").click(function() {
+    var data = {};
+    var inputs = $(this).parent().parent().find("[name^=form]");
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        var id = $(inputs[i]).attr("id");
+        data[id.substring(id.lastIndexOf("_") + 1)] = $(inputs[i]).val();
+    }
+    $.ajax({
+        type: "POST",
+        url: "{{ path("role_save") }}",
+        data: $.toJSON(data)
+    }).done(function(message) {
+        if (message == "same") {
+            $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.nochange"|trans }}").delay(800).slideUp(800);
+        } else if (message == "success") {
+            window.location.reload();
+        }
+        else if (message == "error") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.update.fail"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.update.invalid"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+$("button[name=privilege_manage]").click(function() {
+    var pp = $(this).parent().parent();
+    var id = pp.find("[name='form[id]']").val();
+    window.location.href = "/admin/role-show-" + id;
+});
+</script>
+{% endblock %}

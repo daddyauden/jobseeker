@@ -1,0 +1,98 @@
+{% extends "base.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block footer_js %}
+{% if brand_intro is defined %}
+<script type="text/javascript">brand_queue({{ brand_intro|raw }});</script>
+{% endif %}
+{% endblock %}
+
+{% block header_inner %}
+<div id="toolbar">
+    <a class="btn btn-info btn-sm post-job" href="{{ path("job_post") }}">{{ "fe.job_post"|trans }}</a>
+    {% if areas is defined %}
+    <div id="country">
+        <a id="change_country">{{ "country"|system|upper|trans }}</a>
+        <ul id="other_country">
+            {% for area in areas %}
+                {% if area.child is defined %}
+                    <li>
+                        <h5>{{ area.code|upper|trans }}</h5>
+                        <ul>
+                            {% for child in area.child %}
+                                <li><a href="{{ child.domain }}" target="_blank"><i class="glyphicon area_flag area_flag_{{ child.code|upper }}"></i>{{ child.code|upper|trans }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if locales is defined %}
+    <div id="locale">
+        <a id="change_locale" title="{{ (locales.data[0] ~ ".title")|trans }}">{{ locales.data[0]|trans }}</a>
+        <ul id="other_locale">
+            {% if false == locales.single %}
+                {% for data in locales.data %}
+                    <li class="more">
+                        <ul>
+                            {% for locale in data %}
+                                <li><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            {% else %}
+                {% for locale in locales.data %}
+                    <li class="single"><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}
+
+{% block container_inner %}
+<div id="brand">
+    <div id="brand_logo"><a href="{{ path("index") }}"><img src="{{ asset("/logo.png") }}" title="jobseeker logo" /></a></div>
+    {% if brand_intro is defined %}
+    <div id="brand_intro">
+        <p></p>
+        <p></p>
+    </div>
+    {% endif %}
+</div>
+<div id="signin_jobseeker">
+    {% if app.session.flashbag.has("danger") %}
+    <div class="sign_status">
+        <span class="glyphicon glyphicon-remove status"></span>
+        {% for danger in app.session.flashbag.get('danger') %}
+        <p>{{ danger|raw }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if app.session.flashbag.has("success") %}
+    <div class="sign_status">
+        <span class="glyphicon glyphicon-ok status"></span>
+        {% for success in app.session.flashbag.get('success') %}
+        <p>{{ success|raw }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if app.session.flashbag.has("info") %}
+    <div class="alert alert-info">
+        {% for info in app.session.flashbag.get('info') %}
+        {{ info|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

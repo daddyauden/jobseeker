@@ -1,0 +1,20 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main">
+    <div class="text-left caption">
+        <div class="btn-group">
+            <div class="btn btn-default">{{ "table.discount.rate"|trans }}</div>
+            <div class="btn btn-info">{{ "table.discount.rate.comment"|trans }}</div>
+        </div>
+    </div>
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {{ form(form) }}
+</div>
+{% endblock %}

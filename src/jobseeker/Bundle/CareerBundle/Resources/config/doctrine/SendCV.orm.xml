@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="SendCVRepository" name="jobseeker\Bundle\CareerBundle\Entity\SendCV" table="sendcv">
+        <id name="id" type="bigint" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="sessionid" type="string" column="sessionid" length="100" nullable="true"/>
+        <many-to-one field="jid" type="bigint" target-entity="jobseeker\Bundle\CareerBundle\Entity\Job">
+            <join-column name="jid" nullable="false" referenced-column-name="id"/>
+        </many-to-one>
+        <many-to-one field="emr" type="bigint" target-entity="jobseeker\Bundle\UserBundle\Entity\Employer">
+            <join-column name="emr" nullable="false" referenced-column-name="id"/>
+        </many-to-one>
+        <field name="emailfrom" type="string" column="emailfrom" length="50" nullable="true"/>
+        <field name="emailto" type="string" column="emailto" length="50"/>
+        <field name="cv" type="string" column="cv" length="255"/>
+        <field name="readed" type="smallint" column="readed" nullable="true"/>
+        <field name="ctime" type="integer" column="ctime" nullable="true"/>
+        <indexes>
+            <index columns="sessionid" name="sendcv_sessionid"/>
+            <index columns="readed" name="sendcv_readed"/>
+            <index columns="ctime" name="sendcv_ctime"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

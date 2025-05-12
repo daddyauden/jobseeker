@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="EducationRepository" name="jobseeker\Bundle\UserBundle\Entity\Education" table="education">
+        <id name="id" type="bigint" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="uid" type="bigint" column="uid"/>
+        <field name="university" type="string" column="university" length="100"/>
+        <field name="graduation" type="integer" column="graduation"/>
+        <many-to-one field="diploma" target-entity="jobseeker\Bundle\UserBundle\Entity\Category">
+            <join-column name="diploma" nullable="false" referenced-column-name="id"/>
+        </many-to-one>
+        <field name="major" type="string" column="major" length="100"/>
+        <field name="course" type="text" column="course" nullable="true"/>
+        <field name="description" type="text" column="description" nullable="true"/>
+        <indexes>
+            <index columns="uid" name="education_uid"/>
+            <index columns="university" name="education_university"/>
+            <index columns="diploma" name="education_diploma"/>
+            <index columns="major" name="education_major"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

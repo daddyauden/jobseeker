@@ -1,0 +1,74 @@
+{% extends "dashboard.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block container %}
+<div id="job_list_left">
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+    {% if app.session.flashbag.has("info") %}
+    <div class="alert alert-info">
+        {% for info in app.session.flashbag.get('info') %}
+        {{ info|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+
+    {% if jobs is defined and jobs|length > 0 %}
+    <ul class="nav">
+        {% for job in jobs %}
+        <li>
+            <a href="{{ path("job_show",{"condition": job.condition }) }}" target="job_content">
+                {% if job.avator is not null %}
+                <img src="{{ job.avator|avator }}" />
+                {% else %}
+                <img src="{{ job.emr_avator|avator }}" />
+                {% endif %}
+                <span class="emr">
+                    <h1>{{ job.title }}</h1>
+		    {% if job.code %}
+		    <h5>{{ job.code|upper|trans }}, {{ job.pcode|upper|trans }}</h5>
+		    {% endif %}
+                </span>
+                <span class="type">
+		    <h3>{{ job.tsn|trans }}</h3>
+                    {% if job.salary > 0  %}
+                    <h4>{{ ("currency"|system ~ ".symbol")|trans }}{{ job.salary }}</h4>
+                    {% else %}
+                    <h4>{{ "common.negotiable"|trans }}</h4>
+                    {% endif %}
+                </span>
+            </a>
+        {% endfor %}
+    </ul>
+
+    {% if pages is defined %}
+    <ul class="pager">
+        {% if pages.next is defined %}
+        <li class="next">{{ pages.next|raw }}</li>
+        {% endif %}
+        {% if pages.previous is defined %}
+        <li class="previous">{{ pages.previous|raw }}</li>
+        {% endif %}
+        {% if pages.current is defined %}
+        <li>{{ pages.current|raw }}</li>
+        {% endif %}
+    </ul>
+    {% endif %}
+    {% else %}
+    <div>{{ "common.none"|trans }}</div>
+    {% endif %}
+</div>
+
+<div id="job_list_right">
+    <div id="close-btn" class="close-btn-right"><i class="fa fa-close" aria-hidden="true"></i></div>
+    <iframe name="job_content" id="job_content" src="{{ path("brand") }}"></iframe>
+</div>
+{% endblock %}

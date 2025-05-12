@@ -1,0 +1,219 @@
+{% extends "base.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block header_css %}
+<style>html{height: auto;}</style>
+{% endblock %}
+
+{% block header_inner %}
+<div id="toolbar">
+    <a class="btn btn-info btn-sm post-job" href="{{ path("job_post") }}">{{ "fe.job_post"|trans }}</a>
+    {% if areas is defined %}
+    <div id="country">
+        <a id="change_country">{{ "country"|system|upper|trans }}</a>
+        <ul id="other_country">
+            {% for area in areas %}
+            {% if area.child is defined %}
+            <li>
+                <h5>{{ area.code|upper|trans }}</h5>
+                <ul>
+                    {% for child in area.child %}
+                    <li><a href="{{ child.domain }}" target="_blank"><i class="glyphicon area_flag area_flag_{{ child.code|upper }}"></i>{{ child.code|upper|trans }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>    
+    </div>
+    {% endif %}
+
+    {% if locales is defined %}
+    <div id="locale">
+        <a id="change_locale">{{ locales.data[0]|trans }}</a>
+        <ul id="other_locale">
+            {% if false == locales.single %}
+            {% for data in locales.data %}
+            <li class="more">
+                <ul>
+                    {% for locale in data %}
+                    <li><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+            {% else %}
+            {% for locale in locales.data %}
+            <li class="single"><a name="{{ locale }}" title="{{ (locale ~ ".title")|trans }}">{{ locale|trans }}</a></li>
+            {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+    {% endif %}
+    {% if eme_or_emr is defined %}
+    <div class="avator avator_1x"> 
+        <a class="home" href="{{ path("dashboard") }}"><img src="{{ eme_or_emr.avator|avator }}" /></a>
+    </div>
+    {% else %}   
+    <div class="avator avator_1x">
+        {% if isLogin == true %}
+        <a class="home" href="{{ path("dashboard") }}"><img src="{{ ""|avator }}" /></a>
+        {% else %}
+        <a class="home" href="{{ path("user_signin") }}"><img src="{{ ""|avator }}" /></a>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block container_inner %}
+<div id="logo_top"><img src="{{ asset("/logo_top.png") }}" /></div>
+<div id="jobpostbox">
+    {% if isLogin == false %}
+    <div>
+        <div id="userbox">
+            {{ "common.ismember"|trans }}
+            <button class="btn btn-info btn-sm" id="signin">{{ "fe.signin"|trans }}</button>
+            <button class="btn btn-warning btn-sm" id="signup">{{ "fe.signup"|trans }}</button>
+        </div>
+        <div id="jobseeker_sign">
+            {% if formSignin is defined %}
+            <div id="jobseeker_signin">
+                {{ form_start(formSignin) }}
+                {{ form_widget(formSignin.email) }}
+                {{ form_widget(formSignin.password) }}
+                {{ form_widget(formSignin.signin) }}
+                {{ form_end(formSignin) }}
+            </div>
+            {% endif %}
+            {% if formSignup is defined %}
+            <div id="jobseeker_signup">
+                {{ form_start(formSignup) }}
+                {{ form_widget(formSignup.email) }}
+                {{ form_widget(formSignup.password) }}
+                {{ form_widget(formSignup.signup) }}
+                {{ form_end(formSignup) }}
+            </div>
+            {% endif %}
+            {% if plugins is defined and plugins|length > 0 %}
+            <div id="plugin_signin">
+                <ul>
+                    {% for plugin in plugins %}
+                    <li class="signin_{{ plugin[0] }}">
+                        <span class="signin_logo"></span>
+                        <a href="{{ plugin[1] }}">{{ ("plugin.signin." ~ plugin[0])|trans }}</a>
+                    </li>  
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+    <div id="emrbox">
+        <div id="emrpanel">
+            <div id="emr">
+                {{ form_start(emrform) }}
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.name"|trans }} ( <span class="required">*</span> )</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.name) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.abbr"|trans }} ( <span class="required">*</span> )</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.abbr) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.avator"|trans }} {{ emrform.avator.vars.required ? '( <span class="required">*</span> )' : '' }}</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.avator) }}
+                        <p><span class="glyphicon glyphicon-exclamation-sign"></span>{{ "common.upload_comment"|trans }}</p>
+                        {% if emrform.vars.value.avator %}
+                        <img src="{{ emrform.vars.value.avator|avator("2x") }}" />
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.location"|trans }} ( <span class="required">*</span> )</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.location) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.address"|trans }} ( <span class="required">*</span> )</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.address) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.type"|trans }} ( <span class="required">*</span> )</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.type) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.scale"|trans }} ( <span class="required">*</span> )</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.scale) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.contacter"|trans }} ( <span class="required">*</span> )</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.contacter) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.contacteremail"|trans }} ( <span class="required">*</span> )</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.contacteremail) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.contactertel"|trans }} ( <span class="required">*</span> )</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.contactertel) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.fax"|trans }}</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.fax) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.site"|trans }}</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.site) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 text-right">{{ "table.employer.about"|trans }} ( <span class="required">*</span> )</div>
+                    <div class="col-6">
+                        {{ form_widget(emrform.about) }}
+                    </div>
+                </div>
+                <div class="row">
+                    {{ form_widget(emrform.save) }}
+                    {% if emrform.delete is defined %}
+                    {{ form_widget(emrform.delete) }}
+                    {% endif %}
+                </div>
+                {{ form_end(emrform) }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer_js %}
+<script src="{{ asset("assets/js/ckeditor/ckeditor.js") }}"></script>
+<script type="text/javascript">
+CKEDITOR.replace("form_about");
+</script>
+{% endblock %}

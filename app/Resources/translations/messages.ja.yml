@@ -1,0 +1,1220 @@
+##### Common Panel {
+common.language: 言語
+common.country: 国
+common.choose: 選択する
+common.page.first: 最初のページ
+common.page.privious: 前ページ
+common.page.next: 次ページ
+common.page.last: 最後ページ
+common.date.year: で
+common.date.month: 月
+common.date.day: 天
+common.date.week: 週
+common.time.hour: 時
+common.time.minute: ポイント
+common.time.second: 秒
+common.none: 没有结果
+common.brand.intro: zh_cn@全球招聘专家，您身边的职业管家#en@Global Professional Recruitment,Career Consultant For You#fr@Mondial recrutement professionnel, Consultant de carrière pour vous#de@Global Professional Recruitment, Career Consultant für Sie#ja@グローバルスペシャリスト人材紹介、あなたのキャリアコンサルタント
+# Common Panel }
+
+# Frontend Panel {
+fe.signin: ログイン
+fe.signup: 登録
+fe.cancel: キャンセル
+# Frontend Panel }
+
+# Backend Panel {
+be.search: 搜索
+be.operate: 操作
+be.edit: 编辑
+be.add:  添加
+be.save: 保存
+be.submit: 提交
+be.choose: 选择
+be.privilege.edit: 权限管理
+be.nochange: 没有更改
+be.update: 更新
+be.update.success: 更新成功
+be.update.fail: 更新失败
+be.update.invalid: 更新无效
+be.delete: 删除
+be.delete.success: 删除成功
+be.delete.fail: 删除失败
+be.delete.invalid: 删除无效
+be.install: 安装
+be.install.success: 安装成功
+be.install.fail: 安装失败
+be.uninstall: 卸载
+be.uninstall.success: 卸载成功
+be.uninstall.fail: 卸载失败
+be.installed: 已安装
+be.uninstalled: 未安装
+# Backend Panel }
+
+# Role Name {
+role.normal: 普通角色
+role.publisher: 岗位发布角色
+role.admin: 后台管理角色
+role.founder: 站长
+# Role Name }
+
+# Plugin {
+plugin.scope.user: 插件适用范围：用户功能
+plugin.scope.payment: 适用范围：支付功能
+
+plugin.name.microsoft: Microsoft
+plugin.description.microsoft: More than 500 million people use services like Microsoft account, Microsoft OneDrive, and Outlook.com. When you build apps that work with these services, you give your users new ways to engage with your products and services. To help you create this value and build successful apps that your customers enjoy, we offer Live Connect—a collection of APIs that help you integrate your apps quickly and easily with compatible services like Microsoft account, OneDrive, and Outlook.com.
+plugin.signin.microsoft: Microsoft アカウントでサインイン
+
+plugin.name.weibo: Weibo
+plugin.description.weibo: 微连接（Weibo Connect）是微博针对第三方网站提供的社会化网络接入方案。微连接基于微博亿级用户基数和社交网络传播特性，为第三方网站提供用户身份系统及社交关系导入。
+plugin.signin.weibo: Weibo アカウントでサインイン
+
+plugin.name.google: Google
+plugin.description.google: The Google API Client Library enables you to work with Google APIs such as Google+, Drive, or YouTube on your server.
+plugin.signin.google: Google アカウントでサインイン
+
+plugin.name.qq: QQ
+plugin.description.qq: QQ互联开放平台为第三方网站提供了丰富的API。第三方网站接入QQ互联开放平台后，即可通过调用平台提供的API实现用户使用QQ帐号登录网站功能，且可以获取到腾讯QQ用户的相关信息。
+plugin.signin.qq: QQ アカウントでサインイン
+
+plugin.name.jobseeker: JobSeeker
+plugin.description.jobseeker: JobSeeker用户中心，每个应用的用户都会同步到用户中心，包括注册、登录、调用用户资料流程。
+plugin.signin.jobseeker: JobSeeker アカウントでサインイン
+
+plugin.name.paypal: PayPal
+plugin.description.paypal: PayPal is the faster, safer way to pay and get paid. The service gives people simpler ways to send money without sharing financial information, and with the flexibility to pay using their account balances, bank accounts, credit cards or promotional financing.
+
+plugin.name.stripe: Stripe
+plugin.description.stripe: Stripe is a developer-friendly way to accept payments online and in mobile apps.We process billions of dollars a year for thousands of companies of all sizes.
+# Plugin }
+
+
+
+
+#### Locale #### 菲律宾语 chrome:fil ISO_639:tl #### 爪哇语 chrome:jw ISO_639:jv ####
+de: Deutsch
+de_de: Deutsch(DE)
+en: English
+en_us: English(US)
+en_ca: English(CA)
+en_uk: English(UK)
+fr: Français
+fr_fr: Français(FR)
+fr_ca: Français(CA)
+ja: 日本語
+zh: 中文
+zh_cn: 中文简体
+af: Afrikaans
+am: አማርኛ
+ar: العربية
+as: অসমীয়া
+az: azərbaycan dili
+be: Беларуская
+bg: български език
+bh: भोजपुरी
+bn: বাংলা
+bo: བོད་ཡིག
+br: brezhoneg
+bs: bosanski jezik
+ca: Català
+ce: нохчийн мотт
+co: corsu
+cs: česky
+cy: Cymraeg
+da: dansk
+dz: རྫོང་ཁ
+el: Ελληνικά
+es: español
+et: Eesti keel
+eu: euskara
+fa: فارسی
+fi: suomen kieli
+fil: Filipino
+fj: vosa Vakaviti
+fo: Føroyskt
+fy: Frysk
+ga: Gaeilge
+gd: Gàidhlig
+gl: Galego
+gn: Avañe'ẽ
+gu: ગુજરાતી
+gv: Ghaelg
+ha: هَوُسَ
+he: עברית
+hi: हिन्दी
+hr: Hrvatski
+hu: Magyar
+hy: Հայերեն
+id: Bahasa Indonesia
+is: Íslenska
+it: Italiano
+jv: basa Jawa
+ka: ქართული
+kg: KiKongo
+kk: Қазақша
+km: ភាសាខ្មែរ
+kn: ಕನ್ನಡ
+ko: 한국어
+ku: كوردی
+ky: Кыргыз тили
+la: Latina
+li: Limburgs
+ln: Lingála
+lo: ພາສາລາວ
+lt: Lietuvių
+lv: Latviešu
+mk: Македонски
+ml: മലയാളം
+mn: монгол
+mo: Лимба молдовеняскэ
+mr: मराठी
+ms: Bahasa Melayu
+mt: Malti
+nb: Norsk bokmål
+ne: नेपाली
+nl: Nederlands
+no: Norsk
+oc: Occitan
+om: Afaan Oromoo
+or: ଓଡ଼ିଆ
+pa: ਪੰਜਾਬੀ
+pi: पाऴि
+pl: polski
+ps: پښتو
+pt: Português
+qu: Runa Simi
+rm: rumantsch grischun
+ro: română
+ru: русский язык
+rw: Kinyarwanda
+sa: संस्कृतम्
+sd: सिन्धी
+sh: Srpskohrvatski
+si: සිංහල
+sk: slovenčina
+sl: slovenščina
+sn: chiShona
+so: Soomaaliga
+sq: Shqip
+sr: српски језик
+ss: SiSwati
+st: seSotho
+su: Basa Sunda
+sv: Svenska
+sw: Kiswahili
+ta: தமிழ்
+te: తెలుగు
+tg: тоҷикӣ
+th: ไทย
+ti: ትግርኛ
+tk: Türkmen
+tn: seTswana
+to: faka Tonga
+tr: Türkçe
+ts: xiTsonga
+tt: татарча
+tw: Twi
+ug: ئۇيغۇرچە
+uk: Українська
+ur: اردو
+uz: O'zbek
+ve: tshiVenḓa
+vi: Tiếng Việt
+xh: isiXhosa
+yi: ייִדיש
+yo: Yorùbá
+zu: isiZulu
+
+de.title: ドイツ語
+de_de.title: ドイツ語(ドイツ)
+en.title: 英語
+en_us.title: 英語(米国)
+fr.title: フランス語
+fr_fr.title: フランス語(フランス)
+ja.title: 日本語
+zh.title: 中国語
+zh_cn.title: 中国語(中国)
+af.title: 南非荷兰语
+am.title: 阿姆哈拉语
+ar.title: 阿拉伯语
+as.title: 阿萨姆语
+az.title: 阿塞拜疆语
+be.title: 白俄罗斯语
+bg.title: 保加利亚语
+bh.title: 比哈尔语
+bn.title: 孟加拉语
+bo.title: 藏语
+br.title: 布列塔尼语
+bs.title: 波斯尼亚语
+ca.title: 加泰罗尼亚语
+ce.title: 车臣语
+co.title: 科西嘉语
+cs.title: 捷克语
+cy.title: 威尔士语
+da.title: 丹麦语
+dz.title: 不丹语
+el.title: 希腊语
+es.title: 西班牙语
+et.title: 爱沙尼亚语
+eu.title: 巴斯克语
+fa.title: 波斯语
+fi.title: 芬兰语
+fil.title: 菲律宾语
+fj.title: 斐济语
+fo.title: 法罗斯语
+fy.title: 弗里西亚语
+ga.title: 爱尔兰语
+gd.title: 苏格兰盖尔语
+gl.title: 加利西亚语
+gn.title: 瓜拉尼语
+gu.title: 古吉拉特语
+gv.title: 马恩岛语
+ha.title: 豪萨语
+he.title: 希伯来语
+hi.title: 印地语
+hr.title: 克罗地亚语
+hu.title: 匈牙利语
+hy.title: 亚美尼亚语
+id.title: 印度尼西亚语
+is.title: 冰岛语
+it.title: 意大利语
+jv.title: 爪哇语
+ka.title: 格鲁吉亚语
+kg.title: 刚果语
+kk.title: 哈萨克语
+km.title: 高棉语
+kn.title: 坎纳达语
+ko.title: 朝鲜语
+ku.title: 库尔德语
+ky.title: 吉尔吉斯语
+la.title: 拉丁语
+li.title: 林堡语
+ln.title: 林加拉语
+lo.title: 老挝语
+lt.title: 立陶宛语
+lv.title: 拉脱维亚语
+mk.title: 马其顿语
+ml.title: 马拉亚拉姆语
+mn.title: 蒙古语
+mo.title: 摩尔达维亚语
+mr.title: 马拉地语
+ms.title: 马来语
+mt.title: 马耳他语
+nb.title: 挪威布克莫尔语
+ne.title: 尼泊尔语
+nl.title: 荷兰语
+no.title: 挪威语
+oc.title: 奥克语
+om.title: 阿芳·奥洛莫语
+or.title: 奥利亚语
+pa.title: 旁遮普语
+pi.title: 巴利语
+pl.title: 波兰语
+ps.title: 普什图语
+pt.title: 葡萄牙语
+qu.title: 凯楚亚语
+rm.title: 罗曼什语
+ro.title: 罗马尼亚语
+ru.title: 俄语
+rw.title: 卢旺达语
+sa.title: 梵语
+sd.title: 信德语
+sh.title: 塞尔维亚-克罗地亚语
+si.title: 僧加罗语
+sk.title: 斯洛伐克语
+sl.title: 斯洛文尼亚语
+sn.title: 绍纳语
+so.title: 索马里语
+sq.title: 阿尔巴尼亚语
+sr.title: 塞尔维亚语
+ss.title: 斯瓦特语
+st.title: 塞索托语
+su.title: 巽他语
+sv.title: 瑞典语
+sw.title: 斯瓦希里语
+ta.title: 泰米尔语
+te.title: 泰卢固语
+tg.title: 塔吉克语
+th.title: 泰语
+ti.title: 提格里尼亚语
+tk.title: 塔吉克语
+tn.title: 茨瓦纳语
+to.title: 汤加语
+tr.title: 土耳其语
+ts.title: 宗加语
+tt.title: 塔塔尔语
+tw.title: 特威语
+ug.title: 维吾尔语
+uk.title: 乌克兰语
+ur.title: 乌尔都语
+uz.title: 乌兹别克语
+ve.title: 文达语
+vi.title: 越南语
+xh.title: 科萨语
+yi.title: 依地语
+yo.title: 约鲁巴语
+zu.title: 祖鲁语
+
+
+
+
+#### Currency ####
+hkd.title: 港币
+mop.title: 澳门币
+twd.title: 新台币
+cny.title: 人民币
+krw.title: 韩元
+vnd.title: 越南盾
+jpy.title: 日元
+lak.title: 基普
+khr.title: 瑞尔
+php.title: 菲律宾比索
+myr.title: 马元
+sgd.title: 新加坡元
+thb.title: 泰铢
+mmk.title: 缅元
+lkr.title: 斯里兰卡卢比
+idr.title: 盾
+pkr.title: 巴基斯坦卢比
+inr.title: 卢比
+afn.title: 阿富汗尼
+eur.title: 欧元
+rub.title: 卢布
+chf.title: 瑞士法郎
+gbp.title: 英镑
+cad.title: 加元
+usd.title: 美元
+mxn.title: 墨西哥比索
+veb.title: 博利瓦
+brl.title: 新克鲁赛罗
+ars.title: 阿根廷比索
+xof.title: 西非法郎
+ngn.title: 奈拉
+zar.title: 兰特
+aud.title: 澳大利亚元
+nzd.title: 新西兰元
+
+hkd.symbol: $ 
+mop.symbol: P 
+twd.symbol: NT$ 
+cny.symbol: ¥ 
+krw.symbol: ₩ 
+vnd.symbol: ₫ 
+jpy.symbol: ¥ 
+lak.symbol: ₭ 
+khr.symbol: ៛ 
+php.symbol: ₱ 
+myr.symbol: RM 
+sgd.symbol: $ 
+thb.symbol: ฿ 
+mmk.symbol: K 
+lkr.symbol: ரூ 
+idr.symbol: ₨ 
+pkr.symbol: ₨ 
+inr.symbol: ₨ 
+afn.symbol: Af 
+eur.symbol: € 
+rub.symbol: р. 
+chf.symbol: Fr 
+gbp.symbol: £ 
+cad.symbol: $ 
+usd.symbol: $ 
+mxn.symbol: $ 
+veb.symbol: Bs 
+brl.symbol: R$ 
+ars.symbol: $ 
+xof.symbol: Fr 
+ngn.symbol: ₦ 
+zar.symbol: R 
+aud.symbol: $ 
+nzd.symbol: $
+
+
+
+
+#### Area ####
+# Continent Name {
+AFRICA: 非洲
+AMERICAS: 美洲
+ASIA: 亚洲
+EUROPE: 欧洲
+OCEANIA: 大洋洲
+# Continent Name }
+
+# Africa {
+# Northern Africa
+DZ: 阿尔及利亚
+LY: 利比亚
+SD: 苏丹
+EH: 西撒哈拉
+EG: 埃及
+MA: 摩洛哥
+TN: 突尼斯
+# Eastern Africa
+BI: 布隆迪
+KE: 肯尼亚
+MZ: 莫桑比克
+SS: 南苏丹
+KM: 科摩罗
+MG: 马达加斯加
+RE: 留尼汪
+TZ: 坦桑尼亚
+DJ: 吉布提
+MW: 马拉维
+RW: 卢旺达
+UG: 乌干达
+ER: 厄立特里亚
+MU: 毛里求斯
+SC: 塞舌尔
+ZM: 赞比亚
+ET: 埃塞俄比亚
+YT: 马约特
+SO: 索马里
+ZW: 津巴布韦
+# Southern Africa
+BW: 博茨瓦纳
+NA: 纳米比亚
+ZA: 南非
+SZ: 斯威士兰
+LS: 莱索托
+# Western Africa
+BJ: 贝宁
+GM: 冈比亚
+LR: 利比里亚
+NG: 尼日利亚
+BF: 布基纳法索
+GH: 加纳
+ML: 马里
+SN: 塞内加尔
+CV: 佛得角
+GN: 几内亚
+MR: 毛里塔尼亚
+SL: 塞拉利昂
+CI: 科特迪瓦
+GW: 几内亚比绍
+NE: 尼日尔
+TG: 多哥
+# Middle Africa
+AO: 安哥拉
+TD: 乍得
+CD: 刚果民主共和国
+GA: 加蓬
+CM: 喀麦隆
+CG: 刚果共和国
+GQ: 赤道几内亚
+ST: 圣多美和普林西比
+CF: 中非
+# Africa }
+
+# Americas {
+# Northern America
+BM: 百慕大
+GL: 格陵兰
+PM: 圣皮埃尔和密克隆
+US: 美国
+CA: 加拿大
+# Central America
+BZ: 伯利兹
+SV: 萨尔瓦多
+HN: 洪都拉斯
+NI: 尼加拉瓜
+CR: 哥斯达黎加
+GT: 危地马拉
+MX: 墨西哥
+PA: 巴拿马
+# Caribbean
+AI: 安圭拉
+KY: 开曼群岛
+HT: 海地
+LC: 圣卢西亚
+AG: 安提瓜和巴布达
+CU: 古巴
+JM: 牙买加
+MF: 法属圣马丁
+AW: 阿鲁巴
+CW: 库拉索
+MQ: 马提尼克
+VC: 圣文森特和格林纳丁斯
+BS: 巴哈马
+DM: 多米尼克
+MS: 蒙塞拉特岛
+SX: 荷属圣马丁
+BB: 巴巴多斯
+DO: 多米尼加
+PR: 波多黎各
+TT: 特立尼达和多巴哥
+VG: 英属维尔京群岛
+GD: 格林纳达
+BL: 圣巴泰勒米岛
+TC: 特克斯和凯科斯群岛
+BQ: 荷兰加勒比区
+GP: 瓜德罗普
+KN: 圣基茨和尼维斯
+VI: 美属维尔京群岛
+# South America
+AR: 阿根廷
+CO: 哥伦比亚
+GY: 圭亚那
+SR: 苏里南
+BO: 玻利维亚
+EC: 厄瓜多尔
+PY: 巴拉圭
+UY: 乌拉圭
+BR: 巴西
+GF: 法属圭亚那
+PE: 秘鲁
+VE: 委内瑞拉
+CL: 智利
+# Americas }
+
+# Asia {
+# Eastern Asia
+CN: 中国大陆
+HK: 中国香港
+MO: 中国澳门
+TW: 中国台湾
+JP: 日本
+KR: 韩国
+KP: 朝鲜
+MN: 蒙古
+
+# South-Eastern Asia
+BN: 文莱
+ID: 印度尼西亚
+MM: 缅甸
+TH: 泰国
+KH: 柬埔寨
+LA: 老挝
+PH: 菲律宾
+VN: 越南
+TL: 东帝汶
+MY: 马来西亚
+SG: 新加坡
+# Southern Asia
+AF: 阿富汗
+IO: 英属印度洋领地
+MV: 马尔代夫
+PK: 巴基斯坦
+BD: 孟加拉
+IN: 印度
+NP: 尼泊尔
+LK: 斯里兰卡
+BT: 不丹
+IR: 伊朗
+# Western Asia
+AM: 亚美尼亚
+IQ: 伊拉克
+OM: 阿曼
+SY: 叙利亚
+AZ: 阿塞拜疆
+IL: 以色列
+PS: 巴勒斯坦
+TR: 土耳其
+BH: 巴林
+JO: 约旦
+QA: 卡塔尔
+AE: 阿联酋
+CY: 塞浦路斯
+KW: 科威特
+SA: 沙特阿拉伯
+YE: 也门
+GE: 格鲁吉亚
+LB: 黎巴嫩
+# Central Asia
+KZ: 哈萨克斯坦
+TJ: 塔吉克斯坦
+TM: 土库曼斯坦
+UZ: 乌兹别克斯坦
+KG: 吉尔吉斯斯坦
+# Asia }
+
+# Europe {
+# Northern Europe
+GG: 根西岛
+FO: 法罗群岛
+AX: 奥兰群岛
+DK: 丹麦
+IS: 冰岛
+LV: 拉脱维亚
+SE: 瑞典
+EE: 爱沙尼亚
+IE: 爱尔兰
+LT: 立陶宛
+GB: 英国
+FI: 芬兰
+IM: 马恩岛
+NO: 挪威
+# Eastern Europe
+BY: 白俄罗斯
+HU: 匈牙利
+RO: 罗马尼亚
+SK: 斯洛伐克
+BG: 保加利亚
+MD: 摩尔多瓦
+RU: 俄罗斯
+UA: 乌克兰
+CZ: 捷克
+PL: 波兰
+# Southern Europe
+AL: 阿尔巴尼亚
+GI: 直布罗陀
+MT: 马耳他
+RS: 塞尔维亚
+AD: 安道尔
+GR: 希腊
+ME: 黑山
+SI: 斯洛文尼亚
+BA: 波黑
+IT: 意大利
+PT: 葡萄牙
+ES: 西班牙
+HR: 克罗地亚
+MK: 马其顿
+SM: 圣马力诺
+VA: 梵蒂冈
+# Western Europe
+AT: 奥地利
+DE: 德国
+LU: 卢森堡
+NL: 荷兰
+BE: 比利时
+LI: 列支敦士登
+MC: 摩纳哥
+CH: 瑞士
+FR: 法国
+# Europe }
+
+# Oceania {
+# Australasia
+AU: 澳大利亚
+NZ: 新西兰
+NF: 诺福克岛
+# Melanesia
+FJ: 斐济群岛
+PG: 巴布亚新几内亚
+SB: 所罗门群岛
+VU: 瓦努阿图
+NC: 新喀里多尼亚
+# Micronesian Region
+GU: 关岛
+MH: 马绍尔群岛
+NR: 瑙鲁
+PW: 帕劳
+KI: 基里巴斯
+FM: 密克罗尼西亚联邦
+MP: 北马里亚纳群岛
+# Polynesia
+AS: 美属萨摩亚
+NU: 纽埃
+TK: 托克劳
+TV: 图瓦卢
+CK: 库克群岛
+PN: 皮特凯恩群岛
+TO: 汤加
+WF: 瓦利斯和富图纳
+PF: 法属波利尼西亚
+WS: 萨摩亚
+# Oceania }
+
+
+
+
+### Route ###
+admin_index: 后台首页
+admin_logout: 后台退出
+
+admin_list: 管理员列表
+admin_add: 保存管理员
+admin_delete: 删除管理员
+admin_save: 保存管理员
+admin_show: 显示管理员
+
+area_list: 地区列表
+area_add: 添加地区
+area_delete: 删除地区
+area_save: 保存地区
+
+locale_list: 语言列表
+locale_add: 添加语言
+locale_delete: 删除语言
+locale_save: 保存语言
+
+currency_list: 货币列表
+currency_add: 添加货币
+currency_delete: 删除货币
+currency_save: 保存货币
+
+system_list: 系统参数列表
+system_add: 添加系统参数
+system_delete: 删除系统参数
+system_save: 保存系统参数
+
+job_type_list: 产品类别列表
+job_type_add: 添加产品类别
+job_type_delete: 删除产品类别
+job_type_save: 保存产品类别
+
+job_cat_list: 岗位类别列表
+job_cat_add: 添加岗位类别
+job_cat_delete: 删除岗位类别
+job_cat_save: 保存岗位类别
+
+job_ind_list: 行业类别列表
+job_ind_add: 添加行业类别
+job_ind_delete: 删除行业类别
+job_ind_save: 保存行业类别
+
+role_list: 角色列表
+role_add: 保存角色
+role_delete: 删除角色
+role_save: 保存角色
+role_show: 显示角色
+
+privilege_list: 权限列表
+privilege_add: 添加权限
+privilege_delete: 删除权限
+privilege_save: 保存权限
+
+user_add: 添加用户
+user_callback: 返回callback
+user_list: 用户列表
+user_login: 用户登录
+user_logout: 用户注销
+user_register: 用户注册
+user_show: 用户详情
+
+career_index: 支付首页
+
+order_payment: 前去支付
+order_dopayment: 确认支付
+order_checkout: 结账
+order_docheckout: 确认结账
+
+discount_list: 产品折扣列表
+discount_add: 添加产品折扣
+discount_delete: 删除产品折扣
+discount_save: 保存产品折扣
+
+
+
+### Bundle:Controller:Action ###
+adminbundle: 后台
+adminbundle.area: 地区
+adminbundle.area.list: 列表
+adminbundle.area.add: 添加
+adminbundle.area.delete: 删除
+adminbundle.area.save: 保存
+
+adminbundle.currency: 货币
+adminbundle.currency.list: 列表
+adminbundle.currency.add: 添加
+adminbundle.currency.delete: 删除
+adminbundle.currency.save: 保存
+
+adminbundle.role: 角色
+adminbundle.role.list: 列表
+adminbundle.role.show: 展示
+adminbundle.role.add: 添加
+adminbundle.role.delete: 删除
+adminbundle.role.save: 保存
+
+adminbundle.admin: 管理员
+adminbundle.admin.list: 列表
+adminbundle.admin.show: 展示
+adminbundle.admin.add: 添加
+adminbundle.admin.delete: 删除
+adminbundle.admin.save: 保存
+
+adminbundle.index: 入口
+adminbundle.index.index: 主页
+adminbundle.index.login: 登录
+adminbundle.index.main: 面板
+adminbundle.index.logout: 退出
+
+adminbundle.locale: 语言
+adminbundle.locale.list: 列表
+adminbundle.locale.add: 添加
+adminbundle.locale.delete: 删除
+adminbundle.locale.save: 保存
+
+adminbundle.privilege: 权限
+adminbundle.privilege.list: 列表
+adminbundle.privilege.add: 添加
+adminbundle.privilege.delete: 删除
+adminbundle.privilege.save: 保存
+
+adminbundle.system: 系统
+adminbundle.system.list: 列表
+adminbundle.system.add: 添加
+adminbundle.system.delete: 删除
+adminbundle.system.save: 保存
+
+adminbundle.type: 产品
+adminbundle.type.list: 产品类别列表
+adminbundle.type.add: 添加产品类别
+adminbundle.type.delete: 删除产品类别
+adminbundle.type.save: 保存产品类别
+
+adminbundle.category: 类别
+adminbundle.category.jobcatlist: 岗位类别列表
+adminbundle.category.jobcatadd: 岗位类别添加
+adminbundle.category.jobcatdelete: 岗位类别删除
+adminbundle.category.jobcatsave: 岗位类别保存
+adminbundle.category.jobindlist: 行业类别列表
+adminbundle.category.jobindadd: 行业类别添加
+adminbundle.category.jobinddelete: 行业类别删除
+adminbundle.category.jobindsave: 行业类别保存
+
+adminbundle.discount: 产品折扣
+adminbundle.discount.list: 产品折扣列表
+adminbundle.discount.add: 添加产品折扣
+adminbundle.discount.delete: 删除产品折扣
+adminbundle.discount.save: 保存产品折扣
+
+careerbundle: 招聘
+careerbundle.payment: 支付
+careerbundle.payment.index: 首页
+careerbundle.payment.payment: 前去支付
+careerbundle.payment.dopayment: 确认支付
+careerbundle.payment.checkout: 结账
+careerbundle.payment.docheckout: 确认结账
+
+pluginbundle: 插件
+toolbundle: 工具
+
+userbundle: 用户
+userbundle.user: 用户
+userbundle.user.register: 注册
+userbundle.user.list: 列表
+userbundle.user.add: 添加
+userbundle.user.show: 展示
+userbundle.user.login: 登录
+userbundle.user.logout: 退出
+userbundle.user.callback: 调用callback
+
+
+
+
+#### Discount ####
+J-D-10000: 招聘数量超过1个会有折扣
+J-D-20000: 招聘数量2，享受95%折扣
+J-D-30000: 招聘数量3，享受85%折扣
+J-D-40000: 招聘数量超过4，享受70%折扣
+
+
+
+
+#### Category:Job Category ####
+J-T-10000: 100(RMB)/30天
+J-T-20000: 200(RMB)/60天
+J-T-30000: 300(RMB)/90天
+J-T-40000: 400(RMB)/120天
+J-T-50000: 500(RMB)/180天
+J-T-60000: 600(RMB)/360天
+
+
+
+
+#### Category:Job Category ####
+J-C-10000: 全职
+J-C-20000: 兼职
+J-C-30000: 留学生
+J-C-40000: 实习生
+
+
+
+
+#### Category:Diploma Category ####
+EE-D-10000: 大专
+EE-D-20000: 本科
+EE-D-30000: 研究生
+EE-D-40000: 博士生
+
+
+
+
+#### Category:Employer:Type Category ####
+ER-T-10000: 工作室
+ER-T-20000: 小微企业
+ER-T-30000: 私营企业
+ER-T-40000: 国家控股
+ER-T-50000: 集体企业
+ER-T-60000: 外资企业
+
+
+
+
+#### Category:Employer:Scale Category ####
+ER-S-10000: <3
+ER-S-20000: 3<X<5
+ER-S-30000: 5<X<10
+ER-S-40000: 10<X<20
+ER-S-50000: 20<X<50
+ER-S-60000: 50<X<100
+ER-S-70000: 100<X<200
+ER-S-80000: 200<X<500
+ER-S-90000: ">500"
+
+
+
+
+#### Category:Payment:Type Category ####
+P-T-10000: 网上银行
+P-T-11000: 中国银行
+P-T-12000: 交通银行
+P-T-20000: 信用卡
+P-T-21000: VISA
+P-T-22000: MASTCARD
+P-T-30000: 第三方支付
+P-T-31000: 支付宝
+P-T-32000: PayPal
+
+
+
+
+#### Category:Job Industry ####
+J-I-10000: 计算机软件
+J-I-10001: 系统架构师
+J-I-10002: 开发工程师
+J-I-20000: 计算机硬件
+J-I-20001: 硬件工程师
+J-I-30000: 互联网
+J-I-30001: 产品经理
+J-I-40000: 电子商务
+J-I-40001: 电子商务主管
+J-I-50000: 移动终端
+J-I-50001: IOS研发
+J-I-60000: 银行
+J-I-60001: 副行长
+
+
+
+
+#### Table Column ####
+# Table Area {
+table.area: 地区
+table.area.name: 名称
+table.area.level: 级别
+table.area.level.comment: 洲=1，国家=2，城市=3，区=4
+table.area.level.1: 洲
+table.area.level.2: 国家
+table.area.level.3: 城市
+table.area.level.4: 区
+table.area.pid: 父地区Id
+table.area.code: 地区码
+table.area.code.comment: ISO 3166-1
+table.area.alpha: 首字母
+table.area.alpha.comment: 地区名首字母，中文地区名用拼音首字母
+table.area.domain: 域名
+table.area.domain.comment: level＝2的地区设置值，形如：cn.jobseeker.com
+table.area.lat: 纬度
+table.area.lng: 经度
+table.area.queue: 顺序
+table.area.status: 状态
+table.area.status.1: 可用
+table.area.status.0: 不可用
+# Table Area }
+
+# Table Locale {
+table.locale: 语言
+table.locale.queue: 顺序
+table.locale.code: 语言码
+table.locale.code.comment: ISO 639-1
+table.locale.name: 名称
+table.locale.status: 状态
+table.locale.status.1: 可用
+table.locale.status.0: 不可用
+# Table Locale }
+
+# Table Currency {
+table.currency: 货币
+table.currency.symbol: 货币符号
+table.currency.code: 货币代码
+table.currency.code.comment: ISO 4217
+table.currency.name: 货币名称
+table.currency.status: 状态
+table.currency.status.1: 可用
+table.currency.status.0: 不可用
+# Table Currency }
+
+# Table Role {
+table.role: 角色
+table.role.local: 本地化名称
+table.role.local.comment: 根据名称进行本地化显示
+table.role.name: 名称
+table.role.name.comment: 只能命名英文，保存于数据库中
+table.role.pid: 角色权限
+# Table Locale }
+
+# Table User {
+table.user: 用户
+table.user.id: 用户id
+table.user.uid: 用户中心id
+table.user.rid: 角色
+table.user.source: 注册来源
+table.user.email: 邮箱
+table.user.password: 密码
+table.user.logintime: 上次登录时间
+table.user.loginip: 上次登录Ip地址
+table.user.status: 状态
+table.user.status.1: 正常
+table.user.status.2: 未激活
+table.user.status.3: 已注销
+table.user.salt: 验证码
+# Table User }
+
+# Table System {
+table.system: 系统
+table.system.skey: 参数名称
+table.system.svalue: 参数值
+table.system.stype: 参数值类型
+table.system.stype.text: 字符串
+table.system.stype.textarea: 文本
+table.system.stype.number: 数字
+table.system.stype.currency: 货币
+table.system.stype.locale: 语言
+table.system.stype.area: 地区
+table.system.stype.timezone: 时区
+# Table System }
+
+# Table Privilege {
+table.privilege: 权限
+table.privilege.bundle: 模块
+table.privilege.controller: 控制器
+table.privilege.action: 方法
+table.privilege.route: 路由名称
+table.privilege.status: 状态
+table.privilege.status.1: 可用
+table.privilege.status.0: 不可用
+# Table Privilege }
+
+# Table Type {
+table.type: 产品
+table.type.name: 名称
+table.type.duration: 周期
+table.type.duration.comment: 单位（天）
+table.type.price: 价格
+table.type.price.comment: 货币符号由系统定义
+table.type.tsn: 编号
+table.type.tsn.comment: 规则：10000（需要5位数字）
+table.type.queue: 顺序
+table.type.status: 状态
+table.type.status.1: 可用
+table.type.status.0: 不可用
+# Table Privilege }
+
+# Table Category {
+table.category: 分类
+table.category.name: 名称
+table.category.pid: 父类别
+table.category.pid.comment: 当前类别的上一层类别
+table.category.type: 类型
+table.category.type.comment: 用来区分类别
+table.category.csn: 编号
+table.category.csn.comment: 规则：10000（需要5位数字）
+table.category.queue: 顺序
+table.category.status: 状态
+table.category.status.1: 可用
+table.category.status.0: 不可用
+# Table Category }
+
+# Table Discount {
+table.discount: 折扣
+table.discount.name: 名称
+table.discount.rate: 折扣率
+table.discount.rate.comment: 规则：0<x<1(四舍五入)，最多取小数点后两位
+table.discount.queue: 顺序
+table.discount.dsn: 编号
+table.discount.dsn.comment: 规则：10000（需要5位数字）
+table.discount.status: 状态
+table.discount.status.1: 可用
+table.discount.status.0: 不可用
+# Table Privilege }
+
+# Table Admin {
+table.admin: 管理员
+table.admin.id: 管理员id
+table.admin.rid: 角色
+table.admin.newrid: 新角色
+table.admin.email: Email
+table.admin.newemail: 新Email
+table.admin.password: 密码
+table.admin.newpassword: 新密码
+table.admin.logintime: 上次登录时间
+table.admin.loginip: 上次登录IP
+# Table Admin }
+
+# Table Employee {
+table.employee: 应聘者
+table.employee.id: 应聘者id
+table.employee.uid: 用户id
+table.employee.name: 姓名
+table.employee.birthday: 生日
+table.employee.hometown: 家乡所在地
+table.employee.location: 当前所在地
+table.employee.avator: 头像
+table.employee.gender: 性别
+table.employee.gender.1: 男
+table.employee.gender.0: 女
+table.employee.tag: 标签
+table.employee.description: 自我描述
+table.employee.mobile: 手机
+table.employee.im: IM
+# Table Employee }
+
+# Table Experience {
+table.experience: 工作经历
+table.experience.id: 岗位id
+table.experience.uid: 用户id
+table.experience.location: 工作所在地
+table.experience.company: 公司名称
+table.experience.orientation: 入职日期
+table.experience.dimission: 离职日期
+table.experience.title: 岗位名称
+table.experience.description: 岗位描述
+# Table Experience }
+
+# Table Education {
+table.education: 教育经历
+table.education.id: 教育id
+table.education.uid: 用户id
+table.education.university: 学校名称
+table.education.major: 专业
+table.education.diploma: 学历
+table.education.graduation: 毕业日期
+table.education.course: 课程
+table.education.description: 在校描述
+# Table Education }
+
+# Table Employer {
+table.employer: 雇主
+table.employer.id: 雇主id
+table.employer.uid: 用户id
+table.employer.name: 企业名称
+table.employer.abbr: 企业简称
+table.employer.type: 企业类型
+table.employer.location: 企业所在地
+table.employer.avator: 企业Logo
+table.employer.scale: 企业规模
+table.employer.address: 企业地址
+table.employer.site: 企业网址
+table.employer.about: 关于我们
+table.employer.lat: 纬度
+table.employer.lng: 经度
+table.employer.tel: 联系电话
+table.employer.contacter: 联系人
+# Table Employer }
+
+# Table Plugin {
+table.plugin: 插件 
+table.plugin.id: id 
+table.plugin.name: 名称 
+table.plugin.config: 配置信息
+table.plugin.description: 描述
+table.plugin.logo: Logo
+table.plugin.scope: 适用范围
+table.plugin.status: 状态
+table.plugin.status.0: 不可用
+table.plugin.status.1: 可用
+# Table Plugin }

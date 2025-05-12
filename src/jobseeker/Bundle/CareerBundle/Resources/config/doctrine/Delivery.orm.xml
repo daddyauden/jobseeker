@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="DeliveryRepository" name="jobseeker\Bundle\CareerBundle\Entity\Delivery" table="delivery">
+        <id name="id" type="bigint" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <many-to-one field="jid" type="bigint" target-entity="jobseeker\Bundle\CareerBundle\Entity\Job">
+            <join-column name="jid" nullable="false" referenced-column-name="id"/>
+        </many-to-one>
+        <many-to-one field="eme" type="bigint" target-entity="jobseeker\Bundle\UserBundle\Entity\Employee">
+            <join-column name="eme" nullable="false" referenced-column-name="id"/>
+        </many-to-one>
+        <many-to-one field="emr" type="bigint" target-entity="jobseeker\Bundle\UserBundle\Entity\Employer">
+            <join-column name="emr" nullable="false" referenced-column-name="id"/>
+        </many-to-one>
+        <field name="email" type="string" column="email" length="50"/>
+        <field name="readed" type="smallint" column="readed" nullable="true"/>
+        <field name="reserve" type="string" column="reserve" length="255" nullable="true"/>
+        <field name="message" type="text" column="message" nullable="true"/>
+        <field name="schedule" type="string" column="schedule" length="255" nullable="true"/>
+        <field name="ctime" type="integer" column="ctime" nullable="true"/>
+        <field name="status" type="smallint" column="status" nullable="true"/>
+        <indexes>
+            <index columns="readed" name="delivery_readed"/>
+            <index columns="schedule" name="delivery_schedule"/>
+            <index columns="ctime" name="delivery_ctime"/>
+            <index columns="status" name="delivery_status"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

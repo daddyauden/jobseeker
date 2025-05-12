@@ -1,0 +1,3940 @@
+##### Common Panel {
+common.language: Language
+common.country: Country
+common.choose: Choose
+common.page.first: First Page
+common.page.previous: Previous Page
+common.page.next: Next Page
+common.page.last: Last Page
+common.date.year: Year
+common.date.half_year: Half A Year
+common.date.month: Month
+common.date.quarter: Quarter
+common.date.half_month: Half A Month
+common.date.day: Day
+common.date.week: Week
+common.time.hour: Hour
+common.time.minute: Minute
+common.time.quarter: Quarter
+common.time.second: Second
+common.lt: Less than
+common.lte: No more than
+common.gt: More than
+common.gte: No less than
+common.recent: Recently
+common.ago: Before
+common.brand.intro: zh_cn@全球招聘专家，您身边的职业管家#en@Global Professional Recruitment,Career Consultant For You#fr@Mondial recrutement professionnel, Consultant de carrière pour vous#de@Global Professional Recruitment, Career Consultant für Sie#ja@グローバルスペシャリスト人材紹介、あなたのキャリアコンサルタント
+common.search: Search
+common.save: Save
+common.delete: Delete
+common.nochoose: Select None
+common.none: No Information
+common.novalue: No settings
+common.ucenter: User Center 
+common.upload_comment: Upload File Format：bmp，jpg/jpeg，png，File Size：2M
+common.upload_error_type: Wrong File Format! Try Again!
+common.upload_error_size:  File Oversized! Try Again!
+common.upload_error_other: Wrong File! Try Again!
+common.job.noemployer: No Enterprise Information Provided! Be Cautious!
+common.job.noemployee: Update Information and Deliver!
+common.job.noemployee.employee: Update Personal Information
+common.job.noemployee.education: Update Education Information
+common.ismember: is Member?
+common.drop.file: Drap/Drop File
+common.cancel: Cancel
+common.retry: Retry
+common.pause: Pause
+common.edit: Edit
+common.delete: Delete
+common.close: Close
+common.processing: Processing
+common.upload: Upload
+common.uploading: Uploading
+common.upload.fail: Upload Fail
+common.salary.unit: Monthly
+common.job.post: Days
+common.negotiable: Negotiable
+
+job.delivery: Delivery
+job.delivery.deliverying: Delivering. Please Waiting!
+job.delivery.success: Delivery Success!
+job.delivery.fail: Delivery Failure!
+job.delivery.repeat: Repeated Delivery! ( Period of Validity %day)
+job.delivery.nologin: Unregistered and No Delivery.
+job.delivery.same: No Delivery to Your Own Post. 
+job.delivery.invalid: Invalid Delivery!
+job.delivery.emr.new: To Be Read
+job.delivery.emr.history: Readed
+job.delivery.eme.new: To Be Read
+job.delivery.eme.history: Readed
+job.delivery.reserved: Invited for Interview
+job.delivery.schedule: Accepted for Interview
+
+job.sendcv.send: Send CV
+job.sendcv.cv: Upload Cv
+job.sendcv.emailfrom: A Email for Accept Message
+job.sendcv.expires: Please not repeat send CV in 3 days
+job.sendcv.notupload: Please upload CV
+job.sendcv.error: Error, try again please
+
+job.reserve: Booking the Interview
+job.reserve.info: Reserve Information 
+job.reserve.note: Notes："(EG:Traffic routes,Interview Address and so on)"
+job.reserve.reserving: Reserving,wait please!
+job.reserve.success: Reserved Successfully!
+job.reserve.fail: Reserved Unsuccessfully!
+job.reserve.repeat: Repeated Reserved!
+job.reserve.nologin: Unregistered and unreserved!
+job.reserve.invalid: Invalid reserved!
+job.reserve.reserved: "Choose at least one appointment time:"
+job.reserve.enter: Choose appointment time…
+job.reserve.more: Set at most five appointment time!
+job.reserve.less: Please set at least one appointment time!
+
+job.schedule: Accept interview appointment
+job.schedule.info: Appointment Information
+job.schedule.scheduling: Confirming the appointment，please wait...
+job.schedule.success: Reserve Successfully!
+job.schedule.fail: Reserve Unsuccessfully!
+job.schedule.repeat: Already Reserved!
+job.schedule.nologin: Unregistered and unreserved!
+job.schedule.invalid: Invalid reserved!
+job.schedule.less: Confirming the appointment time.
+
+job.search.condition: Please search by requirement
+job.search.type: Employment type
+job.search.industry: Job family
+job.search.area: Location
+job.search.salary: Salary
+job.search.begintime: Post Time
+
+user.signup.exist: User already exist！
+user.signup.noexist: user not exists！
+user.signup.success: Active email has already sent!
+user.signup.error: Poor network speed，please try later！
+user.signup.invalid: Invalid registry！
+
+user.signin.error_password: Wrong password, please try again!
+user.signin.invalid: Invalid Login ！
+
+user.validate.invalid: Invalid Activation Code
+user.validate.repeat: "Activated Already,  <a style='text-decoration:underline;color:#FFF;' href='%site%'>Home Page</a>"
+user.validate.success: "Active Successfull,  <a style='text-decoration:underline;color:#FFF;' href='%site%'>Update Information</a>"
+# Common Panel }
+
+#### Marketing ADS {
+marketing.job.mount: From today, have available discounts if the number of recruitment is over one
+# Marketing ADS }
+
+# Frontend Panel {
+fe.signin: Login
+fe.signup: Register
+fe.cancel: Cancel
+fe.logout: Log out
+fe.job_post: POST A JOB FOR FREE
+fe.dashboard: User Center
+fe.home: Home
+fe.dashboard.emrinfo: Information
+fe.dashboard.emr_postjob: Online Job
+fe.dashboard.postinfo: Anlytics
+fe.dashboard.info: Information
+fe.dashboard.eduinfo: Education
+fe.dashboard.expinfo: Experience
+fe.dashboard.eme_postjob: Delivered
+# Frontend Panel }
+
+# Email Template {
+user.validate.subject: Account Active
+user.validate.body: After Actived, You can use JobSeeker
+user.validate.notice_a: "If can't press button，Please <a style='text-decoration:none;color:#2aabd2;' href='%validateurl%' target='_blank'>Click Here</a>"
+user.validate.notice_b: "If you need help, please contact with: %support_email%"
+job.delivery.subject: Job Seeker%name% Delivery %title% Post
+
+career.sendcv.subject: A New Job Request
+career.sendcv.body: New CV
+career.sendcv.notice_a: "If can't press button，Please <a style='text-decoration:none;color:#2aabd2;' href='%joburl%' target='_blank'>Click Here</a>"
+career.sendcv.notice_b: "If you need help, please contact with: %support_email%"
+# Email Template }
+
+# Backend Panel {
+be.operate: Operate
+be.edit: Edit
+be.add:  Add
+be.save: Save
+be.submit: Submit
+be.choose: Choose
+be.privilege.edit: Privilege Management
+be.nochange: No Alteration
+be.update: Update
+be.update.success: Update Successfully！
+be.update.fail: Update Unsuccessfully！！！
+be.update.invalid: Invalid Update！！！
+be.delete: Delete
+be.delete.success: Delete Successfully！
+be.delete.fail: Delete Unsuccessfully！！！
+be.delete.invalid: Invalid Delete！！！
+be.install: Install
+be.install.success: Install Successfully！
+be.install.fail: Install Unsuccessfully！！！
+be.uninstall: Uninstall
+be.uninstall.success: Uninstall Successfully！
+be.uninstall.fail: Uninstall Unsuccessfully！！！
+be.installed: Installed
+be.uninstalled: Uninstalled
+be.conflicted: Conflict！！！Don’t choose yourself!
+be.samelevel: Don’t choose the same level!
+# Backend Panel }
+
+# Role Name {
+role.normal: Normal Role
+role.publisher: Post Publication Role
+role.admin: Back-stage Management Role
+role.founder: Webmaster
+# Role Name }
+
+# Plugin {
+plugin.scope.user: For User
+plugin.scope.payment: For Payment
+
+plugin.name.microsoft: Microsoft
+plugin.description.microsoft: More than 500 million people use services like Microsoft account, Microsoft OneDrive, and Outlook.com. When you build apps that work with these services, you give your users new ways to engage with your products and services. To help you create this value and build successful apps that your customers enjoy, we offer Live Connect—a collection of APIs that help you integrate your apps quickly and easily with compatible services like Microsoft account, OneDrive, and Outlook.com.
+plugin.signin.microsoft: Log in with Microsoft
+
+plugin.name.weibo: Weibo
+plugin.description.weibo: 微连接(Weibo Connect)是微博针对第三方网站提供的社会化网络接入方案。微连接基于微博亿级用户基数和社交网络传播特性，为第三方网站提供用户身份系统及社交关系导入。
+plugin.signin.weibo: Log in with Weibo
+
+plugin.name.google: Google
+plugin.description.google: The Google API Client Library enables you to work with Google APIs such as Google+, Drive, or YouTube on your server.
+plugin.signin.google: Log in with Google
+
+plugin.name.qq: QQ
+plugin.description.qq: QQ互联开放平台为第三方网站提供了丰富的API。第三方网站接入QQ互联开放平台后，即可通过调用平台提供的API实现用户使用QQ帐号登录网站功能，且可以获取到腾讯QQ用户的相关信息。
+plugin.signin.qq: Log in with QQ
+
+plugin.name.jobseeker: JobSeeker
+plugin.description.jobseeker: JobSeeker用户中心，每个应用的用户都会同步到用户中心，包括注册、登录、调用用户资料流程。
+plugin.signin.jobseeker: Log in with JobSeeker
+
+plugin.name.weixinopen: Wechat Open Platform
+plugin.description.weixinopen: 接入微信登录，可实现微信账号快速登录，打通账号体系，一键连接亿万微信用户,同一用户使用微信登录你的不同应用和公众帐号，会对应同一个UnionID，以便进行不同业务间的帐号统一
+plugin.signin.weixinopen: Log in with Wechat
+
+plugin.name.facebook: Facebook
+plugin.description.facebook: Facebook Login with the Facebook SDK for JavaScript enables people to sign into your web page with their Facebook credentials. If for some reason you can't use our JavaScript SDK you can also implement Facebook Login without it. To implement Facebook Login without the JavaScript SDK, see Manually Building a Login Flow
+plugin.signin.facebook: Log in with Facebook
+
+plugin.name.paypal: PayPal
+plugin.description.paypal: PayPal is the faster, safer way to pay and get paid. The service gives people simpler ways to send money without sharing financial information, and with the flexibility to pay using their account balances, bank accounts, credit cards or promotional financing.
+
+plugin.name.stripe: Stripe
+plugin.description.stripe: Stripe is a developer-friendly way to accept payments online and in mobile apps.We process billions of dollars a year for thousands of companies of all sizes.
+# Plugin }
+
+
+
+
+#### Locale #### 菲律宾文 chrome:fil ISO_639:tl #### 爪哇文 chrome:jw ISO_639:jv ####
+de: Deutsch
+de_de: Deutsch(DE)
+en: English
+en_us: English(US)
+en_ca: English(CA)
+en_uk: English(UK)
+fr: Français
+fr_fr: Français(FR)
+fr_ca: Français(CA)
+ja: 日本語
+zh: 中文
+zh_cn: 中文简体
+af: Afrikaans
+am: አማርኛ
+ar: العربية
+as: অসমীয়া
+az: azərbaycan dili
+be: Беларуская
+bg: български език
+bh: भोजपुरी
+bn: বাংলা
+bo: བོད་ཡིག
+br: brezhoneg
+bs: bosanski jezik
+ca: Català
+ce: нохчийн мотт
+co: corsu
+cs: česky
+cy: Cymraeg
+da: dansk
+dz: རྫོང་ཁ
+el: Ελληνικά
+es: español
+et: Eesti keel
+eu: euskara
+fa: فارسی
+fi: suomen kieli
+fil: Filipino
+fj: vosa Vakaviti
+fo: Føroyskt
+fy: Frysk
+ga: Gaeilge
+gd: Gàidhlig
+gl: Galego
+gn: Avañe'ẽ
+gu: ગુજરાતી
+gv: Ghaelg
+ha: هَوُسَ
+he: עברית
+hi: हिन्दी
+hr: Hrvatski
+hu: Magyar
+hy: Հայերեն
+id: Bahasa Indonesia
+is: Íslenska
+it: Italiano
+jv: basa Jawa
+ka: ქართული
+kg: KiKongo
+kk: Қазақша
+km: ភាសាខ្មែរ
+kn: ಕನ್ನಡ
+ko: 한국어
+ku: كوردی
+ky: Кыргыз тили
+la: Latina
+li: Limburgs
+ln: Lingála
+lo: ພາສາລາວ
+lt: Lietuvių
+lv: Latviešu
+mk: Македонски
+ml: മലയാളം
+mn: монгол
+mo: Лимба молдовеняскэ
+mr: मराठी
+ms: Bahasa Melayu
+mt: Malti
+nb: Norsk bokmål
+ne: नेपाली
+nl: Nederlands
+no: Norsk
+oc: Occitan
+om: Afaan Oromoo
+or: ଓଡ଼ିଆ
+pa: ਪੰਜਾਬੀ
+pi: पाऴि
+pl: polski
+ps: پښتو
+pt: Português
+qu: Runa Simi
+rm: rumantsch grischun
+ro: română
+ru: русский язык
+rw: Kinyarwanda
+sa: संस्कृतम्
+sd: सिन्धी
+sh: Srpskohrvatski
+si: සිංහල
+sk: slovenčina
+sl: slovenščina
+sn: chiShona
+so: Soomaaliga
+sq: Shqip
+sr: српски језик
+ss: SiSwati
+st: seSotho
+su: Basa Sunda
+sv: Svenska
+sw: Kiswahili
+ta: தமிழ்
+te: తెలుగు
+tg: тоҷикӣ
+th: ไทย
+ti: ትግርኛ
+tk: Türkmen
+tn: seTswana
+to: faka Tonga
+tr: Türkçe
+ts: xiTsonga
+tt: татарча
+tw: Twi
+ug: ئۇيغۇرچە
+uk: Українська
+ur: اردو
+uz: O'zbek
+ve: tshiVenḓa
+vi: Tiếng Việt
+xh: isiXhosa
+yi: ייִדיש
+yo: Yorùbá
+zu: isiZulu
+
+de.title: German
+de_de.title: German(Germany)
+en.title: English
+en_us.title: English(USA)
+en_ca.title: English(Canada)
+en_uk.title: English(United Kingdom)
+fr.title: French
+fr_fr.title: French(France)
+fr_ca.title: French(Canada)
+ja.title: Japanese
+zh.title: Chinese
+zh_cn.title: Chinese(Simple)
+af.title: Afrikaans
+am.title: Amharic
+ar.title: Arabic
+as.title: Assamese
+az.title: Azerbaijani
+be.title: Belarusian
+bg.title: Bulgarian
+bh.title: Bihari
+bn.title: Bengali
+bo.title: 藏文
+br.title: 布列塔尼文
+bs.title: 波斯尼亚文
+ca.title: 加泰隆文
+ce.title: 车臣文
+co.title: 科西嘉文
+cs.title: 捷克文
+cy.title: 威尔士文
+da.title: 丹麦文
+dz.title: 不丹文
+el.title: 现代希腊文
+es.title: 西班牙文
+et.title: 爱沙尼亚文
+eu.title: 巴斯克文
+fa.title: 波斯文
+fi.title: 芬兰文
+fil.title: 菲律宾文
+fj.title: 斐济文
+fo.title: 法罗斯文
+fy.title: 弗里西亚文
+ga.title: 爱尔兰文
+gd.title: 苏格兰盖尔文
+gl.title: 加利西亚文
+gn.title: 瓜拉尼文
+gu.title: 古吉拉特文
+gv.title: 马恩岛文
+ha.title: 豪萨文
+he.title: 希伯来文
+hi.title: 印地文
+hr.title: 克罗地亚文
+hu.title: 匈牙利文
+hy.title: 亚美尼亚文
+id.title: 印尼文
+is.title: 冰岛文
+it.title: 意大利文
+jv.title: 爪哇文
+ka.title: 格鲁吉亚文
+kg.title: 刚果文
+kk.title: 哈萨克文
+km.title: 高棉文
+kn.title: 坎纳达文
+ko.title: 朝鲜文
+ku.title: 库尔德文
+ky.title: 吉尔吉斯文
+la.title: 拉丁文
+li.title: 林堡文
+ln.title: 林加拉文
+lo.title: 老挝文
+lt.title: 立陶宛文
+lv.title: 拉脱维亚文
+mk.title: 马其顿文
+ml.title: 马拉亚拉姆文
+mn.title: 蒙古文
+mo.title: 摩尔达维亚文
+mr.title: 马拉地文
+ms.title: 马来文
+mt.title: 马耳他文
+nb.title: 挪威布克莫尔文
+ne.title: 尼泊尔文
+nl.title: 荷兰文
+no.title: 挪威文
+oc.title: 奥克西唐文
+om.title: 阿芳·奥洛莫文
+or.title: 奥利亚文
+pa.title: 旁遮普文
+pi.title: 巴利文
+pl.title: 波兰文
+ps.title: 普什图文
+pt.title: 葡萄牙文
+qu.title: 凯楚亚文
+rm.title: 利托-罗曼语
+ro.title: 罗马尼亚文
+ru.title: 俄文
+rw.title: 基尼阿万达语
+sa.title: 梵文
+sd.title: 信德文
+sh.title: 塞尔维亚-克罗地亚文
+si.title: 僧加罗文
+sk.title: 斯洛伐克文
+sl.title: 斯洛文尼亚文
+sn.title: 绍纳文
+so.title: 索马里文
+sq.title: 阿尔巴尼亚文
+sr.title: 塞尔维亚文
+ss.title: 塞斯瓦替文
+st.title: 塞索托文
+su.title: 巽他文
+sv.title: 瑞典文
+sw.title: 斯瓦希里文
+ta.title: 泰米尔文
+te.title: 泰卢固文
+tg.title: 塔吉克文
+th.title: 傣文
+ti.title: 提格里尼亚文
+tk.title: 土库曼语
+tn.title: 塞茨瓦纳语
+to.title: 汤加文
+tr.title: 土耳其文
+ts.title: 宗加文
+tt.title: 塔塔尔文
+tw.title: 特威文
+ug.title: 维吾尔文
+uk.title: 乌克兰文
+ur.title: 乌尔都文
+uz.title: 乌兹别克文
+ve.title: 文达文
+vi.title: 越南文
+xh.title: 科萨文
+yi.title: 依地文
+yo.title: 约鲁巴文
+zu.title: 祖鲁文
+
+
+
+
+#### Currency ####
+hkd: 港幣
+mop: 澳門幣
+twd: 新臺幣
+cny: 人民币
+krw: 원
+vnd: 越南盾
+jpy: 日元
+lak: 基普
+khr: 瑞尔
+php: 菲律宾比索
+myr: 马元
+sgd: 新加坡元
+thb: 泰铢
+mmk: 缅元
+lkr: 斯里兰卡卢比
+idr: 盾
+pkr: 巴基斯坦卢比
+inr: 卢比
+afn: 阿富汗尼
+eur: 欧元
+rub: 卢布
+chf: 瑞士法郎
+gbp: 英镑
+cad: 加元
+usd: US Dollar
+mxn: 墨西哥比索
+vef: 玻利瓦尔
+brl: 新克鲁赛罗
+ars: 阿根廷比索
+xof: 西非法郎
+ngn: 奈拉
+zar: 兰特
+aud: 澳大利亚元
+nzd: 新西兰元
+
+hkd.title: 港元
+mop.title: 澳门元
+twd.title: 新台币
+cny.title: 人民币
+krw.title: 韩元
+vnd.title: 越南盾
+jpy.title: 日元
+lak.title: 基普
+khr.title: 瑞尔
+php.title: 菲律宾比索
+myr.title: 令吉
+sgd.title: 新加坡元
+thb.title: 泰铢
+mmk.title: 缅元
+lkr.title: 卢比
+idr.title: 印尼盾
+pkr.title: 卢比
+inr.title: 卢比
+afn.title: 阿富汗尼
+eur.title: 欧元
+rub.title: 卢布
+chf.title: 瑞士法郎
+gbp.title: 英镑
+cad.title: Canada Dollar
+usd.title: US Dollar
+mxn.title: 墨西哥比索
+vef.title: 玻利瓦尔
+brl.title: 巴西雷亚尔
+ars.title: 阿根廷比索
+xof.title: 西非法郎
+ngn.title: 奈拉
+zar.title: 兰特
+aud.title: 澳元
+nzd.title: 新西兰元
+
+hkd.symbol: $
+mop.symbol: P
+twd.symbol: $
+cny.symbol: ¥
+krw.symbol: ₩
+vnd.symbol: ₫
+jpy.symbol: ¥
+lak.symbol: ₭
+khr.symbol: ៛
+php.symbol: ₱
+myr.symbol: RM
+sgd.symbol: $
+thb.symbol: ฿
+mmk.symbol: Ks
+lkr.symbol: Rs
+idr.symbol: Rp
+pkr.symbol: ₨
+inr.symbol: ₹
+afn.symbol: ؋
+eur.symbol: €
+rub.symbol: р.
+chf.symbol: Fr
+gbp.symbol: £
+cad.symbol: $
+usd.symbol: $
+mxn.symbol: $
+vef.symbol: Bs
+brl.symbol: R$
+ars.symbol: $
+xof.symbol: Fr
+ngn.symbol: ₦
+zar.symbol: R
+aud.symbol: $
+nzd.symbol: $
+
+
+
+
+#### Area ####
+# Continent Name {
+AFRICA: Africa
+AMERICAS: Americas
+ASIA: Asia
+EUROPE: Europe
+OCEANIA: Oceania
+# Continent Name }
+
+# Africa {
+# Northern Africa
+DZ: 阿尔及利亚
+LY: 利比亚
+SD: 苏丹
+EG: 埃及
+MA: 摩洛哥
+TN: 突尼斯
+# Eastern Africa
+KE: 肯尼亚
+SS: 南苏丹
+ER: 厄立特里亚
+ET: 埃塞俄比亚
+ZW: 津巴布韦
+# Southern Africa
+ZA: 南非
+# Western Africa
+NG: 尼日利亚
+GH: 加纳
+GN: 几内亚
+CI: 科特迪瓦
+GW: 几内亚比绍
+TG: 多哥
+# Middle Africa
+AO: 安哥拉
+# Africa }
+
+# Americas {
+# Northern America
+US: USA
+CA: Canada
+# Central America
+NI: 尼加拉瓜
+CR: 哥斯达黎加
+MX: 墨西哥
+PA: 巴拿马
+# Caribbean
+KY: 开曼群岛
+CU: 古巴
+PR: 波多黎各
+TT: 特立尼达和多巴哥
+VG: 英属维尔京群岛
+VI: 美属维尔京群岛
+# South America
+AR: 阿根廷
+CO: 哥伦比亚
+BO: 玻利维亚
+EC: 厄瓜多尔
+PY: 巴拉圭
+UY: 乌拉圭
+BR: 巴西
+PE: 秘鲁
+VE: 委内瑞拉
+CL: 智利
+# Americas }
+
+# Asia {
+# Eastern Asia
+CN: China
+HK: Hong Kong(China)
+MO: Macoo(China)
+TW: Taiwan(China)
+JP: Japan
+KR: Korian
+
+# South-Eastern Asia
+BN: 文莱
+ID: 印度尼西亚
+MM: 缅甸
+TH: 泰国
+KH: 柬埔寨
+LA: 老挝
+PH: 菲律宾
+VN: 越南
+MY: 马来西亚
+SG: 新加坡
+# Southern Asia
+AF: 阿富汗
+MV: 马尔代夫
+PK: 巴基斯坦
+BD: 孟加拉国
+IN: 印度
+NP: 尼泊尔
+LK: 斯里兰卡
+BT: 不丹
+IR: 伊朗
+# Western Asia
+IQ: 伊拉克
+SY: 叙利亚
+AZ: 阿塞拜疆
+IL: 以色列
+TR: 土耳其
+QA: 卡塔尔
+AE: 阿联酋
+KW: 科威特
+SA: 沙特阿拉伯
+GE: 格鲁吉亚
+LB: 黎巴嫩
+# Central Asia
+KZ: 哈萨克斯坦
+TJ: 塔吉克斯坦
+TM: 土库曼斯坦
+UZ: 乌兹别克斯坦
+KG: 吉尔吉斯斯坦
+# Asia }
+
+# Europe {
+# Northern Europe
+DK: 丹麦
+IS: 冰岛
+LV: 拉脱维亚
+SE: 瑞典
+EE: 爱沙尼亚
+IE: 爱尔兰
+LT: 立陶宛
+GB: 英国
+FI: 芬兰
+NO: 挪威
+# Eastern Europe
+BY: 白俄罗斯
+HU: 匈牙利
+RO: 罗马尼亚
+BG: 保加利亚
+RU: 俄罗斯
+UA: 乌克兰
+CZ: 捷克
+PL: 波兰
+# Southern Europe
+GR: 希腊
+SI: 斯洛文尼亚
+IT: 意大利
+PT: 葡萄牙
+ES: 西班牙
+# Western Europe
+AT: 奥地利
+DE: 德国
+LU: 卢森堡
+NL: 荷兰
+BE: 比利时
+LI: 列支敦士登
+MC: 摩纳哥
+CH: 瑞士
+FR: 法国
+# Europe }
+
+# Oceania {
+# Australasia
+AU: 澳大利亚
+NZ: 新西兰
+# Melanesia
+FJ: 斐济群岛
+PG: 巴布亚新几内亚
+SB: 所罗门群岛
+# Micronesian Region
+MH: 马绍尔群岛
+PW: 帕劳
+# Polynesia
+TO: 汤加
+# Oceania }
+
+
+
+
+### Route ###
+admin_index: 后台首页
+admin_logout: 后台退出
+
+admin_list: 管理员列表
+admin_add: 保存管理员
+admin_delete: 删除管理员
+admin_save: 保存管理员
+admin_show: 显示管理员
+
+area_list: 地区列表
+area_add: 添加地区
+area_delete: 删除地区
+area_save: 保存地区
+
+locale_list: 语言列表
+locale_add: 添加语言
+locale_delete: 删除语言
+locale_save: 保存语言
+
+currency_list: 货币列表
+currency_add: 添加货币
+currency_delete: 删除货币
+currency_save: 保存货币
+
+system_list: 系统参数列表
+system_add: 添加系统参数
+system_delete: 删除系统参数
+system_save: 保存系统参数
+
+product_list: 产品类别列表
+product_add: 添加产品类别
+product_delete: 删除产品类别
+product_save: 保存产品类别
+
+job_cat_list: 岗位类别列表
+job_cat_add: 添加岗位类别
+job_cat_delete: 删除岗位类别
+job_cat_save: 保存岗位类别
+
+job_ind_list: 行业类别列表
+job_ind_add: 添加行业类别
+job_ind_delete: 删除行业类别
+job_ind_save: 保存行业类别
+
+role_list: 角色列表
+role_add: 保存角色
+role_delete: 删除角色
+role_save: 保存角色
+role_show: 显示角色
+
+privilege_list: 权限列表
+privilege_add: 添加权限
+privilege_delete: 删除权限
+privilege_save: 保存权限
+
+user_add: 添加用户
+user_callback: 返回callback
+user_list: 用户列表
+user_login: 用户登录
+user_logout: 用户注销
+user_register: 用户注册
+user_show: 用户详情
+
+career_index: 支付首页
+
+order_payment: 前去支付
+order_dopayment: 确认支付
+order_checkout: 结账
+order_docheckout: 确认结账
+
+discount_list: 产品折扣列表
+discount_add: 添加产品折扣
+discount_delete: 删除产品折扣
+discount_save: 保存产品折扣
+
+
+
+
+### Bundle:Controller:Action ###
+adminbundle: 后台
+adminbundle.area: 地区
+adminbundle.area.list: 列表
+adminbundle.area.add: 添加
+adminbundle.area.delete: 删除
+adminbundle.area.save: 保存
+
+adminbundle.currency: 货币
+adminbundle.currency.list: 列表
+adminbundle.currency.add: 添加
+adminbundle.currency.delete: 删除
+adminbundle.currency.save: 保存
+
+adminbundle.role: 角色
+adminbundle.role.list: 列表
+adminbundle.role.show: 展示
+adminbundle.role.add: 添加
+adminbundle.role.delete: 删除
+adminbundle.role.save: 保存
+
+adminbundle.admin: 管理员
+adminbundle.admin.list: 列表
+adminbundle.admin.show: 展示
+adminbundle.admin.add: 添加
+adminbundle.admin.delete: 删除
+adminbundle.admin.save: 保存
+
+adminbundle.index: 入口
+adminbundle.index.index: 主页
+adminbundle.index.login: 登录
+adminbundle.index.main: 面板
+adminbundle.index.logout: 退出
+
+adminbundle.locale: 语言
+adminbundle.locale.list: 列表
+adminbundle.locale.add: 添加
+adminbundle.locale.delete: 删除
+adminbundle.locale.save: 保存
+
+adminbundle.privilege: 权限
+adminbundle.privilege.list: 列表
+adminbundle.privilege.add: 添加
+adminbundle.privilege.delete: 删除
+adminbundle.privilege.save: 保存
+
+adminbundle.system: 系统
+adminbundle.system.list: 列表
+adminbundle.system.add: 添加
+adminbundle.system.delete: 删除
+adminbundle.system.save: 保存
+
+adminbundle.product: 产品
+adminbundle.product.list: 产品类别列表
+adminbundle.product.add: 添加产品类别
+adminbundle.product.delete: 删除产品类别
+adminbundle.product.save: 保存产品类别
+
+adminbundle.discount: 产品折扣
+adminbundle.discount.list: 产品折扣列表
+adminbundle.discount.add: 添加产品折扣
+adminbundle.discount.delete: 删除产品折扣
+adminbundle.discount.save: 保存产品折扣
+
+careerbundle: 招聘
+careerbundle.payment: 支付
+careerbundle.payment.index: 首页
+careerbundle.payment.payment: 前去支付
+careerbundle.payment.dopayment: 确认支付
+careerbundle.payment.checkout: 结账
+careerbundle.payment.docheckout: 确认结账
+
+pluginbundle: 插件
+toolbundle: 工具
+
+userbundle: 用户
+userbundle.user: 用户
+userbundle.user.register: 注册
+userbundle.user.list: 列表
+userbundle.user.add: 添加
+userbundle.user.show: 展示
+userbundle.user.login: 登录
+userbundle.user.logout: 退出
+userbundle.user.callback: 调用callback
+
+
+
+
+################ Discount ################
+DT1000: 95% Discount
+DT2000: 90% Discount
+DT3000: 85% Discount
+DT4000: 80% Discount
+DT5000: 75% Discount
+
+################ Type ################
+TE1000: Full-time
+TE2000: Part-time
+TE3000: Permanent
+TE4000: Temporary
+TE5000: Contract
+TE6000: Casual
+TE7000: Internship
+TE8000: Freelance
+TE9000: Volunteer
+TE10000: Abroad
+
+################ Employer_scale ################
+EMRS1000: Less than 5 Employers
+EMRS2000: 5-10 Employers
+EMRS3000: 11-20 Employers
+EMRS4000: 21-50 Employers
+EMRS5000: 51-100 Employers
+EMRS6000: 101-500 Employers
+EMRS7000: More than 500 Employers
+
+################ Employer_type ################
+EMRT1000: Studio
+EMRT2000: Start-up Corporation
+EMRT3000: Foreign-invested Corporation 
+EMRT4000: Quoted Company
+EMRT5000: Collectively-Owned Enterprise
+EMRT6000: Stated-owned Enterprise
+EMRT7000: Education Organization
+EMRT8000: Public Organization
+EMRT9000: Government Organization 
+
+################ Employee_diploma ################
+EMED1000: Junior College
+EMED2000: Bachelor
+EMED3000: Master
+EMED4000: Pd.D
+
+
+
+
+################ Table Column ################
+# Table Admin {
+table.admin: Admin
+table.admin.id: Admin Id
+table.admin.rid: Role
+table.admin.newrid: New Role
+table.admin.email: Email
+table.admin.newemail: New Email
+table.admin.password: Password
+table.admin.newpassword: New Password
+table.admin.logintime: Last Signin Time
+table.admin.loginip: Last Signin IP
+# Table Admin }
+
+# Table Area {
+table.area: Area
+table.area.id: Area Id
+table.area.pid: Parent Id
+table.area.code: Code
+table.area.code.comment: ISO 3166-1
+table.area.name: Name
+table.area.level: Level
+table.area.level.comment: Continent=1, Country=2, City=3, District=4
+table.area.level.1: Continent
+table.area.level.2: Country
+table.area.level.3: City
+table.area.level.4: District
+table.area.alpha: Alpha
+table.area.alpha.comment: Local Area Name Alpha
+table.area.domain: Domain
+table.area.domain.comment: "Value for level＝2, eg: cn.jobseeker.com"
+table.area.lat: Latitude
+table.area.lng: Longitude
+table.area.queue: Sequence
+table.area.status: Status
+table.area.status.0: Inactive
+table.area.status.1: Active
+# Table Area }
+
+# Table Category {
+table.category: Category
+table.category.id: Category Id
+table.category.pid: Parent Id
+table.category.type: Type
+table.category.csn: Category Serial Number
+table.category.queue: Sequence
+table.category.status: Status
+table.category.status.0: Inactive
+table.category.status.1: Active
+# Table Category }
+
+# Table Currency {
+table.currency: Currency
+table.currency.id: Currency Id
+table.currency.code: Code
+table.currency.code.comment: ISO 4217
+table.currency.name: Name
+table.currency.symbol: Symbol
+table.currency.status: Status
+table.currency.status.0: Inactive
+table.currency.status.1: Active
+# Table Currency }
+
+# Table Delivery {
+table.delivery: Delivery
+table.delivery.id: Delivery Id
+table.delivery.jid: Jod Id
+table.delivery.eme: Employee
+table.delivery.emr: Employer
+table.delivery.email: Email
+table.delivery.readed: Read Status
+table.delivery.readed.0: No Read
+table.delivery.readed.1: Readed
+table.delivery.reserve: Reserve Date
+table.delivery.message: Note
+table.delivery.schedule: Audition Date
+table.delivery.ctime: Delivery Date
+table.delivery.status: Status
+table.delivery.status.0: Deleted
+table.delivery.status.1: OK
+table.delivery.status.2: Hided
+# Table Delivery }
+
+# Table Diploma :abstract sub_table Category {
+table.diploma: Diploma
+table.diploma.id: Diploma Id
+table.diploma.pid: Parent Id
+table.diploma.csn: Diploma Serial Number
+table.diploma.queue: Sequence
+table.diploma.status: Status
+table.diploma.status.0: Inactive
+table.diploma.status.1: Active
+table.diploma.name: Name
+# Table Diploma }
+
+# Table Discount {
+table.discount: Discount
+table.discount.id: Discount Id
+table.discount.rate: Discount Rate
+table.discount.rate.comment: Rate need valued 0<x<1(round)
+table.discount.dsn: Discount Serial Number
+table.discount.name: Name
+table.discount.queue: Sequence
+table.discount.status: Status
+table.discount.status.0: Inactive
+table.discount.status.1: Active
+# Table Discount }
+
+# Table Education {
+table.education: Education
+table.education.id: Education Id
+table.education.uid: Employee Id
+table.education.university: University
+table.education.graduation: Graduation Date
+table.education.diploma: Diploma
+table.education.major: Major In
+table.education.course: Course
+table.education.description: Description
+# Table Education }
+
+# Table Employee {
+table.employee: Candidat
+table.employee.id: Employee Id
+table.employee.uid: User Id
+table.employee.name: Name
+table.employee.avator: Avator
+table.employee.gender: Gender
+table.employee.gender.1: Male
+table.employee.gender.0: Female
+table.employee.marital: Marital
+table.employee.marital.1: Married
+table.employee.marital.0: Single
+table.employee.birthday: Birth Date
+table.employee.nationality: Nationality
+table.employee.hometown: Place Of Birth
+table.employee.location: Place Of Live
+table.employee.mobile: Tel
+table.employee.email: Email
+table.employee.interest: Interest
+table.employee.skill: Skill
+table.employee.language: Language
+table.employee.description: About Me
+# Table Employee }
+
+# Table Employer {
+table.employer: Employer
+table.employer.id: Employer Id
+table.employer.uid: User Id
+table.employer.name: Name
+table.employer.abbr: Abbreviation
+table.employer.avator: Logo
+table.employer.location: Location
+table.employer.address: Address
+table.employer.type: Type
+table.employer.scale: Scale
+table.employer.contacter: Contacter
+table.employer.contacteremail: Email
+table.employer.contactertel: Tel
+table.employer.fax: Fax
+table.employer.site: Site
+table.employer.about: About Company
+# Table Employer }
+
+# Table Employerscale :abstract sub_table Category {
+table.employerscale: Scale
+table.employerscale.id: Scale Id
+table.employerscale.pid: Parent Id
+table.employerscale.csn: Serial Number
+table.employerscale.queue: Sequence
+table.employerscale.status: Status
+table.employerscale.status.0: Inactive
+table.employerscale.status.1: Active
+table.employerscale.name: Name
+# Table Employerscale }
+
+# Table Employertype :abstract sub_table Category {
+table.employertype: Type
+table.employertype.id: Type Id
+table.employertype.pid: Parent Id
+table.employertype.csn: Serial Number
+table.employertype.queue: Sequence
+table.employertype.status: Status
+table.employertype.status.0: Inactive
+table.employertype.status.1: Active
+table.employertype.name: Name
+# Table Employertype }
+
+# Table Experience {
+table.experience: Experience
+table.experience.id: Experience Id
+table.experience.uid: User Id
+table.experience.location: Location
+table.experience.company: Company
+table.experience.orientation: Orientation
+table.experience.dimission: Dimission
+table.experience.title: Title
+table.experience.description: Description
+# Table Experience }
+
+# Table Industry {
+table.industry: Industry
+table.industry.id: Industry Id
+table.industry.pid: Parent Id
+table.industry.isn: Industry Serial Number
+table.industry.queue: Sequence
+table.industry.status: Status
+table.industry.status.0: Inactive
+table.industry.status.1: Active
+table.industry.name: Name
+# Table Industry }
+
+# Table Job {
+table.job: Job
+table.job.id: Job Id
+table.job.uid: User Id
+table.job.jid: Job Serial Number
+table.job.ctime: Create Time
+table.job.product: Duration
+table.job.industry: Industry
+table.job.type: Type
+table.job.salary: Salary
+table.job.area: Job Location
+table.job.begintime: Begin To Post
+table.job.begintime.comment: "After %begintime%, You Can't Modify it!"
+table.job.endtime: Endtime
+table.job.title: Job Title
+table.job.description: JD
+table.job.avator: Job Logo
+table.job.verify: Verify Code
+table.job.status: Status
+table.job.status.0: Not Post
+table.job.status.1: Posting
+table.job.status.2: Pause Post
+table.job.status.3: Stop Post
+table.job.contacter: Contracter
+table.job.contacteremail: Email
+table.job.contactertel: Tel
+table.job.about: About Company
+# Table Job }
+
+# Table Locale {
+table.locale: Language
+table.locale.id: Language Id
+table.locale.code: Code
+table.locale.code.comment: ISO 639-1
+table.locale.name: Name
+table.locale.queue: Sequence
+table.locale.status: Status
+table.locale.status.0: Inactive
+table.locale.status.1: Active
+# Table Locale }
+
+# Table Order {
+table.order: Order
+table.order.id: Order Id
+table.order.uid: User Id
+table.order.oid: Order Serial Number
+table.order.jid: Job Id
+table.order.ctime: Order Create Time
+table.order.mtime: Order Modify Time
+table.order.price: Price
+table.order.did: Discount
+table.order.realprice: Real Price
+table.order.status: Order Status
+table.order.status.0: No Pay
+table.order.status.1: Pay
+table.order.status.2: Refund
+table.order.status.3: Refund Processing
+table.order.status.4: Refund Success
+# Table Order }
+
+# Table Payment {
+table.payment: Payment
+table.payment.id: Payment Id
+table.payment.uid: User Id
+table.payment.pid: Payment Serial Number
+table.payment.oid: Order Serial Number
+table.payment.paytype: Payment Type
+table.payment.payinfo: Payment Information
+table.payment.price: Price
+table.payment.ctime: Payment Time
+table.payment.status: Payment Status
+table.payment.status.0: Fail
+table.payment.status.1: Success
+# Table Payment }
+
+# Table Paymenttype :abstract sub_table Category {
+table.paymenttype: Payment Type
+table.paymenttype.id: Payment Type Id
+table.paymenttype.pid: Parent Id
+table.paymenttype.csn: Payment Type Serial Number
+table.paymenttype.queue: Sequence
+table.paymenttype.status: Status
+table.paymenttype.status.0: Inactive
+table.paymenttype.status.1: Active
+table.paymenttype.name: Name
+# Table Paymenttype }
+
+# Table Plugin {
+table.plugin: Plugin
+table.plugin.id: Plugin Id
+table.plugin.name: Name
+table.plugin.scope: Scope
+table.plugin.config: Configure
+table.plugin.status: Status
+table.plugin.status.0: Inactive
+table.plugin.status.1: Active
+table.plugin.description: Description
+table.plugin.logo: Logo
+# Table Plugin }
+
+# Table Privilege {
+table.privilege: Privilege
+table.privilege.bundle: Bundle
+table.privilege.controller: Controller
+table.privilege.action: Action
+table.privilege.route: Route
+table.privilege.status: Status
+table.privilege.status.0: Inactive
+table.privilege.status.1: Active
+# Table Privilege }
+
+# Table Product {
+table.product: Product
+table.product.id: Product Id
+table.product.duration: Duration
+table.product.duration.comment: Show Days, But Stored In Seconds
+table.product.price: Price
+table.product.price.0: Free
+table.product.price.comment: Currency Defined By System
+table.product.queue: Sequence
+table.product.status: Status
+table.product.status.0: Inactive
+table.product.status.1: Active
+# Table Product }
+
+# Table Role {
+table.role: Role
+table.role.id: Role Id
+table.role.name: Role Name
+table.role.name.comment: Named By English Name
+table.role.locale: Local Name
+table.role.local.comment: Show By English Name
+table.role.pid: Privilege
+# Table Role }
+
+# Table Subscribe {
+table.subscribe: Subscribe
+table.subscribe.id: Subscribe Id
+table.subscribe.type: Type
+table.subscribe.industry: Industry
+table.subscribe.location: Location
+table.subscribe.duration: Duration
+table.subscribe.ctime: Create Time
+table.subscribe.sendtime: Send Time
+# Table Subscribe }
+
+# Table System {
+table.system: System
+table.system.id: System Id
+table.system.skey: Name
+table.system.svalue: Value
+table.system.stype: Type
+table.system.stype.text: String
+table.system.stype.textarea: Text
+table.system.stype.number: Number
+table.system.stype.currency: Currency
+table.system.stype.locale: Language
+table.system.stype.area: Area
+table.system.stype.timezone: Timezone
+# Table System }
+
+# Table Type {
+table.type: Type
+table.type.id: Type Id
+table.type.tsn: Type Serial Number
+table.type.queue: Sequence
+table.type.status: Status
+table.type.status.0: Inactive
+table.type.status.1: Active
+table.type.name: Name
+# Table Type }
+
+# Table User {
+table.user: User
+table.user.id: User Id
+table.user.uid: User Center Id
+table.user.rid: Role
+table.user.email: Email
+table.user.password: Password
+table.user.logintime: Last Signin Time
+table.user.loginip: Last Signin IP
+# Table User }
+
+# Database ssojobseeker Table User {
+table.user: User
+table.user.id: User Id
+table.user.uid: SSO User Id
+table.user.source: Signup Source
+table.user.country: Signup From 
+table.user.email: Email
+table.user.password: Password
+table.user.username: Username
+table.user.firstName: First Name
+table.user.lastName: Last Name
+table.user.addtime: Signup Date
+table.user.status: Status
+table.user.status.0: Inactive
+table.user.status.1: active
+table.user.status.2: Frozen
+table.user.status.3: Cancel
+table.user.salt: Active Code
+# Table User }
+
+
+
+
+################ Industry ################
+A100: Senior Management
+A101: Chief Executive Office CEO/President/Executive President/General Manager
+A102: Chief Operating Officer  COO
+A103: Chief Technology Officer   CTO
+A104: Chief Information Officer    CIO
+A105: Chief Financial Officer       CFO
+A106: Vice President (VP)/Vice General Manager
+A107: Inspector General/Department of GM
+A108: Assistant President/General Manager Assistant
+A109: Country Manager
+A110: Chief Representative
+A111: Branch Manager/分支机构经理/Office Manager
+A112: Project Management
+A113: Department Manager
+A114: Copartner
+
+A200: Finance/Bank/Security/ investment
+A201: Governor/Deputy Governor/Senior Management
+A202: Credit/Credit Management
+A203: Asset Evaluation/Analysis
+A204: Import and Export/Settlement by Letter of Credit
+A205: Bank Card/E bank/New Business Exploration
+A206: Venture Management/Audit/Control/Law
+A207: Liquidation/Accounting
+A208: International Settlement/ Foreign Exchange Transactions
+A209: Account Manager/Financial Products/ Marketing Management
+A210: Bank Teller/ Bank Accounting
+A211: Investment Banking 
+A212: Security/Foreign Exchange/ Futures Broke
+A213: Fund Manager
+A214: Stock/ Futures Operator
+A215: Assistant Fund Manager/Security Analysis
+A216: Auction/Pawn
+A217: Investment Adviser/Financial advisor/Customer Service
+A218: Finance/Economic Researcher 
+A219: Capital Director
+A220: Capital Manager/Director/ Commissioner
+A221: Asset Management/Transaction Management/Fund Management/Financial Management
+
+A300: Insurance
+A301: Actuary
+A302: Product Development/Project Planning
+A303: Insurance Business Manager/Director
+A304: Underwriting
+A305: Insurance Customer Service/Extension Management
+A306: Financial Advisor/Financial Planner
+A307: Insurance Agent/Broker/ Account Manager
+A308: Insurance Trainer
+A309: Contract Management
+A310: Insurance Office Staff
+A311: Management Trainee
+A312: Insurance Claims
+
+A400: Finance/Audit/Statistics/Tax
+A401: Chief Financial Officer/Manage/Director
+A402: Financial Analysis Manager/Director
+A403: Financial Analyst
+A404: Accounting Manager/Director
+A405: Finance/Accounting/Cashier/Statistics
+A406: Audit Manager/Director
+A407: Audit Specialist/Assistant
+A408: Costing Manager/Director/Administrator
+A409: Tax Manager/Director
+A410: Tax Specialist/Assistant
+A411: Investment Manager/Director
+A412: Investment Specialist/Assistant
+
+A500: Law/Consulting/Adviser
+A501: Consulting Director/Project Manager
+A502: Consulting Manager/Director
+A503: Consultant
+A504: Professional Consultant
+A505: Trainer
+A506: Investigator
+A507: Intelligence Analysis
+A508: Lawyer
+A509: Legal Counsel
+A510: Legal Assistant
+A511: Legal Manager/Director
+A512: Legal Specialist/Assistant
+A513: Intellectual Property/Patent Adviser/Specialist
+
+A600: Translation
+A601: English Translation
+A602: French Translation
+A603: Spanish translation
+A604: Japanese Translation
+A605: German Translation
+A606: KoreanTranslation
+A607: Portuguese Translation
+A608: Chinese Translation
+A609: Others
+
+A700: Market/Brand
+A701: Market/Planning Supervisor
+A702: Market/Planning Manager
+A703: Market/Market Director
+A704: Market/Planning Specialist(Assistant)
+A705: Market Survey Supervisor/Deputy Director
+A706: Market Survey Manager/Director
+A707: Market Survey Statistics/Analysis
+A708: Market Survey Assistant
+A709: Brand/Product Supervisor
+A710: Brand/Product Manager
+A711: Brand/Product Director
+A712: Brand/Product Specialist(Assistant)
+
+A800: Public Relations/Medium/Advertisement
+A801: Public Relation(Meeting Affairs)Supervisor/Manager/Director
+A802: Public Relation(Meeting Affairs)Specialist/Assistant
+A803: Public Relation(Business Planning)Supervisor/Manager/Director 
+A804: Public Relation(Business Planning)Specialist/Assistant
+
+A805: Medium(Business Planning)Supervisor/Manager/Director
+A806: Medium(Business Planning)Specialist/Assistant
+A807: Media Buying
+A808: Strategy Director
+A809: Strategy Planning
+A810: Official Documents and Letters/Planning
+A811: Creative Director/Supervisor
+A812: Art Director
+A813: Advertising Creative/Design
+
+A900: Sales/Channels/Customer Service
+A901: Sales Director
+A902: Regional Sales Manager/Sales Manager/Director
+A903: Senior Sales Representative/Customer Manager/Sales Representative
+A904: Sales Assistant/Sales Administrative Assistant
+A905: Business Manager/Business Director
+A906: Business Specialist
+A907: Business Assistant
+A908: Distributor/Agent
+A909: Business Development(BD)Director/Manager
+A910: Telemarketing
+A911: Pharmaceutical Sales Representative
+A912: Insurance Agent/Broker
+A913: Pre-sales Support Manager/Director
+A914: Pre-sales Support Engineer
+A915: Pre-sales Trainer
+A916: After-sales Support Manager/Director
+A917: After-sales Support Engineer
+A918: Channels/Distribution Supervisor
+A919: Channels/Distribution Manager
+A920: Channels/Distribution Director
+A921: Channels/Distribution Representative
+A922: Customer Service Supervisor
+A923: Customer Service Manager/Director 
+A924: Customer Service Specialist/Assistant
+A925: Customer Relation Management(CRM)
+A926: Customer Enquiry Hotline/Call Center
+A927: Customer Complaint/Coordination
+A928: Customer training
+
+B100: Human Resource/Administration/Office Support
+B101: Chief Human Resource Officer/Manager/Director
+B102: Human Resource Specialist/Assistant
+B103: Recruiting Manager/Director
+B104: Recruiting Specialist/Assistant
+B105: Training Supervisor/Manager/Director
+B106: Training Specialist/Assistant
+B107: Trainer
+B108: Compensation & Benefit Manager/Director
+B109: Compensation & Benefit Specialist/Assistant
+B110: Performance Assessment Manager/Director
+B111: Performance Assessment Specialist/Assistant
+B112: Employee Relations/Corporate Culture
+B113: Headhunting Consultant/Assistant
+B114: Administrative Director/Manager/Supervisor
+B115: Administration Specialist/Assistant
+B116: Assistant Manager/Secretary/Clerk
+B117: Receptionist/Switchboard/Reception
+
+B200: Painting/Design/Creation/Art/Publication
+B201: Creative Director/Supervisor
+B202: Design Management Workers
+B203: Art Editor/Art Design
+B204: Graphic Design
+B205: Multimedia/Cartoon/3D Design
+B206: Animation/Cartoon Design
+B207: Toy Design
+B208: Fashion Design/Draw designs/ Platemaking
+B209: Artware/Jewelry Design and Appraisal
+B210: Industry/Product Design
+B211: Package Design
+B212: Furniture/Household Product Design
+B213: Storefront/Display design
+B214: Display/Decoration/Exhibition Design
+B215: Appearance Design
+B216: Chief Editor/Deputy Editor-in-Chief/Editor-in-Chief
+B217: Editor/Journalist/Photography
+B218: Writer/Copywriter/Column
+B219: Art Editor
+B220: Official Documents and Letters/Scheme
+B221: Publication/Distribution
+B222: Circulation Director/Manage/Director
+B223: Layout Designer/Finish Artist
+B224: Proofread/Input
+B225: 电分Operator
+B226: Typography/Platemaking
+B227: Digital Printing/Film Output
+B228: Printing Machine Operator/Proofing Machine Operator
+B229: Ink Technician
+B230: Printing Down/Imposition/Bookbinding/Hot Stamping Technician
+B231: Art/Design Director
+B232: Film and Television Production Engineer/Production Staff
+B233: Film Director/Choreographer-director/Film Production
+B234: Photography/Videography/Acousto-Optic Technique
+B235: Post Production/Recording Sounds Specialist
+B236: Actor/Model/Dubbing
+B237: Anchorperson/Broadcaster/DJ
+B238: Make-up Artist/Image Designer/Costume/Stage Property
+B239: Art Performance/Sport Agent/Talent Scout
+
+B300: Internet/Mobile Terminal/Electronic Commerce/Online Games
+B301: Architect
+B302: Product Director/Manage/Director
+B303: Product Specialist
+B304: Web Designer
+B305: UI/UX
+B306: iOS/Android/WP
+B307: Server Operation
+B308: Front Web Engineer
+B309: End Web Engineer
+B310: Web Producer/Operation/Editor
+B311: Web Editor
+B312: E-commerce Manager/Director
+B313: E-commerce Specialist
+B314: Online Shop Manager/Customer Service
+B315: Game Designer/Operator/Editor
+B316: Flash Design/Develop
+B317: Voice/Video/Multimedia Developmental Engineer
+B318: Special Effects/Vision/Sound Designer
+B319: Popularization/SEO Search Engine Optimization 
+
+B400: Project Management
+B401: Project Director/Manager
+B402: Project Supervisor
+B403: Project Implementation/Coordination
+B404: Project Specialist
+
+B500: IT Management and Support
+B501: Technical Director/Manager/Director
+B502: IT Manager/Director
+B503: Technology/Information Commissioner
+B504: Project Director/Manager/Director
+B505: Project Implementation/Coordination
+B506: Project Director/Manager
+B507: QA Manager
+B508: Standardization Engineer
+B509: System Administrator/Network Administrator
+B510: Helpdesk Technical Support
+B511: Technical Support(Maintenance) Director/Manager/Director
+B512: Technical Support(Maintenance) Engineer
+B513: Technical Clerk/Assistant
+B514: ERP/CRM Implementation Consultant
+B515: ERP/CRM Technological Development
+
+B600: Computer Hardware/Network
+B601: System Analyst/Architect
+B602: System Integration Engineer
+B603: System Engineer
+B604: Requirement Engineer
+B605: System Testing
+B606: Simulation Application Engineer
+B607: Computer Aided Design Engineer
+B608: 职能大厦 Generic Cabling
+B609: Senior Hardware Engineer
+B610: Hardware Engineer
+B611: Hardware Test
+B612: Network Engineer
+
+B700: Computer Software/Information Security
+B701: System Analyst/Architect
+B702: System Integration Engineer
+B703: System Engineer
+
+B704: Requirement Engineer 
+B705: System Testing
+B706: Voice/Video/Developmental Engineer
+B707: Multimedia/Game Development Engineer
+B708: Documentation Engineer
+B709: Data development/Management
+B710: Software Test
+B711: Senior Software Engineer
+B712: Software Engineer
+B713: UI Designer/Engineer
+B714: Information Security Engineer
+
+B800: Communication Technology
+B801: Communication Technology Engineer
+B802: Communication Power Supply Engineer
+B803: Wireless Communication Engineer
+B804: Mobile Communication Engineer
+B805: Value-added Product Development Engineer
+B806: Telecommunication Exchange Engineer
+B807: Telecommunication Network Engineer
+B808: Wired Transmission Engineer
+B809: Data Communication Engineer
+B810: Quality Testing Engineer
+B811: Project Director
+B812: Project Manager
+B813: Project Supervisor
+B814: Project Implementation/Coordination
+
+B900: Trade/Logistics/Warehousing/Purchasing
+B901: Foreign Trade/Trading Manager/Director
+B902: Foreign Trade/Trade Commissioner/Assistant
+B903: Domestic Trade Specialist
+B904: Merchandiser Manager
+B905: Documentation Specialist/Customs Declarant
+B906: High-level Business/Merchandiser
+B907: Purchasing Director
+B908: Purchasing Manager/Director
+B909: Purchaser/Assistant
+B910: Buyer
+B911: Logistics Director
+B912: Logistics Manager/Supervisor
+B913: Logistic Specialist/Assistant
+B914: Supply Chain Director
+B915: Supply Chain Manager/Director/Specialist
+B916: Transportation Manager/Director
+B917: Shipping/Air Freight/Land Transportation  
+B918: Container Operator
+B919: Customs Affairs Management
+B920: Materials Manager
+B921: Materials Director/Specialist
+B922: Warehouse Manager/Director
+B923: Warehouse Keeper
+B924: Oil and Natural Gas Storage and Transport 
+B925: Freight Forwarder
+B926: Courier
+B927: Dispatch Operator
+B928: Warehouse Stock Management
+
+C100: Architecture/Real Estate/Decoration/Environment
+C101: Architect
+C102: Structure/Civil Engineering/Structural Engineer
+C103: Architectural Design/Charting
+C104: Construction Management
+C105: Engineering Project Supervisor
+C106: Geotechnical/Underground Project
+C107: Electrical Engineering
+C108: Budgeting Specialist/Budget and Settlement
+C109: Construction Project Inspector
+C110: Curtain Wall Engineer
+C111: Real Estate Development/Planning Manager
+C112: Real Estate Development/Planning Supervisor(Specialist)
+C113: Real Estate Project Bid inviting
+C114: Real Estate Appraisal
+C115: Real Estate Project Supporting Engineer
+C116: Real Estate Agent/Transaction
+C117: Real Estate Sales
+C118: Surveying and Mapping/Measurement
+C119: Construction Crew
+C120: Urban Design and Planning
+C121: Highway/Bridge/Harbor/Tunneling Engineer
+C122: Horticulture/Garden/Landscape Design
+C123: Equipment Engineer
+C124: Water Supply and Drainage/Strong and Light Current/HVAC Project Engineer
+C125: Interior and Exterior Decoration Design
+C126: Furniture Manufacturing
+C127: Senior Property Advisor/Property Advisor
+C128: Property Advisor Manager/Supervisor
+C129: Property Advisor Specialist/Assistant
+C130: Property Lease/Tenancy/Sell and Lease
+C131: Property Establishment Management
+C132: Property Maintenance/Ascendant
+C133: Property Consultant
+C134: Project Director
+C135: Project Manager
+C136: Project Supervisor
+C137: Project Implementation/Coordination
+C138: Environmental Management/Environmental Conservation
+C139: Environmental Engineering Technology/Garden Landscape
+
+C200: Hotel/Catering/Tourism/Entertainment/Retailer
+C201: Hotel/Hotel Management
+C202: Catering/Entertainment Management
+C203: Hall Manager/Assistant Manager/Foreman
+C204: Floor Manager
+C205: Reception/Etiquette/Telephonist
+C206: Chef
+C207: Bartender
+C208: Dietitian
+C209: Tea Specialist
+C210: Cicerone/Travel Consultant
+C211: Booking/Booking Service
+C212: Driver
+C213: Waiter
+C214: Usher/Porter
+C215: Security Guard
+C216: Shopkeeper/Store Manager
+C217: Deputy Store Manager/Assistant Manager
+C218: Cashier
+C219: Shop Assistant/Trade Assistant/Waiter
+C220: Shopping Guide/Sales Promotion Person
+C221: Tally Clerk/Display Worker/Statistician
+C222: Raw Food Processing
+C223: Cooked Food Processing
+C224: Bread and Cakes Processing
+C225: Loss Prevention/Internal Security
+
+C300: Medical Treatment/Nursing/Traditional Chinese Medical/Cosmetology/Pet
+C301: Hospital Management
+C302: Internal Medicine/Surgery/Specialist Physicians
+C303: Dentist
+C304: Chinese Medicine Practitioners
+C305: Anesthesiologist
+C306: Psychologist
+C307: Pharmacist/Pharmacist
+C308: Medical Inspection
+C309: Public Hygiene/Disease Control
+C310: Director of Nursing/Head Nurse
+C311: Nurse/Paramedic
+C312: Physical Therapy/Dietitian
+C313: Traditional Chinese Medical/Acupuncture/Massage/Cheirapsis
+C314: Beauty Treatments/Plastic Surgeon 
+C315: Hairdresser/Image Design/Nail Artist
+C316: Veterinarian/Pet Doctor/Pet Care
+
+C400: Education/Training
+C401: University Professors
+C402: Lecturer/Teaching Assistant
+C403: High School Teacher
+C404: Grade School Teacher
+C405: Preschool Education
+C406: Educational Facility Management
+C407: Tutor
+C408: Education Product Development
+C409: Fitness Consultant/Coach
+C410: Trainer
+
+C500: Aviation/Railway/Mail Steamer
+C501: Airplane Captain/Vice Captain
+C502: Flight Attendant
+C503: Aviation Maintenance Technician
+C504: Ground Crew
+C505: Train Conductor
+C506: Train Driver
+C507: Crew Member/Ticket Seller
+C508: Captain/Vice Captain
+C509: Crew
+C510: Dispatcher/Web Services/Coordinator
+
+C600: Clothing/Textile/Leather
+C601: Clothing/Textile Design
+C602: Leather Clothing/Fur Clothing Design
+C603: Handbag Designer
+C604: Fabric/Accessory/Pattern Design
+C605: Matching Design
+C606: Garments Sampling/Platemaking
+C607: Quality Control/Examine Goods/Quality Checking/Quality Control
+C608: Sample Room/Shoe Last/底格出格师
+C609: Size Grading)/Grading
+C610: Paper Pattern/Sweep Template/Markers/吓数
+C611: CAD/CAM
+C612: Fabric Accessories Purchasing
+C613: Cloth/Cut Bed/Packaging
+C614: Display/Exhibition Designer
+C615: Pattern Cutter/Electric Shears
+C616: Clothing/Textile/Leather Documentary
+C617: Sweater Linking/Sweater Hand Stitching/Washing Water
+C618: Machine Embroidery Worker/Tearing/Groove 
+C619: Finish/Under Pressing
+
+C700: Electron/Electrical Appliance/Semiconductor
+C701: Electronics Engineer/Technician
+C702: Electronics Development Engineer
+C703: Electron/Electrical Appliance Maintenance Engineer/Technician
+C704: Electronic Component Engineer
+C705: Electronics Software Development
+C706: Electronic Circuit Engineer/Technician (Simulation/digit)
+C707: Analog Circuit Design/Application Engineer
+C708: Integrated Circuit(IC) Design/Application Engineer
+C709: Autocontrol Engineer/Technician
+C710: Embedded Hardware Development(Motherboard)
+C711: Embedded System Software Development(SCM/DLC/DSP)
+C712: Domestic Appliance/Digital Products Development
+C713: Product Process/Process Engineer
+C714: Laser/Optoelectronic Technology
+C715: Wireless Engineer
+C716: Semiconductor Engineer
+C717: FAE Field Application Engineer
+C718: Layout Engineer
+C719: Audio/Video Engineer/Technician
+C720: Light Sources and Illuminants Engineer
+C721: Transformer and Magnetic Electricity Engineer
+C722: Standardization Engineer
+C723: Acoustic Engineer
+C724: Technical Design Manager/Director
+C725: Technical Design Engineer
+C726: Product Process/Process Engineer
+C727: Product Planing Engineer
+C728: Lab Manager/Engineer
+C729: Quality Testing Engineer
+C730: Equipment Engineer(Debugging/Installation/Maintenance)
+C731: Project Manager/Product Manager
+C732: Project and Item Implementation
+
+C800: Machinery/Instrument and Apparatus
+C801: Mechanical Engineer
+C802: Tooling Engineer
+C803: Archetype Analysis
+C804: Engineering/Mechanical Draughtsman
+C805: Precision Mechanism/Instrument Engineer/Technician
+C806: Casting/Forging Engineer/Technician
+C807: Molding Engineer/Technician
+C808: CNC Engineer
+C809: Punch Engineer/Technician
+C810: Welding Engineer/Technician
+C811: Packaging/Printing
+C812: Food Machinery
+C813: Textile Machinery
+C814: Clamp Engineer/Technician
+C815: Mechanical Maintenance Engineer
+C816: Structural Engineer
+C817: Engineering/Facility Manager
+C818: Equipment Engineer(Debugging/Installation/Maintenance)
+C819: Technical Design Manager/Director
+C820: Technical Design Engineer
+C821: Product Process/Process Engineer
+C822: Product Planing Engineer
+C823: Lab Manager/Engineer
+C824: Motor Vehicle/Motorcycle Engineer
+C825: Shipping Engineer
+C826: Railway Engineer/Technician
+C827: Project Director
+C828: Project Manager
+C829: Project Supervisor
+C830: Project Implementation/Coordination
+
+C900: Energy/Electricity/Power
+C901: Electricity Engineer/Technician
+C902: Water Conservancy/Hydroelectricity Engineer
+C903: Light Sources and Illuminants Project
+C904: Electrical & Mechanical Engineer
+C905: Nuclear Force/Firepower Engineer
+C906: Electricity Engineer
+C907: Urban Gas Technician
+C908: Battery/Power Development
+C909: Power Engineer/Technician
+C910: Boiler Engineer/Technician
+C911: Air Conditioning/Thermal Energy Engineer
+
+
+D100: Automobile/Transportation
+D101: Automotive Structural Engineer
+D102: Automotive Design Engineer
+D103: Automotive Electronics Engineer
+D104: Automotive Quality Management
+D105: Automotive Safety Performance Engineer
+D106: Automotive Assembly Process Engineer
+D107: Automotive Repair
+D108: 4S Shop Manager/Maintenance Station Manager
+D109: Car sales/Broker
+D110: Second-Hand Car Appraisers
+D111: Motorbike Engineer
+D112: Man Project
+D113: Shipping Engineer
+D114: Aviation Maintenance Technician
+D115: Aircraft Design & Manufacture
+D116: Railway Engineer/Technician
+
+D200: Technician
+D201: Electrician/Locksmith/Sheet metal Worker/Panel Beater
+D202: Sawing Machine/Lathe/Grinder/Milling Machines/Punch/Woodturning Lathe
+D203: Air Condition Technician/Elevator Operator/Boiler Fireman
+D204: Irrigation Worker/Carpenter/Painter
+D205: Forklift/Forklift Operator
+D206: Cutting Technician
+D207: Automobile Mechanic/Mechanic
+D208: Technician/General Worker
+D209: Tooling Engineer/Tooling Worker
+D210: Product or Process Engineer
+D211: Tailor/Sewing/Ironing
+D212: Electric Welder/Plate-Work and Welding Worker
+D213: Foundry Worker/Heat Treatment
+D214: Blow Molding/Injection Molding Worker
+D215: Galvanizer
+
+D300: Factory/Scientific Research/Produce/Manufacturing
+D301: Plant Manager/Deputy Factory Manager
+D302: Chief Engineer/Deputy Chief Engineer 
+D303: Research Management
+D304: Research Specialist Staff
+D305: Laboratory Management
+D306: Laboratory Investigation Worker
+D307: Technical Engineer
+D308: Project Manager/Director
+D309: Project Engineer
+D310: Purchasing Management
+D311: Production Plan/Warehouse/Material Management
+D312: Engineering/Device Management
+D313: Production Manager/Workshop Director
+D314: Production Supervisor/Supervisor/Team Leader/Foreman
+D315: Manufacturing Engineer
+D316: Industry Engineer(IE)
+D317: Product Development or Technique/Technological Design Manager
+D318: Product/Production Engineer(PE)
+D319: Maintenance Engineer
+D320: Quality Assessment(QA)/Quality Control(QC)
+D321: Chemical Examination/Inspection
+D322: MC Manager/Director
+D323: Safety/Health/Environment Management
+D324: PMC/SMT Technician
+D325: Fault Analysis Engineer
+D326: Certification Engineer/Assessor
+D327: Reliability Engineer
+D328: Quality System Engineer/Assessor
+D329: Base Construction Engineer
+D330: Quality Inspector/Test Controller
+D331: Operations Manager
+D332: Operations Director
+D333: Statistics/Plan/Dispatch
+D334: Production Clerk
+
+D400: Chemical Engineering/Biology/Pharmacy/Medical Apparatus and Instruments
+D401: Bioengineering/Pharmaceuticals
+D402: Clinical Trial/Pharmaceuticals Register Specialist
+D403: Chemical Analyst
+D404: Pharmaceutical Technology R&D Management
+D405: Medicine Development/Chemical Development
+D406: Clinical Research/Coordination
+D407: Pharmaceuticals Register Specialist
+D408: Pharmaceutical Manufacturing/Quality Control
+D409: Medical Equipment Register
+D410: Medical Equipments Production/Quality Management
+D411: Pharmaceutical Marketing Manager
+D412: Pharmaceutical Marketing Supervisor/Commissioner
+D413: Pharmaceutical Business Development
+D414: Pharmaceutical Sales Manager/Supervisor
+D415: Pharmaceutical Sales Representative
+D416: Medical Equipment Sales/Marketing Promotion
+D417: Medical Equipment Maintenance Engineer
+D418: Chemical Technical Application
+D419: Chemical Laboratory Researcher/Technician
+D420: Food/Beverage Research & Development
+D421: Cosmetics Research & Development
+D422: Plastic Engineer
+D423: Coating Research & Development Engineer
+D424: Color Matching Technician
+
+
+
+
+# CN {
+CN110000: 北京市
+CN110101: 东城区
+CN110102: 西城区
+CN110105: 朝阳区
+CN110106: 丰台区
+CN110107: 石景山区
+CN110108: 海淀区
+CN110109: 门头沟区
+CN110111: 房山区
+CN110112: 通州区
+CN110113: 顺义区
+CN110114: 昌平区
+CN110115: 大兴区
+
+CN120000: 天津市
+CN120101: 和平区
+CN120102: 河东区
+CN120103: 河西区
+CN120104: 南开区
+CN120105: 河北区
+CN120106: 红桥区
+CN120110: 东丽区
+CN120113: 北辰区
+
+CN370200: 青岛市
+CN370202: 市南区
+CN370203: 市北区
+CN370211: 黄岛区
+CN370212: 崂山区
+CN370213: 李沧区
+CN370214: 城阳区
+CN370281: 胶州市
+CN370282: 即墨市
+CN370283: 平度市
+CN370285: 莱西市
+
+CN370100: 济南市
+CN370102: 历下区
+CN370103: 市中区
+CN370104: 槐荫区
+CN370105: 天桥区
+CN370112: 历城区
+CN370113: 长清区
+
+CN610100: 西安市
+CN610102: 新城区
+CN610103: 碑林区
+CN610104: 莲湖区
+CN610111: 灞桥区
+CN610112: 未央区
+CN610113: 雁塔区
+CN610115: 临潼区
+CN610116: 长安区
+
+CN510100: 成都市
+CN510104: 锦江区
+CN510105: 青羊区
+CN510106: 金牛区
+CN510107: 武侯区
+CN510108: 成华区
+CN510112: 龙泉驿区
+CN510113: 青白江区
+CN510114: 新都区
+CN510115: 温江区
+CN510122: 双流县
+CN510124: 郫县
+
+CN500000: 重庆市
+CN500104: 大渡口区
+CN500106: 沙坪坝区
+CN500107: 九龙坡区
+CN500108: 南岸区
+CN500111: 大足区
+CN500112: 渝北区
+CN500113: 巴南区
+
+CN420100: 武汉市
+CN420102: 江岸区
+CN420103: 江汉区
+CN420104: 硚口区
+CN420105: 汉阳区
+CN420106: 武昌区
+CN420107: 青山区
+CN420111: 洪山区
+CN420112: 东西湖区
+CN420113: 汉南区
+CN420114: 蔡甸区
+CN420115: 江夏区
+CN420116: 黄陂区
+CN420117: 新洲区
+
+CN340100: 合肥市
+CN340102: 瑶海区
+CN340103: 庐阳区
+CN340104: 蜀山区
+CN340111: 包河区
+CN340122: 肥东县
+CN340123: 肥西县
+
+CN320100: 南京市
+CN320102: 玄武区
+CN320104: 秦淮区
+CN320105: 建邺区
+CN320106: 鼓楼区
+CN320111: 浦口区
+CN320113: 栖霞区
+CN320114: 雨花台区
+CN320115: 江宁区
+CN320116: 六合区
+CN320117: 溧水区
+CN320118: 高淳区
+
+CN320200: 无锡市
+CN320202: 崇安区
+CN320203: 南长区
+CN320204: 北塘区
+CN320205: 锡山区
+CN320206: 惠山区
+CN320211: 滨湖区
+CN320281: 江阴市
+CN320282: 宜兴市
+
+CN320500: 苏州市
+CN320505: 虎丘区
+CN320506: 吴中区
+CN320507: 相城区
+CN320508: 姑苏区
+CN320509: 吴江区
+CN320510: 高新区
+CN320511: 工业园区
+CN320581: 常熟市
+CN320582: 张家港市
+CN320583: 昆山市
+CN320585: 太仓市
+
+CN310000: 上海市
+CN310101: 黄浦区
+CN310104: 徐汇区
+CN310105: 长宁区
+CN310106: 静安区
+CN310107: 普陀区
+CN310108: 闸北区
+CN310109: 虹口区
+CN310110: 杨浦区
+CN310112: 闵行区
+CN310113: 宝山区
+CN310114: 嘉定区
+CN310115: 浦东新区
+CN310116: 金山区
+CN310117: 松江区
+CN310118: 青浦区
+CN310120: 奉贤区
+
+CN330100: 杭州市
+CN330102: 上城区
+CN330103: 下城区
+CN330104: 江干区
+CN330105: 拱墅区
+CN330106: 西湖区
+CN330108: 滨江区
+CN330109: 萧山区
+CN330110: 余杭区
+
+CN360100: 南昌市
+CN360102: 东湖区
+CN360103: 西湖区
+CN360104: 青云谱区
+CN360105: 湾里区
+CN360111: 青山湖区
+CN360121: 南昌县
+CN360122: 新建县
+
+CN430100: 长沙市
+CN430102: 芙蓉区
+CN430103: 天心区
+CN430104: 岳麓区
+CN430105: 开福区
+CN430111: 雨花区
+CN430112: 望城区
+CN430121: 长沙县
+
+CN530100: 昆明市
+CN530102: 五华区
+CN530103: 盘龙区
+CN530111: 官渡区
+CN530112: 西山区
+CN530114: 呈贡区
+
+CN350200: 厦门市
+CN350203: 思明区
+CN350205: 海沧区
+CN350206: 湖里区
+CN350211: 集美区
+CN350212: 同安区
+CN350213: 翔安区
+
+CN440100: 广州市
+CN440103: 荔湾区
+CN440104: 越秀区
+CN440105: 海珠区
+CN440106: 天河区
+CN440111: 白云区
+CN440112: 黄埔区
+CN440113: 番禺区
+CN440114: 花都区
+
+CN440300: 深圳市
+CN440303: 罗湖区
+CN440304: 福田区
+CN440305: 南山区
+CN440306: 宝安区
+CN440307: 龙岗区
+CN440308: 盐田区
+# CN }
+
+# HK {
+HK0100: 新界
+HK0101: 离岛区
+HK0102: 葵青区
+HK0103: 北区
+HK0104: 西贡区
+HK0105: 沙田区
+HK0106: 大埔区
+HK0107: 荃湾区
+HK0108: 屯门区
+HK0109: 元朗区
+
+HK0200: 九龙
+HK0210: 九龙城区
+HK0211: 观塘区
+HK0212: 深水埗区
+HK0213: 黄大仙区
+HK0214: 油尖旺区
+
+HK0300: 香港岛
+HK0315: 中西区
+HK0316: 东区
+HK0317: 南区
+HK0318: 湾仔区
+# HK }
+
+# MO {
+MO0100: 澳门半岛
+MO0101: 花地玛堂区
+MO0102: 圣安多尼堂区(花王堂区)
+MO0103: 大堂区(主教座堂堂区)
+MO0104: 望德堂区
+MO0105: 风顺堂区(圣老楞佐堂区)
+
+MO0200: 氹仔
+MO0201: 嘉模堂区
+MO0202: 澳门大学新校区(横琴岛)
+
+MO0300: 路环
+MO0301: 圣方济各堂区
+# MO }
+
+# TW {
+TW0100: 台北市
+TW0101: 中正区
+TW0102: 大同区
+TW0103: 中山区
+TW0104: 万华区
+TW0105: 信义区
+TW0106: 松山区
+TW0107: 大安区
+TW0108: 南港区
+TW0109: 北投区
+TW0110: 内湖区
+TW0111: 士林区
+TW0112: 文山区
+
+TW0200: 新北市
+TW0201: 板桥区
+TW0202: 新庄区
+TW0203: 中和区
+TW0204: 永和区
+TW0205: 土城区
+TW0206: 树林区
+TW0207: 三峡区
+TW0208: 莺歌区
+TW0209: 三重区
+TW0210: 芦洲区
+TW0211: 五股区
+TW0212: 泰山区
+TW0213: 林口区
+TW0214: 淡水区
+TW0215: 金山区
+TW0216: 八里区
+TW0217: 万里区
+TW0218: 石门区
+TW0219: 三芝区
+TW0220: 瑞芳区
+TW0221: 汐止区
+TW0222: 平溪区
+TW0223: 贡寮区
+TW0224: 双溪区
+TW0225: 深坑区
+TW0226: 石碇区
+TW0227: 新店区
+TW0228: 坪林区
+TW0229: 乌来区
+
+TW0300: 台中市
+TW0301: 中区
+TW0302: 东区
+TW0303: 南区
+TW0304: 西区
+TW0305: 北区
+TW0306: 北屯区
+TW0307: 西屯区
+TW0308: 南屯区
+TW0309: 太平区
+TW0310: 大里区
+TW0311: 雾峰区
+TW0312: 乌日区
+TW0313: 丰原区
+TW0314: 后里区
+TW0315: 石冈区
+TW0316: 东势区
+TW0317: 和平区
+TW0318: 新社区
+TW0319: 潭子区
+TW0320: 大雅区
+TW0321: 神冈区
+TW0322: 大肚区
+TW0323: 沙鹿区
+TW0324: 龙井区
+TW0325: 梧栖区
+TW0326: 清水区
+TW0327: 大甲区
+TW0328: 外埔区
+TW0329: 大安区
+
+TW0400: 台南市
+TW0401: 中西区
+TW0402: 东区
+TW0403: 南区
+TW0404: 北区
+TW0405: 安平区
+TW0406: 安南区
+TW0407: 永康区
+TW0408: 归仁区
+TW0409: 新化区
+TW0410: 左镇区
+TW0411: 玉井区
+TW0412: 楠西区
+TW0413: 南化区
+TW0414: 仁德区
+TW0415: 关庙区
+TW0416: 龙崎区
+TW0417: 官田区
+TW0418: 麻豆区
+TW0419: 佳里区
+TW0420: 西港区
+TW0421: 七股区
+TW0422: 将军区
+TW0423: 学甲区
+TW0424: 北门区
+TW0425: 新营区
+TW0426: 后壁区
+TW0427: 白河区
+TW0428: 东山区
+TW0429: 六甲区
+TW0430: 下营区
+TW0431: 柳营区
+TW0432: 盐水区
+TW0433: 善化区
+TW0434: 大内区
+TW0435: 山上区
+TW0436: 新市区
+TW0437: 安定区
+
+TW0500: 高雄市
+TW0501: 楠梓区
+TW0502: 左营区
+TW0503: 鼓山区
+TW0504: 三民区
+TW0505: 盐埕区
+TW0506: 前金区
+TW0507: 新兴区
+TW0508: 苓雅区
+TW0509: 前镇区
+TW0510: 旗津区
+TW0511: 小港区
+TW0512: 凤山区
+TW0513: 大寮区
+TW0514: 鸟松区
+TW0515: 林园区
+TW0516: 仁武区
+TW0517: 大树区
+TW0518: 大社区
+TW0519: 冈山区
+TW0520: 路竹区
+TW0521: 桥头区
+TW0522: 梓官区
+TW0523: 弥陀区
+TW0524: 永安区
+TW0525: 燕巢区
+TW0526: 田寮区
+TW0527: 阿莲区
+TW0528: 茄萣区
+TW0529: 湖内区
+TW0530: 旗山区
+TW0531: 美浓区
+TW0532: 内门区
+TW0533: 杉林区
+TW0534: 甲仙区
+TW0535: 六龟区
+TW0536: 茂林区
+TW0537: 桃源区
+TW0538: 那玛夏区
+
+TW0600: 桃园县
+TW0601: 桃园市
+TW0602: 中坜市
+TW0603: 八德市
+TW0604: 平镇市
+TW0605: 杨梅市
+TW0606: 芦竹市
+
+TW0700: 基隆市
+TW0701: 仁爱区
+TW0702: 中正区
+TW0703: 信义区
+TW0704: 中山区
+TW0705: 安乐区
+TW0706: 七堵区
+TW0707: 暖暖区
+
+TW0800: 新竹市
+TW0801: 东区
+TW0802: 北区
+TW0803: 香山区
+
+TW0900: 嘉义市
+TW0901: 东区
+TW0902: 西区
+# TW }
+
+# JP {
+JP13100-8: 东京
+JP13101-6: 千代田区
+JP13102-4: 中央区
+JP13103-2: 港区
+JP13104-1: 新宿区
+JP13105-9: 文京区
+JP13106-7: 台东区
+JP13107-5: 墨田区
+JP13108-3: 江东区
+JP13109-1: 品川区
+JP13110-5: 目黑区
+JP13111-3: 大田区
+JP13112-1: 世田谷区
+JP13113-0: 涩谷区
+JP13114-8: 中野区
+JP13115-6: 杉并区
+JP13116-4: 丰岛区
+JP13117-2: 北区
+JP13118-1: 荒川区
+JP13119-9: 板桥区
+JP13120-2: 练马区
+JP13121-1: 足立区
+JP13122-9: 葛饰区
+JP13123-7: 江户川区
+
+JP14100-3: 横滨市
+JP14101-1: 鹤见区
+JP14102-0: 神奈川区
+JP14103-8: 西区
+JP14104-6: 中区
+JP14105-4: 南区
+JP14106-2: 保土谷区
+JP14107-1: 矶子区
+JP14108-9: 金泽区
+JP14109-7: 港北区
+JP14110-1: 户冢区
+JP14111-9: 港南区
+JP14112-7: 旭区
+JP14113-5: 绿区
+JP14114-3: 濑谷区
+JP14115-1: 荣区
+JP14116-0: 泉区
+JP14117-8: 青叶区
+JP14118-6: 都筑区
+
+JP27100-4: 大阪市
+JP27102-1: 都岛区
+JP27103-9: 福岛区
+JP27104-7: 此花区
+JP27106-3: 西区
+JP27107-1: 港区
+JP27108-0: 大正区
+JP27109-8: 天王寺区
+JP27111-0: 浪速区
+JP27113-6: 西淀川区
+JP27114-4: 东淀川区
+JP27115-2: 东成区
+JP27116-1: 生野区
+JP27117-9: 旭区
+JP27118-7: 城东区
+JP27119-5: 阿倍野区
+JP27120-9: 住吉区
+JP27121-7: 东住吉区
+JP27122-5: 西成区
+JP27123-3: 淀川区
+JP27124-1: 鹤见区
+JP27125-0: 住之江区
+JP27126-8: 平野区
+JP27127-6: 北区
+JP27128-4: 中央区
+
+JP23100-2: 名古屋市
+JP23109-6: 热田区
+JP23103-7: 北区
+JP23107-0: 昭和区
+JP23101-1: 千种区
+JP23116-9: 天白区
+JP23110-0: 中川区
+JP23106-1: 中区
+JP23105-3: 中村区
+JP23104-5: 西区
+JP23102-9: 东区
+JP23108-8: 瑞穗区
+JP23114-2: 绿区
+JP23111-8: 港区
+JP23112-6: 南区
+JP23115-1: 名东区
+JP23113-4: 守山区
+
+JP01100-2: 札幌市
+JP01101-1: 中央区
+JP01102-9: 北区
+JP01103-7: 东区
+JP01104-5: 白石区
+JP01108-8: 厚别区
+JP01105-3: 丰平区
+JP01110-0: 清田区
+JP01106-1: 南区
+JP01107-0: 西区
+JP01109-6: 手稻区
+
+JP28100-0: 神戸市
+JP28101-8: 东滩区
+JP28102-6: 滩区
+JP28110-7: 中央区
+JP28105-1: 兵库区
+JP28106-9: 长田区
+JP28107-7: 须磨区
+JP28108-5: 垂水区
+JP28109-3: 北区
+JP28111-5: 西区
+
+JP26100-9: 京都市
+JP26108-4: 右京区
+JP26103-3: 左京区
+JP26101-7: 北区
+JP26102-5: 上京区
+JP26104-1: 中京区
+JP26106-8: 下京区
+JP26105-0: 东山区
+JP26110-6: 山科区
+JP26109-2: 伏见区
+JP26107-6: 南区
+JP26111-4: 西京区
+
+JP40130-7: 福冈市
+JP40133-1: 中央区
+JP40132-3: 博多区
+JP40137-4: 早良区
+JP40131-5: 东区
+JP40135-8: 西区
+JP40134-0: 南区
+JP40136-6: 城南区
+
+JP14130-5: 川崎市
+JP14131-3: 川崎区
+JP14132-1: 幸区
+JP14133-0: 中原区
+JP14134-8: 高津区
+JP14135-6: 多摩区
+JP14136-4: 宫前区
+JP14137-2: 麻生区
+
+JP11100-7: 埼玉市
+JP11101-5: 西区
+JP11102-3: 北区
+JP11103-1: 大宫区
+JP11104-0: 见沼区
+JP11105-8: 中央区
+JP11106-6: 樱区
+JP11107-4: 浦和区
+JP11108-2: 南区
+JP11109-1: 绿区
+JP11110-4: 岩槻区
+
+JP34100-2: 广岛市
+JP34101-1: 中区
+JP34102-9: 东区
+JP34103-7: 南区
+JP34104-5: 西区
+JP34105-3: 安佐南区
+JP34106-1: 安佐北区
+JP34107-0: 安艺区
+JP34108-8: 佐伯区
+
+JP04100-9: 仙台市
+JP04101-7: 青叶区
+JP04102-5: 宫成野区
+JP04103-3: 若林区
+JP04104-1: 太白区
+JP04105-0: 泉区
+
+JP40100-5: 北九州市
+JP40103-0: 若松区
+JP40105-6: 户畑区
+JP40106-4: 小仓北区
+JP40101-3: 门司区
+JP40109-9: 八幡西区
+JP40108-1: 八幡东区
+JP40107-2: 小仓南区
+
+JP12100-2: 千叶市
+JP12101-1: 中央区
+JP12102-9: 花见川区
+JP12103-7: 稻毛区
+JP12104-5: 若叶区
+JP12105-3: 绿区
+JP12106-1: 美滨区
+
+JP27140-3: 堺市
+JP27141-1: 堺区
+JP27143-8: 东区
+JP27144-6: 西区
+JP27145-4: 南区
+JP27146-2: 北区
+JP27142-0: 中区
+JP27147-1: 美原区
+
+JP15100-9: 新潟市
+JP15101-7: 北区
+JP15102-5: 东区
+JP15103-3: 中央区
+JP15104-1: 江南区
+JP15105-0: 秋叶区
+JP15106-8: 南区
+JP15107-6: 西区
+JP15108-4: 西蒲区
+
+JP22130-9: 滨松市
+JP22131-7: 中区
+JP22132-5: 东区
+JP22133-3: 西区
+JP22134-1: 南区
+JP22135-0: 北区
+JP22136-8: 滨北区
+JP22137-6: 天龙区
+
+JP43100-1: 熊本市
+JP43101-0: 中央区
+JP43102-8: 东区
+JP43103-6: 西区
+JP43104-4: 南区
+JP43105-2: 北区
+
+JP14150-0: 相模原市
+JP14151-8: 绿区
+JP14152-6: 中央区
+JP14153-4: 南区
+
+JP22100-7: 静冈市
+JP22101-5: 葵区
+JP22102-3: 骏河区
+JP22103-1: 清水区
+
+JP33100-7: 冈山市
+JP33101-5: 北区
+JP33102-3: 中区
+JP33103-1: 东区
+JP33104-0: 南区
+# JP }
+
+# KR {
+KR0100: 首尔
+KR0101: 江南区
+KR0102: 江东区
+KR0103: 江北区
+KR0104: 江西区
+KR0105: 冠岳区
+KR0106: 广津区
+KR0107: 九老区
+KR0108: 衿川区
+KR0109: 芦原区
+KR0110: 道峰区
+KR0111: 东大门区
+KR0112: 铜雀区
+KR0113: 麻浦区
+KR0114: 西大门区
+KR0115: 瑞草区
+KR0116: 城东区
+KR0117: 城北区
+KR0118: 阳川区
+KR0119: 永登浦区
+KR0120: 龙山区
+KR0121: 恩平区
+KR0122: 钟路区
+KR0123: 中区
+KR0124: 中浪区
+KR0125: 松坡区
+
+
+KR0200: 釜山
+KR0201: 机张郡
+KR0202: 北区
+KR0203: 釜山镇区
+KR0204: 东区
+KR0205: 东莱区
+KR0206: 江西区
+KR0207: 金井区
+KR0208: 海云台区
+KR0209: 中区
+KR0210: 南区
+KR0211: 沙下区
+KR0212: 沙上区
+KR0213: 西区
+KR0214: 水营区
+KR0215: 影岛区
+KR0216: 莲堤区
+
+KR0300: 仁川
+KR0301: 桂阳区
+KR0302: 南区
+KR0303: 南洞区
+KR0304: 东区
+KR0305: 富平区
+KR0306: 西区
+KR0307: 延寿区
+KR0308: 中区
+KR0309: 江华郡
+
+KR0400: 大邱
+KR0401: 北区
+KR0402: 达西区
+KR0403: 东区
+KR0404: 中区
+KR0405: 南区
+KR0406: 西区
+KR0407: 寿城区
+KR0408: 达城郡
+
+KR0500: 大田
+KR0501: 中区
+KR0502: 东区
+KR0503: 西区
+KR0504: 大德区
+KR0505: 儒城区
+
+KR0600: 光州
+KR0601: 北区
+KR0602: 东区
+KR0603: 光山区
+KR0604: 南区
+KR0605: 西区
+
+KR0700: 蔚山
+KR0701: 北区
+KR0702: 东区
+KR0703: 中区
+KR0704: 南区
+
+KR0800: 水原
+KR0801: 劝善区
+KR0802: 灵通区
+KR0803: 长安区
+KR0804: 八达区
+
+KR0900: 昌原
+KR0901: 义昌区
+KR0902: 城山区
+KR0903: 马山合浦区
+KR0904: 马山会原区
+KR0905: 镇海区
+
+KR1000: 城南
+KR1001: 寿井区
+KR1002: 中院区
+KR1003: 盆唐区
+
+KR1100: 高阳
+KR1101: 德阳区
+KR1102: 一山东区
+KR1103: 一山西区
+
+KR1200: 龙仁
+KR1201: 器兴区
+KR1202: 水枝区
+KR1203: 处仁区
+
+KR1300: 富川
+KR1301: 梧亭区
+KR1302: 远美区
+KR1303: 素砂区
+
+KR1400: 安山
+KR1401: 檀园区
+KR1402: 常绿区
+
+KR1500: 清州
+KR1501: 上党区
+KR1502: 西原区
+KR1503: 兴德区
+KR1504: 清原区
+
+KR1600: 全州
+KR1601: 完山区
+KR1602: 德津区
+
+KR1700: 安养
+KR1701: 万安区
+KR1702: 东安区
+
+KR1800: 天安
+KR1801: 东南区
+KR1802: 西北区
+
+KR1900: 南杨州
+KR1901: 好坪洞
+KR1902: 坪内洞
+KR1903: 金谷洞
+KR1904: 养正洞
+KR1905: 芝锦洞
+KR1906: 陶农洞
+KR1907: 瓦阜邑
+KR1908: 榛接邑
+KR1909: 和道邑
+KR1910: 真干邑
+KR1911: 梧南邑
+KR1912: 别内面
+KR1913: 退溪院面
+KR1914: 水洞面
+KR1915: 鸟安面
+
+KR2000: 浦项
+KR2001: 南区
+KR2002: 北区
+# KR }
+
+# SG {
+SG0100: CDC Districts
+SG0101: Central Singapore
+SG0102: North West
+SG0103: South West
+SG0104: North East
+SG0105: South East
+# SG }
+
+# GB {
+GB0100: 伦敦
+GB0101: 伦敦城
+GB0102: 威斯敏斯特
+GB0103: 肯辛顿-切尔西
+GB0104: 汉默史密斯-富勒姆
+GB0105: 旺兹沃思
+GB0106: 兰贝斯
+GB0107: 南华克
+GB0108: 哈姆雷特塔
+GB0109: 哈克尼
+GB0110: 伊斯林顿
+GB0111: 康登
+GB0112: 布伦特
+GB0113: 伊令
+GB0114: 豪恩斯洛
+GB0115: 里奇蒙
+GB0116: 京斯顿
+GB0117: 默顿
+GB0118: 索顿
+GB0119: 克罗伊登
+GB0120: 布伦来
+GB0121: 路厄斯罕
+GB0122: 格林威治
+GB0123: 贝克斯利
+GB0124: 黑弗灵
+GB0125: 巴金-达根罕
+GB0126: 红桥
+GB0127: 纽汉
+GB0128: 瓦尔珊森林
+GB0129: 哈林盖
+GB0130: 恩菲尔德
+GB0131: 巴内特
+GB0132: 哈洛
+GB0133: 希灵登
+
+GB0200: 英格兰
+GB0201: 伯明翰
+GB0202: 布拉德福德
+GB0203: 布里斯托尔
+GB0204: 谢菲尔德
+GB0205: 考文垂
+GB0206: 德比郡
+GB0207: 赫尔河畔金斯顿
+GB0208: 利兹
+GB0209: 莱斯特
+GB0210: 利物浦
+GB0211: 伦敦
+GB0212: 曼彻斯特
+GB0213: 泰恩河畔纽卡斯尔
+GB0214: 诺丁汉
+GB0215: 普利茅斯
+GB0216: 谢菲尔德
+GB0217: 桑德兰
+GB0218: 伍尔弗汉普顿
+GB0219: 剑桥
+GB0220: 约克
+GB0221: 牛津
+
+GB0300: 苏格兰
+GB0301: 格拉斯哥
+GB0302: 爱丁堡
+GB0303: 阿伯丁
+GB0304: 邓迪
+GB0305: 因弗內斯
+GB0306: 斯特灵
+
+GB0400: 威尔士
+GB0401: 加的夫
+GB0402: 斯旺西
+GB0403: 纽波特
+
+GB0500: 北爱尔兰
+GB0501: 贝尔法斯特
+GB0502: 伦敦德里
+GB0503: 纽里
+GB0504: 阿马
+GB0505: 利斯本
+# GB }
+
+# FR {
+FR127500: Paris
+FR127501: Louvre
+FR127502: Bourse
+FR127503: Temple
+FR127504: Hôtel-de-Ville
+FR127505: Panthéon
+FR127506: Luxembourg
+FR127507: Palais-Bourbon
+FR127508: Élysée
+FR127509: Opéra
+FR127510: Entrepôt
+FR127511: Popincourt
+FR127512: Reuilly
+FR127513: Gobelins
+FR127514: Observatoire
+FR127515: Vaugirard
+FR127516: Passy
+FR127517: Batignolles-Monceau
+FR127518: Buttes-Montmartre
+FR127519: Buttes-Chaumont
+FR127520: Ménilmontant
+
+FR010000: Alsace
+FR016701: Strasbourg
+FR016801: Colmar
+
+FR020000: Aquitaine
+FR022401: Périgueux
+FR023301: Bordeaux
+FR024001: Mont-de-Marsan
+FR024701: Agen
+FR026401: Pau
+
+FR030000: Auvergne
+FR030301: Moulins
+FR031501: Aurillac
+FR034301: Le Puy-en-Velay
+FR036301: Clermont-Ferrand
+
+FR040000: Basse-Normandie
+FR041401: Caen
+FR045001: Saint-Lô
+FR046101: Alençon
+
+FR050000: Bourgogne
+FR052101: Dijon
+FR055801: Nevers
+FR057101: Mâcon
+FR058901: Auxerre
+
+FR060000: Bretagne
+FR062201: Saint-Brieuc
+FR062901: Quimper
+FR062902: Brest
+FR063501: Rennes
+FR065601: Vannes
+FR065602: Lorient
+
+FR070000: Centre
+FR071801: Bourges
+FR072801: Chartres
+FR073601: Châteauroux
+FR073701: Tours
+FR074101: Blois
+FR074501: Orléans
+
+FR080000: Champagne-Ardenne
+FR080801: Charleville-Mézières
+FR081001: Troyes
+FR085101: Châlons-en-Champagne
+FR085201: Chaumont
+
+FR090000: Corse
+FR092A01: Ajaccio
+FR092A02: Bonifacio
+FR092B01: Bastia
+FR092B02: Corte
+
+FR100000: Franche-Comté
+FR102501: Besançon
+FR103901: Lons-le-Saunier
+FR107001: Vesoul
+FR109001: Belfort
+
+FR110000: Haute-Normandie
+FR112701: Évreux
+FR117601: Rouen
+
+FR120000: Ile-de-France
+FR127701: Melun
+FR127801: Versailles
+FR129101: Effry
+FR129201: Nanterre
+FR129301: Bobigny
+FR129401: Créteil
+FR129501: Pontoise
+
+FR130000: Languedoc-Roussillon
+FR131101: Carcassonne
+FR131102: Narbonne
+FR133001: Nîmes
+FR133401: Montpellier
+FR133402: Béziers
+FR134801: Mende
+FR136601: Perpignan
+
+FR140000: Limousin
+FR141901: Tulle
+FR142301: Guéret
+FR148701: Limoges
+
+FR150000: Lorraine
+FR155401: Nancy
+FR155501: Bar-le-Duc
+FR155701: Metz
+FR158800: Épinal
+
+FR160000: Midi-Pyrénées
+FR160901: Foix
+FR161201: Rodez
+FR163101: Toulouse
+FR163200: Auch
+FR164600: Cahors
+FR166501: Tarbes
+FR168101: Albi
+FR168201: Montauban
+
+FR170000: Nord-Pas-de-Calais
+FR175901: Lille
+FR175902: Dunkerque
+FR176201: Arras
+FR176202: Calais
+
+FR180000: Pays-de-la-Loire
+FR184401: Nantes
+FR184901: Angers
+FR185301: Lavel
+FR187201: Le Mans
+FR188501: La Roche-sur-Yon
+
+FR190000: Picardie
+FR190201: Laon
+FR196001: Beauvais
+FR198001: Amiens
+
+FR200000: Poitou-Charentes
+FR201601: Angoulême
+FR201701: La Rochelle
+FR207901: Niort
+FR208601: Poitiers
+
+FR210000: Provence-Alpes-Côte d'Azur
+FR210401: Digne-les-Bains
+FR210501: Gap
+FR210601: Nice
+FR210602: Cannes
+FR210603: Grasse
+FR210604: Menton
+FR211301: Marseille
+FR218301: Toulon
+FR218401: Avignon
+
+FR220000: Rhône-Alpes
+FR220101: Bourg-en-Bresse
+FR220701: Privas
+FR222601: Valence
+FR223801: Grenoble
+FR224201: Saint-Étienne
+FR226901: Lyon
+FR227301: Chambéry
+FR227401: Annecy
+# FR }
+
+# DE {
+DE0100: Berlin
+DE0101: Mitte
+DE0102: Friedrichshain-Kreuzberg
+DE0103: Pankow
+DE0104: Charlottenburg-Wilmersdorf
+DE0105: Spandau
+DE0106: Steglitz-Zehlendorf
+DE0107: Tempelhof-Schöneberg
+DE0108: Neukölln
+DE0109: Treptow-Köpenick
+DE0110: Marzahn-Hellersdorf
+DE0111: Lichtenberg
+DE0112: Reinickendorf
+
+DE0200: Hamburg
+DE0201: Hamburg-Mitte
+DE0202: Altona
+DE0203: Eimsbüttel
+DE0204: Hamburg-Nord
+DE0205: Wandsbek
+DE0206: Bergedorf
+DE0207: Harburg
+
+DE0300: München
+DE0301: Altstadt-Lehel
+DE0302: Ludwigsvorstadt-Isarvorstadt
+DE0303: Maxvorstadt
+DE0304: Schwabing|Schwabing-West
+DE0305: Au-Haidhausen
+DE0306: Sendling
+DE0307: Sendling-Westpark
+DE0308: Schwanthalerhöhe
+DE0309: Neuhausen-Nymphenburg
+DE0310: München-Moosach
+DE0311: Milbertshofen-Am Hart
+DE0312: Schwabing
+DE0313: Bogenhausen
+DE0314: Berg am Laim
+DE0315: Trudering-Riem
+DE0316: Ramersdorf-Perlach
+DE0317: Obergiesing
+DE0318: Untergiesing-Harlaching
+DE0319: Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln
+DE0320: Hadern
+DE0321: Pasing-Obermenzing
+DE0322: Aubing-Lochhausen-Langwied
+DE0323: Allach-Untermenzing
+DE0324: Feldmoching-Hasenbergl
+DE0325: Laim
+
+DE0400: Köln
+DE0401: Innenstadt
+DE0402: Rodenkirchen
+DE0403: Lindenthal
+DE0404: Ehrenfeld
+DE0405: Nippes
+DE0406: Chorweiler
+DE0407: Porz
+DE0408: Kalk
+DE0409: Mülheim
+
+DE0500: Frankfurt am Main
+DE0501: Innenstadt I
+DE0502: Innenstadt II
+DE0503: Innenstadt III
+DE0504: Innenstadt IV
+DE0505: Süd
+DE0506: West
+DE0507: Mitte-West
+DE0508: Nord-West
+DE0509: Mitte-Nord
+DE0510: Nord-Ost
+DE0511: Ost
+DE0512: Kalbach
+DE0513: Nieder-Erlenbach
+DE0514: Harheim
+DE0515: Nieder-Eschbach
+DE0516: Bergen-Enkheim
+
+DE0600: Stuttgart
+DE0601: Stuttgart-Mitte
+DE0602: Stuttgart-Nord
+DE0603: Stuttgart-Ost
+DE0604: Stuttgart-Süd
+DE0605: Stuttgart-West
+
+DE0700: Düsseldorf
+DE0701: Stadtbezirk 1
+DE0702: Stadtbezirk 2
+DE0703: Stadtbezirk 3
+DE0704: Stadtbezirk 4
+DE0705: Stadtbezirk 5
+DE0706: Stadtbezirk 6
+DE0707: Stadtbezirk 7
+DE0708: Stadtbezirk 8
+DE0709: Stadtbezirk 9
+DE0710: Stadtbezirk 10
+
+DE0800: Dortmund
+DE0801: Innenstadt-West
+DE0802: Innenstadt-Nord
+DE0803: Innenstadt-Ost
+DE0804: Eving
+DE0805: Scharnhorst
+DE0806: Brackel
+DE0807: Aplerbeck
+DE0808: Hörde
+DE0809: Hombruch
+DE0810: Lütgendortmund
+DE0811: Huckarde
+DE0812: Mengede
+
+DE0900: Essen
+DE0901: Stadtbezirke I
+DE0902: Stadtbezirke II
+DE0903: Stadtbezirke III
+DE0904: Stadtbezirke IV
+DE0905: Stadtbezirke V
+DE0906: Stadtbezirke VI
+DE0907: Stadtbezirke VII
+DE0908: Stadtbezirke VIII
+DE0909: Stadtbezirke IX
+
+DE1000: Bremen
+DE1001: Mitte
+DE1002: Häfen
+DE1003: Neustadt
+DE1004: Obervieland
+DE1005: Huchting
+DE1006: Woltmershausen
+DE1007: Seehausen
+DE1008: Strom
+DE1009: Östliche Vorstadt
+DE1010: Schwachhausen
+DE1011: Vahr
+DE1012: Horn-Lehe
+DE1013: Borgfeld
+DE1014: Oberneuland
+DE1015: Osterholz
+DE1016: Hemelingen
+DE1017: Blockland
+DE1018: Findorff
+DE1019: Walle
+DE1020: Gröpelingen
+DE1021: Burglesum
+DE1022: Vegesack
+DE1023: Blumenthal
+
+DE1100: Dresden
+DE1101: Altstadt
+DE1102: Neustadt
+DE1103: Pieschen
+DE1104: Klotzsche
+DE1105: Loschwitz
+DE1106: Blasewitz
+DE1107: Leuben
+DE1108: Prohlis
+DE1109: Plauen
+DE1110: Cotta
+
+DE1200: Leipzig
+DE1201: Nordwest
+DE1202: Nord
+DE1203: Nordost
+DE1204: Altwest
+DE1205: Mitte
+DE1206: Ost
+DE1207: West
+DE1208: Süd
+DE1209: Südost
+DE1210: Südwest
+
+DE1300: Hannover
+DE1301: Mitte
+DE1302: Vahrenwald-List
+DE1303: Bothfeld-Vahrenheide
+DE1304: Buchholz-Kleefeld
+DE1305: Misburg-Anderten
+DE1306: Kirchrode-Bemerode-Wülferode
+DE1307: Südstadt-Bult
+DE1308: Döhren-Wülfel
+DE1309: Ricklingen
+DE1310: Linden-Limmer
+DE1311: Ahlem-Badenstedt-Davenstedt
+DE1312: Herrenhausen-Stöcken
+DE1313: Nord
+
+DE1400: Nürnberg
+DE1401: Mitte
+DE1402: Nordwestliche Außenstadt
+DE1403: Ost
+DE1404: West
+DE1405: Galgenhof
+DE1406: Langwasser
+
+DE1500: Duisburg
+DE1501: Walsum
+DE1502: Hamborn
+DE1503: Meiderich/Beeck
+DE1504: Homberg/Ruhrort/Baerl
+DE1505: Duisburg-Mitte(center)
+DE1506: Rheinhausen
+DE1507: Duisburg-Süd
+DE1508: Neumühl
+
+DE1600: Bochum
+DE1601: Bochum-Mitte
+DE1602: Wattenscheid
+DE1603: North
+DE1604: East
+DE1605: South
+DE1606: Southwest
+
+DE1700: Wuppertal
+DE1701: Barmen
+DE1702: Heckinghausen
+DE1703: Oberbarmen
+DE1704: Uellendahl-katernbrg
+DE1705: Elberfeld-West
+DE1706: Vohwinkel
+DE1707: Ronsdorf
+DE1708: Cronenberg
+DE1709: Langerfeld-Beyenburg
+
+DE1800: Bonn
+DE1801: Bonn
+DE1802: Bad Godesberg
+DE1803: Beuel
+DE1804: Hardtberg
+
+DE1900: Bielefeld
+DE1901: Bielefeld-Mitte
+DE1902: Brackwede
+DE1903: Dornberg
+DE1904: Gadderbaum
+DE1905: Heepen
+DE1906: Jöllenbeck
+DE1907: Schildesche
+DE1908: Senne
+DE1909: Sennestadt
+DE1910: Stieghorst
+
+DE2000: Mannheim
+DE2001: Sandhofen
+DE2002: Schönau
+DE2003: Gartenstadt
+DE2004: Waldhof
+DE2005: Industriehafen
+DE2006: Käfertal
+DE2007: Neckarstadt-Ost
+DE2008: Innenstadt/Jungbusch
+DE2009: Oststadt
+DE2010: Schwetzingerstadt
+DE2011: Wallstadt
+DE2012: Feudenheim
+DE2013: Seckenheim
+DE2014: Lindenhof
+DE2015: Neckarau
+DE2016: Rheinau
+DE2017: Friedrichsfeld
+# DE }
+
+# US {
+US0100: New York–Newark–Jersey City
+US0101: Kings County, NY
+US0102: Queens County, NY
+US0103: New York County(Manhattan), NY
+US0104: Bronx County, NY
+US0105: Richmond County(Staten Island), NY
+US0106: Westchester County, NY
+US0107: Suffolk County, NY
+US0108: Nassau County, NY
+US0109: Dutchess County, NY
+US0110: Bergen County, NJ
+US0111: Hudson County, NJ
+US0112: Middlesex County, NJ
+US0113: Essex County, NJ
+US0114: Union County, NJ
+US0115: Morris County, NJ
+US0116: Somerset, NJ
+US0117: Hunterdon County, NJ
+
+US0200: Los Angeles-Long Beach-Anaheim
+US0201: Eastside
+US0202: San Gabriel Valley
+US0203: Pomona Valley
+US0204: Westside
+US0205: Beach Cities
+US0206: South Bay
+US0207: Palos Verdes Peninsula
+US0208: South Los Angeles
+US0209: Gateway Cities
+US0210: North Orange County
+US0211: South Orange County
+US0212: San Fernando Valley
+US0213: Antelope Valley
+US0214: Santa Clarita Valley
+US0215: Downtown Los Angeles
+US0216: Mid-Wilshire
+
+US0300: Chicago-Aurora-Joliet-Lake County
+US0301: Cook County, IL
+US0302: DeKalb County, IL
+US0303: DuPage County, IL
+US0304: Grundy County, IL
+US0305: Kane County, IL
+US0306: Will County, IL
+US0307: Lake County, IL
+
+US0400: Dallas–Fort Worth
+US0401: Dallas County, TX
+US0402: Tarrant County, TX
+US0403: Collin County, TX
+US0404: Denton County, TX
+US0405: Ellis County, TX
+US0406: Hood County, TX
+US0407: Hunt County, TX
+US0408: Johnson County, TX
+US0409: Kaufman County, TX
+US0410: Parker County, TX
+US0411: Rockwall County, TX
+US0412: Somervell County, TX
+US0413: Delta County, TX
+US0414: Wise County, TX
+
+US0500: Houston–The Woodlands–Sugar Land
+US0501: Harris County, TX
+US0502: Fort Bend County, TX
+US0503: Montgomery County, TX
+US0504: Brazoria County, TX
+US0505: Galveston County, TX
+US0506: Liberty County, TX
+US0507: Waller County, TX
+US0508: Chambers County, TX
+US0509: Austin County, TX
+
+US0600: Philadelphia–Reading–Camden–Wilmington
+US0601: Philadelphia County, PA
+US0602: Bucks County, PA
+US0603: Delaware County, PA
+US0604: Chester County, PA
+US0605: Berks County, PA
+US0606: Montgomery County, PA
+US0607: Camden County, NJ
+US0608: Gloucester County, NJ
+US0609: Burlington County, NJ
+US0610: Atlantic County, NJ
+US0611: Cumberland County, NJ
+US0612: Cape May County, NJ
+US0613: Salem County, NJ
+US0614: Kent County, DE
+US0615: New Castle County, DE
+US0616: Cecil County, MD
+
+US0700: Washington-Arlington-Alexandria
+US0701: Washington, D.C., DC
+US0702: Arlington County, VA
+US0703: Fairfax County, VA
+US0704: Fauquier County, VA
+US0705: Charles County, MD
+US0706: Montgomery County, MD
+US0707: Prince George's County, MD
+US0708: Anne Arundel County, MD
+US0709: Howard County, MD
+US0710: St. Mary's County, MD
+
+US0800: Miami-Fort Lauderdale-West Palm Beach
+US0801: Miami, FL
+US0802: Miami Beach, FL
+US0803: Hialeah, FL
+US0804: Miramar, FL
+US0805: Miami Gardens, FL
+US0806: Pembroke Pines, FL
+US0807: Hollywood, FL
+US0808: Fort Lauderdale, FL
+US0809: Pompano Beach, FL
+US0810: Coral Springs, FL
+US0811: Deerfield Beach, FL
+US0812: Boca Raton, FL
+US0813: Delray Beach, FL
+US0814: Boynton Beach, FL
+US0815: West Palm Beach, FL
+US0816: Kendall, FL
+US0817: Homestead, FL
+
+US0900: Atlanta-Sandy Springs-Roswell
+US0901: Atlanta, GA
+US0902: Sandy Springs, GA
+US0903: Roswell, GA
+US0904: Johns Creek, GA
+US0905: Alpharetta, GA
+US0906: Marietta, GA
+US0907: Smyrna, GA
+US0908: Dunwoody, GA
+US0909: Brookhaven, GA
+US0910: Mableton, GA
+US0911: Peachtree City, GA
+US0912: Peachtree Corners, GA
+US0913: Gainesville, GA
+US0914: East Point, GA
+US0915: Newnan, GA
+US0916: Redan, GA
+US0917: Milton, GA
+US0918: Douglasville, GA
+US0919: Kennesaw, GA
+US0920: Lawrenceville, GA
+US0921: Tucker, GA
+US0922: Duluth, GA
+US0923: Stockbridge, GA
+
+US1000: Boston-Cambridge-Newton
+US1001: Suffolk County, MA
+US1002: Middlesex County, MA
+US1003: Essex County, MA,
+US1004: Norfolk County, MA
+US1005: Plymouth County, MA
+US1006: Worcester, MA
+US1007: Rockingham County, NH
+US1008: Strafford County, NH
+
+US1100: San Francisco–Oakland–Hayward
+US1101: San Francisco, CA
+US1102: Alameda County, CA
+US1103: San Mateo County, CA
+US1104: Marin County, CA
+US1105: San Jose, CA
+US1106: Santa Rosa, CA
+US1107: Contra Costa County, CA
+US1108: Napa County, CA
+US1109: Vallejo, CA
+US1110: Fairfield, CA
+
+US1200: Phoenix-Mesa-Scottsdale
+US1201: Phoenix, AZ
+US1202: Mesa, AZ
+US1203: Chandler, AZ
+US1204: Glendale, AZ
+US1205: Scottsdale, AZ
+US1206: Gilbert, AZ
+US1207: Tempe, AZ
+US1208: Peoria, AZ
+US1209: Surprise, AZ
+
+US1300: Riverside-San Bernardino-Ontario
+US1301: Riverside County, CA
+US1302: San Bernardino County, CA
+US1303: Ontario, CA
+
+US1400: Detroit-Warren-Dearborn
+US1401: Detroit, MI
+US1402: Warren, MI
+US1403: Livonia, MI
+US1404: Dearborn, MI
+
+US1500: Seattle-Tacoma-Bellevue
+US1501: King County, WA
+US1502: Snohomish County, WA
+US1503: Pierce County, WA
+US1504: Kitsap County, WA
+US1505: Thurston County, WA
+US1506: Skagit County, WA
+US1507: Bainbridge Island, WA
+US1508: Mason County, WA
+
+US1600: Minneapolis-St. Paul-Bloomington
+US1601: Minneapolis, MN
+US1602: Saint Paul, MN
+US1603: Bloomington, MN
+
+US1700: San Diego-Carlsbad
+US1701: San Diego County, CA
+US1702: Carlsbad, CA
+
+US1800: Tampa-St. Petersburg-Clearwater
+US1801: Tampa, FL
+US1802: St. Petersburg, FL
+US1803: Clearwater, FL
+US1804: Brandon, FL
+
+US1900: St. Louis
+US1901: St. Louis, MO
+US1902: St. Charles County, MO
+US1903: Jefferson City, MO
+US1904: Madison, IL
+US1905: St. Clair County, IL
+
+US2000: Baltimore-Columbia-Towson
+US2001: Baltimore, MD
+US2002: Anne Arundel County, MD
+US2003: Howard County, MD
+US2004: Baltimore County, MD
+US2005: Carroll County, MD
+US2006: Harford County, MD
+US2007: Queen Anne's County, MD
+# US }
+
+# CA {
+CA0100: Ottawa
+CA0101: Centretown
+CA0102: Chinatown
+CA0103: Little Italy
+CA0104: The Glebe
+CA0105: Tunney's Pasture
+CA0106: Westboro
+CA0107: Carlington
+CA0108: Old Ottawa South
+CA0109: Sandy Hill
+CA0110: Lower Town
+CA0111: Overbrook
+CA0112: Vanier
+CA0113: New Edinburgh
+CA0114: Rockcliffe Park
+CA0115: Manor Park
+CA0116: Cardinal Heights
+CA0117: Industrial Park
+
+CA0200: Toronto
+CA0201: East York
+CA0202: Etobicoke
+CA0203: North York
+CA0204: Old Toronto
+CA0205: Scarborough
+CA0206: York
+
+CA0300: Montreal
+CA0301: Montreal East
+CA0302: Downtown
+CA0303: Montreal West
+CA0304: Montreal Nord
+CA0305: Lasalle
+CA0306: Laval
+CA0307: Longueuil
+CA0308: Brossard
+CA0309: Le Plateau-Mont-Royal
+CA0310: Gay Village
+CA0311: Sainte-Marie
+CA0312: Hochelaga
+CA0313: Maisonneuve
+CA0314: Longue-Pointe
+CA0315: Viauville
+CA0316: Tétreaultville
+CA0317: Saint-Justin
+CA0318: Nouveau-Rosemont
+CA0319: St. Leonard
+CA0320: Rosemont-La Petite-Patrie
+CA0321: LACHINE
+CA0322: Villeray—Saint-Michel—Parc-Extension
+CA0323: La Petite-Patrie
+CA0324: Outremont
+CA0325: Mount Royal
+CA0326: Southwest
+CA0327: Pointe-Claire
+CA0328: Saint-Laurent
+CA0329: Sault-au-Récollet
+
+CA0400: Vancouver
+CA0401: West End
+CA0402: Downtown
+CA0403: Downtown Eastside
+CA0404: Strathcona
+CA0405: Grandview–Woodland
+CA0406: Hastings–Sunrise
+CA0407: Mount Pleasant
+CA0408: Fairview
+CA0409: Kitsilano
+CA0410: West Point Grey
+CA0411: Dunbar–Southlands
+CA0412: Arbutus Ridge
+CA0413: Shaughnessy
+CA0414: South Cambie
+CA0415: Riley Park
+CA0416: Kensington–Cedar Cottage
+CA0417: Renfrew–Collingwood
+CA0418: Killarney
+CA0419: Victoria–Fraserview
+CA0420: Sunset
+CA0421: Oakridge
+CA0422: Marpole
+CA0423: Kerrisdale
+
+CA0500: Calgary
+CA0501: Downtown Calgary
+CA0502: Downtown West End
+CA0503: Downtown Commercial Core
+CA0504: Downtown East Village
+CA0505: Stephen Avenue Retail Core
+CA0506: Entertainment District
+CA0507: Government District
+CA0508: Beltline
+CA0509: Chinatown
+CA0510: Eau Claire
+
+CA0600: Edmonton
+CA0601: Boyle Street
+CA0602: Central McDougall
+CA0603: Cloverdale
+CA0604: Garneau
+CA0605: McCauley
+CA0606: Oliver
+CA0607: Queen Mary Park
+CA0608: Riverdale
+CA0609: Rossdale
+CA0610: Strathcona
+CA0611: University of Alberta
+
+CA0700: Quebec City
+CA0701: La Cité-Limoilou
+CA0702: Les Rivières
+CA0703: Sainte-Foy–Sillery–Cap-Rouge
+CA0704: Charlesbourg
+CA0705: Beauport
+CA0706: La Haute-Saint-Charles
+
+CA0800: Winnipeg
+CA0801: City Centre
+CA0802: East Kildonan–Transcona
+CA0803: Assiniboia
+CA0804: Lord Selkirk–West Kildonan
+CA0805: Riel
+
+CA0900: Hamilton
+CA0901: Central
+CA0902: The North End
+CA0903: The East End
+CA0904: The West End
+CA0905: Westdale
+CA0906: Downtown
+CA0907: Stoney Creek
+CA0908: Dundas
+CA0909: Flamborough
+CA0910: Ancaster
+CA0911: Township of Glanbrook
+CA0912: East Mountain
+# CA }
+
+# AU {
+AU0100: Canberra
+AU0101: Canberra Central
+AU0102: Woden Valley
+AU0103: Belconnen
+AU0104: Weston Creek
+AU0105: Tuggeranong
+AU0106: Gungahlin
+AU0107: Molonglo Valley
+
+AU0200: Sydney
+AU0201: Woollahra
+AU0202: Waverley
+AU0203: Randwick
+AU0204: Marrickville
+AU0205: Leichhardt
+AU0206: Ashfield
+AU0207: Burwood
+AU0208: Strathfield
+AU0209: Canada Bay
+AU0210: Hunters Hill
+AU0211: Lane Cove
+AU0212: North Sydney
+AU0213: Mosman
+AU0214: Willoughby
+AU0215: Manly
+
+AU0300: Melbourne
+AU0301: Flemington
+AU0302: Kensington
+AU0303: Parkville
+AU0304: North Melbourne
+AU0305: Princes Hill
+AU0306: Carlton
+AU0307: Carlton North
+AU0308: Fitzroy North
+AU0309: Fitzroy
+AU0310: Collingwood
+AU0311: Clifton Hill
+AU0312: Alphington
+AU0313: Fairfield
+AU0314: West Melbourne
+AU0315: Docklands
+AU0316: South Wharf
+AU0317: Melbourne
+AU0318: Southbank
+AU0319: East Melbourne
+AU0320: Richmond
+AU0321: Cremorne
+AU0322: Burnley
+AU0323: South Yarra
+AU0324: South Melbourne
+AU0325: Port Melbourne
+AU0326: Albert Park
+AU0327: Middle Park
+AU0328: Windsor
+AU0329: St Kilda West
+AU0330: St Kilda
+AU0331: St Kilda East
+AU0332: Balaclava
+AU0333: Ripponlea
+AU0334: Elwood
+
+AU0400: Brisbane
+AU0401: Algester
+AU0402: Ashgrove
+AU0403: Aspley
+AU0404: Brisbane Central
+AU0405: Bulimba
+AU0406: Chatsworth
+AU0407: Clayfield
+AU0408: Everton
+AU0409: Ferny Grove
+AU0410: Greenslopes
+AU0411: Inala
+AU0412: Indooroopilly
+AU0413: Lytton
+AU0414: Mansfield
+AU0415: Moggill
+AU0416: Mount Coot-tha
+AU0417: Mount Ommaney
+AU0418: Nudgee
+AU0419: Sandgate
+AU0420: South Brisbane
+AU0421: Stafford
+AU0422: Stretton
+AU0423: Sunnybank
+AU0424: Yeerongpilly
+
+AU0500: Perth
+AU0501: North Perth
+AU0502: North Perth
+AU0503: Highgate
+AU0504: Northbridge
+AU0505: Perth
+AU0506: East Perth
+AU0507: West Perth
+AU0508: South Perth
+AU0509: Victoria Park
+
+AU0600: Adelaide
+AU0601: Hindmarsh
+AU0602: North Adelaide
+AU0603: Gilberton
+AU0604: Hackney
+AU0605: Thebarton
+AU0606: Mile End
+AU0607: Kent Town
+AU0608: Rose Park
+AU0609: Dulwich
+AU0610: Keswick
+AU0611: Wayville
+AU0612: Unley
+AU0613: Parkside
+AU0614: Eastwood
+AU0615: Glenside
+AU0616: Walkerville
+AU0617: Charles Sturt
+AU0618: Prospect
+AU0619: Walkerville
+AU0620: West Torrens
+AU0621: Norwood
+AU0622: Payneham
+AU0623: St Peters
+AU0624: West Torrens
+AU0625: Unley
+AU0626: Burnside
+# AU }

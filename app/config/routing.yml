@@ -1,0 +1,23 @@
+index:
+    resource: "@IndexBundle/Resources/config/routing.xml"
+    prefix:   /
+
+admin:
+    resource: "@AdminBundle/Resources/config/routing.xml"
+    prefix:   /
+
+career:
+    resource: "@CareerBundle/Resources/config/routing.xml"
+    prefix:   /
+
+plugin:
+    resource: "@PluginBundle/Resources/config/routing.xml"
+    prefix:   /
+
+user:
+    resource: "@UserBundle/Resources/config/routing.xml"
+    prefix:   /
+
+tool:
+    resource: "@ToolBundle/Resources/config/routing.xml"
+    prefix:   /

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="SystemRepository" name="jobseeker\Bundle\AdminBundle\Entity\System" table="system">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="skey" type="string" column="skey" length="50"/>
+        <field name="svalue" type="string" column="svalue" length="255" nullable="true"/>
+        <field name="stype" type="string" column="stype" length="50" nullable="true"/>
+        <unique-constraints>
+            <unique-constraint columns="skey" name="system_skey"/>
+        </unique-constraints>
+        <indexes>
+            <index columns="stype" name="system_stype"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

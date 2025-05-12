@@ -1,0 +1,54 @@
+{% extends "admin/base.html.twig" %}
+
+{% block header_js %}
+<script type="text/javascript">
+var data = {{ data|raw }};
+</script>
+{% endblock %}
+
+{% block main_content_inner %}
+<div class="form_main">
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {{ form(form) }}
+</div>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+var bundleString = controllerString = actionString = [];
+for (var bundle in data) {
+    bundleString.push('<option value="' + bundle + '">' + data[bundle]['alias'] + '</option>');
+    controllerString[bundle] = [];
+    for (var controller in data[bundle]["controller"]) {
+        controllerString[bundle].push('<option value="' + controller + '">' + data[bundle]["controller"][controller]['alias'] + '</option>');
+        actionString[bundle+"-"+controller] = [];
+        for (var action in data[bundle]["controller"][controller]["action"]) {
+            actionString[bundle+"-"+controller].push('<option value="' + action + '">' + data[bundle]["controller"][controller]['action'][action] + '</option>');
+        }
+    }
+}
+
+$("#form_bundle").html(bundleString.join(""));
+$("#form_controller").html(controllerString[$("#form_bundle option:first").val()].join(""));
+$("#form_action").html(actionString[$("#form_bundle option:first").val() + "-"+ $("#form_controller option:first").val()].join(""));
+
+$("#form_bundle").change(function() {
+    var bundle = $("#form_bundle option:selected").val();
+    var controller = controllerString[bundle];
+    $("#form_controller").html(controller.join(""));
+    $("#form_controller").change();
+});
+$("#form_controller").change(function() {
+    var bundle = $("#form_bundle option:selected").val();
+    var controller = $("#form_controller option:selected").val();
+    var action = actionString[bundle + "-"+ controller];
+    $("#form_action").html(action.join(""));
+});
+</script>
+{% endblock %}

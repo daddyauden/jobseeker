@@ -1,0 +1,102 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main_edit">
+    <label id="message_alert"></label>
+    <table class="table table-hover discount_table">
+        <caption class="text-left caption">
+            <div class="btn-group">
+                <div class="btn btn-default">{{ "table.discount.rate"|trans }}</div>
+                <div class="btn btn-info">{{ "table.discount.rate.comment"|trans }}</div>
+            </div>
+        </caption>
+        <thead>
+            <tr>
+                <th class="discount_name">{{ "table.discount.name"|trans }}</th>
+                <th class="discount_queue">{{ "table.discount.queue"|trans }}</th>
+                <th class="discount_dsn">{{ "table.discount.dsn"|trans }}</th>
+                <th class="discount_rate">{{ "table.discount.rate"|trans }}</th>
+                <th class="discount_status">{{ "table.discount.status"|trans }}</th>
+                <th class="discount_operation">{{ "be.operate"|trans }}</th>
+            </tr>
+            <tr>
+                <th class="discount_name">{{ "table.discount.name"|trans }}</th>
+                <th class="discount_queue">{{ "table.discount.queue"|trans }}</th>
+                <th class="discount_dsn">{{ "table.discount.dsn"|trans }}</th>
+                <th class="discount_rate">{{ "table.discount.rate"|trans }}</th>
+                <th class="discount_status">{{ "table.discount.status"|trans }}</th>
+                <th class="discount_operation">{{ "be.operate"|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for discount in discounts %}
+                <tr>
+                    {{ form_widget(discount.id) }}
+                    <td class="discount_name">{{ form_label(discount.dsn) }}</td>
+                    <td class="discount_queue">{{ form_widget(discount.queue) }}</td>
+                    <td class="discount_dsn">{{ form_widget(discount.dsn) }}</td>
+                    <td class="discount_rate">{{ form_widget(discount.rate) }}</td>
+                    <td class="discount_status">{{ form_widget(discount.status) }}</td>
+                    <td class="discount_operation">
+                        <button name="edit" class="btn btn-info btn-sm">{{ "be.edit"|trans }}</button>
+                        <button name="delete" class="btn btn-warning btn-sm">{{ "be.delete"|trans }}</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<ul class="pager">
+    {% for url in urls %}
+    <li>{{ url|raw }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+$("button[name=edit]").click(function() {
+    var data = {};
+    var inputs = $(this).parent().parent().find("[name^=form]");
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        var id = $(inputs[i]).attr("id");
+        data[id.substring(id.lastIndexOf("_") + 1)] = $(inputs[i]).val();
+    }
+    $.ajax({
+        type: "POST",
+        url: "{{ path("discount_save") }}",
+        data: $.toJSON(data)
+    }).done(function(message) {
+        if (message == "same") {
+            $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.nochange"|trans }}").delay(800).slideUp(800);
+        } else if (message == "success") {
+            window.location.reload();
+        } else if (message == "error") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.update.fail"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.update.invalid"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+
+$("button[name=delete]").click(function() {
+    var pp = $(this).parent().parent();
+    var id = pp.find("[name='form[id]']").val();
+    $.ajax({
+        type: "POST",
+        url: "{{ path("discount_delete") }}",
+        data: id
+    }).done(function(message) {
+        if (message == "success") {
+            $("#message_alert").attr({"class": "label label-success"}).slideDown(500).html("{{ "be.delete.success"|trans }}").delay(800).slideUp(800);
+            pp.fadeOut(800);
+        } else if (message == "error") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.delete.fail"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.delete.invalid"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+</script>
+{% endblock %}

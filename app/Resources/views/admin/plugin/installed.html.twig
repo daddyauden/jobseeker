@@ -1,0 +1,107 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main_edit">
+    <label id="message_alert"></label>
+    <table class="table table-hover plugin_table plugin_header_table">
+        <thead>
+            <tr>
+                <th class="plugin_logo"></th>
+                <th class="plugin_name">{{ "table.plugin.name"|trans }}</th>
+                <th class="plugin_description">{{ "table.plugin.description"|trans }}</th>
+                <th class="plugin_status">{{ "table.plugin.status"|trans }}</th>
+                <th class="plugin_config">{{ "table.plugin.config"|trans }}</th>
+                <th class="plugin_opration">{{ "be.operate"|trans }}</th>
+            </tr>
+        </thead>
+    </table>
+    {% if pluginss|length > 0 %}
+    {% for scope, plugins in pluginss %}
+    <table class="table table-hover plugin_table">
+        <caption class="caption">{{ ("plugin.scope." ~ scope)|trans }}</caption>
+        <tbody>
+            {% for plugin in plugins %}
+            <tr>
+                {{ form_widget(plugin.id) }}
+                <td class="plugin_logo"><img src="{{ plugin.children.logo.vars.value }}" /></td>
+                <td class="plugin_name">{{ form_label(plugin.namealias) }}</td>
+                <td class="plugin_description">{{ form_label(plugin.description) }}</td>
+                <td class="plugin_status">{{ form_widget(plugin.status) }}</td>
+                <td class="plugin_config">
+                    {% for configName , config in plugin.children %}
+                    {% if configName|slice(0, 7)|lower == "config_" %}
+                    <div>{{ form_label(config) }}{{ form_widget(config) }}</div>
+                    {% endif %}
+                    {% endfor %}
+                </td>
+                <td class="plugin_opration">
+                    <a name="update" class="btn btn-info"><span class="glyphicon glyphicon-refresh">{{ "be.update"|trans }}</span></a>
+                    <a name="uninstall" class="btn btn-warning"><span class="glyphicon glyphicon-trash">{{ "be.uninstall"|trans }}</span></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endfor %}
+    {% else %}
+    <table class="table table-hover plugin_table">
+        <caption class="caption">{{ "common.none"|trans }}</caption>
+    </table>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+    $("a[name=update]").click(function() {
+        var data = {};
+        var inputs = $(this).parent().parent().find("[name^=form]");
+        for (var i = 0, len = inputs.length; i < len; i++) {
+            var id = $(inputs[i]).attr("id");
+            id = id.substring(id.indexOf("_") + 1);
+            data[id] = $(inputs[i]).val();
+        }
+        $.ajax({
+            type: "POST",
+            url: "{{ path("plugin_update") }}",
+            data: $.toJSON(data)
+        }).done(function(message) {
+            if (message == "invalid") {
+                $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.update.invalid"|trans }}").delay(800).slideUp(800);
+            } else if (message == "success") {
+                $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.update.success"|trans }}").delay(800).slideUp(800);
+                window.setTimeout(function() {
+                    window.location.reload();
+                }, 3000);
+            } else if (message == "same") {
+                $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.nochange"|trans }}").delay(800).slideUp(800);
+            } else {
+                $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.update.fail"|trans }}").delay(800).slideUp(800);
+            }
+        });
+    });
+
+    $("a[name=uninstall]").click(function() {
+        var pp = $(this).parent().parent();
+        var id = pp.find("[name='form[id]']").val();
+        $.ajax({
+            type: "POST",
+            url: "{{ path("plugin_uninstall") }}",
+            data: id
+        }).done(function(message) {
+            if (message == "uninstalled") {
+                $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.uninstalled"|trans }}").delay(800).slideUp(800);
+            } else if (message == "success") {
+                $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.uninstall.success"|trans }}").delay(800).slideUp(800);
+                window.setTimeout(function() {
+                    window.location.reload();
+                }, 2500);
+            } else if (message == "fail") {
+                $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.uninstall.fail"|trans }}").delay(800).slideUp(800);
+            } else {
+                $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.uninstall.fail"|trans }}").delay(800).slideUp(800);
+            }
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "dashboard.html.twig" %}
+
+{% block title_suffix %} - Homepage{% endblock %}
+
+{% block container %}
+<div id="brand">
+    <div id="brand_logo"><img src="{{ asset("/logo.png") }}" /></div>
+    {% if brand_intro is defined %}
+    <div id="brand_intro">
+        <p></p>
+        <p></p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+{% if brand_intro is defined %}
+(function (content) {
+    window.setTimeout(function () {
+        var introLength = content.length;
+        var queue = 0;
+        $("#brand_intro p:first").html(content[queue]);
+        queue++;
+        function play() {
+            $("#brand_intro p:first").fadeOut(1500, "linear");
+            $("#brand_intro p:last").html(content[queue]).fadeIn(3000, "linear");
+            if (queue < introLength - 1) {
+                queue++;
+            } else {
+                queue = 0;
+            }
+            $("#brand_intro p:first").appendTo($("#brand_intro"));
+        }
+        window.setInterval(play, 5000);
+    }, 0);
+})({{ brand_intro|raw }});
+{% endif %}
+</script>
+{% endblock %}

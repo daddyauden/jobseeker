@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="AdminRepository" name="jobseeker\Bundle\AdminBundle\Entity\Admin" table="admin">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <many-to-one field="rid" target-entity="jobseeker\Bundle\UserBundle\Entity\Role">
+            <join-column name="rid"  nullable="false" referenced-column-name="id"/>
+        </many-to-one>
+        <field name="email" type="string" column="email" length="255"/>
+        <field name="password" type="string" column="password" length="255"/>
+        <field name="logintime" type="integer" column="logintime" nullable="true"/>
+        <field name="loginip" type="string" column="loginip" length="50" nullable="true"/>
+        <unique-constraints>
+            <unique-constraint columns="email" name="admin_email"/>
+        </unique-constraints>
+        <indexes>
+            <index columns="password" name="admin_password"/>
+            <index columns="logintime" name="admin_logintime"/>
+            <index columns="loginip" name="admin_loginip"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

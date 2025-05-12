@@ -1,0 +1,26 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    {% if app.session.flashbag.has("info") %}
+    <div class="alert alert-info">
+        {% for info in app.session.flashbag.get('info') %}
+        {{ info }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {{ form_start(form) }}
+    <h2 class="form_header">Login JobSeeker</h2>
+    {{ form_widget(form.email) }}
+    {{ form_widget(form.password) }}
+    {{ form_widget(form.submit) }}
+    {{ form_end(form) }}
+</div>
+{% endblock %}

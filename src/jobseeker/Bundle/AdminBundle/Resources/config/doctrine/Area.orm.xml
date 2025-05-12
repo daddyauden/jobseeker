@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="AreaRepository" name="jobseeker\Bundle\AdminBundle\Entity\Area" table="area" >
+        <id name="id" type="bigint" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="pid" type="bigint" column="pid" nullable="true"/>
+        <field name="code" type="string" column="code" length="20"/>
+        <field name="level" type="smallint" column="level"/>
+        <field name="alpha" type="string" column="alpha" length="10" nullable="true"/>
+        <field name="domain" type="string" column="domain" length="50" nullable="true"/>
+        <field name="lat" type="string" column="lat" length="10" nullable="true"/>
+        <field name="lng" type="string" column="lng" length="10" nullable="true"/>
+        <field name="queue" type="integer" column="queue" nullable="true"/>
+        <field name="status" type="smallint" column="status"/>
+        <unique-constraints>
+            <unique-constraint columns="code" name="area_code"/>
+        </unique-constraints>
+        <indexes>
+            <index columns="pid" name="area_pid"/>
+            <index columns="level" name="area_level"/>
+            <index columns="alpha" name="area_alpha"/>
+            <index columns="lat" name="area_lat"/>
+            <index columns="lng" name="area_lng"/>
+            <index columns="queue" name="area_queue"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

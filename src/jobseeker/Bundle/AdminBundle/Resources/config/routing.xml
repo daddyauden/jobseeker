@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    <route id="admin_list" path="/admin/admin-list-{page}">
+        <default key="_controller">AdminBundle:Admin:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="admin_add" path="/admin/admin-add">
+        <default key="_controller">AdminBundle:Admin:add</default>
+    </route>
+    <route id="admin_change_password" path="/admin/admin-changepass-{aid}">
+        <default key="_controller">AdminBundle:Admin:changepass</default>
+        <default key="aid">1</default>
+        <requirement key="aid">\d+</requirement>
+    </route>
+    <route id="admin_change_email" path="/admin/admin-changeemail-{aid}">
+        <default key="_controller">AdminBundle:Admin:changeemail</default>
+        <default key="aid">1</default>
+        <requirement key="aid">\d+</requirement>
+    </route>
+    <route id="admin_change_role" path="/admin/admin-changerole-{aid}">
+        <default key="_controller">AdminBundle:Admin:changerole</default>
+        <default key="aid">1</default>
+        <requirement key="aid">\d+</requirement>
+    </route>
+    <route id="admin_save" path="/admin/admin-save" methods="post">
+        <default key="_controller">AdminBundle:Admin:save</default>
+    </route>
+
+
+    <route id="area_list" path="/admin/area-list-{page}">
+        <default key="_controller">AdminBundle:Area:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="area_add" path="/admin/area-add">
+        <default key="_controller">AdminBundle:Area:add</default>
+    </route>
+    <route id="area_delete" path="/admin/area-delete" methods="post">
+        <default key="_controller">AdminBundle:Area:delete</default>
+    </route>
+    <route id="area_save" path="/admin/area-save" methods="post">
+        <default key="_controller">AdminBundle:Area:save</default>
+    </route>
+
+
+    <route id="currency_list" path="/admin/currency-list-{page}">
+        <default key="_controller">AdminBundle:Currency:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="currency_add" path="/admin/currency-add">
+        <default key="_controller">AdminBundle:Currency:add</default>
+    </route>
+    <route id="currency_delete" path="/admin/currency-delete" methods="post">
+        <default key="_controller">AdminBundle:Currency:delete</default>
+    </route>
+    <route id="currency_save" path="/admin/currency-save" methods="post">
+        <default key="_controller">AdminBundle:Currency:save</default>
+    </route>
+
+
+    <route id="diploma_list" path="/admin/diploma-list-{page}">
+        <default key="_controller">AdminBundle:Diploma:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="diploma_add" path="/admin/diploma-add">
+        <default key="_controller">AdminBundle:Diploma:add</default>
+    </route>
+    <route id="diploma_delete" path="/admin/diploma-delete" methods="post">
+        <default key="_controller">AdminBundle:Diploma:delete</default>
+    </route>
+    <route id="diploma_save" path="/admin/diploma-save" methods="post">
+        <default key="_controller">AdminBundle:Diploma:save</default>
+    </route>
+
+
+    <route id="discount_list" path="/admin/discount-list-{page}">
+        <default key="_controller">AdminBundle:Discount:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="discount_add" path="/admin/discount-add">
+        <default key="_controller">AdminBundle:Discount:add</default>
+    </route>
+    <route id="discount_delete" path="/admin/discount-delete" methods="post">
+        <default key="_controller">AdminBundle:Discount:delete</default>
+    </route>
+    <route id="discount_save" path="/admin/discount-save" methods="post">
+        <default key="_controller">AdminBundle:Discount:save</default>
+    </route>
+
+
+    <route id="employee_search" path="/admin/employee-search">
+        <default key="_controller">AdminBundle:Employee:search</default>
+    </route>
+    <route id="employee_add" path="/admin/employee-add">
+        <default key="_controller">AdminBundle:Employee:add</default>
+    </route>
+    <route id="employee_list" path="/admin/employee-list-{page}">
+        <default key="_controller">AdminBundle:Employee:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+
+
+    <route id="employer_search" path="/admin/employer-search">
+        <default key="_controller">AdminBundle:Employer:search</default>
+    </route>
+    <route id="employer_add" path="/admin/employer-add">
+        <default key="_controller">AdminBundle:Employer:add</default>
+    </route>
+    <route id="employer_list" path="/admin/employer-list-{page}">
+        <default key="_controller">AdminBundle:Employer:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+
+
+    <route id="employerscale_list" path="/admin/employerscale-list-{page}">
+        <default key="_controller">AdminBundle:Employerscale:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="employerscale_add" path="/admin/employerscale-add">
+        <default key="_controller">AdminBundle:Employerscale:add</default>
+    </route>
+    <route id="employerscale_delete" path="/admin/employerscale-delete" methods="post">
+        <default key="_controller">AdminBundle:Employerscale:delete</default>
+    </route>
+    <route id="employerscale_save" path="/admin/employerscale-save" methods="post">
+        <default key="_controller">AdminBundle:Employerscale:save</default>
+    </route>
+
+
+    <route id="employertype_list" path="/admin/employertype-list-{page}">
+        <default key="_controller">AdminBundle:Employertype:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="employertype_add" path="/admin/employertype-add">
+        <default key="_controller">AdminBundle:Employertype:add</default>
+    </route>
+    <route id="employertype_delete" path="/admin/employertype-delete" methods="post">
+        <default key="_controller">AdminBundle:Employertype:delete</default>
+    </route>
+    <route id="employertype_save" path="/admin/employertype-save" methods="post">
+        <default key="_controller">AdminBundle:Employertype:save</default>
+    </route>
+
+
+    <route id="admin_index" path="/admin{slash}">
+        <default key="_controller">AdminBundle:Index:index</default>
+        <default key="slash">/</default>
+        <requirement key="slash">[/]{1}</requirement>
+    </route>
+    <route id="admin_logout" path="/admin/logout">
+        <default key="_controller">AdminBundle:Index:logout</default>
+    </route>
+
+
+    <route id="industry_list" path="/admin/industry-list-{page}">
+        <default key="_controller">AdminBundle:Industry:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="industry_add" path="/admin/industry-add">
+        <default key="_controller">AdminBundle:Industry:add</default>
+    </route>
+    <route id="industry_delete" path="/admin/industry-delete" methods="post">
+        <default key="_controller">AdminBundle:Industry:delete</default>
+    </route>
+    <route id="industry_save" path="/admin/industry-save" methods="post">
+        <default key="_controller">AdminBundle:Industry:save</default>
+    </route>
+
+
+    <route id="locale_list" path="/admin/locale-list-{page}">
+        <default key="_controller">AdminBundle:Locale:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="locale_add" path="/admin/locale-add">
+        <default key="_controller">AdminBundle:Locale:add</default>
+    </route>
+    <route id="locale_delete" path="/admin/locale-delete" methods="post">
+        <default key="_controller">AdminBundle:Locale:delete</default>
+    </route>
+    <route id="locale_save" path="/admin/locale-save" methods="post">
+        <default key="_controller">AdminBundle:Locale:save</default>
+    </route>
+
+
+    <route id="paymenttype_list" path="/admin/paymenttype-list-{page}">
+        <default key="_controller">AdminBundle:Paymenttype:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="paymenttype_add" path="/admin/paymenttype-add">
+        <default key="_controller">AdminBundle:Paymenttype:add</default>
+    </route>
+    <route id="paymenttype_delete" path="/admin/paymenttype-delete" methods="post">
+        <default key="_controller">AdminBundle:Paymenttype:delete</default>
+    </route>
+    <route id="paymenttype_save" path="/admin/paymenttype-save" methods="post">
+        <default key="_controller">AdminBundle:Paymenttype:save</default>
+    </route>
+
+
+    <route id="plugin_installed" path="/admin/plugin-installed">
+        <default key="_controller">AdminBundle:Plugin:installed</default>
+    </route>
+    <route id="plugin_uninstalled" path="/admin/plugin-uninstalled">
+        <default key="_controller">AdminBundle:Plugin:uninstalled</default>
+    </route>
+    <route id="plugin_install" path="/admin/plugin-install" methods="post">
+        <default key="_controller">AdminBundle:Plugin:install</default>
+    </route>
+    <route id="plugin_uninstall" path="/admin/plugin-uninstall" methods="post">
+        <default key="_controller">AdminBundle:Plugin:uninstall</default>
+    </route>
+    <route id="plugin_update" path="/admin/plugin-update" methods="post">
+        <default key="_controller">AdminBundle:Plugin:update</default>
+    </route>
+
+
+    <route id="add_user" path="/admin/add-user">
+        <default key="_controller">AdminBundle:Tool:addUser</default>
+    </route>
+
+
+    <route id="privilege_list" path="/admin/privilege-list-{page}">
+        <default key="_controller">AdminBundle:Privilege:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="privilege_add" path="/admin/privilege-add">
+        <default key="_controller">AdminBundle:Privilege:add</default>
+    </route>
+    <route id="privilege_delete" path="/admin/privilege-delete" methods="post">
+        <default key="_controller">AdminBundle:Privilege:delete</default>
+    </route>
+    <route id="privilege_save" path="/admin/privilege-save" methods="post">
+        <default key="_controller">AdminBundle:Privilege:save</default>
+    </route>
+
+
+    <route id="product_list" path="/admin/product-list-{page}">
+        <default key="_controller">AdminBundle:Product:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="product_add" path="/admin/product-add">
+        <default key="_controller">AdminBundle:Product:add</default>
+    </route>
+    <route id="product_delete" path="/admin/product-delete" methods="post">
+        <default key="_controller">AdminBundle:Product:delete</default>
+    </route>
+    <route id="product_save" path="/admin/product-save" methods="post">
+        <default key="_controller">AdminBundle:Product:save</default>
+    </route>
+
+
+    <route id="role_list" path="/admin/role-list-{page}">
+        <default key="_controller">AdminBundle:Role:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="role_add" path="/admin/role-add">
+        <default key="_controller">AdminBundle:Role:add</default>
+    </route>
+    <route id="role_delete" path="/admin/role-delete" methods="post">
+        <default key="_controller">AdminBundle:Role:delete</default>
+    </route>
+    <route id="role_save" path="/admin/role-save" methods="post">
+        <default key="_controller">AdminBundle:Role:save</default>
+    </route>
+    <route id="role_show" path="/admin/role-show-{rid}">
+        <default key="_controller">AdminBundle:Role:show</default>
+        <default key="rid">1</default>
+        <requirement key="rid">\d+</requirement>
+    </route>
+
+
+    <route id="system_list" path="/admin/system-list-{page}">
+        <default key="_controller">AdminBundle:System:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="system_add" path="/admin/system-add">
+        <default key="_controller">AdminBundle:System:add</default>
+    </route>
+    <route id="system_delete" path="/admin/system-delete" methods="post">
+        <default key="_controller">AdminBundle:System:delete</default>
+    </route>
+    <route id="system_save" path="/admin/system-save" methods="post">
+        <default key="_controller">AdminBundle:System:save</default>
+    </route>
+
+
+    <route id="type_list" path="/admin/type-list-{page}">
+        <default key="_controller">AdminBundle:Type:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="type_add" path="/admin/type-add">
+        <default key="_controller">AdminBundle:Type:add</default>
+    </route>
+    <route id="type_delete" path="/admin/type-delete" methods="post">
+        <default key="_controller">AdminBundle:Type:delete</default>
+    </route>
+    <route id="type_save" path="/admin/type-save" methods="post">
+        <default key="_controller">AdminBundle:Type:save</default>
+    </route>
+</routes>

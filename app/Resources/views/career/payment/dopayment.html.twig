@@ -1,0 +1,104 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Payment Index{% endblock %}
+
+{% block header_css %}
+{% endblock %}
+
+{% block header_js %}
+<script type="text/javascript">
+    function generateCC() {
+        var cc_number = new Array(16);
+        var cc_len = 16;
+        var start = 0;
+        var rand_number = Math.random();
+
+        switch (document.DoDirectPaymentForm.creditCardType.value)
+        {
+            case "Visa":
+                cc_number[start++] = 4;
+                break;
+            case "Discover":
+                cc_number[start++] = 6;
+                cc_number[start++] = 0;
+                cc_number[start++] = 1;
+                cc_number[start++] = 1;
+                break;
+            case "MasterCard":
+                cc_number[start++] = 5;
+                cc_number[start++] = Math.floor(Math.random() * 5) + 1;
+                break;
+            case "Amex":
+                cc_number[start++] = 3;
+                cc_number[start++] = Math.round(Math.random()) ? 7 : 4;
+                cc_len = 15;
+                break;
+        }
+
+        for (var i = start; i < (cc_len - 1); i++) {
+            cc_number[i] = Math.floor(Math.random() * 10);
+        }
+
+        var sum = 0;
+        for (var j = 0; j < (cc_len - 1); j++) {
+            var digit = cc_number[j];
+            if ((j & 1) == (cc_len & 1))
+                digit *= 2;
+            if (digit > 9)
+                digit -= 9;
+            sum += digit;
+        }
+
+        var check_digit = new Array(0, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+        cc_number[cc_len - 1] = check_digit[sum % 10];
+
+        document.DoDirectPaymentForm.creditCardNumber.value = "";
+        for (var k = 0; k < cc_len; k++) {
+            document.DoDirectPaymentForm.creditCardNumber.value += cc_number[k];
+        }
+        return false;
+    }
+</script>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+    generateCC();
+</script>
+{% endblock %}
+
+{% block main_header %}
+<div id="main_header">
+    <div id="main_header_inner">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div>
+                <img alt="jobseeker logo" src="{{ asset("/logo.png") }}" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block main_content_inner %}
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    <table class="api" width=400>
+        {% for res in resArray %}
+        <tr><td>{{ res.key }}</td><td>{{ res.value }}</td>";
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}
+
+{% block main_footer %}
+<div id="main_footer">
+    <div id="main_footer_inner">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div>
+                <img alt="jobseeker logo" src="{{ asset("/logo.png") }}" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

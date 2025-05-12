@@ -1,0 +1,128 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main_edit">
+    <table class="employee_table table">
+        <tr>
+            <td class="col-lg-3 col-md-4 col-sm-4 col-xs-4 search_panel">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0">
+                    {% if app.session.flashbag.has("danger") %}
+                    <div class="alert alert-danger">
+                        {% for danger in app.session.flashbag.get('danger') %}
+                        {{ danger }}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{ "common.search"|trans }}</h3>
+                        </div>
+                        <div class="panel-body">
+                            {{ form(form) }}
+                        </div>
+                    </div>
+                </div>
+            </td>
+
+            <td class="col-lg-9 col-md-8 col-sm-8 col-xs-8 search_result_panel">
+                {% if employee is defined %}
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{ "table.user"|trans }}</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p class="list-group-item">{{ "table.user.email"|trans }} : {{ employee.uid.email }}</p>
+                            <p class="list-group-item">{{ "table.user.logintime"|trans }} : {{ employee.uid.logintime|date('Y-m-d H:i:s') }}</p>
+                            <p class="list-group-item">
+                                {{ "table.user.loginip"|trans }} : {{ employee.uid.loginip|country("code")|trans }} {{ employee.uid.loginip|city("city") }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{ "table.employee"|trans }}</h3>
+                        </div>
+                        <div class="panel-body">
+                            {% for key,value in employee %}
+                            {% if value == true and key in ["name","gender","birthday","hometown","location","mobile","im","tag","description"] %}
+                            {% if key == "birthday" %}
+                            <p class="list-group-item">{{ ("table.employee." ~ key)|trans }} : {{ value|date("Y-m-d") }}</p>  
+                            {% elseif key == "gender" %}
+                            <p class="list-group-item">{{ ("table.employee." ~ key)|trans }} : {{ ("table.employee.gender." ~ value)|trans }}</p>
+                            {% elseif key == "im" %}
+                            <p class="list-group-item">{{ ("table.employee." ~ key)|trans }} : {{ value }}</p>
+                            {% elseif key == "tag" %}
+                            <p class="list-group-item">{% set tags = value|split(",") %}{{ ("table.employee." ~ key)|trans }} : 
+                                {% for tag in tags %}
+                                <span class="tag label">{{ tag }}</span>
+                                {% endfor %}
+                            </p>
+                            {% else %}
+                            <p class="list-group-item">{{ ("table.employee." ~ key)|trans }} : {{ value }}</p>
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if educations is defined  and educations|length > 0 %}
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0">
+                    {% for index,education in educations %}
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{ "table.education"|trans }} {{ index+1 }}</h3>
+                        </div>
+                        <div class="panel-body">
+                            {% for key,value in education %}
+                            {% if value == true and key in ["university","diploma","major","graduation","course","description"] %}
+                            {% if key == "graduation" %}
+                            <p class="list-group-item">{{ ("table.education." ~ key)|trans }} : {{ value|date("Y-m-d") }}</p>  
+                            {% elseif key == "diploma" %}
+                            <p class="list-group-item">{{ ("table.education." ~ key)|trans }} : {{ value.csn|trans }}</p>
+                            {% elseif key == "course" %}
+                            <p class="list-group-item">{% set courses = value|split(",") %}{{ ("table.education." ~ key)|trans }} : 
+                                {% for course in courses %}
+                                <span class="tag label">{{ course }}</span>
+                                {% endfor %}
+                            </p>
+                            {% else %}
+                            <p class="list-group-item">{{ ("table.education." ~ key)|trans }} : {{ value }}</p>
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if experiences is defined  and experiences|length > 0 %}
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0">
+                    {% for index,experience in experiences %}
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">{{ "table.experience"|trans }} {{ index+1 }}</h3>
+                        </div>
+                        <div class="panel-body">
+                            {% for key,value in experience %}
+                            {% if value == true and key in ["location","company","title","orientation","dimission","description"] %}
+                            {% if key == "orientation" or key == "dimission" %}
+                            <p class="list-group-item">{{ ("table.experience." ~ key)|trans }} : {{ value|date("Y-m-d") }}</p>  
+                            {% else %}
+                            <p class="list-group-item">{{ ("table.experience." ~ key)|trans }} : {{ value }}</p>
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

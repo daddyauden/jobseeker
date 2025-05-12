@@ -1,0 +1,157 @@
+{% extends "dashboard.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block container %}
+{% if delivery is defined %}
+{% if delivery.schedule is not empty %}
+<div id="reserve_dialog">
+    <div id="close-btn" class="close-btn-right"><i class="fa fa-close" aria-hidden="true"></i></div>
+    <div id="reserve_dialog_inner" class="col-10 col-offset-1">
+        <p>{{ "table.delivery.schedule"|trans }}</p>
+        <p><span class="label label-danger">{{ delivery.schedule|date("datetime_format"|system) }}</span></p>
+        {% if delivery.reserve|length > 0 %}
+        <p>{{ "table.delivery.reserve"|trans }}</p>
+        <p>
+            {% for reserveDate in delivery.reserve %}
+            <span class="label label-default">{{ reserveDate|date("datetime_format"|system) }}</span>
+            {% endfor %}
+        </p>
+        {% endif %}
+        {% if delivery.message is not empty %}
+        <p>{{ "table.delivery.message"|trans }}</p>
+        <p>{{ delivery.message|raw }}</p>
+        {% endif %}
+    </div>
+</div>
+{% elseif delivery.reserve|length > 0 %}
+<div id="reserve_dialog">
+    <div id="close-btn" class="close-btn-right"><i class="fa fa-close" aria-hidden="true"></i></div>
+    <div id="reserve_dialog_inner" class="col-10 col-offset-1">
+        <div class="col-5 row">
+            {% for reserveDate in delivery.reserve %}
+            <label><input type="radio" name="schedule_date" value="{{ reserveDate|date("datetime_format"|system) }}" />{{ reserveDate|date("datetime_format"|system) }}</label>
+            {% endfor %}
+        </div>
+        <div class="col-7 row">
+            {% if delivery.message is not empty %}
+            <p>{{ "table.delivery.message"|trans }} : </p>
+            <p>{{ delivery.message|raw }}</p>
+            {% endif %}
+            <div class="col-12">
+                <div class="col-12">
+                    <a class="btn btn-primary btn-md" id="schedule" onclick='schedule("{{ schedule }}","{{ path('job_schedule') }}",{"scheduling":"{{ "job.schedule.scheduling"|trans }}","less":"{{ "job.schedule.less"|trans }}","success":"{{ "job.schedule.success"|trans }}","fail":"{{ "job.schedule.fail"|trans }}","repeat":"{{ "job.schedule.repeat"|trans }}","nologin":"{{ "job.reserve.nologin"|trans }}","invalid":"{{ "job.schedule.invalid"|trans }}"})'>{{ "job.schedule"|trans }}</a>
+                </div>
+                <div class="col-12" id="schedule_status"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endif %}
+
+<div id="job_content_left">
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+    {% if app.session.flashbag.has("info") %}
+    <div class="alert alert-info">
+        {% for info in app.session.flashbag.get('info') %}
+        {{ info|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+    
+    {% if delivery is defined %}
+    {% if delivery.schedule is not empty %}
+    <button id="toggle-dialog" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-info-sign"></span> {{ "job.schedule.info"|trans }}</button>
+    {% elseif delivery.reserve|length > 0 %}
+    <button id="toggle-dialog" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-bullhorn"></span> {{ "job.schedule"|trans }}</button>
+    {% endif %}
+    {% endif %}
+
+    {% if job is defined %}
+    <div class="job_desc">
+        <h2>{{ job.title }}</h2>
+        <div class="job_attr">
+            {% if job.salary %}
+            <span>{{ "table.job.salary"|trans }} : {{ job.salary }}({{ ("currency"|system ~ ".symbol")|trans }})</span>
+            {% endif %}
+
+            {% if job.industry is iterable and job.industry|length > 0 %}
+            <span>{{ "table.job.industry"|trans }} : {{ job.industry.isn|trans }}</span>
+            {% endif %}
+
+            {% if job.type is iterable and job.type|length > 0 %}
+            <span>{{ "table.job.type"|trans }} : {{ job.type.tsn|trans }}</span>
+            {% endif %}
+
+            {% if job.area is iterable and job.area|length > 0 %}
+            <span>
+                {{ "table.job.area"|trans }} : 
+                {{ job.area.code|upper|trans }}
+                {% if job.area.pid is iterable and job.area.pid|length > 0 %}
+                - {{ job.area.pid.code|upper|trans }}
+                {% endif %}
+            </span>
+            {% endif %}
+
+            {% if job.endtime %}
+            <span>{{ "table.job.endtime"|trans }} : {{ job.endtime|date("datetime_format"|system) }}</span>
+            {% endif %}
+        </div>
+
+        {% if job.description %}
+        <p>{{ job.description|raw }}</p>
+        {% endif %}
+
+        {% if job.contacter is not empty %}
+        <p>{{ "table.job.contacter"|trans }} : {{ job.contacter }}</p>
+        {% endif %}
+
+        {% if job.contactertel is not empty %}
+        <p>{{ "table.job.contactertel"|trans }} : {{ job.contactertel }}</p>
+        {% endif %}
+
+        {% if job.contacteremail is not empty %}
+        <p>{{ "table.job.contacteremail"|trans }} : {{ job.contacteremail }}</p>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    {% if emr is defined %}
+    <div class="emr_desc">
+        <div class="avator avator_2x"><img src="{{ emr.avator|avator("2x") }}" /></div>
+        <h3>{{ emr.name }}</h3>
+        <div class="job_attr">
+            <span>{{ "table.employer.location"|trans }} : {{ emr.location.code|trans }}</span>
+            <span>{{ "table.employer.type"|trans }} : {{ emr.type.csn|trans }}</span>
+            <span>{{ "table.employer.scale"|trans }} : {{ emr.scale.csn|trans }}</span>
+        </div>
+        {% if job.about is not empty %}
+        <p>{{ job.about|raw }}</p>
+        {% else %}
+        <p>{{ emr.about|raw }}</p>
+        {% endif %}
+        <p>{{ "table.employer.contacter"|trans }} : {{ emr.contacter }}</p>
+        <p>{{ "table.employer.contactertel"|trans }} : {{ emr.contactertel }}</p>
+        {% if emr.fax is not empty %}
+        <p>{{ "table.employer.fax"|trans }} : {{ emr.fax }}</p>
+        {% endif %}
+        <p>{{ "table.employer.address"|trans }} : {{ emr.address }}</p>
+
+        {% if emr.site is not empty %}
+        <p>{{ "table.employer.site"|trans }} : <a href="{{ emr.site }}" target="_blank">{{ emr.site }}</a></p>
+        {% endif %}
+    </div>
+    {% else %}
+    <div class="label label-warning">{{ "common.job.noemployer"|trans }}</div>
+    {% endif %}
+</div>
+{% endblock %}

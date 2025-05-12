@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="PaymentRepository" name="jobseeker\Bundle\CareerBundle\Entity\Payment" table="payment">
+        <id name="id" type="bigint" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="uid" type="bigint" column="uid"/>
+        <field name="pid" type="bigint" column="pid"/>
+        <field name="oid" type="bigint" column="oid"/>
+        <field name="paytype" type="integer" column="paytype"/>
+        <field name="payinfo" type="string" column="payinfo" length="255" nullable="true"/>
+        <field name="price" type="float" column="price"/>
+        <field name="ctime" type="integer" column="ctime" nullable="true"/>
+        <field name="status" type="smallint" column="status"/>
+        <unique-constraints>
+            <unique-constraint columns="pid" name="payment_pid"/>
+        </unique-constraints>
+        <indexes>
+            <index columns="uid" name="payment_uid"/>
+            <index columns="oid" name="payment_oid"/>
+            <index columns="paytype" name="payment_paytype"/>
+            <index columns="price" name="payment_price"/>
+            <index columns="ctime" name="payment_ctime"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

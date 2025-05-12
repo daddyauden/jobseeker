@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="SsoUserManager" class="jobseeker\Bundle\SsoBundle\DependencyInjection\UserManager">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>jobseeker\Bundle\SsoBundle\Entity\User</argument>
+        </service>
+        <service id="OAuth2Storage" class="jobseeker\Bundle\SsoBundle\Service\OAuth2\Storage\Doctrine">
+            <argument type="service" id="service_container"/>
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+        </service>
+        <service id="oauth2_granttype_authorizationcode" class="jobseeker\Bundle\SsoBundle\Service\OAuth2\GrantType\AuthorizationCode">
+            <argument type="service" id="OAuth2Storage"/>
+        </service>
+        <service id="oauth2_granttype_clientCredentials" class="jobseeker\Bundle\SsoBundle\Service\OAuth2\GrantType\ClientCredentials">
+            <argument type="service" id="OAuth2Storage"/>
+        </service>
+        <service id="oauth2_granttype_refreshtoken" class="jobseeker\Bundle\SsoBundle\Service\OAuth2\GrantType\RefreshToken">
+            <argument type="service" id="OAuth2Storage"/>
+        </service>
+        <service id="oauth2_granttype_usercredentials" class="jobseeker\Bundle\SsoBundle\Service\OAuth2\GrantType\UserCredentials">
+            <argument type="service" id="OAuth2Storage"/>
+        </service>
+        <service id="oauth2_responsetype_token" class="jobseeker\Bundle\SsoBundle\Service\OAuth2\ResponseType\AccessToken">
+            <argument type="service" id="OAuth2Storage"/>
+        </service>
+        <service id="oauth2_responsetype_code" class="jobseeker\Bundle\SsoBundle\Service\OAuth2\ResponseType\AuthorizationCode">
+            <argument type="service" id="OAuth2Storage"/>
+        </service>
+        <service id="oauth2_tokentype" class="jobseeker\Bundle\SsoBundle\Service\OAuth2\TokenType\Bearer">
+        </service>
+        <service id="oauth2_scope" class="jobseeker\Bundle\SsoBundle\Service\OAuth2\Scope">
+            <argument type="service" id="OAuth2Storage"/>
+        </service>
+        <service id="oauth2" class="jobseeker\Bundle\SsoBundle\Service\OAuth2\OAuth2">
+            <argument type="service" id="OAuth2Storage"/>
+            <argument type="collection">
+                <argument key="enforce_state">true</argument>
+                <argument key="allow_implicit">true</argument>
+                <argument key="use_openid_connect">false</argument>
+                <argument key="use_crypto_tokens">false</argument>
+                <argument key="token_param_name" type="string">access_token</argument>
+                <argument key="token_bearer_header_name" type="string">Bearer</argument>
+                <argument key="require_exact_redirect_uri">true</argument>
+                <argument key="allow_public_clients">true</argument>
+            </argument>
+            <argument type="collection">
+                <argument key="authorization_code" type="service" id="oauth2_granttype_authorizationcode"/>
+                <argument key="client_credentials" type="service" id="oauth2_granttype_clientCredentials"/>
+                <argument key="refresh_token" type="service" id="oauth2_granttype_refreshtoken"/>
+                <argument key="user_credentials" type="service" id="oauth2_granttype_usercredentials"/>
+            </argument>
+            <argument type="collection">
+                <argument key="token" type="service" id="oauth2_responsetype_token"/>
+                <argument key="code" type="service" id="oauth2_responsetype_code"/>
+            </argument>
+            <argument type="service" id="oauth2_tokentype"/>
+            <argument type="service" id="oauth2_scope"/>
+            <argument type="service" id="oauth2_granttype_clientCredentials"/>
+        </service>
+    </services>
+</container>

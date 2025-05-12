@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="OrderRepository" name="jobseeker\Bundle\CareerBundle\Entity\Order" table="order">
+        <id name="id" type="bigint" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="uid" type="bigint" column="uid"/>
+        <field name="oid" type="bigint" column="oid"/>
+        <field name="jid" type="text" column="jid"/>
+        <field name="ctime" type="integer" column="ctime" nullable="true"/>
+        <field name="mtime" type="integer" column="mtime" nullable="true"/>
+        <field name="price" type="float" column="price"/>
+        <field name="did" type="integer" column="did"/>
+        <field name="realprice" type="float" column="realprice"/>
+        <field name="status" type="smallint" column="status"/>
+        <unique-constraints>
+            <unique-constraint columns="oid" name="order_oid"/>
+        </unique-constraints>
+        <indexes>
+            <index columns="uid" name="order_uid"/>
+            <index columns="ctime" name="order_ctime"/>
+            <index columns="price" name="order_price"/>
+            <index columns="did" name="order_did"/>
+            <index columns="realprice" name="order_realprice"/>
+            <index columns="status" name="order_status"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

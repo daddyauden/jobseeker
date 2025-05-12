@@ -1,0 +1,92 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main_edit">
+    <label id="message_alert"></label>
+    <table class="table table-hover industry_table">
+        <thead>
+            <tr>
+                <th class="industry_name">{{ "table.industry.name"|trans }}</th>
+                <th class="industry_pid">{{ "table.industry.pid"|trans }}</th>
+                <th class="industry_isn">{{ "table.industry.isn"|trans }}</th>
+                <th class="industry_queue">{{ "table.industry.queue"|trans }}</th>
+                <th class="industry_status">{{ "table.industry.status"|trans }}</th>
+                <th class="industry_operation">{{ "be.operate"|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for industry in industrys %}
+                <tr>
+                    {{ form_widget(industry.id) }}
+                    <td class="industry_name">{{ form_label(industry.isn) }}</td>
+                    <td class="industry_pid">{{ form_widget(industry.pid) }}</td>
+                    <td class="industry_isn">{{ form_widget(industry.isn) }}</td>
+                    <td class="industry_queue">{{ form_widget(industry.queue) }}</td>
+                    <td class="industry_status">{{ form_widget(industry.status) }}</td>
+                    <td class="industry_operation">
+                        <button name="edit" class="btn btn-info btn-sm">{{ "be.edit"|trans }}</button>
+                        <button name="delete" class="btn btn-warning btn-sm">{{ "be.delete"|trans }}</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<ul class="pager">
+    {% for url in urls %}
+    <li>{{ url|raw }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+$("button[name=edit]").click(function() {
+    var data = {};
+    var inputs = $(this).parent().parent().find("[name^=form]");
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        var id = $(inputs[i]).attr("id");
+        data[id.substring(id.lastIndexOf("_") + 1)] = $(inputs[i]).val();
+    }
+    $.ajax({
+        type: "POST",
+        url: "{{ path("industry_save") }}",
+        data: $.toJSON(data)
+    }).done(function(message) {
+        if (message == "same") {
+            $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.nochange"|trans }}").delay(800).slideUp(800);
+        } else if (message == "success") {
+            window.location.reload();
+        } else if (message == "error") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.update.fail"|trans }}").delay(800).slideUp(800);
+        } else if (message == "conflicted") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.conflicted"|trans }}").delay(800).slideUp(800);
+        } else if (message == "samelevel") {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.samelevel"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.update.invalid"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+
+$("button[name=delete]").click(function() {
+    var pp = $(this).parent().parent();
+    var id = pp.find("[name='form[id]']").val();
+    $.ajax({
+        type: "POST",
+        url: "{{ path("industry_delete") }}",
+        data: id
+    }).done(function(message) {
+        if (message == "success") {
+            $("#message_alert").attr({"class": "label label-success"}).slideDown(500).html("{{ "be.delete.success"|trans }}").delay(800).slideUp(800);
+            pp.fadeOut(800);
+        } else if (message == "error") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.delete.fail"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.delete.invalid"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+</script>
+{% endblock %}

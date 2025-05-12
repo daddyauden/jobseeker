@@ -1,0 +1,27 @@
+<table width="660" border="0" cellspacing="0" cellpadding="0" align="center" valign="middle">
+    <thead>
+        <caption>亲爱的会员，您好!</caption>
+    </thead>
+    <tbody>
+        <tr>
+            <th>职位名称</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>头像</th>
+        </tr>
+        <tr>
+            <td>{{ job.title }}</td>
+            <td>{{ eme.name }}</td>
+            <td>{{ eme.birthday|date('Y-n-j') }}</td>
+            <td><img src="{{ eme.avator|avator }}"/></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>加入JobSeeker，请垂询：800-820-5100 或 Email：<a target="_blank" href="mailto:support@jobseeker.com" style="text-decoration:none;">support@jobseeker.cn</a></td>
+        </tr>
+        <tr>
+            <td>JobSeeker网版权所有©1999-2014</td>
+        </tr>
+    </tfoot>
+</table>

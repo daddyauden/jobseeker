@@ -1,0 +1,123 @@
+{% extends "admin/base.html.twig" %}
+
+{% block header_js %}
+<script type="text/javascript">
+var data = {{ data|raw }};
+</script>
+{% endblock %}
+
+{% block main_content_inner %}
+<div class="form_main_edit">
+    <label id="message_alert"></label>
+    <table class="table table-hover privilege_table">
+        <thead>
+            <tr>
+                <th class="privilege_name">{{ "table.privilege.route"|trans }}</th>
+                <th class="privilege_bundle">{{ "table.privilege.bundle"|trans }}</th>
+                <th class="privilege_controller">{{ "table.privilege.controller"|trans }}</th>
+                <th class="privilege_action">{{ "table.privilege.action"|trans }}</th>
+                <th class="privilege_status">{{ "table.privilege.status"|trans }}</th>
+                <th class="privilege_operation">{{ "be.operate"|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for privilege in privileges %}
+            <tr>
+                {{ form_widget(privilege.id) }}
+                <td class="privilege_name">{{ form_label(privilege.bundle) }}</td>
+                <td class="privilege_bundle">{{ form_widget(privilege.bundle) }}</td>
+                <td class="privilege_controller">{{ form_widget(privilege.controller) }}</td>
+                <td class="privilege_action">{{ form_widget(privilege.action) }}</td>
+                <td class="privilege_status">{{ form_widget(privilege.status) }}</td>
+                <td class="privilege_operation">
+                    <button name="edit" class="btn btn-info btn-sm">{{ "be.edit"|trans }}</button>
+                    <button name="delete" class="btn btn-warning btn-sm">{{ "be.delete"|trans }}</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<ul class="pager">
+    {% for url in urls %}
+    <li>{{ url|raw }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+var bundleString = controllerString = actionString = [];
+for (var bundle in data) {
+    bundleString.push('<option value="' + bundle + '">' + data[bundle]['alias'] + '</option>');
+    controllerString[bundle] = [];
+    for (var controller in data[bundle]["controller"]) {
+        controllerString[bundle].push('<option value="' + controller + '">' + data[bundle]["controller"][controller]['alias'] + '</option>');
+        actionString[controller] = [];
+        for (var action in data[bundle]["controller"][controller]["action"]) {
+            actionString[controller].push('<option value="' + action + '">' + data[bundle]["controller"][controller]['action'][action] + '</option>');
+        }
+    }
+
+}
+
+$(".form-bundle").change(function() {
+    var form_parent = $(this).parent().parent();
+    var bundle = $(this).find("option:selected").val();
+    var controller = controllerString[bundle];
+    form_parent.find("select.form-controller").html(controller.join(""));
+    form_parent.find("select.form-controller").change();
+});
+$(".form-controller").change(function() {
+    var form_parent = $(this).parent().parent();
+    var controller = $(this).find("option:selected").val();
+    var action = actionString[controller];
+    form_parent.find("select.form-action").html(action.join(""));
+});
+
+$("button[name=edit]").click(function() {
+    var data = {};
+    var inputs = $(this).parent().parent().find("[name^=form]");
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        var id = $(inputs[i]).attr("id");
+        data[id.substring(id.lastIndexOf("_") + 1)] = $(inputs[i]).val();
+    }
+    $.ajax({
+        type: "POST",
+        contentType: "text/html; charset=utf-8",
+        url: "{{ path("privilege_save") }}",
+        data: $.toJSON(data)
+    }).done(function(message) {
+        if (message == "same") {
+            $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.nochange"|trans }}").delay(800).slideUp(800);
+        } else if (message == "success") {
+            window.location.reload();
+        } else if (message == "error") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.update.fail"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.update.invalid"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+
+$("button[name=delete]").click(function() {
+    var pp = $(this).parent().parent();
+    var id = pp.find("[name='form[id]']").val();
+    $.ajax({
+        type: "POST",
+        url: "{{ path("privilege_delete") }}",
+        data: id
+    }).done(function(message) {
+        if (message == "success") {
+            $("#message_alert").attr({"class": "label label-success"}).slideDown(500).html("{{ "be.delete.success"|trans }}").delay(800).slideUp(800);
+            pp.fadeOut(800);
+        } else if (message == "error") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.delete.fail"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.delete.invalid"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+</script>
+{% endblock %}

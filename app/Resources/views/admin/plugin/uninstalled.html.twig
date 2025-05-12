@@ -1,0 +1,83 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main_edit">
+    <label id="message_alert"></label>
+    <table class="table table-hover plugin_table plugin_header_table">
+        <thead>
+            <tr>
+                <th class="plugin_logo"></th>
+                <th class="plugin_name">{{ "table.plugin.name"|trans }}</th>
+                <th class="plugin_description">{{ "table.plugin.description"|trans }}</th>
+                <th class="plugin_config">{{ "table.plugin.config"|trans }}</th>
+                <th class="plugin_opration">{{ "be.operate"|trans }}</th>
+            </tr>
+        </thead>
+    </table>
+    {% if pluginss|length > 0 %}
+    {% for scope, plugins in pluginss %}
+    <table class="table table-hover plugin_table">
+        <caption class="caption">{{ ("plugin.scope." ~ scope)|trans }}</caption>
+        <tbody>
+            {% for plugin in plugins %}
+            <tr>
+                {{ form_widget(plugin.name) }}
+                {{ form_widget(plugin.scope) }}
+                {{ form_widget(plugin.status) }}
+                <td class="plugin_logo"><img src="{{ plugin.children.logo.vars.value }}" /></td>
+                <td class="plugin_name">{{ form_label(plugin.namealias) }}</td>
+                <td class="plugin_description">{{ form_label(plugin.description) }}</td>
+                <td class="plugin_config">
+                    {% for configName, config in plugin.children %}
+                    {% if configName|slice(0, 7)|lower == "config_" %}
+                    <div>{{ form_label(config) }}{{ form_widget(config) }}</div>
+                    {% endif %}
+                    {% endfor %}
+                </td>
+                <td class="plugin_opration">
+                    <a name="install" class="btn btn-info"><span class="glyphicon glyphicon-download-alt">{{ "be.install"|trans }}</span></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endfor %}
+    {% else %}
+    <table class="table table-hover plugin_table">
+        <caption class="caption">{{ "common.none"|trans }}</caption>
+    </table>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+$("a[name=install]").click(function() {
+    var data = {};
+    var inputs = $(this).parent().parent().find("[name^=form]");
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        var id = $(inputs[i]).attr("id");
+        id = id.substring(id.indexOf("_") + 1);
+        data[id] = $(inputs[i]).val();
+    }
+    $.ajax({
+        type: "POST",
+        url: "{{ path("plugin_install") }}",
+        data: $.toJSON(data)
+    }).done(function(message) {
+        if (message == "installed") {
+            $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.installed"|trans }}").delay(800).slideUp(800);
+        } else if (message == "success") {
+            $("#message_alert").attr({"class": "label label-info"}).slideDown(500).html("{{ "be.install.success"|trans }}").delay(800).slideUp(800);
+            window.setTimeout(function() {
+                window.location.reload();
+            }, 2500);
+        } else if (message == "fail") {
+            $("#message_alert").attr({"class": "label label-danger"}).slideDown(500).html("{{ "be.install.fail"|trans }}").delay(800).slideUp(800);
+        } else {
+            $("#message_alert").attr({"class": "label label-warning"}).slideDown(500).html("{{ "be.install.fail"|trans }}").delay(800).slideUp(800);
+        }
+    });
+});
+</script>
+{% endblock %}

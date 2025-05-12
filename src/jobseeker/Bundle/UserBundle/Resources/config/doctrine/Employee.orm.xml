@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="EmployeeRepository" name="jobseeker\Bundle\UserBundle\Entity\Employee" table="employee">
+        <id name="id" type="bigint" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="uid" type="bigint" column="uid"/>
+        <field name="name" type="string" column="name" length="100"/>
+        <field name="avator" type="string" column="avator" length="255" nullable="true"/>
+        <field name="gender" type="smallint" column="gender"/>
+        <field name="marital" type="smallint" column="marital"/>
+        <field name="birthday" type="integer" column="birthday"/>
+        <field name="nationality" type="string" column="nationality" length="100"/>
+        <field name="hometown" type="string" column="hometown" length="100"/>
+        <field name="location" type="string" column="location" length="100"/>
+        <field name="mobile" type="string" column="mobile" length="100"/>
+        <field name="email" type="string" column="email" length="100"/>
+        <field name="interest" type="text" column="interest" nullable="true"/>
+        <field name="skill" type="text" column="skill" nullable="true"/>
+        <field name="language" type="text" column="language" nullable="true"/>
+        <field name="description" type="text" column="description" nullable="true"/>
+        <unique-constraints>
+            <unique-constraint columns="uid" name="employee_uid"/>
+        </unique-constraints>
+        <indexes>
+            <index columns="gender" name="employee_gender"/>
+            <index columns="marital" name="employee_marital"/>
+            <index columns="birthday" name="employee_birthday"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

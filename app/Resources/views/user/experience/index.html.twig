@@ -1,0 +1,109 @@
+{% extends "dashboard.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block container %}
+<div class="alpha_100">
+    <div id="message_alert" class="alert alert-info"></div>
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+    {% if app.session.flashbag.has("info") %}
+    <div class="alert alert-info">
+        {% for info in app.session.flashbag.get('info') %}
+        {{ info|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+
+    {% if forms[0].vars.value.id %}
+    <button name="exp_add" id="exp_add" class="btn btn-sm btn-info col-offset-1">{{ "be.add"|trans }}{{ "table.experience"|trans }}</button>
+    {% endif %}
+
+    <div id="exp_list">
+        {% for form in forms %}
+        <div class="per">
+            {{ form_widget(form.id) }}
+            <div class="row">
+                <div class="col-3 text-right">{{ "table.experience.location"|trans }} ( <span class="required">*</span> )</div>
+                <div class="col-5">
+                    {{ form_widget(form.location) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 text-right">{{ "table.experience.company"|trans }} ( <span class="required">*</span> )</div>
+                <div class="col-6">
+                    {{ form_widget(form.company) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 text-right">{{ "table.experience.orientation"|trans }} ( <span class="required">*</span> )</div>
+                <div class="col-5">
+                    {{ form_widget(form.orientation) }}<i class="icon-form-controll icon-office-calendar"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 text-right">{{ "table.experience.dimission"|trans }} ( <span class="required">*</span> )</div>
+                <div class="col-5">
+                    {{ form_widget(form.dimission) }}<i class="icon-form-controll icon-office-calendar"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 text-right">{{ "table.experience.title"|trans }} ( <span class="required">*</span> )</div>
+                <div class="col-6">
+                    {{ form_widget(form.title) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 text-right">{{ "table.experience.description"|trans }} ( <span class="required">*</span> )</div>
+                <div class="col-8">
+                    {{ form_widget(form.description) }}
+                </div>
+            </div>
+            <div class="row operation">
+                <button id="edit" name="edit" onclick='edit(this,"{{ path("account_exp_set") }}",{"novalue": "{{ "common.novalue"|trans }}","nochange": "{{ "be.nochange"|trans }}","success": "{{ "be.update.success"|trans }}","fail": "{{ "be.update.fail"|trans }}","invalid": "{{ "be.update.invalid"|trans }}"})' class="btn btn-sm btn-primary col-2 col-offset-3">{{ "be.save"|trans }}</button>
+                {% if form.vars.value.id %}
+                <button id="delete" name="delete" onclick='del(this,"{{ path("account_exp_del") }}",{"success":"{{ "be.delete.success"|trans }}","fail":"{{ "be.delete.fail"|trans }}","invalid":"{{ "be.delete.invalid"|trans }}"})' class="btn btn-sm btn-warning col-2">{{ "be.delete"|trans }}</button>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block footer_js %}
+<script src="{{ asset("assets/js/ckeditor/ckeditor.js") }}"></script>
+<script src="{{ asset("assets/js/ckeditor/adapters/jquery.js") }}"></script>
+<script type="text/javascript">
+$('.exp_description').ckeditor();
+$("button[name=exp_add]").click(function(){
+    var exp = $("#exp_list").children().first().clone();
+    exp.find("#delete").remove();
+    exp.find("#form_description").siblings().remove();
+    var inputs = exp.find("[name^=form]") || exp.find("[id^=form]");
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        $(inputs[i]).val("");
+    }
+    $("#exp_list").prepend(exp);
+    $('.exp_description').ckeditor();
+    $(".datetime").datetimepicker({
+        format: '{{ "date_format"|formatForJS }}',
+        language: locale,
+        autoclose: true,
+        showMeridian: true,
+        startView: "year",
+        minView: "month",
+        todayBtn: true,
+        todayHighlight: true
+    });
+    $(".datetime").datetimepicker("update");
+});
+</script>
+{% endblock %}

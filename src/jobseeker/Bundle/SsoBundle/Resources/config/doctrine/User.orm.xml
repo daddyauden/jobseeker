@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="UserRepository" name="jobseeker\Bundle\SsoBundle\Entity\User" table="user">
+        <id name="id" type="bigint" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="uid" type="bigint" column="uid"/>
+        <field name="source" type="string" column="source" length="50" nullable="true"/>
+        <field name="country" type="string" column="country" length="20" nullable="true"/>
+        <field name="email" type="string" column="email" length="100"/>
+        <field name="password" type="string" column="password" length="100"/>
+        <field name="username" type="string" column="username" length="255" nullable="true"/>
+        <field name="firstName" type="string" column="first_name" length="255" nullable="true"/>
+        <field name="lastName" type="string" column="last_name" length="255" nullable="true"/>
+        <field name="addtime" type="integer" column="addtime"/>
+        <field name="status" type="smallint" column="status"/>
+        <field name="salt" type="string" column="salt" length="100" nullable="true"/>
+        <unique-constraints>
+            <unique-constraint columns="uid" name="user_uid"/>
+            <unique-constraint columns="email" name="user_email"/>
+        </unique-constraints>
+        <indexes>
+            <index columns="password" name="user_password"/>
+            <index columns="country" name="user_country"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

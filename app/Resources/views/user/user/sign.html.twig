@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block header_inner %}
+<div id="toolbar">
+    <a class="btn btn-info btn-sm post-job" href="{{ path("job_post") }}">{{ "fe.job_post"|trans }}</a>
+    {% block country %}{% endblock %}
+    {% block locale %}{% endblock %}
+    {% block jobseeker_sign_choose %}{% endblock %}
+</div>
+{% endblock %}
+
+{% block container_inner %}
+    {% block jobseeker_brand %}{% endblock %}
+    {% block jobseeker_sign %}{% endblock %}
+{% endblock %}
+
+{% block footer_inner %}
+    {% block plugin_signin %}{% endblock %}
+{% endblock %}

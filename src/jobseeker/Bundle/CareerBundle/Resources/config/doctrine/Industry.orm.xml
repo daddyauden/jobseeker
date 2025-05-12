@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity repository-class="IndustryRepository" name="jobseeker\Bundle\CareerBundle\Entity\Industry" table="industry">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="pid" type="integer" column="pid" nullable="true"/>
+        <field name="isn" type="string" column="isn" length="50"/>
+        <field name="queue" type="integer" column="queue" nullable="true"/>
+        <field name="status" type="smallint" column="status"/>
+        <unique-constraints>
+            <unique-constraint columns="isn" name="industry_isn"/>
+        </unique-constraints>
+        <indexes>
+            <index columns="pid" name="industry_pid"/>
+            <index columns="queue" name="industry_queue"/>
+            <index columns="status" name="industry_status"/>
+        </indexes>
+    </entity>
+</doctrine-mapping>

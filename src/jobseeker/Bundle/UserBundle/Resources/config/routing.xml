@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    <route id="user_signup" path="/signup">
+        <default key="_controller">UserBundle:User:signup</default>
+    </route>
+    <route id="user_signin" path="/signin">
+        <default key="_controller">UserBundle:User:signin</default>
+    </route>
+    <route id="user_logout" path="/logout">
+        <default key="_controller">UserBundle:User:logout</default>
+    </route>
+    <route id="user_validate" path="/validate-{code}">
+        <default key="_controller">UserBundle:User:validate</default>
+        <default key="code">""</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+
+    <route id="account_edu" path="/account/edu">
+        <default key="_controller">UserBundle:Education:index</default>
+    </route>
+    <route id="account_edu_set" path="/account/edu/set">
+        <default key="_controller">UserBundle:Education:save</default>
+    </route>
+    <route id="account_edu_del" path="/account/edu/del">
+        <default key="_controller">UserBundle:Education:delete</default>
+    </route>
+    <route id="account_exp" path="/account/exp">
+        <default key="_controller">UserBundle:Experience:index</default>
+    </route>
+    <route id="account_exp_set" path="/account/exp/set">
+        <default key="_controller">UserBundle:Experience:save</default>
+    </route>
+    <route id="account_exp_del" path="/account/exp/del">
+        <default key="_controller">UserBundle:Experience:delete</default>
+    </route>
+    <route id="account_eme" path="/account/eme">
+        <default key="_controller">UserBundle:Employee:index</default>
+    </route>
+    <route id="eme_show" path="/eme-{condition}">
+        <default key="_controller">UserBundle:Employee:show</default>
+        <default key="condition">""</default>
+    </route>
+    <route id="account_emr" path="/account/emr">
+        <default key="_controller">UserBundle:Employer:index</default>
+    </route>
+    <route id="emr_new" path="/emr/new">
+        <default key="_controller">UserBundle:Employer:new</default>
+    </route>
+
+    <route id="user_change_password" path="/user/change-password">
+        <default key="_controller">UserBundle:User:changePassword</default>
+        <requirement key="_method">GET|POST</requirement>
+    </route>
+    <route id="user_check_email" path="/user/check-email">
+        <default key="_controller">UserBundle:User:checkEmail</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+    <route id="user_confirmed" path="/user/confirmed">
+        <default key="_controller">UserBundle:User:confirmed</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+    <route id="user_reset_email" path="/user/send-email">
+        <default key="_controller">UserBundle:User:resetEmail</default>
+        <requirement key="_method">POST</requirement>
+    </route>
+    <route id="user_reset_token" path="/user/reset/{token}">
+        <default key="_controller">UserBundle:User:resetToken</default>
+        <requirement key="_method">GET|POST</requirement>
+    </route>
+    <route id="user_list" path="/admin/user-user-list-{page}">
+        <default key="_controller">UserBundle:User:list</default>
+        <default key="page">1</default>
+        <requirement key="page">\d+</requirement>
+    </route>
+    <route id="user_show" path="/admin/user-user-show-{uid}" methods="GET">
+        <default key="_controller">UserBundle:User:show</default>
+        <requirement key="uid">\d+</requirement>
+    </route>
+</routes>

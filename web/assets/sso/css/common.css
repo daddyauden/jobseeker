@@ -1,0 +1,42 @@
+html , body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+a {
+    color: #428bca;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#main, #main_inner {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+
+}
+
+.signin {
+    width: 533px;
+    min-width: 533px;
+    margin: 73px auto;
+    position: relative;
+    padding: 23px;
+    text-align: center;
+}
+
+.signin .form-control {
+    margin: 13px 0px;
+}
+
+.logo {
+    text-align: center;
+}

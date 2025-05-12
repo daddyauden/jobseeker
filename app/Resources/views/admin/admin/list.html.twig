@@ -1,0 +1,72 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main_content_inner %}
+<div class="form_main_edit">
+    <label id="message_alert"></label>
+    <table class="table table-hover admin_table">
+        <thead>
+            <tr>
+                <th class="admin_role">{{ "table.admin.rid"|trans }}</th>
+                <th class="admin_email">{{ "table.admin.email"|trans }}</th>
+                <th class="admin_logintime">{{ "table.admin.logintime"|trans }}</th>
+                <th class="admin_operation">{{ "be.operate"|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for admin in admins %}
+            <tr>
+                {{ form_widget(admin.id) }}
+                <td class="admin_role">{{ form_label(admin.rid) }}</td>
+                <td class="admin_email">{{ form_label(admin.email) }}</td>
+                <td class="admin_logintime">{{ form_label(admin.logintime) }} - {{ form_label(admin.loginip) }}</td>
+                <td class="admin_operation">
+                    <button name="edit_email" class="btn btn-info btn-sm">{{ "be.edit"|trans }}{{ "table.admin.email"|trans }}</button>
+                    <button name="edit_password" class="btn btn-info btn-sm">{{ "be.edit"|trans }}{{ "table.admin.password"|trans }}</button>
+                    <button name="edit_role" class="btn btn-warning btn-sm">{{ "be.edit"|trans }}{{ "table.admin.rid"|trans }}</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<ul class="pager">
+    {% for url in urls %}
+    <li>{{ url|raw }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block footer_js %}
+<script type="text/javascript">
+$("button[name=edit_email]").click(function() {
+    var data = {};
+    var inputs = $(this).parent().parent().find("[name^=form]");
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        var id = $(inputs[i]).attr("id");
+        data[id.substring(id.lastIndexOf("_") + 1)] = $(inputs[i]).val();
+    }
+    window.location.href = "{{ path("admin_change_email") }}-" + data["id"];
+});
+
+$("button[name=edit_password]").click(function() {
+    var data = {};
+    var inputs = $(this).parent().parent().find("[name^=form]");
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        var id = $(inputs[i]).attr("id");
+        data[id.substring(id.lastIndexOf("_") + 1)] = $(inputs[i]).val();
+    }
+    window.location.href = "{{ path("admin_change_password") }}-" + data["id"];
+});
+
+$("button[name=edit_role]").click(function() {
+    var data = {};
+    var inputs = $(this).parent().parent().find("[name^=form]");
+    for (var i = 0, len = inputs.length; i < len; i++) {
+        var id = $(inputs[i]).attr("id");
+        data[id.substring(id.lastIndexOf("_") + 1)] = $(inputs[i]).val();
+    }
+    window.location.href = "{{ path("admin_change_role") }}-" + data["id"];
+});
+</script>
+{% endblock %}

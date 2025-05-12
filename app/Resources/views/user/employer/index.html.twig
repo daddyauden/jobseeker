@@ -1,0 +1,123 @@
+{% extends "dashboard.html.twig" %}
+
+{% block title_suffix %}{% endblock %}
+
+{% block container %}
+<div class="alpha_100">
+    <div id="message_alert" class="alert alert-info"></div>
+    {% if app.session.flashbag.has("danger") %}
+    <div class="alert alert-danger">
+        {% for danger in app.session.flashbag.get('danger') %}
+        {{ danger|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+    {% if app.session.flashbag.has("info") %}
+    <div class="alert alert-info">
+        {% for info in app.session.flashbag.get('info') %}
+        {{ info|raw }}
+        {% endfor %}
+        <span class="close glyphicon glyphicon-remove"></span>
+    </div>
+    {% endif %}
+
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.name"|trans }} ( <span class="required">*</span> )</div>
+        <div class="col-6">
+            {{ form_widget(form.name) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.abbr"|trans }} ( <span class="required">*</span> )</div>
+        <div class="col-5">
+            {{ form_widget(form.abbr) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.avator"|trans }} {{ form.avator.vars.required ? '( <span class="required">*</span> )' : '' }}</div>
+        <div class="col-5">
+            {{ form_widget(form.avator) }}
+            <p><span class="glyphicon glyphicon-exclamation-sign"></span>{{ "common.upload_comment"|trans }}</p>
+            {% if form.vars.value.avator %}
+            <img src="{{ form.vars.value.avator|avator("2x") }}" />
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.location"|trans }} ( <span class="required">*</span> )</div>
+        <div class="col-5">
+            {{ form_widget(form.location) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.address"|trans }} ( <span class="required">*</span> )</div>
+        <div class="col-8">
+            {{ form_widget(form.address) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.type"|trans }} ( <span class="required">*</span> )</div>
+        <div class="col-5">
+            {{ form_widget(form.type) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.scale"|trans }} ( <span class="required">*</span> )</div>
+        <div class="col-5">
+            {{ form_widget(form.scale) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.contacter"|trans }} ( <span class="required">*</span> )</div>
+        <div class="col-5">
+            {{ form_widget(form.contacter) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.contacteremail"|trans }} ( <span class="required">*</span> )</div>
+        <div class="col-5">
+            {{ form_widget(form.contacteremail) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.contactertel"|trans }} ( <span class="required">*</span> )</div>
+        <div class="col-5">
+            {{ form_widget(form.contactertel) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.fax"|trans }}</div>
+        <div class="col-5">
+            {{ form_widget(form.fax) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.site"|trans }}</div>
+        <div class="col-5">
+            {{ form_widget(form.site) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 text-right">{{ "table.employer.about"|trans }} ( <span class="required">*</span> )</div>
+        <div class="col-8">
+            {{ form_widget(form.about) }}
+        </div>
+    </div>
+    <div class="row">
+        {{ form_widget(form.save) }}
+        {% if form.delete is defined %}
+        {{ form_widget(form.delete) }}
+        {% endif %}
+    </div>
+    {{ form_end(form) }}
+</div>
+{% endblock %}
+
+{% block footer_js %}
+<script src="{{ asset("assets/js/ckeditor/ckeditor.js") }}"></script>
+<script type="text/javascript">
+CKEDITOR.replace("form_about");
+</script>
+{% endblock %}

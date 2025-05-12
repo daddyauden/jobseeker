@@ -1,0 +1,3958 @@
+##### Common Panel {
+common.language: 语言
+common.country: 国家
+common.choose: 选择
+common.page.first: 第一页
+common.page.previous: 上一页
+common.page.next: 下一页
+common.page.last: 最后一页
+common.date.year: 年
+common.date.half_year: 半年
+common.date.month: 月
+common.date.quarter: 季度
+common.date.half_month: 半月
+common.date.day: 天
+common.date.week: 星期
+common.time.hour: 时
+common.time.minute: 分
+common.time.quarter: 刻钟
+common.time.second: 秒
+common.lt: 少于
+common.lte: 不多于
+common.gt: 多于
+common.gte: 不少于
+common.recent: 最近
+common.ago: 之前
+common.brand.intro: zh_cn@全球招聘专家，您身边的职业管家#en@Global Professional Recruitment,Career Consultant For You#fr@Mondial recrutement professionnel, Consultant de carrière pour vous#de@Global Professional Recruitment, Career Consultant für Sie#ja@グローバルスペシャリスト人材紹介、あなたのキャリアコンサルタント
+common.search: 搜索
+common.save: 保存
+common.delete: 删除
+common.nochoose: 不选择
+common.none: 没有信息
+common.novalue: 没有设置值
+common.ucenter: 用户中心
+common.upload_comment: 上传文件格式：bmp，jpg/jpeg，png，文件大小：2M
+common.upload_error_type: 上传文件格式有误，请重新上传！
+common.upload_error_size: 上传文件超过指定大小，请重新上传！
+common.upload_error_other: 文件上传有误，请重新上传！
+common.job.noemployer: 企业暂无提供信息，请谨慎投递岗位！
+common.job.noemployee: 您需要完善资料，之后才可以投递岗位！
+common.job.noemployee.employee: 完善个人信息
+common.job.noemployee.education: 完善教育信息
+common.ismember: 已是会员?
+common.drop.file: 拖放文件
+common.cancel: 取消
+common.retry: 重试
+common.pause: 暂停
+common.edit: 编辑
+common.delete: 删除
+common.close: 关闭
+common.processing: 处理中
+common.upload: 上传
+common.uploading: 上传中
+common.upload.fail: 上传失败
+common.salary.unit: 月
+common.job.post: 天
+common.negotiable: 面谈
+
+job.delivery: 投递岗位
+job.delivery.deliverying: 投递中，请稍后...
+job.delivery.success: 投递成功！
+job.delivery.fail: 投递失败！
+job.delivery.repeat: 这个岗位投过啦！(有效期%day%天)
+job.delivery.nologin: 未登录，暂不能投递！
+job.delivery.same: 不能给自己的岗位投递！
+job.delivery.invalid: 投递无效！
+job.delivery.emr.new: 未阅
+job.delivery.emr.history: 已阅
+job.delivery.eme.new: 未阅
+job.delivery.eme.history: 已阅
+job.delivery.reserved: 已邀请面试
+job.delivery.schedule: 已接受邀请
+
+job.sendcv.send: 发送简历
+job.sendcv.cv: 上传简历
+job.sendcv.emailfrom: 提供一个便于接受消息的email
+job.sendcv.expires: 三天内请不要重复提交!
+job.sendcv.notupload: 请上传简历
+job.sendcv.error: 上传发生错误,请稍候重试
+
+job.reserve: 预约面试
+job.reserve.info: 预约信息
+job.reserve.note: 备注：(例如：交通线路、面试地址等)
+job.reserve.reserving: 预约中，请稍后...
+job.reserve.success: 预约成功！
+job.reserve.fail: 预约失败！
+job.reserve.repeat: 已经预约过啦！
+job.reserve.nologin: 未登录，暂不能预约！
+job.reserve.invalid: 预约无效！
+job.reserve.reserved: 至少选择1个预约时间：
+job.reserve.enter: 选择预约时间...
+job.reserve.more: 最多只能设置5个预约时间！
+job.reserve.less: 请至少设置1个预约时间！
+
+job.schedule: 接受面试预约
+job.schedule.info: 预约信息
+job.schedule.scheduling: 确认预约中，请稍后...
+job.schedule.success: 预约成功！
+job.schedule.fail: 预约失败！
+job.schedule.repeat: 已经预约好啦！
+job.schedule.nologin: 未登录，暂不能预约！
+job.schedule.invalid: 预约无效！
+job.schedule.less: 请确认预约时间！
+
+job.search.condition: 请选择筛选条件
+job.search.type: 您的工作类型
+job.search.industry: 您喜欢的行业
+job.search.area: 工作地点
+job.search.salary: 期望薪资
+job.search.begintime: 发布时间
+
+user.signup.exist: 此用户已存在！
+user.signup.noexist: 用户不存在！
+user.signup.success: 激活邮件已发出！
+user.signup.error: 网络不是太给力，请稍后再试！
+user.signup.invalid: 注册无效！
+
+user.signin.error_password: 密码错误，请重试！
+user.signin.invalid: 登录无效！
+
+user.validate.invalid: 激活码无效
+user.validate.repeat: "已激活， <a style='text-decoration:underline;color:#FFF;' href='%site%'>返回主页</a>"
+user.validate.success: "激活成功， <a style='text-decoration:underline;color:#FFF;' href='%site%'>完善个人资料</a>"
+# Common Panel }
+
+#### Marketing ADS {
+marketing.job.mount: 今日起，招聘数量超过1个，即可享有折扣优惠
+# Marketing ADS }
+
+# Frontend Panel {
+fe.signin: 登录
+fe.signup: 注册
+fe.cancel: 取消
+fe.logout: 退出
+fe.job_post: 免费发布岗位
+fe.dashboard: 用户中心
+fe.home: 首页
+fe.dashboard.emrinfo: 企业信息
+fe.dashboard.postjob: 在投岗位
+fe.dashboard.postinfo: 应聘统计
+fe.dashboard.info: 基本信息
+fe.dashboard.eduinfo: 教育经历
+fe.dashboard.expinfo: 工作经历
+fe.dashboard.postjob: 投递统计
+# Frontend Panel }
+
+# Email Template {
+user.validate.subject: 确认邮箱
+user.validate.body: 确认邮箱后即可使用JobSeeker
+user.validate.notice_a: "如果按钮失效，请 <a style='text-decoration:none;color:#2aabd2;' href='%validateurl%' target='_blank'>点击这里</a>"
+user.validate.notice_b: "如果您需要协助或有任何疑问，请联系客户服务：%support_email%"
+job.delivery.subject: 求职者%name% 投递了 %title%岗位
+
+career.sendcv.subject: 新的用户投递了简历
+career.sendcv.body: 新的简历
+career.sendcv.notice_a: "如果按钮失效，请 <a style='text-decoration:none;color:#2aabd2;' href='%joburl%' target='_blank'>点击这里</a>"
+career.sendcv.notice_b: "如果您需要协助或有任何疑问，请联系客户服务：%support_email%"
+# Email Template }
+
+# Backend Panel {
+be.operate: 操作
+be.edit: 编辑
+be.add:  添加
+be.save: 保存
+be.submit: 提交
+be.choose: 选择
+be.privilege.edit: 权限管理
+be.nochange: 没有改动
+be.update: 更新
+be.update.success: 更新成功！
+be.update.fail: 更新失败！！！
+be.update.invalid: 更新无效！！！
+be.delete: 删除
+be.delete.success: 删除成功！
+be.delete.fail: 删除失败！！！
+be.delete.invalid: 删除无效！！！
+be.install: 安装
+be.install.success: 安装成功！
+be.install.fail: 安装失败！！！
+be.uninstall: 卸载
+be.uninstall.success: 卸载成功！
+be.uninstall.fail: 卸载失败！！！
+be.installed: 已安装
+be.uninstalled: 未安装
+be.conflicted: 冲突！！！不能选择自己
+be.samelevel: 不能选择相同级别
+# Backend Panel }
+
+# Role Name {
+role.normal: 普通角色
+role.publisher: 岗位发布角色
+role.admin: 后台管理角色
+role.founder: 站长
+# Role Name }
+
+# Plugin {
+plugin.scope.user: 插件适用范围：用户功能
+plugin.scope.payment: 适用范围：支付功能
+
+plugin.name.microsoft: Microsoft
+plugin.description.microsoft: More than 500 million people use services like Microsoft account, Microsoft OneDrive, and Outlook.com. When you build apps that work with these services, you give your users new ways to engage with your products and services. To help you create this value and build successful apps that your customers enjoy, we offer Live Connect—a collection of APIs that help you integrate your apps quickly and easily with compatible services like Microsoft account, OneDrive, and Outlook.com.
+plugin.signin.microsoft: 使用 Microsoft 登录
+
+plugin.name.weibo: 微博
+plugin.description.weibo: 微连接(Weibo Connect)是微博针对第三方网站提供的社会化网络接入方案。微连接基于微博亿级用户基数和社交网络传播特性，为第三方网站提供用户身份系统及社交关系导入。
+plugin.signin.weibo: 使用 微博 登录
+
+plugin.name.google: Google
+plugin.description.google: The Google API Client Library enables you to work with Google APIs such as Google+, Drive, or YouTube on your server.
+plugin.signin.google: 使用 谷歌 登录
+
+plugin.name.qq: QQ
+plugin.description.qq: QQ互联开放平台为第三方网站提供了丰富的API。第三方网站接入QQ互联开放平台后，即可通过调用平台提供的API实现用户使用QQ帐号登录网站功能，且可以获取到腾讯QQ用户的相关信息。
+plugin.signin.qq: 使用 QQ 登录
+
+plugin.name.jobseeker: JobSeeker
+plugin.description.jobseeker: JobSeeker用户中心，每个应用的用户都会同步到用户中心，包括注册、登录、调用用户资料流程。
+plugin.signin.jobseeker: 使用 JobSeeker 登录
+
+plugin.name.weixinopen: 微信开放平台
+plugin.description.weixinopen: 接入微信登录，可实现微信账号快速登录，打通账号体系，一键连接亿万微信用户,同一用户使用微信登录你的不同应用和公众帐号，会对应同一个UnionID，以便进行不同业务间的帐号统一
+plugin.signin.weixinopen: 使用 微信账号 登录
+
+plugin.name.facebook: Facebook
+plugin.description.facebook: Facebook Login with the Facebook SDK for JavaScript enables people to sign into your web page with their Facebook credentials. If for some reason you can't use our JavaScript SDK you can also implement Facebook Login without it. To implement Facebook Login without the JavaScript SDK, see Manually Building a Login Flow
+plugin.signin.facebook: Log in with Facebook
+
+plugin.name.paypal: PayPal
+plugin.description.paypal: PayPal is the faster, safer way to pay and get paid. The service gives people simpler ways to send money without sharing financial information, and with the flexibility to pay using their account balances, bank accounts, credit cards or promotional financing.
+
+plugin.name.stripe: Stripe
+plugin.description.stripe: Stripe is a developer-friendly way to accept payments online and in mobile apps.We process billions of dollars a year for thousands of companies of all sizes.
+# Plugin }
+
+
+
+
+#### Locale #### 菲律宾文 chrome:fil ISO_639:tl #### 爪哇文 chrome:jw ISO_639:jv ####
+de: Deutsch
+de_de: Deutsch(DE)
+en: English
+en_us: English(US)
+en_ca: English(CA)
+en_uk: English(UK)
+fr: Français
+fr_fr: Français(FR)
+fr_ca: Français(CA)
+ja: 日本語
+zh: 中文
+zh_cn: 中文简体
+af: Afrikaans
+am: አማርኛ
+ar: العربية
+as: অসমীয়া
+az: azərbaycan dili
+be: Беларуская
+bg: български език
+bh: भोजपुरी
+bn: বাংলা
+bo: བོད་ཡིག
+br: brezhoneg
+bs: bosanski jezik
+ca: Català
+ce: нохчийн мотт
+co: corsu
+cs: česky
+cy: Cymraeg
+da: dansk
+dz: རྫོང་ཁ
+el: Ελληνικά
+es: español
+et: Eesti keel
+eu: euskara
+fa: فارسی
+fi: suomen kieli
+fil: Filipino
+fj: vosa Vakaviti
+fo: Føroyskt
+fy: Frysk
+ga: Gaeilge
+gd: Gàidhlig
+gl: Galego
+gn: Avañe'ẽ
+gu: ગુજરાતી
+gv: Ghaelg
+ha: هَوُسَ
+he: עברית
+hi: हिन्दी
+hr: Hrvatski
+hu: Magyar
+hy: Հայերեն
+id: Bahasa Indonesia
+is: Íslenska
+it: Italiano
+jv: basa Jawa
+ka: ქართული
+kg: KiKongo
+kk: Қазақша
+km: ភាសាខ្មែរ
+kn: ಕನ್ನಡ
+ko: 한국어
+ku: كوردی
+ky: Кыргыз тили
+la: Latina
+li: Limburgs
+ln: Lingála
+lo: ພາສາລາວ
+lt: Lietuvių
+lv: Latviešu
+mk: Македонски
+ml: മലയാളം
+mn: монгол
+mo: Лимба молдовеняскэ
+mr: मराठी
+ms: Bahasa Melayu
+mt: Malti
+nb: Norsk bokmål
+ne: नेपाली
+nl: Nederlands
+no: Norsk
+oc: Occitan
+om: Afaan Oromoo
+or: ଓଡ଼ିଆ
+pa: ਪੰਜਾਬੀ
+pi: पाऴि
+pl: polski
+ps: پښتو
+pt: Português
+qu: Runa Simi
+rm: rumantsch grischun
+ro: română
+ru: русский язык
+rw: Kinyarwanda
+sa: संस्कृतम्
+sd: सिन्धी
+sh: Srpskohrvatski
+si: සිංහල
+sk: slovenčina
+sl: slovenščina
+sn: chiShona
+so: Soomaaliga
+sq: Shqip
+sr: српски језик
+ss: SiSwati
+st: seSotho
+su: Basa Sunda
+sv: Svenska
+sw: Kiswahili
+ta: தமிழ்
+te: తెలుగు
+tg: тоҷикӣ
+th: ไทย
+ti: ትግርኛ
+tk: Türkmen
+tn: seTswana
+to: faka Tonga
+tr: Türkçe
+ts: xiTsonga
+tt: татарча
+tw: Twi
+ug: ئۇيغۇرچە
+uk: Українська
+ur: اردو
+uz: O'zbek
+ve: tshiVenḓa
+vi: Tiếng Việt
+xh: isiXhosa
+yi: ייִדיש
+yo: Yorùbá
+zu: isiZulu
+
+de.title: 德文
+de_de.title: 德文（德国）
+en.title: 英文
+en_us.title: 英文（美国）
+en_ca.title: 英文（加拿大）
+en_uk.title: 英文（英国）
+fr.title: 法文
+fr_fr.title: 法文（法国）
+fr_ca.title: 法文（加拿大）
+ja.title: 日文
+zh.title: 中文
+zh_cn.title: 中文（简体）
+af.title: 阿非利堪斯文
+am.title: 阿姆哈拉文
+ar.title: 阿拉伯文
+as.title: 阿萨姆文
+az.title: 阿塞拜疆文
+be.title: 白俄罗斯文
+bg.title: 保加利亚文
+bh.title: 比哈尔文
+bn.title: 孟加拉文
+bo.title: 藏文
+br.title: 布列塔尼文
+bs.title: 波斯尼亚文
+ca.title: 加泰隆文
+ce.title: 车臣文
+co.title: 科西嘉文
+cs.title: 捷克文
+cy.title: 威尔士文
+da.title: 丹麦文
+dz.title: 不丹文
+el.title: 现代希腊文
+es.title: 西班牙文
+et.title: 爱沙尼亚文
+eu.title: 巴斯克文
+fa.title: 波斯文
+fi.title: 芬兰文
+fil.title: 菲律宾文
+fj.title: 斐济文
+fo.title: 法罗斯文
+fy.title: 弗里西亚文
+ga.title: 爱尔兰文
+gd.title: 苏格兰盖尔文
+gl.title: 加利西亚文
+gn.title: 瓜拉尼文
+gu.title: 古吉拉特文
+gv.title: 马恩岛文
+ha.title: 豪萨文
+he.title: 希伯来文
+hi.title: 印地文
+hr.title: 克罗地亚文
+hu.title: 匈牙利文
+hy.title: 亚美尼亚文
+id.title: 印尼文
+is.title: 冰岛文
+it.title: 意大利文
+jv.title: 爪哇文
+ka.title: 格鲁吉亚文
+kg.title: 刚果文
+kk.title: 哈萨克文
+km.title: 高棉文
+kn.title: 坎纳达文
+ko.title: 朝鲜文
+ku.title: 库尔德文
+ky.title: 吉尔吉斯文
+la.title: 拉丁文
+li.title: 林堡文
+ln.title: 林加拉文
+lo.title: 老挝文
+lt.title: 立陶宛文
+lv.title: 拉脱维亚文
+mk.title: 马其顿文
+ml.title: 马拉亚拉姆文
+mn.title: 蒙古文
+mo.title: 摩尔达维亚文
+mr.title: 马拉地文
+ms.title: 马来文
+mt.title: 马耳他文
+nb.title: 挪威布克莫尔文
+ne.title: 尼泊尔文
+nl.title: 荷兰文
+no.title: 挪威文
+oc.title: 奥克西唐文
+om.title: 阿芳·奥洛莫文
+or.title: 奥利亚文
+pa.title: 旁遮普文
+pi.title: 巴利文
+pl.title: 波兰文
+ps.title: 普什图文
+pt.title: 葡萄牙文
+qu.title: 凯楚亚文
+rm.title: 利托-罗曼语
+ro.title: 罗马尼亚文
+ru.title: 俄文
+rw.title: 基尼阿万达语
+sa.title: 梵文
+sd.title: 信德文
+sh.title: 塞尔维亚-克罗地亚文
+si.title: 僧加罗文
+sk.title: 斯洛伐克文
+sl.title: 斯洛文尼亚文
+sn.title: 绍纳文
+so.title: 索马里文
+sq.title: 阿尔巴尼亚文
+sr.title: 塞尔维亚文
+ss.title: 塞斯瓦替文
+st.title: 塞索托文
+su.title: 巽他文
+sv.title: 瑞典文
+sw.title: 斯瓦希里文
+ta.title: 泰米尔文
+te.title: 泰卢固文
+tg.title: 塔吉克文
+th.title: 傣文
+ti.title: 提格里尼亚文
+tk.title: 土库曼语
+tn.title: 塞茨瓦纳语
+to.title: 汤加文
+tr.title: 土耳其文
+ts.title: 宗加文
+tt.title: 塔塔尔文
+tw.title: 特威文
+ug.title: 维吾尔文
+uk.title: 乌克兰文
+ur.title: 乌尔都文
+uz.title: 乌兹别克文
+ve.title: 文达文
+vi.title: 越南文
+xh.title: 科萨文
+yi.title: 依地文
+yo.title: 约鲁巴文
+zu.title: 祖鲁文
+
+
+
+
+#### Currency ####
+hkd: 港幣
+mop: 澳門幣
+twd: 新臺幣
+cny: 人民币
+krw: 원
+vnd: 越南盾
+jpy: 日元
+lak: 基普
+khr: 瑞尔
+php: 菲律宾比索
+myr: 马元
+sgd: 新加坡元
+thb: 泰铢
+mmk: 缅元
+lkr: 斯里兰卡卢比
+idr: 盾
+pkr: 巴基斯坦卢比
+inr: 卢比
+afn: 阿富汗尼
+eur: 欧元
+rub: 卢布
+chf: 瑞士法郎
+gbp: 英镑
+cad: 加元
+usd: US Dollar
+mxn: 墨西哥比索
+vef: 玻利瓦尔
+brl: 新克鲁赛罗
+ars: 阿根廷比索
+xof: 西非法郎
+ngn: 奈拉
+zar: 兰特
+aud: 澳大利亚元
+nzd: 新西兰元
+
+hkd.title: 港元
+mop.title: 澳门元
+twd.title: 新台币
+cny.title: 人民币
+krw.title: 韩元
+vnd.title: 越南盾
+jpy.title: 日元
+lak.title: 基普
+khr.title: 瑞尔
+php.title: 菲律宾比索
+myr.title: 令吉
+sgd.title: 新加坡元
+thb.title: 泰铢
+mmk.title: 缅元
+lkr.title: 卢比
+idr.title: 印尼盾
+pkr.title: 卢比
+inr.title: 卢比
+afn.title: 阿富汗尼
+eur.title: 欧元
+rub.title: 卢布
+chf.title: 瑞士法郎
+gbp.title: 英镑
+cad.title: 加拿大元
+usd.title: 美元
+mxn.title: 墨西哥比索
+vef.title: 玻利瓦尔
+brl.title: 巴西雷亚尔
+ars.title: 阿根廷比索
+xof.title: 西非法郎
+ngn.title: 奈拉
+zar.title: 兰特
+aud.title: 澳元
+nzd.title: 新西兰元
+
+hkd.symbol: $
+mop.symbol: P
+twd.symbol: $
+cny.symbol: ¥
+krw.symbol: ₩
+vnd.symbol: ₫
+jpy.symbol: ¥
+lak.symbol: ₭
+khr.symbol: ៛
+php.symbol: ₱
+myr.symbol: RM
+sgd.symbol: $
+thb.symbol: ฿
+mmk.symbol: Ks
+lkr.symbol: Rs
+idr.symbol: Rp
+pkr.symbol: ₨
+inr.symbol: ₹
+afn.symbol: ؋
+eur.symbol: €
+rub.symbol: р.
+chf.symbol: Fr
+gbp.symbol: £
+cad.symbol: $
+usd.symbol: $
+mxn.symbol: $
+vef.symbol: Bs
+brl.symbol: R$
+ars.symbol: $
+xof.symbol: Fr
+ngn.symbol: ₦
+zar.symbol: R
+aud.symbol: $
+nzd.symbol: $
+
+
+
+
+#### Area ####
+# Continent Name {
+AFRICA: 非洲
+AMERICAS: 美洲
+ASIA: 亚洲
+EUROPE: 欧洲
+OCEANIA: 大洋洲
+# Continent Name }
+
+# Africa {
+# Northern Africa
+DZ: 阿尔及利亚
+LY: 利比亚
+SD: 苏丹
+EG: 埃及
+MA: 摩洛哥
+TN: 突尼斯
+# Eastern Africa
+KE: 肯尼亚
+SS: 南苏丹
+ER: 厄立特里亚
+ET: 埃塞俄比亚
+ZW: 津巴布韦
+# Southern Africa
+ZA: 南非
+# Western Africa
+NG: 尼日利亚
+GH: 加纳
+GN: 几内亚
+CI: 科特迪瓦
+GW: 几内亚比绍
+TG: 多哥
+# Middle Africa
+AO: 安哥拉
+# Africa }
+
+# Americas {
+# Northern America
+US: 美国
+CA: 加拿大
+# Central America
+NI: 尼加拉瓜
+CR: 哥斯达黎加
+MX: 墨西哥
+PA: 巴拿马
+# Caribbean
+KY: 开曼群岛
+CU: 古巴
+PR: 波多黎各
+TT: 特立尼达和多巴哥
+VG: 英属维尔京群岛
+VI: 美属维尔京群岛
+# South America
+AR: 阿根廷
+CO: 哥伦比亚
+BO: 玻利维亚
+EC: 厄瓜多尔
+PY: 巴拉圭
+UY: 乌拉圭
+BR: 巴西
+PE: 秘鲁
+VE: 委内瑞拉
+CL: 智利
+# Americas }
+
+# Asia {
+# Eastern Asia
+CN: 中国大陆
+HK: 中国香港
+MO: 中国澳门
+TW: 中国台湾
+JP: 日本
+KR: 韩国
+
+# South-Eastern Asia
+BN: 文莱
+ID: 印度尼西亚
+MM: 缅甸
+TH: 泰国
+KH: 柬埔寨
+LA: 老挝
+PH: 菲律宾
+VN: 越南
+MY: 马来西亚
+SG: 新加坡
+# Southern Asia
+AF: 阿富汗
+MV: 马尔代夫
+PK: 巴基斯坦
+BD: 孟加拉国
+IN: 印度
+NP: 尼泊尔
+LK: 斯里兰卡
+BT: 不丹
+IR: 伊朗
+# Western Asia
+IQ: 伊拉克
+SY: 叙利亚
+AZ: 阿塞拜疆
+IL: 以色列
+TR: 土耳其
+QA: 卡塔尔
+AE: 阿联酋
+KW: 科威特
+SA: 沙特阿拉伯
+GE: 格鲁吉亚
+LB: 黎巴嫩
+# Central Asia
+KZ: 哈萨克斯坦
+TJ: 塔吉克斯坦
+TM: 土库曼斯坦
+UZ: 乌兹别克斯坦
+KG: 吉尔吉斯斯坦
+# Asia }
+
+# Europe {
+# Northern Europe
+DK: 丹麦
+IS: 冰岛
+LV: 拉脱维亚
+SE: 瑞典
+EE: 爱沙尼亚
+IE: 爱尔兰
+LT: 立陶宛
+GB: 英国
+FI: 芬兰
+NO: 挪威
+# Eastern Europe
+BY: 白俄罗斯
+HU: 匈牙利
+RO: 罗马尼亚
+BG: 保加利亚
+RU: 俄罗斯
+UA: 乌克兰
+CZ: 捷克
+PL: 波兰
+# Southern Europe
+GR: 希腊
+SI: 斯洛文尼亚
+IT: 意大利
+PT: 葡萄牙
+ES: 西班牙
+# Western Europe
+AT: 奥地利
+DE: 德国
+LU: 卢森堡
+NL: 荷兰
+BE: 比利时
+LI: 列支敦士登
+MC: 摩纳哥
+CH: 瑞士
+FR: 法国
+# Europe }
+
+# Oceania {
+# Australasia
+AU: 澳大利亚
+NZ: 新西兰
+# Melanesia
+FJ: 斐济群岛
+PG: 巴布亚新几内亚
+SB: 所罗门群岛
+# Micronesian Region
+MH: 马绍尔群岛
+PW: 帕劳
+# Polynesia
+TO: 汤加
+# Oceania }
+
+
+
+
+### Route ###
+admin_index: 后台首页
+admin_logout: 后台退出
+
+admin_list: 管理员列表
+admin_add: 保存管理员
+admin_delete: 删除管理员
+admin_save: 保存管理员
+admin_show: 显示管理员
+
+area_list: 地区列表
+area_add: 添加地区
+area_delete: 删除地区
+area_save: 保存地区
+
+locale_list: 语言列表
+locale_add: 添加语言
+locale_delete: 删除语言
+locale_save: 保存语言
+
+currency_list: 货币列表
+currency_add: 添加货币
+currency_delete: 删除货币
+currency_save: 保存货币
+
+system_list: 系统参数列表
+system_add: 添加系统参数
+system_delete: 删除系统参数
+system_save: 保存系统参数
+
+product_list: 产品类别列表
+product_add: 添加产品类别
+product_delete: 删除产品类别
+product_save: 保存产品类别
+
+job_cat_list: 岗位类别列表
+job_cat_add: 添加岗位类别
+job_cat_delete: 删除岗位类别
+job_cat_save: 保存岗位类别
+
+job_ind_list: 行业类别列表
+job_ind_add: 添加行业类别
+job_ind_delete: 删除行业类别
+job_ind_save: 保存行业类别
+
+role_list: 角色列表
+role_add: 保存角色
+role_delete: 删除角色
+role_save: 保存角色
+role_show: 显示角色
+
+privilege_list: 权限列表
+privilege_add: 添加权限
+privilege_delete: 删除权限
+privilege_save: 保存权限
+
+user_add: 添加用户
+user_callback: 返回callback
+user_list: 用户列表
+user_login: 用户登录
+user_logout: 用户注销
+user_register: 用户注册
+user_show: 用户详情
+
+career_index: 支付首页
+
+order_payment: 前去支付
+order_dopayment: 确认支付
+order_checkout: 结账
+order_docheckout: 确认结账
+
+discount_list: 产品折扣列表
+discount_add: 添加产品折扣
+discount_delete: 删除产品折扣
+discount_save: 保存产品折扣
+
+
+
+
+### Bundle:Controller:Action ###
+indexbundle: 首页
+indexbundle.index: 首页
+indexbundle.index.index: 首页
+indexbundle.index.search: 职位搜索
+indexbundle.index.brand: logo展示
+indexbundle.index.dashboard: 个人面板
+
+adminbundle: 后台
+adminbundle.area: 地区
+adminbundle.area.list: 列表
+adminbundle.area.add: 添加
+adminbundle.area.delete: 删除
+adminbundle.area.save: 保存
+
+adminbundle.currency: 货币
+adminbundle.currency.list: 列表
+adminbundle.currency.add: 添加
+adminbundle.currency.delete: 删除
+adminbundle.currency.save: 保存
+
+adminbundle.role: 角色
+adminbundle.role.list: 列表
+adminbundle.role.show: 展示
+adminbundle.role.add: 添加
+adminbundle.role.delete: 删除
+adminbundle.role.save: 保存
+
+adminbundle.admin: 管理员
+adminbundle.admin.list: 列表
+adminbundle.admin.show: 展示
+adminbundle.admin.add: 添加
+adminbundle.admin.delete: 删除
+adminbundle.admin.save: 保存
+
+adminbundle.index: 入口
+adminbundle.index.index: 主页
+adminbundle.index.login: 登录
+adminbundle.index.main: 面板
+adminbundle.index.logout: 退出
+
+adminbundle.locale: 语言
+adminbundle.locale.list: 列表
+adminbundle.locale.add: 添加
+adminbundle.locale.delete: 删除
+adminbundle.locale.save: 保存
+
+adminbundle.privilege: 权限
+adminbundle.privilege.list: 列表
+adminbundle.privilege.add: 添加
+adminbundle.privilege.delete: 删除
+adminbundle.privilege.save: 保存
+
+adminbundle.system: 系统
+adminbundle.system.list: 列表
+adminbundle.system.add: 添加
+adminbundle.system.delete: 删除
+adminbundle.system.save: 保存
+
+adminbundle.product: 产品
+adminbundle.product.list: 产品类别列表
+adminbundle.product.add: 添加产品类别
+adminbundle.product.delete: 删除产品类别
+adminbundle.product.save: 保存产品类别
+
+adminbundle.discount: 产品折扣
+adminbundle.discount.list: 产品折扣列表
+adminbundle.discount.add: 添加产品折扣
+adminbundle.discount.delete: 删除产品折扣
+adminbundle.discount.save: 保存产品折扣
+
+careerbundle: 招聘
+careerbundle.payment: 支付
+careerbundle.payment.index: 首页
+careerbundle.payment.payment: 前去支付
+careerbundle.payment.dopayment: 确认支付
+careerbundle.payment.checkout: 结账
+careerbundle.payment.docheckout: 确认结账
+
+pluginbundle: 插件
+toolbundle: 工具
+
+userbundle: 用户
+userbundle.user: 用户
+userbundle.user.register: 注册
+userbundle.user.list: 列表
+userbundle.user.add: 添加
+userbundle.user.show: 展示
+userbundle.user.login: 登录
+userbundle.user.logout: 退出
+userbundle.user.callback: 调用callback
+
+
+
+
+################ Discount ################
+DT1000: 95% 折扣
+DT2000: 90% 折扣
+DT3000: 85% 折扣
+DT4000: 80% 折扣
+DT5000: 75% 折扣
+
+################ Type ################
+TE1000: 全职
+TE2000: 兼职
+TE3000: 无固定期限
+TE4000: 临时
+TE5000: 合同
+TE6000: Casual
+TE7000: 实习
+TE8000: 自由职业
+TE9000: 志愿者
+TE10000: 留学生
+
+################ Employer_scale ################
+EMRS1000: 少于5人
+EMRS2000: 5-10人
+EMRS3000: 11-20人
+EMRS4000: 21-50人
+EMRS5000: 51-100人
+EMRS6000: 101-500人
+EMRS7000: 多于500人
+
+################ Employer_type ################
+EMRT1000: 工作室
+EMRT2000: 初创公司
+EMRT3000: 外资公司
+EMRT4000: 上市公司
+EMRT5000: 集体企业
+EMRT6000: 国有企业
+EMRT7000: 教育机构
+EMRT8000: 公益组织
+EMRT9000: 政府机构
+
+################ Employee_diploma ################
+EMED1000: 大专
+EMED2000: 本科
+EMED3000: 硕士
+EMED4000: 博士
+
+
+
+
+################ Table Column ################
+# Table Admin {
+table.admin: 管理员
+table.admin.id: 管理员id
+table.admin.rid: 角色
+table.admin.newrid: 新角色
+table.admin.email: Email
+table.admin.newemail: 新Email
+table.admin.password: 密码
+table.admin.newpassword: 新密码
+table.admin.logintime: 上次登录时间
+table.admin.loginip: 上次登录IP
+# Table Admin }
+
+# Table Area {
+table.area: 地区
+table.area.id: 地区Id
+table.area.pid: 上一级
+table.area.code: 地区码
+table.area.code.comment: ISO 3166-1
+table.area.name: 名称
+table.area.level: 级别
+table.area.level.comment: 洲=1，国家=2，城市=3，区=4
+table.area.level.1: 洲
+table.area.level.2: 国家
+table.area.level.3: 城市
+table.area.level.4: 区
+table.area.alpha: 首字母
+table.area.alpha.comment: 地区本地语言首字母
+table.area.domain: 域名
+table.area.domain.comment: level＝2的地区设置值，形如：cn.jobseeker.com
+table.area.lat: 纬度
+table.area.lng: 经度
+table.area.queue: 顺序
+table.area.status: 状态
+table.area.status.0: 未启用
+table.area.status.1: 启用
+# Table Area }
+
+# Table Category {
+table.category: 分类
+table.category.id: 分类id
+table.category.pid: 父分类id
+table.category.type: 分类类别
+table.category.csn: 分类编号
+table.category.queue: 顺序
+table.category.status: 状态
+table.category.status.0: 未启用
+table.category.status.1: 启用
+# Table Category }
+
+# Table Currency {
+table.currency: 货币
+table.currency.id: 货币id
+table.currency.code: 货币代码
+table.currency.code.comment: ISO 4217
+table.currency.name: 货币名称
+table.currency.symbol: 货币符号
+table.currency.status: 状态
+table.currency.status.0: 未启用
+table.currency.status.1: 启用
+# Table Currency }
+
+# Table Delivery {
+table.delivery: 投递
+table.delivery.id: 投递id
+table.delivery.jid: 岗位id
+table.delivery.eme: 应聘者
+table.delivery.emr: 企业
+table.delivery.email: 投递email
+table.delivery.readed: 查看状态
+table.delivery.readed.0: 未阅
+table.delivery.readed.1: 已阅
+table.delivery.reserve: 预约时间
+table.delivery.message: 备注
+table.delivery.schedule: 面试时间
+table.delivery.ctime: 投递时间
+table.delivery.status: 状态
+table.delivery.status.0: 已删除
+table.delivery.status.1: 完好
+table.delivery.status.2: 已隐藏
+# Table Delivery }
+
+# Table Diploma :abstract sub_table Category {
+table.diploma: 学历
+table.diploma.id: 学历id
+table.diploma.pid: 父类id
+table.diploma.csn: 学历编号
+table.diploma.queue: 顺序
+table.diploma.status: 状态
+table.diploma.status.0: 未启用
+table.diploma.status.1: 启用
+table.diploma.name: 名称
+# Table Diploma }
+
+# Table Discount {
+table.discount: 折扣
+table.discount.id: 折扣id
+table.discount.rate: 折扣率
+table.discount.rate.comment: 规则：0<x<1(四舍五入)，最多取小数点后两位
+table.discount.dsn: 编号
+table.discount.name: 名称
+table.discount.queue: 顺序
+table.discount.status: 状态
+table.discount.status.0: 未启用
+table.discount.status.1: 启用
+# Table Discount }
+
+# Table Education {
+table.education: 教育
+table.education.id: 教育id
+table.education.uid: 用户id
+table.education.university: 学校名称
+table.education.graduation: 毕业时间
+table.education.diploma: 学历
+table.education.major: 专业
+table.education.course: 课程
+table.education.description: 在校描述
+# Table Education }
+
+# Table Employee {
+table.employee: 应聘者
+table.employee.id: 应聘者id
+table.employee.uid: 用户id
+table.employee.name: 姓名
+table.employee.avator: 头像
+table.employee.gender: 性别
+table.employee.gender.1: 男
+table.employee.gender.0: 女
+table.employee.marital: 婚姻
+table.employee.marital.1: 已婚
+table.employee.marital.0: 单身
+table.employee.birthday: 生日
+table.employee.nationality: 国籍
+table.employee.hometown: 出生城市
+table.employee.location: 当前城市
+table.employee.mobile: Tel
+table.employee.email: Email
+table.employee.interest: 兴趣
+table.employee.skill: 技能
+table.employee.language: 语言
+table.employee.description: 关于我
+# Table Employee }
+
+# Table Employer {
+table.employer: 雇主
+table.employer.id: 雇主id
+table.employer.uid: 用户id
+table.employer.name: 名称
+table.employer.abbr: 简称
+table.employer.avator: Logo
+table.employer.location: 城市
+table.employer.address: 地址
+table.employer.type: 类型
+table.employer.scale: 规模
+table.employer.contacter: 联系人
+table.employer.contacteremail: 联系Email
+table.employer.contactertel: 联系电话
+table.employer.fax: 传真
+table.employer.site: 网址
+table.employer.about: 公司介绍
+# Table Employer }
+
+# Table Employerscale :abstract sub_table Category {
+table.employerscale: 企业规模
+table.employerscale.id: id
+table.employerscale.pid: 父类
+table.employerscale.csn: 编号
+table.employerscale.queue: 顺序
+table.employerscale.status: 状态
+table.employerscale.status.0: 未启用
+table.employerscale.status.1: 启用
+table.employerscale.name: 名称
+# Table Employerscale }
+
+# Table Employertype :abstract sub_table Category {
+table.employertype: 企业类别
+table.employertype.id: id
+table.employertype.pid: 父类
+table.employertype.csn: 编号
+table.employertype.queue: 顺序
+table.employertype.status: 状态
+table.employertype.status.0: 未启用
+table.employertype.status.1: 启用
+table.employertype.name: 名称
+# Table Employertype }
+
+# Table Experience {
+table.experience: 工作
+table.experience.id: 岗位id
+table.experience.uid: 用户id
+table.experience.location: 工作所在地
+table.experience.company: 公司名称
+table.experience.orientation: 入职日期
+table.experience.dimission: 离职日期
+table.experience.title: 岗位名称
+table.experience.description: 岗位描述
+# Table Experience }
+
+# Table Industry {
+table.industry: 行业类别
+table.industry.id: id
+table.industry.pid: 上一级
+table.industry.isn: 行业编号
+table.industry.queue: 顺序
+table.industry.status: 状态
+table.industry.status.0: 未启用
+table.industry.status.1: 启用
+table.industry.name: 行业名称
+# Table Industry }
+
+# Table Job {
+table.job: 岗位
+table.job.id: 岗位id
+table.job.uid: 发布用户
+table.job.jid: 岗位编号
+table.job.ctime: 创建时间
+table.job.product: 投放周期
+table.job.industry: 行业
+table.job.type: 岗位分类
+table.job.salary: 薪
+table.job.area: 工作地点
+table.job.begintime: 开始投放时间
+table.job.begintime.comment: %begintime% 之前一直可以修改，之后将不能修改！
+table.job.endtime: 投放结束时间
+table.job.title: 岗位标题
+table.job.description: 岗位描述
+table.job.avator: Logo
+table.job.verify: 识别码
+table.job.status: 状态
+table.job.status.0: 暂未投放
+table.job.status.1: 投放中
+table.job.status.2: 暂停投放
+table.job.status.3: 投放结束
+table.job.contacter: 联系人
+table.job.contacteremail: Email
+table.job.contactertel: 电话
+table.job.about: 公司介绍
+# Table Job }
+
+# Table Locale {
+table.locale: 语言
+table.locale.id: 语言id
+table.locale.code: 语言码
+table.locale.code.comment: ISO 639-1
+table.locale.name: 名称
+table.locale.queue: 顺序
+table.locale.status: 状态
+table.locale.status.0: 未启用
+table.locale.status.1: 启用
+# Table Locale }
+
+# Table Order {
+table.order: 订单
+table.order.id: 订单id
+table.order.uid: 产生订单的用户id
+table.order.oid: 订单编号
+table.order.jid: 岗位id
+table.order.ctime: 产生订单时间
+table.order.mtime: 修改订单时间
+table.order.price: 订单原价
+table.order.did: 折扣id
+table.order.realprice: 订单实际价格(折扣之后价格)
+table.order.status: 订单状态
+table.order.status.0: 未支付
+table.order.status.1: 已支付
+table.order.status.2: 申请退款
+table.order.status.3: 退款处理中
+table.order.status.4: 退款成功
+# Table Order }
+
+# Table Payment {
+table.payment: 支付
+table.payment.id: 支付id
+table.payment.uid: 产生支付的用户id
+table.payment.pid: 支付编号
+table.payment.oid: 对应订单id
+table.payment.paytype: 支付方式
+table.payment.payinfo: 支付信息
+table.payment.price: 支付价格
+table.payment.ctime: 支付时间
+table.payment.status: 支付状态
+table.payment.status.0: 支付失败
+table.payment.status.1: 支付成功
+# Table Payment }
+
+# Table Paymenttype :abstract sub_table Category {
+table.paymenttype: 支付方式
+table.paymenttype.id: id
+table.paymenttype.pid: 父类
+table.paymenttype.csn: 编号
+table.paymenttype.queue: 顺序
+table.paymenttype.status: 状态
+table.paymenttype.status.0: 未启用
+table.paymenttype.status.1: 启用
+table.paymenttype.name: 名称
+# Table Paymenttype }
+
+# Table Plugin {
+table.plugin: 插件
+table.plugin.id: 插件id
+table.plugin.name: 名称
+table.plugin.scope: 适用范围
+table.plugin.config: 配置信息
+table.plugin.status: 状态
+table.plugin.status.0: 未启用
+table.plugin.status.1: 启用
+table.plugin.description: 描述
+table.plugin.logo: Logo
+# Table Plugin }
+
+# Table Privilege {
+table.privilege: 权限
+table.privilege.bundle: 模块
+table.privilege.controller: 控制器
+table.privilege.action: 方法
+table.privilege.route: 路由名称
+table.privilege.status: 状态
+table.privilege.status.0: 未启用
+table.privilege.status.1: 启用
+# Table Privilege }
+
+# Table Product {
+table.product: 产品
+table.product.id: 产品id
+table.product.duration: 产品持续时间
+table.product.duration.comment: 显示：天，实际值：秒
+table.product.price: 价格
+table.product.price.0: 免费
+table.product.price.comment: 货币符由系统定义
+table.product.queue: 顺序
+table.product.status: 状态
+table.product.status.0: 未启用
+table.product.status.1: 启用
+# Table Product }
+
+# Table Role {
+table.role: 角色
+table.role.id: 角色id
+table.role.name: 角色名称
+table.role.name.comment: 命名英文
+table.role.locale: 本地化名称
+table.role.local.comment: 根据名称进行本地化显示
+table.role.pid: 角色权限
+# Table Role }
+
+# Table SendCV {
+table.sendcv: 发送简历
+table.sendcv.id: id
+table.sendcv.jid: 岗位id
+table.sendcv.emr: 企业
+table.sendcv.emailfrom: 发送人email
+table.sendcv.emailto: 接受人email
+table.sendcv.cv: 简历
+table.sendcv.readed.0: 未阅
+table.sendcv.readed.1: 已阅
+table.sendcv.ctime: 发送时间
+# Table SendCV }
+
+# Table Subscribe {
+table.subscribe: 订阅
+table.subscribe.id: 订阅id
+table.subscribe.type: 岗位分类
+table.subscribe.industry: 行业分类
+table.subscribe.location: 岗位所在城市
+table.subscribe.duration: 订阅周期
+table.subscribe.ctime: 创建时间
+table.subscribe.sendtime: 发送时间
+# Table Subscribe }
+
+# Table System {
+table.system: 系统
+table.system.id: 系统id
+table.system.skey: 参数名称
+table.system.svalue: 参数值
+table.system.stype: 参数值类型
+table.system.stype.text: 字符串
+table.system.stype.textarea: 文本
+table.system.stype.number: 数字
+table.system.stype.currency: 货币
+table.system.stype.locale: 语言
+table.system.stype.area: 地区
+table.system.stype.timezone: 时区
+# Table System }
+
+# Table Type {
+table.type: 岗位类别
+table.type.id: 类别id
+table.type.tsn: 类别编号
+table.type.queue: 顺序
+table.type.status: 状态
+table.type.status.0: 未启用
+table.type.status.1: 启用
+table.type.name: 名称
+# Table Type }
+
+# Table User {
+table.user: 用户
+table.user.id: 用户id
+table.user.uid: 用户中心id
+table.user.rid: 角色
+table.user.email: 邮箱
+table.user.password: 密码
+table.user.logintime: 上次登录时间
+table.user.loginip: 上次登录IP
+# Table User }
+
+# Database ssojobseeker Table User {
+table.user: 用户
+table.user.id: 用户id
+table.user.uid: 用户中心id
+table.user.source: 注册来源
+table.user.country: 注册国家
+table.user.email: 邮箱
+table.user.password: 密码
+table.user.username: 用户名
+table.user.firstName: 姓
+table.user.lastName: 名
+table.user.addtime: 注册时间
+table.user.status: 状态
+table.user.status.0: 未激活
+table.user.status.1: 正常
+table.user.status.2: 已冻结
+table.user.status.3: 已注销
+table.user.salt: 激活码
+# Table User }
+
+
+
+
+################ Industry ################
+A100: 高级管理
+A101: 首席执行官CEO/总裁/执行总裁/总经理
+A102: 首席运营官COO
+A103: 首席技术官CTO
+A104: 首席信息官CIO
+A105: 首席财务官CFO
+A106: 副总裁(VP)/副总经理
+A107: 总监/事业部总经理
+A108: 总裁助理/总经理助理
+A109: 驻外经理
+A110: 办事处首席代表
+A111: 分公司经理/分支机构经理/办事处经理
+A112: 项目管理
+A113: 部门经理
+A114: 合伙人
+
+A200: 金融/银行/证券/投资
+A201: 行长/副行长/高级管理
+A202: 信贷/信用管理
+A203: 资产评估/分析
+A204: 进出口/信用证结算
+A205: 银行卡/电子银行/新业务开拓
+A206: 风险管理/稽核/控制/法律
+A207: 清算/核算
+A208: 国际结算/外汇交易
+A209: 客户经理/金融产品营销管理
+A210: 银行柜员/银行会计
+A211: 投资银行业务
+A212: 证券/外汇/期货经纪人
+A213: 基金经理
+A214: 股票/期货操盘手
+A215: 基金经理助理/证券分析
+A216: 拍卖/典当
+A217: 投资顾问/理财顾问/客户服务
+A218: 金融/经济研究员
+A219: 融资总监
+A220: 融资经理/主管/专员
+A221: 资产管理/交易管理/资金管理/财务管理
+
+A300: 保险
+A301: 保险精算师
+A302: 保险产品开发/项目策划
+A303: 保险业务经理/主管
+A304: 保险核保
+A305: 保险客户服务/续期管理
+A306: 理财顾问/财务规划师
+A307: 保险代理/经纪人/客户经理
+A308: 保险培训师
+A309: 契约管理
+A310: 保险内勤
+A311: 储备经理
+A312: 保险理赔
+
+A400: 财务/审计/统计/税务
+A401: 财务总监/经理/主管
+A402: 财务分析经理/主管
+A403: 财务分析员
+A404: 会计经理/主管
+A405: 财务/会计/出纳/统计
+A406: 审计经理/主管
+A407: 审计专员/助理
+A408: 成本经理/主管/管理员
+A409: 税务经理/主管
+A410: 税务专员/助理
+A411: 投融资经理/主管
+A412: 投融资专员/助理
+
+A500: 法律/咨询/顾问
+A501: 咨询总监/项目经理
+A502: 咨询经理/主管
+A503: 咨询员
+A504: 专业顾问
+A505: 培训师
+A506: 调研员
+A507: 情报信息分析
+A508: 律师
+A509: 法律顾问
+A510: 律师助理
+A511: 法务经理/主管
+A512: 法务专员/助理
+A513: 知识产权/专利顾问/专员
+
+A600: 翻译
+A601: 英语翻译
+A602: 法语翻译
+A603: 西班牙语翻译
+A604: 日语翻译
+A605: 德语翻译
+A606: 朝鲜语翻译
+A607: 葡萄牙语翻译
+A608: 中文翻译
+A609: 其他翻译
+
+A700: 市场/品牌
+A701: 市场/企划总监
+A702: 市场/企划经理
+A703: 市场/企划主管
+A704: 市场/企划专员(助理)
+A705: 市场调研总监/副总监
+A706: 市场调研经理/主管
+A707: 市场调研统计/分析
+A708: 市场调研助理
+A709: 品牌/产品总监
+A710: 品牌/产品经理
+A711: 品牌/产品主管
+A712: 品牌/产品专员(助理)
+
+A800: 公关/媒介/广告
+A801: 公关(会务)总监/经理/主管
+A802: 公关(会务)专员/助理
+A803: 公关(企划)总监/经理/主管
+A804: 公关(企划)专员/助理
+A805: 媒介(企划)总监/经理/主管
+A806: 媒介(企划)专员/助理
+A807: 媒介购买
+A808: 策略总监
+A809: 策略计划
+A810: 文案/策划
+A811: 创意指导/总监
+A812: 美术指导
+A813: 广告创意/设计
+
+A900: 销售/渠道/客户服务
+A901: 销售总监
+A902: 区域销售经理/销售经理/主管
+A903: 高级销售代表/客户经理/销售代表
+A904: 销售助理/销售行政助理
+A905: 商务经理/商务主管
+A906: 商务专员
+A907: 商务助理
+A908: 经销商/代理商
+A909: 业务拓展(BD)总监/经理
+A910: 电话销售
+A911: 医药代表
+A912: 保险代理/经纪
+A913: 售前支持经理/主管
+A914: 售前支持工程师
+A915: 售前培训师
+A916: 售后支持经理/主管
+A917: 售后支持工程师
+A918: 渠道/分销总监
+A919: 渠道/分销经理
+A920: 渠道/分销主管
+A921: 渠道/分销代表
+A922: 客户服务总监
+A923: 客户服务经理/主管
+A924: 客户服务专员/助理
+A925: 客户关系管理(CRM)
+A926: 客户咨询热线/呼叫中心人员
+A927: 客户投诉/协调
+A928: 客户培训
+
+B100: 人力资源/行政/后勤
+B101: 人力资源总监/经理/主管
+B102: 人力资源专员/助理
+B103: 招聘经理/主管
+B104: 招聘专员/助理
+B105: 培训总监/经理/主管
+B106: 培训专员/助理
+B107: 培训师
+B108: 薪资福利经理/主管
+B109: 薪资福利专员/助理
+B110: 绩效考核经理/主管
+B111: 绩效考核专员/助理
+B112: 员工关系/企业文化
+B113: 猎头顾问/助理
+B114: 行政总监/经理/主管
+B115: 行政专员/助理
+B116: 经理助理/秘书/文员
+B117: 前台/总机/接待
+
+B200: 美术/设计/创意/艺术/出版
+B201: 创意指导/总监
+B202: 设计管理人员
+B203: 美术编辑/美术设计
+B204: 平面设计
+B205: 多媒体/动画/3D设计
+B206: 动漫/卡通设计
+B207: 玩具设计
+B208: 服装设计/打样/制版
+B209: 工艺品/珠宝设计鉴定
+B210: 工业/产品设计
+B211: 包装设计
+B212: 家具/家居用品设计
+B213: 店面/陈列设计
+B214: 展示/装潢/展览设计
+B215: 造型设计
+B216: 总编/副总编/主编
+B217: 编辑/记者/摄影
+B218: 作家/撰稿人/专栏
+B219: 美术编辑
+B220: 文案/策划
+B221: 出版/发行
+B222: 发行总监/经理/主管
+B223: 排版设计/完稿
+B224: 校对/录入
+B225: 电分操作员
+B226: 印刷排版/制版
+B227: 数码打印/菲林输出
+B228: 印刷机械机长/打稿机操作员
+B229: 调墨技师
+B230: 晒板/拼版/装订/烫金技工
+B231: 艺术/设计总监
+B232: 影视策划/制作人员
+B233: 导演/编导/制片
+B234: 摄影/摄像/声光技术
+B235: 后期制作/音效师
+B236: 演员/模特/配音
+B237: 主持人/播音员/DJ
+B238: 化妆师/造型师/服装/道具
+B239: 演艺/体育经纪人/星探
+
+B300: 互联网/移动终端/电子商务/网游
+B301: 架构师
+B302: 产品总监/经理/主管
+B303: 产品专员
+B304: 网页设计师
+B305: UI/UX
+B306: iOS/Android/WP
+B307: 服务器运维
+B308: 前端开发工程师
+B309: 后端开发工程师
+B310: 网站策划/运营/编辑
+B311: 网站编辑
+B312: 电子商务经理/主管
+B313: 电子商务专员
+B314: 网店店长/客服
+B315: 游戏策划/运营/编辑
+B316: Flash设计/开发
+B317: 语音/视频/多媒体开发工程师
+B318: 特效/视觉/音效设计师
+B319: 推广/SEO搜索引擎优化
+
+B400: 项目管理
+B401: 项目总监/经理
+B402: 项目主管
+B403: 项目执行/协调
+B404: 项目专员
+
+B500: IT管理及支持
+B501: 技术总监/经理/主管
+B502: 信息经理/主管
+B503: 技术/信息专员
+B504: 项目总监/经理/主管
+B505: 项目执行/协调
+B506: 产品经理/主管
+B507: 品质经理
+B508: 标准化工程师
+B509: 系统管理员/网络管理员
+B510: Helpdesk技术支持
+B511: 技术支持(维护)总监/经理/主管
+B512: 技术支持(维护)工程师
+B513: 技术文员/助理
+B514: ERP/CRM实施顾问
+B515: ERP/CRM技术开发
+
+B600: 计算机硬件/网络
+B601: 系统分析师/架构师
+B602: 系统集成工程师
+B603: 系统工程师
+B604: 需求工程师
+B605: 系统测试
+B606: 仿真应用工程师
+B607: 计算机辅助设计工程师
+B608: 职能大厦综合布线
+B609: 高级硬件工程师
+B610: 硬件工程师
+B611: 硬件测试
+B612: 网络工程师
+
+B700: 计算机软件/信息安全
+B701: 系统分析师/架构师
+B702: 系统集成工程师
+B703: 系统工程师
+B704: 需求工程师
+B705: 系统测试
+B706: 语音/视频开发工程师
+B707: 多媒体/游戏开发工程师
+B708: 文档工程师
+B709: 数据开发/管理
+B710: 软件测试
+B711: 高级软件工程师
+B712: 软件工程师
+B713: UI设计师/工程师
+B714: 网络信息安全工程师
+
+B800: 通信技术
+B801: 通信技术工程师
+B802: 通信电源工程师
+B803: 无线通信工程师
+B804: 移动通信工程师
+B805: 增值产品开发工程师
+B806: 电信交换工程师
+B807: 电信网络工程师
+B808: 有线传输工程师
+B809: 数据通信工程师
+B810: 测试工程师
+B811: 项目总监
+B812: 项目经理
+B813: 项目主管
+B814: 项目执行/协调
+
+B900: 贸易/物流/仓储/采购
+B901: 外贸/贸易经理/主管
+B902: 外贸/贸易专员/助理
+B903: 国内贸易人员
+B904: 业务更单经理
+B905: 单证员/报关员
+B906: 高级业务/业务更单
+B907: 采购总监
+B908: 采购经理/主管
+B909: 采购员/助理
+B910: 买手
+B911: 物流总监
+B912: 物流经理/主管
+B913: 物流专员/助理
+B914: 供应链总监
+B915: 供应链经理/主管/专员
+B916: 运输经理/主管
+B917: 船务/空运/陆运运输
+B918: 集装箱业务
+B919: 海关事务管理
+B920: 物料经理
+B921: 物料主管/专员
+B922: 仓库经理/主管
+B923: 仓库管理员
+B924: 石油天然气仓储运输
+B925: 货运代理
+B926: 快递员
+B927: 调度员
+B928: 理货员
+
+C100: 建筑/房地产/装修/环境
+C101: 建筑工程师
+C102: 结构/土木/土建工程师
+C103: 建筑设计/制图
+C104: 建筑工程管理
+C105: 工程监理
+C106: 岩土/基础地下工程
+C107: 电气工程
+C108: 工程造价师/预结算
+C109: 建筑工程验收
+C110: 幕墙工程师
+C111: 房地产开发/策划经理
+C112: 房地产开发/策划主管(专员)
+C113: 房地产项目招标专员
+C114: 房地产评估
+C115: 房产项目配套工程师
+C116: 房地产中介/交易
+C117: 房地产销售人员
+C118: 测绘/测量
+C119: 施工员
+C120: 城市规划与设计
+C121: 公路/桥梁/港口/隧道工程师
+C122: 园艺/园林/景观设计
+C123: 设备工程师
+C124: 给排水/强弱电/制冷暖通
+C125: 室内外装潢设计
+C126: 家具制造
+C127: 高级物业顾问/物业顾问
+C128: 物业管理经理/主管
+C129: 物业管理专员/助理
+C130: 物业招商/租赁/租售
+C131: 物业设施管理人员
+C132: 物业维修/维护人员
+C133: 置业顾问
+C134: 项目总监
+C135: 项目经理
+C136: 项目主管
+C137: 项目执行/协调
+C138: 环境管理/环境保护
+C139: 环境工程技术/园林景区
+
+C200: 酒店/餐饮/旅游/娱乐/零售百货
+C201: 宾馆/酒店管理
+C202: 餐饮/娱乐管理
+C203: 大堂经理/副理/领班
+C204: 楼面经理
+C205: 前厅接待/礼仪/接线生
+C206: 厨师
+C207: 调酒师
+C208: 营养师
+C209: 茶艺师
+C210: 导游/旅游顾问
+C211: 订票/订房服务
+C212: 司机
+C213: 服务员
+C214: 迎宾/行李员
+C215: 保安
+C216: 店长/卖场经理
+C217: 副店长/助理店长
+C218: 收银员
+C219: 店员/营业员/服务员
+C220: 导购/促销员
+C221: 理货员/陈列员/统计员
+C222: 生鲜食品加工
+C223: 熟食加工
+C224: 面包糕点加工
+C225: 防损/内保
+
+C300: 医疗/护理/中医/美容/宠物
+C301: 医院管理人员
+C302: 内科/外科/专科医生医师
+C303: 牙科医生
+C304: 中医科医生
+C305: 麻醉医生
+C306: 心理医生
+C307: 药库主任/药剂师
+C308: 医药检验
+C309: 公共卫生/疾病控制
+C310: 护理主任/护士长
+C311: 护士/护理人员
+C312: 理疗/营养师
+C313: 中医/针灸/推拿/按摩
+C314: 美容/整形师
+C315: 美发师/形象设计/美甲师
+C316: 兽医/宠物医生/宠物护理
+
+C400: 教育/培训
+C401: 大学教授
+C402: 讲师/助教
+C403: 中学教师
+C404: 小学教师
+C405: 幼教
+C406: 院校教务管理人员
+C407: 家教
+C408: 教育产品开发
+C409: 健身顾问/教练
+C410: 培训师
+
+C500: 航空/铁路/邮轮
+C501: 飞机机长/副机长
+C502: 空乘人员
+C503: 飞机维修机械师
+C504: 地勤人员
+C505: 列车车长
+C506: 列车司机
+C507: 乘务员/售票员
+C508: 船长/副船长
+C509: 船员
+C510: 调度员/站务/行调员
+
+C600: 服装/纺织/皮革
+C601: 服装/纺织设计
+C602: 皮衣/裘衣设计
+C603: 手袋设计师
+C604: 面料/辅料/图案设计
+C605: 配套设计
+C606: 服装打样/制版
+C607: 质量管理/验货/质检/品控
+C608: 板房/楦头/底格出格师
+C609: 推档/放码
+C610: 纸样/车板/唛架/吓数
+C611: CAD/CAM
+C612: 面料辅料采购
+C613: 布料/裁床/包装
+C614: 陈列/展示设计师
+C615: 裁剪师/电剪
+C616: 服装/纺织/皮革跟单
+C617: 毛衣缝盘/毛衣挑撞/洗水
+C618: 机绣工/撕纸朴/压线
+C619: 大/小烫
+
+C700: 电子/电器/半导体
+C701: 电子工程师/技术员
+C702: 电子技术研发工程师
+C703: 电子/电器维修工程师/技师
+C704: 电子元器件工程师
+C705: 电子软件开发
+C706: 电路工程师/技术员(模拟/数字)
+C707: 模拟电路设计/应用工程师
+C708: 集成电路IC设计/应用工程师
+C709: 自动控制工程师/技术员
+C710: 嵌入式硬件开发(主板机)
+C711: 嵌入式系统软件开发(单片机/DLC/DSP)
+C712: 家用电器/数码产品研发
+C713: 产品工艺/制程工程师
+C714: 激光/光电子技术
+C715: 无线电工程师
+C716: 半导体工程师
+C717: FAE现场应用工程师
+C718: 版图设计工程师
+C719: 音频/视频工程师/技术员
+C720: 光源与照明工程师
+C721: 变压器与磁电工程师
+C722: 标准化工程师
+C723: 电声工程师
+C724: 技术研发经理/主管
+C725: 技术研发工程师
+C726: 产品工艺/制程工程师
+C727: 产品规划工程师
+C728: 实验室负责人/工程师
+C729: 测试工程师
+C730: 设备工程师(调试/安装/维护)
+C731: 项目经理/产品经理
+C732: 工程与项目实施
+
+C800: 机械/仪表仪器
+C801: 机械工程师
+C802: 模具工程师
+C803: 原型分析
+C804: 工程/机械绘图员
+C805: 精密机械/仪器仪表工程师/技术员
+C806: 铸造/锻造工程师/技师
+C807: 注塑工程师/技师员
+C808: CNC工程师
+C809: 冲压工程师/技师
+C810: 焊接工程师/技师
+C811: 包装/印刷
+C812: 食品机械
+C813: 纺织机械
+C814: 夹具工程师/技师
+C815: 机械维修工程师
+C816: 结构工程师
+C817: 工程/设备经理
+C818: 设备工程师(调试/安装/维护)
+C819: 技术研发经理/主管
+C820: 技术研发工程师
+C821: 产品工艺/制程工程师
+C822: 产品规划工程师
+C823: 实验室负责人/工程师
+C824: 汽车/摩托车工程师
+C825: 船舶工程师
+C826: 轨道工程师/技术员
+C827: 项目总监
+C828: 项目经理
+C829: 项目主管
+C830: 项目执行/协调
+
+C900: 能源/电气/动力
+C901: 电气工程师/技术员
+C902: 水利/水电工程师
+C903: 光源与照明工程
+C904: 机电工程师
+C905: 核力/火力工程师
+C906: 电力工程师
+C907: 城市燃气技术人员
+C908: 电池/电源开发
+C909: 电力工程师/技术
+C910: 锅炉工程师/技术员
+C911: 空调/热能工程师
+
+
+D100: 汽车/交通
+D101: 汽车机构工程师
+D102: 汽车设计工程师
+D103: 汽车电子工程师
+D104: 汽车质量管理
+D105: 汽车安全性能工程师
+D106: 汽车装配工艺工程师
+D107: 汽车修理人员
+D108: 4S店经理/维修站经理
+D109: 汽车销售/经纪人
+D110: 二手车评估师
+D111: 摩托车工程师
+D112: 人体工程
+D113: 船舶工程师
+D114: 飞机维修机械师
+D115: 飞行器设计与制造
+D116: 轨道工程师/技术员
+
+D200: 技工
+D201: 电工/钳工/钣工/钣金工
+D202: 锯床/车床/磨床/铣床/冲床/锣床
+D203: 空调工/电梯工/锅炉工
+D204: 水工/木工/油漆工
+D205: 铲车/叉车工
+D206: 切割技工
+D207: 汽车修理工/机修工
+D208: 技工/普工
+D209: 模具工程师/模具工
+D210: 产品或工艺工程师
+D211: 裁剪车缝熨烫
+D212: 电焊工/铆焊工
+D213: 铸造工/热处理
+D214: 吹塑/注塑工
+D215: 电镀工
+
+D300: 工厂/科研/生产/制造
+D301: 工厂厂长/副厂长
+D302: 总工程师/副总工程师
+D303: 科研管理人员
+D304: 科研人员
+D305: 实验室管理人员
+D306: 实验室研究人员
+D307: 技术工程师
+D308: 工程项目经理/主管
+D309: 项目工程师
+D310: 采购管理
+D311: 生产计划/仓库/物料管理
+D312: 工程/设备管理
+D313: 生产经理/车间主任
+D314: 生产主管/督导/组长/领班
+D315: 制造工程师
+D316: 工业(IE)工程师
+D317: 产品开发或技术/工艺设计经理
+D318: 产品/生产工艺(PE)工程师
+D319: 维修工程师
+D320: 质量管理(QA)/质量控制(QC)
+D321: 化验/检验
+D322: 物控经理/主管
+D323: 安全/健康/环境管理
+D324: PMC/SMT技术员
+D325: 故障分析工程师
+D326: 认证工程师/审核员
+D327: 可靠度工程师
+D328: 体系工程师/审核员
+D329: 基建工程师
+D330: 质量检验员/测试员
+D331: 营运经理
+D332: 营运主管
+D333: 统计/计划/调度
+D334: 生产文员
+
+D400: 化工/生物/制药/医疗器械
+D401: 生物工程/生物制药
+D402: 临床试验/药品注册
+D403: 化学分析测试员
+D404: 医药技术研发管理人员
+D405: 医药研发/化学制剂研发
+D406: 临床研究/协调
+D407: 药品注册
+D408: 药品生产/质量管理
+D409: 医疗设备注册
+D410: 医疗设备生产/质量管理
+D411: 药品市场推广经理
+D412: 药品市场推广主管/专员
+D413: 医药招商
+D414: 医药销售经理/主管
+D415: 医药代表
+D416: 医疗器械销售/市场推广
+D417: 医疗器械维修人员
+D418: 化工技术应用
+D419: 化工实验室研究员/技术员
+D420: 食品/饮料研发
+D421: 化妆品研发
+D422: 塑料工程师
+D423: 涂料研发工程师
+D424: 配色技术员
+
+
+
+
+# CN {
+CN110000: 北京市
+CN110101: 东城区
+CN110102: 西城区
+CN110105: 朝阳区
+CN110106: 丰台区
+CN110107: 石景山区
+CN110108: 海淀区
+CN110109: 门头沟区
+CN110111: 房山区
+CN110112: 通州区
+CN110113: 顺义区
+CN110114: 昌平区
+CN110115: 大兴区
+
+CN120000: 天津市
+CN120101: 和平区
+CN120102: 河东区
+CN120103: 河西区
+CN120104: 南开区
+CN120105: 河北区
+CN120106: 红桥区
+CN120110: 东丽区
+CN120113: 北辰区
+
+CN370200: 青岛市
+CN370202: 市南区
+CN370203: 市北区
+CN370211: 黄岛区
+CN370212: 崂山区
+CN370213: 李沧区
+CN370214: 城阳区
+CN370281: 胶州市
+CN370282: 即墨市
+CN370283: 平度市
+CN370285: 莱西市
+
+CN370100: 济南市
+CN370102: 历下区
+CN370103: 市中区
+CN370104: 槐荫区
+CN370105: 天桥区
+CN370112: 历城区
+CN370113: 长清区
+
+CN610100: 西安市
+CN610102: 新城区
+CN610103: 碑林区
+CN610104: 莲湖区
+CN610111: 灞桥区
+CN610112: 未央区
+CN610113: 雁塔区
+CN610115: 临潼区
+CN610116: 长安区
+
+CN510100: 成都市
+CN510104: 锦江区
+CN510105: 青羊区
+CN510106: 金牛区
+CN510107: 武侯区
+CN510108: 成华区
+CN510112: 龙泉驿区
+CN510113: 青白江区
+CN510114: 新都区
+CN510115: 温江区
+CN510122: 双流县
+CN510124: 郫县
+
+CN500000: 重庆市
+CN500104: 大渡口区
+CN500106: 沙坪坝区
+CN500107: 九龙坡区
+CN500108: 南岸区
+CN500111: 大足区
+CN500112: 渝北区
+CN500113: 巴南区
+
+CN420100: 武汉市
+CN420102: 江岸区
+CN420103: 江汉区
+CN420104: 硚口区
+CN420105: 汉阳区
+CN420106: 武昌区
+CN420107: 青山区
+CN420111: 洪山区
+CN420112: 东西湖区
+CN420113: 汉南区
+CN420114: 蔡甸区
+CN420115: 江夏区
+CN420116: 黄陂区
+CN420117: 新洲区
+
+CN340100: 合肥市
+CN340102: 瑶海区
+CN340103: 庐阳区
+CN340104: 蜀山区
+CN340111: 包河区
+CN340122: 肥东县
+CN340123: 肥西县
+
+CN320100: 南京市
+CN320102: 玄武区
+CN320104: 秦淮区
+CN320105: 建邺区
+CN320106: 鼓楼区
+CN320111: 浦口区
+CN320113: 栖霞区
+CN320114: 雨花台区
+CN320115: 江宁区
+CN320116: 六合区
+CN320117: 溧水区
+CN320118: 高淳区
+
+CN320200: 无锡市
+CN320202: 崇安区
+CN320203: 南长区
+CN320204: 北塘区
+CN320205: 锡山区
+CN320206: 惠山区
+CN320211: 滨湖区
+CN320281: 江阴市
+CN320282: 宜兴市
+
+CN320500: 苏州市
+CN320505: 虎丘区
+CN320506: 吴中区
+CN320507: 相城区
+CN320508: 姑苏区
+CN320509: 吴江区
+CN320510: 高新区
+CN320511: 工业园区
+CN320581: 常熟市
+CN320582: 张家港市
+CN320583: 昆山市
+CN320585: 太仓市
+
+CN310000: 上海市
+CN310101: 黄浦区
+CN310104: 徐汇区
+CN310105: 长宁区
+CN310106: 静安区
+CN310107: 普陀区
+CN310108: 闸北区
+CN310109: 虹口区
+CN310110: 杨浦区
+CN310112: 闵行区
+CN310113: 宝山区
+CN310114: 嘉定区
+CN310115: 浦东新区
+CN310116: 金山区
+CN310117: 松江区
+CN310118: 青浦区
+CN310120: 奉贤区
+
+CN330100: 杭州市
+CN330102: 上城区
+CN330103: 下城区
+CN330104: 江干区
+CN330105: 拱墅区
+CN330106: 西湖区
+CN330108: 滨江区
+CN330109: 萧山区
+CN330110: 余杭区
+
+CN360100: 南昌市
+CN360102: 东湖区
+CN360103: 西湖区
+CN360104: 青云谱区
+CN360105: 湾里区
+CN360111: 青山湖区
+CN360121: 南昌县
+CN360122: 新建县
+
+CN430100: 长沙市
+CN430102: 芙蓉区
+CN430103: 天心区
+CN430104: 岳麓区
+CN430105: 开福区
+CN430111: 雨花区
+CN430112: 望城区
+CN430121: 长沙县
+
+CN530100: 昆明市
+CN530102: 五华区
+CN530103: 盘龙区
+CN530111: 官渡区
+CN530112: 西山区
+CN530114: 呈贡区
+
+CN350200: 厦门市
+CN350203: 思明区
+CN350205: 海沧区
+CN350206: 湖里区
+CN350211: 集美区
+CN350212: 同安区
+CN350213: 翔安区
+
+CN440100: 广州市
+CN440103: 荔湾区
+CN440104: 越秀区
+CN440105: 海珠区
+CN440106: 天河区
+CN440111: 白云区
+CN440112: 黄埔区
+CN440113: 番禺区
+CN440114: 花都区
+
+CN440300: 深圳市
+CN440303: 罗湖区
+CN440304: 福田区
+CN440305: 南山区
+CN440306: 宝安区
+CN440307: 龙岗区
+CN440308: 盐田区
+# CN }
+
+# HK {
+HK0100: 新界
+HK0101: 离岛区
+HK0102: 葵青区
+HK0103: 北区
+HK0104: 西贡区
+HK0105: 沙田区
+HK0106: 大埔区
+HK0107: 荃湾区
+HK0108: 屯门区
+HK0109: 元朗区
+
+HK0200: 九龙
+HK0210: 九龙城区
+HK0211: 观塘区
+HK0212: 深水埗区
+HK0213: 黄大仙区
+HK0214: 油尖旺区
+
+HK0300: 香港岛
+HK0315: 中西区
+HK0316: 东区
+HK0317: 南区
+HK0318: 湾仔区
+# HK }
+
+# MO {
+MO0100: 澳门半岛
+MO0101: 花地玛堂区
+MO0102: 圣安多尼堂区(花王堂区)
+MO0103: 大堂区(主教座堂堂区)
+MO0104: 望德堂区
+MO0105: 风顺堂区(圣老楞佐堂区)
+
+MO0200: 氹仔
+MO0201: 嘉模堂区
+MO0202: 澳门大学新校区(横琴岛)
+
+MO0300: 路环
+MO0301: 圣方济各堂区
+# MO }
+
+# TW {
+TW0100: 台北市
+TW0101: 中正区
+TW0102: 大同区
+TW0103: 中山区
+TW0104: 万华区
+TW0105: 信义区
+TW0106: 松山区
+TW0107: 大安区
+TW0108: 南港区
+TW0109: 北投区
+TW0110: 内湖区
+TW0111: 士林区
+TW0112: 文山区
+
+TW0200: 新北市
+TW0201: 板桥区
+TW0202: 新庄区
+TW0203: 中和区
+TW0204: 永和区
+TW0205: 土城区
+TW0206: 树林区
+TW0207: 三峡区
+TW0208: 莺歌区
+TW0209: 三重区
+TW0210: 芦洲区
+TW0211: 五股区
+TW0212: 泰山区
+TW0213: 林口区
+TW0214: 淡水区
+TW0215: 金山区
+TW0216: 八里区
+TW0217: 万里区
+TW0218: 石门区
+TW0219: 三芝区
+TW0220: 瑞芳区
+TW0221: 汐止区
+TW0222: 平溪区
+TW0223: 贡寮区
+TW0224: 双溪区
+TW0225: 深坑区
+TW0226: 石碇区
+TW0227: 新店区
+TW0228: 坪林区
+TW0229: 乌来区
+
+TW0300: 台中市
+TW0301: 中区
+TW0302: 东区
+TW0303: 南区
+TW0304: 西区
+TW0305: 北区
+TW0306: 北屯区
+TW0307: 西屯区
+TW0308: 南屯区
+TW0309: 太平区
+TW0310: 大里区
+TW0311: 雾峰区
+TW0312: 乌日区
+TW0313: 丰原区
+TW0314: 后里区
+TW0315: 石冈区
+TW0316: 东势区
+TW0317: 和平区
+TW0318: 新社区
+TW0319: 潭子区
+TW0320: 大雅区
+TW0321: 神冈区
+TW0322: 大肚区
+TW0323: 沙鹿区
+TW0324: 龙井区
+TW0325: 梧栖区
+TW0326: 清水区
+TW0327: 大甲区
+TW0328: 外埔区
+TW0329: 大安区
+
+TW0400: 台南市
+TW0401: 中西区
+TW0402: 东区
+TW0403: 南区
+TW0404: 北区
+TW0405: 安平区
+TW0406: 安南区
+TW0407: 永康区
+TW0408: 归仁区
+TW0409: 新化区
+TW0410: 左镇区
+TW0411: 玉井区
+TW0412: 楠西区
+TW0413: 南化区
+TW0414: 仁德区
+TW0415: 关庙区
+TW0416: 龙崎区
+TW0417: 官田区
+TW0418: 麻豆区
+TW0419: 佳里区
+TW0420: 西港区
+TW0421: 七股区
+TW0422: 将军区
+TW0423: 学甲区
+TW0424: 北门区
+TW0425: 新营区
+TW0426: 后壁区
+TW0427: 白河区
+TW0428: 东山区
+TW0429: 六甲区
+TW0430: 下营区
+TW0431: 柳营区
+TW0432: 盐水区
+TW0433: 善化区
+TW0434: 大内区
+TW0435: 山上区
+TW0436: 新市区
+TW0437: 安定区
+
+TW0500: 高雄市
+TW0501: 楠梓区
+TW0502: 左营区
+TW0503: 鼓山区
+TW0504: 三民区
+TW0505: 盐埕区
+TW0506: 前金区
+TW0507: 新兴区
+TW0508: 苓雅区
+TW0509: 前镇区
+TW0510: 旗津区
+TW0511: 小港区
+TW0512: 凤山区
+TW0513: 大寮区
+TW0514: 鸟松区
+TW0515: 林园区
+TW0516: 仁武区
+TW0517: 大树区
+TW0518: 大社区
+TW0519: 冈山区
+TW0520: 路竹区
+TW0521: 桥头区
+TW0522: 梓官区
+TW0523: 弥陀区
+TW0524: 永安区
+TW0525: 燕巢区
+TW0526: 田寮区
+TW0527: 阿莲区
+TW0528: 茄萣区
+TW0529: 湖内区
+TW0530: 旗山区
+TW0531: 美浓区
+TW0532: 内门区
+TW0533: 杉林区
+TW0534: 甲仙区
+TW0535: 六龟区
+TW0536: 茂林区
+TW0537: 桃源区
+TW0538: 那玛夏区
+
+TW0600: 桃园县
+TW0601: 桃园市
+TW0602: 中坜市
+TW0603: 八德市
+TW0604: 平镇市
+TW0605: 杨梅市
+TW0606: 芦竹市
+
+TW0700: 基隆市
+TW0701: 仁爱区
+TW0702: 中正区
+TW0703: 信义区
+TW0704: 中山区
+TW0705: 安乐区
+TW0706: 七堵区
+TW0707: 暖暖区
+
+TW0800: 新竹市
+TW0801: 东区
+TW0802: 北区
+TW0803: 香山区
+
+TW0900: 嘉义市
+TW0901: 东区
+TW0902: 西区
+# TW }
+
+# JP {
+JP13100-8: 东京
+JP13101-6: 千代田区
+JP13102-4: 中央区
+JP13103-2: 港区
+JP13104-1: 新宿区
+JP13105-9: 文京区
+JP13106-7: 台东区
+JP13107-5: 墨田区
+JP13108-3: 江东区
+JP13109-1: 品川区
+JP13110-5: 目黑区
+JP13111-3: 大田区
+JP13112-1: 世田谷区
+JP13113-0: 涩谷区
+JP13114-8: 中野区
+JP13115-6: 杉并区
+JP13116-4: 丰岛区
+JP13117-2: 北区
+JP13118-1: 荒川区
+JP13119-9: 板桥区
+JP13120-2: 练马区
+JP13121-1: 足立区
+JP13122-9: 葛饰区
+JP13123-7: 江户川区
+
+JP14100-3: 横滨市
+JP14101-1: 鹤见区
+JP14102-0: 神奈川区
+JP14103-8: 西区
+JP14104-6: 中区
+JP14105-4: 南区
+JP14106-2: 保土谷区
+JP14107-1: 矶子区
+JP14108-9: 金泽区
+JP14109-7: 港北区
+JP14110-1: 户冢区
+JP14111-9: 港南区
+JP14112-7: 旭区
+JP14113-5: 绿区
+JP14114-3: 濑谷区
+JP14115-1: 荣区
+JP14116-0: 泉区
+JP14117-8: 青叶区
+JP14118-6: 都筑区
+
+JP27100-4: 大阪市
+JP27102-1: 都岛区
+JP27103-9: 福岛区
+JP27104-7: 此花区
+JP27106-3: 西区
+JP27107-1: 港区
+JP27108-0: 大正区
+JP27109-8: 天王寺区
+JP27111-0: 浪速区
+JP27113-6: 西淀川区
+JP27114-4: 东淀川区
+JP27115-2: 东成区
+JP27116-1: 生野区
+JP27117-9: 旭区
+JP27118-7: 城东区
+JP27119-5: 阿倍野区
+JP27120-9: 住吉区
+JP27121-7: 东住吉区
+JP27122-5: 西成区
+JP27123-3: 淀川区
+JP27124-1: 鹤见区
+JP27125-0: 住之江区
+JP27126-8: 平野区
+JP27127-6: 北区
+JP27128-4: 中央区
+
+JP23100-2: 名古屋市
+JP23109-6: 热田区
+JP23103-7: 北区
+JP23107-0: 昭和区
+JP23101-1: 千种区
+JP23116-9: 天白区
+JP23110-0: 中川区
+JP23106-1: 中区
+JP23105-3: 中村区
+JP23104-5: 西区
+JP23102-9: 东区
+JP23108-8: 瑞穗区
+JP23114-2: 绿区
+JP23111-8: 港区
+JP23112-6: 南区
+JP23115-1: 名东区
+JP23113-4: 守山区
+
+JP01100-2: 札幌市
+JP01101-1: 中央区
+JP01102-9: 北区
+JP01103-7: 东区
+JP01104-5: 白石区
+JP01108-8: 厚别区
+JP01105-3: 丰平区
+JP01110-0: 清田区
+JP01106-1: 南区
+JP01107-0: 西区
+JP01109-6: 手稻区
+
+JP28100-0: 神戸市
+JP28101-8: 东滩区
+JP28102-6: 滩区
+JP28110-7: 中央区
+JP28105-1: 兵库区
+JP28106-9: 长田区
+JP28107-7: 须磨区
+JP28108-5: 垂水区
+JP28109-3: 北区
+JP28111-5: 西区
+
+JP26100-9: 京都市
+JP26108-4: 右京区
+JP26103-3: 左京区
+JP26101-7: 北区
+JP26102-5: 上京区
+JP26104-1: 中京区
+JP26106-8: 下京区
+JP26105-0: 东山区
+JP26110-6: 山科区
+JP26109-2: 伏见区
+JP26107-6: 南区
+JP26111-4: 西京区
+
+JP40130-7: 福冈市
+JP40133-1: 中央区
+JP40132-3: 博多区
+JP40137-4: 早良区
+JP40131-5: 东区
+JP40135-8: 西区
+JP40134-0: 南区
+JP40136-6: 城南区
+
+JP14130-5: 川崎市
+JP14131-3: 川崎区
+JP14132-1: 幸区
+JP14133-0: 中原区
+JP14134-8: 高津区
+JP14135-6: 多摩区
+JP14136-4: 宫前区
+JP14137-2: 麻生区
+
+JP11100-7: 埼玉市
+JP11101-5: 西区
+JP11102-3: 北区
+JP11103-1: 大宫区
+JP11104-0: 见沼区
+JP11105-8: 中央区
+JP11106-6: 樱区
+JP11107-4: 浦和区
+JP11108-2: 南区
+JP11109-1: 绿区
+JP11110-4: 岩槻区
+
+JP34100-2: 广岛市
+JP34101-1: 中区
+JP34102-9: 东区
+JP34103-7: 南区
+JP34104-5: 西区
+JP34105-3: 安佐南区
+JP34106-1: 安佐北区
+JP34107-0: 安艺区
+JP34108-8: 佐伯区
+
+JP04100-9: 仙台市
+JP04101-7: 青叶区
+JP04102-5: 宫成野区
+JP04103-3: 若林区
+JP04104-1: 太白区
+JP04105-0: 泉区
+
+JP40100-5: 北九州市
+JP40103-0: 若松区
+JP40105-6: 户畑区
+JP40106-4: 小仓北区
+JP40101-3: 门司区
+JP40109-9: 八幡西区
+JP40108-1: 八幡东区
+JP40107-2: 小仓南区
+
+JP12100-2: 千叶市
+JP12101-1: 中央区
+JP12102-9: 花见川区
+JP12103-7: 稻毛区
+JP12104-5: 若叶区
+JP12105-3: 绿区
+JP12106-1: 美滨区
+
+JP27140-3: 堺市
+JP27141-1: 堺区
+JP27143-8: 东区
+JP27144-6: 西区
+JP27145-4: 南区
+JP27146-2: 北区
+JP27142-0: 中区
+JP27147-1: 美原区
+
+JP15100-9: 新潟市
+JP15101-7: 北区
+JP15102-5: 东区
+JP15103-3: 中央区
+JP15104-1: 江南区
+JP15105-0: 秋叶区
+JP15106-8: 南区
+JP15107-6: 西区
+JP15108-4: 西蒲区
+
+JP22130-9: 滨松市
+JP22131-7: 中区
+JP22132-5: 东区
+JP22133-3: 西区
+JP22134-1: 南区
+JP22135-0: 北区
+JP22136-8: 滨北区
+JP22137-6: 天龙区
+
+JP43100-1: 熊本市
+JP43101-0: 中央区
+JP43102-8: 东区
+JP43103-6: 西区
+JP43104-4: 南区
+JP43105-2: 北区
+
+JP14150-0: 相模原市
+JP14151-8: 绿区
+JP14152-6: 中央区
+JP14153-4: 南区
+
+JP22100-7: 静冈市
+JP22101-5: 葵区
+JP22102-3: 骏河区
+JP22103-1: 清水区
+
+JP33100-7: 冈山市
+JP33101-5: 北区
+JP33102-3: 中区
+JP33103-1: 东区
+JP33104-0: 南区
+# JP }
+
+# KR {
+KR0100: 首尔
+KR0101: 江南区
+KR0102: 江东区
+KR0103: 江北区
+KR0104: 江西区
+KR0105: 冠岳区
+KR0106: 广津区
+KR0107: 九老区
+KR0108: 衿川区
+KR0109: 芦原区
+KR0110: 道峰区
+KR0111: 东大门区
+KR0112: 铜雀区
+KR0113: 麻浦区
+KR0114: 西大门区
+KR0115: 瑞草区
+KR0116: 城东区
+KR0117: 城北区
+KR0118: 阳川区
+KR0119: 永登浦区
+KR0120: 龙山区
+KR0121: 恩平区
+KR0122: 钟路区
+KR0123: 中区
+KR0124: 中浪区
+KR0125: 松坡区
+
+
+KR0200: 釜山
+KR0201: 机张郡
+KR0202: 北区
+KR0203: 釜山镇区
+KR0204: 东区
+KR0205: 东莱区
+KR0206: 江西区
+KR0207: 金井区
+KR0208: 海云台区
+KR0209: 中区
+KR0210: 南区
+KR0211: 沙下区
+KR0212: 沙上区
+KR0213: 西区
+KR0214: 水营区
+KR0215: 影岛区
+KR0216: 莲堤区
+
+KR0300: 仁川
+KR0301: 桂阳区
+KR0302: 南区
+KR0303: 南洞区
+KR0304: 东区
+KR0305: 富平区
+KR0306: 西区
+KR0307: 延寿区
+KR0308: 中区
+KR0309: 江华郡
+
+KR0400: 大邱
+KR0401: 北区
+KR0402: 达西区
+KR0403: 东区
+KR0404: 中区
+KR0405: 南区
+KR0406: 西区
+KR0407: 寿城区
+KR0408: 达城郡
+
+KR0500: 大田
+KR0501: 中区
+KR0502: 东区
+KR0503: 西区
+KR0504: 大德区
+KR0505: 儒城区
+
+KR0600: 光州
+KR0601: 北区
+KR0602: 东区
+KR0603: 光山区
+KR0604: 南区
+KR0605: 西区
+
+KR0700: 蔚山
+KR0701: 北区
+KR0702: 东区
+KR0703: 中区
+KR0704: 南区
+
+KR0800: 水原
+KR0801: 劝善区
+KR0802: 灵通区
+KR0803: 长安区
+KR0804: 八达区
+
+KR0900: 昌原
+KR0901: 义昌区
+KR0902: 城山区
+KR0903: 马山合浦区
+KR0904: 马山会原区
+KR0905: 镇海区
+
+KR1000: 城南
+KR1001: 寿井区
+KR1002: 中院区
+KR1003: 盆唐区
+
+KR1100: 高阳
+KR1101: 德阳区
+KR1102: 一山东区
+KR1103: 一山西区
+
+KR1200: 龙仁
+KR1201: 器兴区
+KR1202: 水枝区
+KR1203: 处仁区
+
+KR1300: 富川
+KR1301: 梧亭区
+KR1302: 远美区
+KR1303: 素砂区
+
+KR1400: 安山
+KR1401: 檀园区
+KR1402: 常绿区
+
+KR1500: 清州
+KR1501: 上党区
+KR1502: 西原区
+KR1503: 兴德区
+KR1504: 清原区
+
+KR1600: 全州
+KR1601: 完山区
+KR1602: 德津区
+
+KR1700: 安养
+KR1701: 万安区
+KR1702: 东安区
+
+KR1800: 天安
+KR1801: 东南区
+KR1802: 西北区
+
+KR1900: 南杨州
+KR1901: 好坪洞
+KR1902: 坪内洞
+KR1903: 金谷洞
+KR1904: 养正洞
+KR1905: 芝锦洞
+KR1906: 陶农洞
+KR1907: 瓦阜邑
+KR1908: 榛接邑
+KR1909: 和道邑
+KR1910: 真干邑
+KR1911: 梧南邑
+KR1912: 别内面
+KR1913: 退溪院面
+KR1914: 水洞面
+KR1915: 鸟安面
+
+KR2000: 浦项
+KR2001: 南区
+KR2002: 北区
+# KR }
+
+# SG {
+SG0100: CDC Districts
+SG0101: Central Singapore
+SG0102: North West
+SG0103: South West
+SG0104: North East
+SG0105: South East
+# SG }
+
+# GB {
+GB0100: 伦敦
+GB0101: 伦敦城
+GB0102: 威斯敏斯特
+GB0103: 肯辛顿-切尔西
+GB0104: 汉默史密斯-富勒姆
+GB0105: 旺兹沃思
+GB0106: 兰贝斯
+GB0107: 南华克
+GB0108: 哈姆雷特塔
+GB0109: 哈克尼
+GB0110: 伊斯林顿
+GB0111: 康登
+GB0112: 布伦特
+GB0113: 伊令
+GB0114: 豪恩斯洛
+GB0115: 里奇蒙
+GB0116: 京斯顿
+GB0117: 默顿
+GB0118: 索顿
+GB0119: 克罗伊登
+GB0120: 布伦来
+GB0121: 路厄斯罕
+GB0122: 格林威治
+GB0123: 贝克斯利
+GB0124: 黑弗灵
+GB0125: 巴金-达根罕
+GB0126: 红桥
+GB0127: 纽汉
+GB0128: 瓦尔珊森林
+GB0129: 哈林盖
+GB0130: 恩菲尔德
+GB0131: 巴内特
+GB0132: 哈洛
+GB0133: 希灵登
+
+GB0200: 英格兰
+GB0201: 伯明翰
+GB0202: 布拉德福德
+GB0203: 布里斯托尔
+GB0204: 谢菲尔德
+GB0205: 考文垂
+GB0206: 德比郡
+GB0207: 赫尔河畔金斯顿
+GB0208: 利兹
+GB0209: 莱斯特
+GB0210: 利物浦
+GB0211: 伦敦
+GB0212: 曼彻斯特
+GB0213: 泰恩河畔纽卡斯尔
+GB0214: 诺丁汉
+GB0215: 普利茅斯
+GB0216: 谢菲尔德
+GB0217: 桑德兰
+GB0218: 伍尔弗汉普顿
+GB0219: 剑桥
+GB0220: 约克
+GB0221: 牛津
+
+GB0300: 苏格兰
+GB0301: 格拉斯哥
+GB0302: 爱丁堡
+GB0303: 阿伯丁
+GB0304: 邓迪
+GB0305: 因弗內斯
+GB0306: 斯特灵
+
+GB0400: 威尔士
+GB0401: 加的夫
+GB0402: 斯旺西
+GB0403: 纽波特
+
+GB0500: 北爱尔兰
+GB0501: 贝尔法斯特
+GB0502: 伦敦德里
+GB0503: 纽里
+GB0504: 阿马
+GB0505: 利斯本
+# GB }
+
+# FR {
+FR127500: Paris
+FR127501: Louvre
+FR127502: Bourse
+FR127503: Temple
+FR127504: Hôtel-de-Ville
+FR127505: Panthéon
+FR127506: Luxembourg
+FR127507: Palais-Bourbon
+FR127508: Élysée
+FR127509: Opéra
+FR127510: Entrepôt
+FR127511: Popincourt
+FR127512: Reuilly
+FR127513: Gobelins
+FR127514: Observatoire
+FR127515: Vaugirard
+FR127516: Passy
+FR127517: Batignolles-Monceau
+FR127518: Buttes-Montmartre
+FR127519: Buttes-Chaumont
+FR127520: Ménilmontant
+
+FR010000: Alsace
+FR016701: Strasbourg
+FR016801: Colmar
+
+FR020000: Aquitaine
+FR022401: Périgueux
+FR023301: Bordeaux
+FR024001: Mont-de-Marsan
+FR024701: Agen
+FR026401: Pau
+
+FR030000: Auvergne
+FR030301: Moulins
+FR031501: Aurillac
+FR034301: Le Puy-en-Velay
+FR036301: Clermont-Ferrand
+
+FR040000: Basse-Normandie
+FR041401: Caen
+FR045001: Saint-Lô
+FR046101: Alençon
+
+FR050000: Bourgogne
+FR052101: Dijon
+FR055801: Nevers
+FR057101: Mâcon
+FR058901: Auxerre
+
+FR060000: Bretagne
+FR062201: Saint-Brieuc
+FR062901: Quimper
+FR062902: Brest
+FR063501: Rennes
+FR065601: Vannes
+FR065602: Lorient
+
+FR070000: Centre
+FR071801: Bourges
+FR072801: Chartres
+FR073601: Châteauroux
+FR073701: Tours
+FR074101: Blois
+FR074501: Orléans
+
+FR080000: Champagne-Ardenne
+FR080801: Charleville-Mézières
+FR081001: Troyes
+FR085101: Châlons-en-Champagne
+FR085201: Chaumont
+
+FR090000: Corse
+FR092A01: Ajaccio
+FR092A02: Bonifacio
+FR092B01: Bastia
+FR092B02: Corte
+
+FR100000: Franche-Comté
+FR102501: Besançon
+FR103901: Lons-le-Saunier
+FR107001: Vesoul
+FR109001: Belfort
+
+FR110000: Haute-Normandie
+FR112701: Évreux
+FR117601: Rouen
+
+FR120000: Ile-de-France
+FR127701: Melun
+FR127801: Versailles
+FR129101: Effry
+FR129201: Nanterre
+FR129301: Bobigny
+FR129401: Créteil
+FR129501: Pontoise
+
+FR130000: Languedoc-Roussillon
+FR131101: Carcassonne
+FR131102: Narbonne
+FR133001: Nîmes
+FR133401: Montpellier
+FR133402: Béziers
+FR134801: Mende
+FR136601: Perpignan
+
+FR140000: Limousin
+FR141901: Tulle
+FR142301: Guéret
+FR148701: Limoges
+
+FR150000: Lorraine
+FR155401: Nancy
+FR155501: Bar-le-Duc
+FR155701: Metz
+FR158800: Épinal
+
+FR160000: Midi-Pyrénées
+FR160901: Foix
+FR161201: Rodez
+FR163101: Toulouse
+FR163200: Auch
+FR164600: Cahors
+FR166501: Tarbes
+FR168101: Albi
+FR168201: Montauban
+
+FR170000: Nord-Pas-de-Calais
+FR175901: Lille
+FR175902: Dunkerque
+FR176201: Arras
+FR176202: Calais
+
+FR180000: Pays-de-la-Loire
+FR184401: Nantes
+FR184901: Angers
+FR185301: Lavel
+FR187201: Le Mans
+FR188501: La Roche-sur-Yon
+
+FR190000: Picardie
+FR190201: Laon
+FR196001: Beauvais
+FR198001: Amiens
+
+FR200000: Poitou-Charentes
+FR201601: Angoulême
+FR201701: La Rochelle
+FR207901: Niort
+FR208601: Poitiers
+
+FR210000: Provence-Alpes-Côte d'Azur
+FR210401: Digne-les-Bains
+FR210501: Gap
+FR210601: Nice
+FR210602: Cannes
+FR210603: Grasse
+FR210604: Menton
+FR211301: Marseille
+FR218301: Toulon
+FR218401: Avignon
+
+FR220000: Rhône-Alpes
+FR220101: Bourg-en-Bresse
+FR220701: Privas
+FR222601: Valence
+FR223801: Grenoble
+FR224201: Saint-Étienne
+FR226901: Lyon
+FR227301: Chambéry
+FR227401: Annecy
+# FR }
+
+# DE {
+DE0100: Berlin
+DE0101: Mitte
+DE0102: Friedrichshain-Kreuzberg
+DE0103: Pankow
+DE0104: Charlottenburg-Wilmersdorf
+DE0105: Spandau
+DE0106: Steglitz-Zehlendorf
+DE0107: Tempelhof-Schöneberg
+DE0108: Neukölln
+DE0109: Treptow-Köpenick
+DE0110: Marzahn-Hellersdorf
+DE0111: Lichtenberg
+DE0112: Reinickendorf
+
+DE0200: Hamburg
+DE0201: Hamburg-Mitte
+DE0202: Altona
+DE0203: Eimsbüttel
+DE0204: Hamburg-Nord
+DE0205: Wandsbek
+DE0206: Bergedorf
+DE0207: Harburg
+
+DE0300: München
+DE0301: Altstadt-Lehel
+DE0302: Ludwigsvorstadt-Isarvorstadt
+DE0303: Maxvorstadt
+DE0304: Schwabing|Schwabing-West
+DE0305: Au-Haidhausen
+DE0306: Sendling
+DE0307: Sendling-Westpark
+DE0308: Schwanthalerhöhe
+DE0309: Neuhausen-Nymphenburg
+DE0310: München-Moosach
+DE0311: Milbertshofen-Am Hart
+DE0312: Schwabing
+DE0313: Bogenhausen
+DE0314: Berg am Laim
+DE0315: Trudering-Riem
+DE0316: Ramersdorf-Perlach
+DE0317: Obergiesing
+DE0318: Untergiesing-Harlaching
+DE0319: Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln
+DE0320: Hadern
+DE0321: Pasing-Obermenzing
+DE0322: Aubing-Lochhausen-Langwied
+DE0323: Allach-Untermenzing
+DE0324: Feldmoching-Hasenbergl
+DE0325: Laim
+
+DE0400: Köln
+DE0401: Innenstadt
+DE0402: Rodenkirchen
+DE0403: Lindenthal
+DE0404: Ehrenfeld
+DE0405: Nippes
+DE0406: Chorweiler
+DE0407: Porz
+DE0408: Kalk
+DE0409: Mülheim
+
+DE0500: Frankfurt am Main
+DE0501: Innenstadt I
+DE0502: Innenstadt II
+DE0503: Innenstadt III
+DE0504: Innenstadt IV
+DE0505: Süd
+DE0506: West
+DE0507: Mitte-West
+DE0508: Nord-West
+DE0509: Mitte-Nord
+DE0510: Nord-Ost
+DE0511: Ost
+DE0512: Kalbach
+DE0513: Nieder-Erlenbach
+DE0514: Harheim
+DE0515: Nieder-Eschbach
+DE0516: Bergen-Enkheim
+
+DE0600: Stuttgart
+DE0601: Stuttgart-Mitte
+DE0602: Stuttgart-Nord
+DE0603: Stuttgart-Ost
+DE0604: Stuttgart-Süd
+DE0605: Stuttgart-West
+
+DE0700: Düsseldorf
+DE0701: Stadtbezirk 1
+DE0702: Stadtbezirk 2
+DE0703: Stadtbezirk 3
+DE0704: Stadtbezirk 4
+DE0705: Stadtbezirk 5
+DE0706: Stadtbezirk 6
+DE0707: Stadtbezirk 7
+DE0708: Stadtbezirk 8
+DE0709: Stadtbezirk 9
+DE0710: Stadtbezirk 10
+
+DE0800: Dortmund
+DE0801: Innenstadt-West
+DE0802: Innenstadt-Nord
+DE0803: Innenstadt-Ost
+DE0804: Eving
+DE0805: Scharnhorst
+DE0806: Brackel
+DE0807: Aplerbeck
+DE0808: Hörde
+DE0809: Hombruch
+DE0810: Lütgendortmund
+DE0811: Huckarde
+DE0812: Mengede
+
+DE0900: Essen
+DE0901: Stadtbezirke I
+DE0902: Stadtbezirke II
+DE0903: Stadtbezirke III
+DE0904: Stadtbezirke IV
+DE0905: Stadtbezirke V
+DE0906: Stadtbezirke VI
+DE0907: Stadtbezirke VII
+DE0908: Stadtbezirke VIII
+DE0909: Stadtbezirke IX
+
+DE1000: Bremen
+DE1001: Mitte
+DE1002: Häfen
+DE1003: Neustadt
+DE1004: Obervieland
+DE1005: Huchting
+DE1006: Woltmershausen
+DE1007: Seehausen
+DE1008: Strom
+DE1009: Östliche Vorstadt
+DE1010: Schwachhausen
+DE1011: Vahr
+DE1012: Horn-Lehe
+DE1013: Borgfeld
+DE1014: Oberneuland
+DE1015: Osterholz
+DE1016: Hemelingen
+DE1017: Blockland
+DE1018: Findorff
+DE1019: Walle
+DE1020: Gröpelingen
+DE1021: Burglesum
+DE1022: Vegesack
+DE1023: Blumenthal
+
+DE1100: Dresden
+DE1101: Altstadt
+DE1102: Neustadt
+DE1103: Pieschen
+DE1104: Klotzsche
+DE1105: Loschwitz
+DE1106: Blasewitz
+DE1107: Leuben
+DE1108: Prohlis
+DE1109: Plauen
+DE1110: Cotta
+
+DE1200: Leipzig
+DE1201: Nordwest
+DE1202: Nord
+DE1203: Nordost
+DE1204: Altwest
+DE1205: Mitte
+DE1206: Ost
+DE1207: West
+DE1208: Süd
+DE1209: Südost
+DE1210: Südwest
+
+DE1300: Hannover
+DE1301: Mitte
+DE1302: Vahrenwald-List
+DE1303: Bothfeld-Vahrenheide
+DE1304: Buchholz-Kleefeld
+DE1305: Misburg-Anderten
+DE1306: Kirchrode-Bemerode-Wülferode
+DE1307: Südstadt-Bult
+DE1308: Döhren-Wülfel
+DE1309: Ricklingen
+DE1310: Linden-Limmer
+DE1311: Ahlem-Badenstedt-Davenstedt
+DE1312: Herrenhausen-Stöcken
+DE1313: Nord
+
+DE1400: Nürnberg
+DE1401: Mitte
+DE1402: Nordwestliche Außenstadt
+DE1403: Ost
+DE1404: West
+DE1405: Galgenhof
+DE1406: Langwasser
+
+DE1500: Duisburg
+DE1501: Walsum
+DE1502: Hamborn
+DE1503: Meiderich/Beeck
+DE1504: Homberg/Ruhrort/Baerl
+DE1505: Duisburg-Mitte(center)
+DE1506: Rheinhausen
+DE1507: Duisburg-Süd
+DE1508: Neumühl
+
+DE1600: Bochum
+DE1601: Bochum-Mitte
+DE1602: Wattenscheid
+DE1603: North
+DE1604: East
+DE1605: South
+DE1606: Southwest
+
+DE1700: Wuppertal
+DE1701: Barmen
+DE1702: Heckinghausen
+DE1703: Oberbarmen
+DE1704: Uellendahl-katernbrg
+DE1705: Elberfeld-West
+DE1706: Vohwinkel
+DE1707: Ronsdorf
+DE1708: Cronenberg
+DE1709: Langerfeld-Beyenburg
+
+DE1800: Bonn
+DE1801: Bonn
+DE1802: Bad Godesberg
+DE1803: Beuel
+DE1804: Hardtberg
+
+DE1900: Bielefeld
+DE1901: Bielefeld-Mitte
+DE1902: Brackwede
+DE1903: Dornberg
+DE1904: Gadderbaum
+DE1905: Heepen
+DE1906: Jöllenbeck
+DE1907: Schildesche
+DE1908: Senne
+DE1909: Sennestadt
+DE1910: Stieghorst
+
+DE2000: Mannheim
+DE2001: Sandhofen
+DE2002: Schönau
+DE2003: Gartenstadt
+DE2004: Waldhof
+DE2005: Industriehafen
+DE2006: Käfertal
+DE2007: Neckarstadt-Ost
+DE2008: Innenstadt/Jungbusch
+DE2009: Oststadt
+DE2010: Schwetzingerstadt
+DE2011: Wallstadt
+DE2012: Feudenheim
+DE2013: Seckenheim
+DE2014: Lindenhof
+DE2015: Neckarau
+DE2016: Rheinau
+DE2017: Friedrichsfeld
+# DE }
+
+# US {
+US0100: New York–Newark–Jersey City
+US0101: Kings County, NY
+US0102: Queens County, NY
+US0103: New York County(Manhattan), NY
+US0104: Bronx County, NY
+US0105: Richmond County(Staten Island), NY
+US0106: Westchester County, NY
+US0107: Suffolk County, NY
+US0108: Nassau County, NY
+US0109: Dutchess County, NY
+US0110: Bergen County, NJ
+US0111: Hudson County, NJ
+US0112: Middlesex County, NJ
+US0113: Essex County, NJ
+US0114: Union County, NJ
+US0115: Morris County, NJ
+US0116: Somerset, NJ
+US0117: Hunterdon County, NJ
+
+US0200: Los Angeles-Long Beach-Anaheim
+US0201: Eastside
+US0202: San Gabriel Valley
+US0203: Pomona Valley
+US0204: Westside
+US0205: Beach Cities
+US0206: South Bay
+US0207: Palos Verdes Peninsula
+US0208: South Los Angeles
+US0209: Gateway Cities
+US0210: North Orange County
+US0211: South Orange County
+US0212: San Fernando Valley
+US0213: Antelope Valley
+US0214: Santa Clarita Valley
+US0215: Downtown Los Angeles
+US0216: Mid-Wilshire
+
+US0300: Chicago-Aurora-Joliet-Lake County
+US0301: Cook County, IL
+US0302: DeKalb County, IL
+US0303: DuPage County, IL
+US0304: Grundy County, IL
+US0305: Kane County, IL
+US0306: Will County, IL
+US0307: Lake County, IL
+
+US0400: Dallas–Fort Worth
+US0401: Dallas County, TX
+US0402: Tarrant County, TX
+US0403: Collin County, TX
+US0404: Denton County, TX
+US0405: Ellis County, TX
+US0406: Hood County, TX
+US0407: Hunt County, TX
+US0408: Johnson County, TX
+US0409: Kaufman County, TX
+US0410: Parker County, TX
+US0411: Rockwall County, TX
+US0412: Somervell County, TX
+US0413: Delta County, TX
+US0414: Wise County, TX
+
+US0500: Houston–The Woodlands–Sugar Land
+US0501: Harris County, TX
+US0502: Fort Bend County, TX
+US0503: Montgomery County, TX
+US0504: Brazoria County, TX
+US0505: Galveston County, TX
+US0506: Liberty County, TX
+US0507: Waller County, TX
+US0508: Chambers County, TX
+US0509: Austin County, TX
+
+US0600: Philadelphia–Reading–Camden–Wilmington
+US0601: Philadelphia County, PA
+US0602: Bucks County, PA
+US0603: Delaware County, PA
+US0604: Chester County, PA
+US0605: Berks County, PA
+US0606: Montgomery County, PA
+US0607: Camden County, NJ
+US0608: Gloucester County, NJ
+US0609: Burlington County, NJ
+US0610: Atlantic County, NJ
+US0611: Cumberland County, NJ
+US0612: Cape May County, NJ
+US0613: Salem County, NJ
+US0614: Kent County, DE
+US0615: New Castle County, DE
+US0616: Cecil County, MD
+
+US0700: Washington-Arlington-Alexandria
+US0701: Washington, D.C., DC
+US0702: Arlington County, VA
+US0703: Fairfax County, VA
+US0704: Fauquier County, VA
+US0705: Charles County, MD
+US0706: Montgomery County, MD
+US0707: Prince George's County, MD
+US0708: Anne Arundel County, MD
+US0709: Howard County, MD
+US0710: St. Mary's County, MD
+
+US0800: Miami-Fort Lauderdale-West Palm Beach
+US0801: Miami, FL
+US0802: Miami Beach, FL
+US0803: Hialeah, FL
+US0804: Miramar, FL
+US0805: Miami Gardens, FL
+US0806: Pembroke Pines, FL
+US0807: Hollywood, FL
+US0808: Fort Lauderdale, FL
+US0809: Pompano Beach, FL
+US0810: Coral Springs, FL
+US0811: Deerfield Beach, FL
+US0812: Boca Raton, FL
+US0813: Delray Beach, FL
+US0814: Boynton Beach, FL
+US0815: West Palm Beach, FL
+US0816: Kendall, FL
+US0817: Homestead, FL
+
+US0900: Atlanta-Sandy Springs-Roswell
+US0901: Atlanta, GA
+US0902: Sandy Springs, GA
+US0903: Roswell, GA
+US0904: Johns Creek, GA
+US0905: Alpharetta, GA
+US0906: Marietta, GA
+US0907: Smyrna, GA
+US0908: Dunwoody, GA
+US0909: Brookhaven, GA
+US0910: Mableton, GA
+US0911: Peachtree City, GA
+US0912: Peachtree Corners, GA
+US0913: Gainesville, GA
+US0914: East Point, GA
+US0915: Newnan, GA
+US0916: Redan, GA
+US0917: Milton, GA
+US0918: Douglasville, GA
+US0919: Kennesaw, GA
+US0920: Lawrenceville, GA
+US0921: Tucker, GA
+US0922: Duluth, GA
+US0923: Stockbridge, GA
+
+US1000: Boston-Cambridge-Newton
+US1001: Suffolk County, MA
+US1002: Middlesex County, MA
+US1003: Essex County, MA,
+US1004: Norfolk County, MA
+US1005: Plymouth County, MA
+US1006: Worcester, MA
+US1007: Rockingham County, NH
+US1008: Strafford County, NH
+
+US1100: San Francisco–Oakland–Hayward
+US1101: San Francisco, CA
+US1102: Alameda County, CA
+US1103: San Mateo County, CA
+US1104: Marin County, CA
+US1105: San Jose, CA
+US1106: Santa Rosa, CA
+US1107: Contra Costa County, CA
+US1108: Napa County, CA
+US1109: Vallejo, CA
+US1110: Fairfield, CA
+
+US1200: Phoenix-Mesa-Scottsdale
+US1201: Phoenix, AZ
+US1202: Mesa, AZ
+US1203: Chandler, AZ
+US1204: Glendale, AZ
+US1205: Scottsdale, AZ
+US1206: Gilbert, AZ
+US1207: Tempe, AZ
+US1208: Peoria, AZ
+US1209: Surprise, AZ
+
+US1300: Riverside-San Bernardino-Ontario
+US1301: Riverside County, CA
+US1302: San Bernardino County, CA
+US1303: Ontario, CA
+
+US1400: Detroit-Warren-Dearborn
+US1401: Detroit, MI
+US1402: Warren, MI
+US1403: Livonia, MI
+US1404: Dearborn, MI
+
+US1500: Seattle-Tacoma-Bellevue
+US1501: King County, WA
+US1502: Snohomish County, WA
+US1503: Pierce County, WA
+US1504: Kitsap County, WA
+US1505: Thurston County, WA
+US1506: Skagit County, WA
+US1507: Bainbridge Island, WA
+US1508: Mason County, WA
+
+US1600: Minneapolis-St. Paul-Bloomington
+US1601: Minneapolis, MN
+US1602: Saint Paul, MN
+US1603: Bloomington, MN
+
+US1700: San Diego-Carlsbad
+US1701: San Diego County, CA
+US1702: Carlsbad, CA
+
+US1800: Tampa-St. Petersburg-Clearwater
+US1801: Tampa, FL
+US1802: St. Petersburg, FL
+US1803: Clearwater, FL
+US1804: Brandon, FL
+
+US1900: St. Louis
+US1901: St. Louis, MO
+US1902: St. Charles County, MO
+US1903: Jefferson City, MO
+US1904: Madison, IL
+US1905: St. Clair County, IL
+
+US2000: Baltimore-Columbia-Towson
+US2001: Baltimore, MD
+US2002: Anne Arundel County, MD
+US2003: Howard County, MD
+US2004: Baltimore County, MD
+US2005: Carroll County, MD
+US2006: Harford County, MD
+US2007: Queen Anne's County, MD
+# US }
+
+# CA {
+CA0100: Ottawa
+CA0101: Centretown
+CA0102: Chinatown
+CA0103: Little Italy
+CA0104: The Glebe
+CA0105: Tunney's Pasture
+CA0106: Westboro
+CA0107: Carlington
+CA0108: Old Ottawa South
+CA0109: Sandy Hill
+CA0110: Lower Town
+CA0111: Overbrook
+CA0112: Vanier
+CA0113: New Edinburgh
+CA0114: Rockcliffe Park
+CA0115: Manor Park
+CA0116: Cardinal Heights
+CA0117: Industrial Park
+
+CA0200: Toronto
+CA0201: East York
+CA0202: Etobicoke
+CA0203: North York
+CA0204: Old Toronto
+CA0205: Scarborough
+CA0206: York
+
+CA0300: Montreal
+CA0301: Montreal East
+CA0302: Downtown
+CA0303: Montreal West
+CA0304: Montreal Nord
+CA0305: Lasalle
+CA0306: Laval
+CA0307: Longueuil
+CA0308: Brossard
+CA0309: Le Plateau-Mont-Royal
+CA0310: Gay Village
+CA0311: Sainte-Marie
+CA0312: Hochelaga
+CA0313: Maisonneuve
+CA0314: Longue-Pointe
+CA0315: Viauville
+CA0316: Tétreaultville
+CA0317: Saint-Justin
+CA0318: Nouveau-Rosemont
+CA0319: St. Leonard
+CA0320: Rosemont-La Petite-Patrie
+CA0321: LACHINE
+CA0322: Villeray—Saint-Michel—Parc-Extension
+CA0323: La Petite-Patrie
+CA0324: Outremont
+CA0325: Mount Royal
+CA0326: Southwest
+CA0327: Pointe-Claire
+CA0328: Saint-Laurent
+CA0329: Sault-au-Récollet
+
+CA0400: Vancouver
+CA0401: West End
+CA0402: Downtown
+CA0403: Downtown Eastside
+CA0404: Strathcona
+CA0405: Grandview–Woodland
+CA0406: Hastings–Sunrise
+CA0407: Mount Pleasant
+CA0408: Fairview
+CA0409: Kitsilano
+CA0410: West Point Grey
+CA0411: Dunbar–Southlands
+CA0412: Arbutus Ridge
+CA0413: Shaughnessy
+CA0414: South Cambie
+CA0415: Riley Park
+CA0416: Kensington–Cedar Cottage
+CA0417: Renfrew–Collingwood
+CA0418: Killarney
+CA0419: Victoria–Fraserview
+CA0420: Sunset
+CA0421: Oakridge
+CA0422: Marpole
+CA0423: Kerrisdale
+
+CA0500: Calgary
+CA0501: Downtown Calgary
+CA0502: Downtown West End
+CA0503: Downtown Commercial Core
+CA0504: Downtown East Village
+CA0505: Stephen Avenue Retail Core
+CA0506: Entertainment District
+CA0507: Government District
+CA0508: Beltline
+CA0509: Chinatown
+CA0510: Eau Claire
+
+CA0600: Edmonton
+CA0601: Boyle Street
+CA0602: Central McDougall
+CA0603: Cloverdale
+CA0604: Garneau
+CA0605: McCauley
+CA0606: Oliver
+CA0607: Queen Mary Park
+CA0608: Riverdale
+CA0609: Rossdale
+CA0610: Strathcona
+CA0611: University of Alberta
+
+CA0700: Quebec City
+CA0701: La Cité-Limoilou
+CA0702: Les Rivières
+CA0703: Sainte-Foy–Sillery–Cap-Rouge
+CA0704: Charlesbourg
+CA0705: Beauport
+CA0706: La Haute-Saint-Charles
+
+CA0800: Winnipeg
+CA0801: City Centre
+CA0802: East Kildonan–Transcona
+CA0803: Assiniboia
+CA0804: Lord Selkirk–West Kildonan
+CA0805: Riel
+
+CA0900: Hamilton
+CA0901: Central
+CA0902: The North End
+CA0903: The East End
+CA0904: The West End
+CA0905: Westdale
+CA0906: Downtown
+CA0907: Stoney Creek
+CA0908: Dundas
+CA0909: Flamborough
+CA0910: Ancaster
+CA0911: Township of Glanbrook
+CA0912: East Mountain
+# CA }
+
+# AU {
+AU0100: Canberra
+AU0101: Canberra Central
+AU0102: Woden Valley
+AU0103: Belconnen
+AU0104: Weston Creek
+AU0105: Tuggeranong
+AU0106: Gungahlin
+AU0107: Molonglo Valley
+
+AU0200: Sydney
+AU0201: Woollahra
+AU0202: Waverley
+AU0203: Randwick
+AU0204: Marrickville
+AU0205: Leichhardt
+AU0206: Ashfield
+AU0207: Burwood
+AU0208: Strathfield
+AU0209: Canada Bay
+AU0210: Hunters Hill
+AU0211: Lane Cove
+AU0212: North Sydney
+AU0213: Mosman
+AU0214: Willoughby
+AU0215: Manly
+
+AU0300: Melbourne
+AU0301: Flemington
+AU0302: Kensington
+AU0303: Parkville
+AU0304: North Melbourne
+AU0305: Princes Hill
+AU0306: Carlton
+AU0307: Carlton North
+AU0308: Fitzroy North
+AU0309: Fitzroy
+AU0310: Collingwood
+AU0311: Clifton Hill
+AU0312: Alphington
+AU0313: Fairfield
+AU0314: West Melbourne
+AU0315: Docklands
+AU0316: South Wharf
+AU0317: Melbourne
+AU0318: Southbank
+AU0319: East Melbourne
+AU0320: Richmond
+AU0321: Cremorne
+AU0322: Burnley
+AU0323: South Yarra
+AU0324: South Melbourne
+AU0325: Port Melbourne
+AU0326: Albert Park
+AU0327: Middle Park
+AU0328: Windsor
+AU0329: St Kilda West
+AU0330: St Kilda
+AU0331: St Kilda East
+AU0332: Balaclava
+AU0333: Ripponlea
+AU0334: Elwood
+
+AU0400: Brisbane
+AU0401: Algester
+AU0402: Ashgrove
+AU0403: Aspley
+AU0404: Brisbane Central
+AU0405: Bulimba
+AU0406: Chatsworth
+AU0407: Clayfield
+AU0408: Everton
+AU0409: Ferny Grove
+AU0410: Greenslopes
+AU0411: Inala
+AU0412: Indooroopilly
+AU0413: Lytton
+AU0414: Mansfield
+AU0415: Moggill
+AU0416: Mount Coot-tha
+AU0417: Mount Ommaney
+AU0418: Nudgee
+AU0419: Sandgate
+AU0420: South Brisbane
+AU0421: Stafford
+AU0422: Stretton
+AU0423: Sunnybank
+AU0424: Yeerongpilly
+
+AU0500: Perth
+AU0501: North Perth
+AU0502: North Perth
+AU0503: Highgate
+AU0504: Northbridge
+AU0505: Perth
+AU0506: East Perth
+AU0507: West Perth
+AU0508: South Perth
+AU0509: Victoria Park
+
+AU0600: Adelaide
+AU0601: Hindmarsh
+AU0602: North Adelaide
+AU0603: Gilberton
+AU0604: Hackney
+AU0605: Thebarton
+AU0606: Mile End
+AU0607: Kent Town
+AU0608: Rose Park
+AU0609: Dulwich
+AU0610: Keswick
+AU0611: Wayville
+AU0612: Unley
+AU0613: Parkside
+AU0614: Eastwood
+AU0615: Glenside
+AU0616: Walkerville
+AU0617: Charles Sturt
+AU0618: Prospect
+AU0619: Walkerville
+AU0620: West Torrens
+AU0621: Norwood
+AU0622: Payneham
+AU0623: St Peters
+AU0624: West Torrens
+AU0625: Unley
+AU0626: Burnside
+# AU }
